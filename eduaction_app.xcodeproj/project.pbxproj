@@ -15,6 +15,8 @@
 		3E3AEFC9217DFDA9006C2860 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFC8217DFDA9006C2860 /* main.m */; };
 		3E3AEFD3217DFDA9006C2860 /* eduaction_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFD2217DFDA9006C2860 /* eduaction_appTests.m */; };
 		3E3AEFDE217DFDA9006C2860 /* eduaction_appUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFDD217DFDA9006C2860 /* eduaction_appUITests.m */; };
+		3E79DE642186B55700CD8AFC /* registerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E79DE632186B55700CD8AFC /* registerView.m */; };
+		3E79DE662186B56700CD8AFC /* registerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E79DE652186B56700CD8AFC /* registerView.xib */; };
 		3E83D2C1217E019200E78B1C /* MyNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2C0217E019200E78B1C /* MyNav.m */; };
 		3E83D2C4217E01F200E78B1C /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2C3217E01F200E78B1C /* LogManager.m */; };
 		3E83D2CB217E128100E78B1C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2CA217E128100E78B1C /* BaseViewController.m */; };
@@ -22,6 +24,10 @@
 		3E83D2D1217E132900E78B1C /* loginview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2D0217E132900E78B1C /* loginview.m */; };
 		3E83D2D3217E133F00E78B1C /* loginview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E83D2D2217E133F00E78B1C /* loginview.xib */; };
 		3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2D5217E21A600E78B1C /* CommonFunciton.m */; };
+		3EA283412186E1A600B2D716 /* cellphone_loginview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA283402186E1A600B2D716 /* cellphone_loginview.m */; };
+		3EA283432186E1BF00B2D716 /* cellphone_loginview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA283422186E1BF00B2D716 /* cellphone_loginview.xib */; };
+		3EA283462186EE0300B2D716 /* forgetpassview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA283452186EE0300B2D716 /* forgetpassview.m */; };
+		3EA283482186EE1200B2D716 /* forgetpassview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA283472186EE1200B2D716 /* forgetpassview.xib */; };
 		5AA662C53AD4BF3BB74F0F17 /* Pods_eduaction_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7DF20B5D012266405DC98F /* Pods_eduaction_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +66,9 @@
 		3E3AEFDD217DFDA9006C2860 /* eduaction_appUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eduaction_appUITests.m; sourceTree = "<group>"; };
 		3E3AEFDF217DFDA9006C2860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E3AEFEC217DFF7E006C2860 /* mypchfile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mypchfile.pch; sourceTree = "<group>"; };
+		3E79DE622186B55700CD8AFC /* registerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = registerView.h; sourceTree = "<group>"; };
+		3E79DE632186B55700CD8AFC /* registerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = registerView.m; sourceTree = "<group>"; };
+		3E79DE652186B56700CD8AFC /* registerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = registerView.xib; sourceTree = "<group>"; };
 		3E83D2BB217E016C00E78B1C /* Comment_configHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment_configHeader.h; sourceTree = "<group>"; };
 		3E83D2BF217E019200E78B1C /* MyNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNav.h; sourceTree = "<group>"; };
 		3E83D2C0217E019200E78B1C /* MyNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNav.m; sourceTree = "<group>"; };
@@ -74,6 +83,12 @@
 		3E83D2D2217E133F00E78B1C /* loginview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loginview.xib; sourceTree = "<group>"; };
 		3E83D2D4217E21A600E78B1C /* CommonFunciton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFunciton.h; sourceTree = "<group>"; };
 		3E83D2D5217E21A600E78B1C /* CommonFunciton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonFunciton.m; sourceTree = "<group>"; };
+		3EA2833F2186E1A600B2D716 /* cellphone_loginview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cellphone_loginview.h; sourceTree = "<group>"; };
+		3EA283402186E1A600B2D716 /* cellphone_loginview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cellphone_loginview.m; sourceTree = "<group>"; };
+		3EA283422186E1BF00B2D716 /* cellphone_loginview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellphone_loginview.xib; sourceTree = "<group>"; };
+		3EA283442186EE0300B2D716 /* forgetpassview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = forgetpassview.h; sourceTree = "<group>"; };
+		3EA283452186EE0300B2D716 /* forgetpassview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = forgetpassview.m; sourceTree = "<group>"; };
+		3EA283472186EE1200B2D716 /* forgetpassview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = forgetpassview.xib; sourceTree = "<group>"; };
 		761D5219AE706E7540972853 /* Pods-eduaction_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eduaction_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-eduaction_app/Pods-eduaction_app.release.xcconfig"; sourceTree = "<group>"; };
 		7C7DF20B5D012266405DC98F /* Pods_eduaction_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eduaction_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40D477D260A17C06502D08 /* Pods-eduaction_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eduaction_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eduaction_app/Pods-eduaction_app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +220,15 @@
 				3E83D2CF217E132900E78B1C /* loginview.h */,
 				3E83D2D0217E132900E78B1C /* loginview.m */,
 				3E83D2D2217E133F00E78B1C /* loginview.xib */,
+				3E79DE622186B55700CD8AFC /* registerView.h */,
+				3E79DE632186B55700CD8AFC /* registerView.m */,
+				3E79DE652186B56700CD8AFC /* registerView.xib */,
+				3EA2833F2186E1A600B2D716 /* cellphone_loginview.h */,
+				3EA283402186E1A600B2D716 /* cellphone_loginview.m */,
+				3EA283422186E1BF00B2D716 /* cellphone_loginview.xib */,
+				3EA283442186EE0300B2D716 /* forgetpassview.h */,
+				3EA283452186EE0300B2D716 /* forgetpassview.m */,
+				3EA283472186EE1200B2D716 /* forgetpassview.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -338,8 +362,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA283482186EE1200B2D716 /* forgetpassview.xib in Resources */,
 				3E3AEFC6217DFDA9006C2860 /* LaunchScreen.storyboard in Resources */,
+				3E79DE662186B56700CD8AFC /* registerView.xib in Resources */,
 				3E3AEFC3217DFDA9006C2860 /* Assets.xcassets in Resources */,
+				3EA283432186E1BF00B2D716 /* cellphone_loginview.xib in Resources */,
 				3E83D2D3217E133F00E78B1C /* loginview.xib in Resources */,
 				3E3AEFC1217DFDA8006C2860 /* Main.storyboard in Resources */,
 			);
@@ -427,15 +454,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA283462186EE0300B2D716 /* forgetpassview.m in Sources */,
 				3E83D2C4217E01F200E78B1C /* LogManager.m in Sources */,
 				3E83D2CB217E128100E78B1C /* BaseViewController.m in Sources */,
 				3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */,
 				3E83D2D1217E132900E78B1C /* loginview.m in Sources */,
 				3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */,
 				3E3AEFC9217DFDA9006C2860 /* main.m in Sources */,
+				3EA283412186E1A600B2D716 /* cellphone_loginview.m in Sources */,
 				3E83D2CE217E129300E78B1C /* LoginViewController.m in Sources */,
 				3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */,
 				3E83D2C1217E019200E78B1C /* MyNav.m in Sources */,
+				3E79DE642186B55700CD8AFC /* registerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

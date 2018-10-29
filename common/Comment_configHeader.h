@@ -38,7 +38,8 @@ typedef NS_ENUM(NSInteger,GradientDirection)
 #define btn_selectcolor_black HexRGB(0x454545)
 #define btn_normalcolor_white HexRGB(0xFFFFFF)
 
-
+#define scale_w (ZTWidth/375.0)
+#define scale_H (ZTHeight/667.0)
 
 #pragma mark 通知通用字符串
 
