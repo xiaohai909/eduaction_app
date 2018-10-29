@@ -169,7 +169,7 @@
     [self.go_reg_btn  mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-space_left);
         make.left.mas_equalTo(space_left);
-    make.top.mas_equalTo(self.eulabtn.mas_bottom).offset(37*scale_H);
+        make.top.mas_equalTo(self.eulabtn.mas_bottom).offset(30*scale_H);
         make.height.mas_equalTo(44);
     }];
     [self.go_reg_btn setBackgroundImage:[CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:self.go_reg_btn.frame gradientDir:leftToright] forState:UIControlStateNormal];

@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
                           startPoint:(CGPoint)startPoint
                             endPoint:(CGPoint)endPoint
                            viewframe:(CGRect )AddViewframe;
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
++ (NSString*)dictionaryToJson:(NSDictionary *)dic;
 @end
 
 NS_ASSUME_NONNULL_END

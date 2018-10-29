@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,9 +32,7 @@
                     <state key="selected">
                         <color key="titleColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <connections>
-                        <action selector="loginbtnclick:" destination="iN0-l3-epB" eventType="touchUpInside" id="aqs-TC-AeA"/>
-                    </connections>
+                    <state key="highlighted" title="登录"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ab-dO-uMn">
                     <rect key="frame" x="267" y="80" width="46" height="30"/>
@@ -45,9 +44,7 @@
                     <state key="selected">
                         <color key="titleColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <connections>
-                        <action selector="registerclick:" destination="iN0-l3-epB" eventType="touchUpInside" id="8S9-6w-Qab"/>
-                    </connections>
+                    <state key="highlighted" title="注册"/>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1O-8O-yrD">
                     <rect key="frame" x="0.0" y="177" width="375" height="26"/>
@@ -106,9 +103,6 @@
                     <rect key="frame" x="25" y="405" width="325" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="登录"/>
-                    <connections>
-                        <action selector="login_click:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ze8-6l-L6a"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBv-UE-esV">
                     <rect key="frame" x="159" y="552" width="56" height="14"/>
@@ -125,17 +119,11 @@
                     <rect key="frame" x="57" y="582" width="44" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button" image="qq_icon"/>
-                    <connections>
-                        <action selector="QQlick:" destination="iN0-l3-epB" eventType="touchUpInside" id="sf9-xq-cF0"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBx-cL-8KF">
                     <rect key="frame" x="212" y="582" width="44" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button" image="wx_icon"/>
-                    <connections>
-                        <action selector="WXclick:" destination="iN0-l3-epB" eventType="touchUpInside" id="j8u-V6-D0g"/>
-                    </connections>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4M-OC-6Th">
                     <rect key="frame" x="25" y="488" width="325" height="48"/>
@@ -151,9 +139,6 @@
                             <state key="normal" title="短信登录">
                                 <color key="titleColor" red="1" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
-                            <connections>
-                                <action selector="login_click:" destination="iN0-l3-epB" eventType="touchUpInside" id="YGe-Jg-d9P"/>
-                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

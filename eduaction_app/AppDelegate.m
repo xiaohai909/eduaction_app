@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [IQKeyboardManager sharedManager].enable = YES;
+    [[LogManager sharedManager]config];
     //[IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     [self gologinView];
     return YES;
@@ -54,7 +55,9 @@
 -(void)gologinView{
     
     LoginViewController *cont = [[LoginViewController alloc]init];
-    [self.window setRootViewController:cont];
+    MyNav *nav = [[MyNav alloc]initWithRootViewController:cont];
+    nav.navigationBarHidden = YES;
+    [self.window setRootViewController:nav];
     
 }
 @end
