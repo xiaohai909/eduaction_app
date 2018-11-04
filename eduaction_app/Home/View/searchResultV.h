@@ -1,8 +1,8 @@
 //
-//  Searchhot&hisV.h
+//  searchResultV.h
 //  eduaction_app
 //
-//  Created by legendlxd on 2018/11/4.
+//  Created by legendlxd on 2018/11/5.
 //  Copyright © 2018年 diandang. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Searchhot_hisV : UIView
+@interface searchResultV : UICollectionView
 
 @end
 

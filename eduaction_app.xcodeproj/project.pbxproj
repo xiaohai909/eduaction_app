@@ -17,6 +17,9 @@
 		3E3AEFD3217DFDA9006C2860 /* eduaction_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFD2217DFDA9006C2860 /* eduaction_appTests.m */; };
 		3E3AEFDE217DFDA9006C2860 /* eduaction_appUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFDD217DFDA9006C2860 /* eduaction_appUITests.m */; };
 		3E401A62218F433500D85448 /* UIView+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E401A60218F433500D85448 /* UIView+PYSearchExtension.m */; };
+		3E401A65218F496F00D85448 /* SearchSecionV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E401A64218F496F00D85448 /* SearchSecionV.m */; };
+		3E401A67218F498100D85448 /* SearchSecionV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E401A66218F498100D85448 /* SearchSecionV.xib */; };
+		3E401A6A218F4F1900D85448 /* searchResultV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E401A69218F4F1900D85448 /* searchResultV.m */; };
 		3E79DE642186B55700CD8AFC /* registerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E79DE632186B55700CD8AFC /* registerView.m */; };
 		3E79DE662186B56700CD8AFC /* registerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E79DE652186B56700CD8AFC /* registerView.xib */; };
 		3E83D2C1217E019200E78B1C /* MyNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2C0217E019200E78B1C /* MyNav.m */; };
@@ -53,7 +56,7 @@
 		3ECB362D218AC1250008A109 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB362C218AC1250008A109 /* StudyViewController.m */; };
 		3EDCF81E218F298800861D26 /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF81C218F298800861D26 /* MySearchBar.m */; };
 		3EDCF821218F2ADC00861D26 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF820218F2ADC00861D26 /* SearchViewController.m */; };
-		3EDCF824218F428900861D26 /* Searchhot&hisV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF823218F428900861D26 /* Searchhot&hisV.m */; };
+		3EDCF824218F428900861D26 /* SearchhotAndhisV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF823218F428900861D26 /* SearchhotAndhisV.m */; };
 		5AA662C53AD4BF3BB74F0F17 /* Pods_eduaction_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7DF20B5D012266405DC98F /* Pods_eduaction_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +99,11 @@
 		3E3AEFEC217DFF7E006C2860 /* mypchfile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mypchfile.pch; sourceTree = "<group>"; };
 		3E401A60218F433500D85448 /* UIView+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PYSearchExtension.m"; sourceTree = "<group>"; };
 		3E401A61218F433500D85448 /* UIView+PYSearchExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PYSearchExtension.h"; sourceTree = "<group>"; };
+		3E401A63218F496F00D85448 /* SearchSecionV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchSecionV.h; sourceTree = "<group>"; };
+		3E401A64218F496F00D85448 /* SearchSecionV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchSecionV.m; sourceTree = "<group>"; };
+		3E401A66218F498100D85448 /* SearchSecionV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSecionV.xib; sourceTree = "<group>"; };
+		3E401A68218F4F1900D85448 /* searchResultV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = searchResultV.h; sourceTree = "<group>"; };
+		3E401A69218F4F1900D85448 /* searchResultV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searchResultV.m; sourceTree = "<group>"; };
 		3E79DE622186B55700CD8AFC /* registerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = registerView.h; sourceTree = "<group>"; };
 		3E79DE632186B55700CD8AFC /* registerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = registerView.m; sourceTree = "<group>"; };
 		3E79DE652186B56700CD8AFC /* registerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = registerView.xib; sourceTree = "<group>"; };
@@ -160,8 +168,8 @@
 		3EDCF81D218F298800861D26 /* MySearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySearchBar.h; sourceTree = "<group>"; };
 		3EDCF81F218F2ADC00861D26 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		3EDCF820218F2ADC00861D26 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		3EDCF822218F428900861D26 /* Searchhot&hisV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Searchhot&hisV.h"; sourceTree = "<group>"; };
-		3EDCF823218F428900861D26 /* Searchhot&hisV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Searchhot&hisV.m"; sourceTree = "<group>"; };
+		3EDCF822218F428900861D26 /* SearchhotAndhisV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchhotAndhisV.h; sourceTree = "<group>"; };
+		3EDCF823218F428900861D26 /* SearchhotAndhisV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchhotAndhisV.m; sourceTree = "<group>"; };
 		761D5219AE706E7540972853 /* Pods-eduaction_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eduaction_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-eduaction_app/Pods-eduaction_app.release.xcconfig"; sourceTree = "<group>"; };
 		7C7DF20B5D012266405DC98F /* Pods_eduaction_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eduaction_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40D477D260A17C06502D08 /* Pods-eduaction_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eduaction_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eduaction_app/Pods-eduaction_app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -342,8 +350,13 @@
 				3EB08EAE218C76ED00849777 /* homeheaderCR2.h */,
 				3EB08EAF218C76ED00849777 /* homeheaderCR2.m */,
 				3EB08EB0218C76ED00849777 /* homeheaderCR2.xib */,
-				3EDCF822218F428900861D26 /* Searchhot&hisV.h */,
-				3EDCF823218F428900861D26 /* Searchhot&hisV.m */,
+				3EDCF822218F428900861D26 /* SearchhotAndhisV.h */,
+				3EDCF823218F428900861D26 /* SearchhotAndhisV.m */,
+				3E401A63218F496F00D85448 /* SearchSecionV.h */,
+				3E401A64218F496F00D85448 /* SearchSecionV.m */,
+				3E401A66218F498100D85448 /* SearchSecionV.xib */,
+				3E401A68218F4F1900D85448 /* searchResultV.h */,
+				3E401A69218F4F1900D85448 /* searchResultV.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -557,6 +570,7 @@
 				3EA283482186EE1200B2D716 /* forgetpassview.xib in Resources */,
 				3EB08EB2218C76ED00849777 /* homeheaderCR2.xib in Resources */,
 				3EB08ECA218C922B00849777 /* QRcomfimViewController.xib in Resources */,
+				3E401A67218F498100D85448 /* SearchSecionV.xib in Resources */,
 				3E3AEFC6217DFDA9006C2860 /* LaunchScreen.storyboard in Resources */,
 				3EB08EBD218C853100849777 /* SGQRCode.bundle in Resources */,
 				3EB08EA0218C5BDC00849777 /* HomecourseCell.xib in Resources */,
@@ -665,12 +679,14 @@
 				3ECB361E218AAF0C0008A109 /* MYtabarViewController.m in Sources */,
 				3EB08E96218C575200849777 /* HomeCollection.m in Sources */,
 				3EB08E9F218C5BDC00849777 /* HomecourseCell.m in Sources */,
+				3E401A6A218F4F1900D85448 /* searchResultV.m in Sources */,
 				3EB08EC9218C922B00849777 /* QRcomfimViewController.m in Sources */,
 				3EB08EB1218C76ED00849777 /* homeheaderCR2.m in Sources */,
 				3E83D2CB217E128100E78B1C /* BaseViewController.m in Sources */,
+				3E401A65218F496F00D85448 /* SearchSecionV.m in Sources */,
 				3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */,
 				3E83D2D1217E132900E78B1C /* loginview.m in Sources */,
-				3EDCF824218F428900861D26 /* Searchhot&hisV.m in Sources */,
+				3EDCF824218F428900861D26 /* SearchhotAndhisV.m in Sources */,
 				3ECB362A218AC1140008A109 /* MineViewController.m in Sources */,
 				3EB08EC5218C85E000849777 /* ScanQRViewController.m in Sources */,
 				3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */,
