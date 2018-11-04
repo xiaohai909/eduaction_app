@@ -217,9 +217,12 @@
     
     
     [self.viewModel.subscribeCommand_loginbtn.executionSignals.switchToLatest subscribeNext:^(id x) {
+#pragma mark 登录状态
         
         DDLogVerbose(@"%@", [CommonFunciton dictionaryToJson:x]);
         
+        
+        [k_appDelegate goTabarView];
     }];
     
 

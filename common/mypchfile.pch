@@ -17,6 +17,14 @@
 #import "LoginViewController.h"
 #import "CommonFunciton.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
+#import "MYtabarViewController.h"
+#import "HomeViewController.h"
+#import "MineViewController.h"
+#import "StudyViewController.h"
+#import "AppDelegate.h"
+#import "ImagePlayerView.h"
+#import "TezButton.h"
+#import "UIView+PYSearchExtension.h"
 #if DEBUG
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #else

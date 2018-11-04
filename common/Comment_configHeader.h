@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger,GradientDirection)
     /** 从右上角至左下角*/
     uprightTolowLeft
 };
-
+#define k_appDelegate  ((AppDelegate *)[[UIApplication sharedApplication]delegate])
 #define HexRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define HexRGBAlpha(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
 
@@ -29,6 +29,8 @@ typedef NS_ENUM(NSInteger,GradientDirection)
 #define ZTHeight   [[UIScreen mainScreen]bounds].size.height
 #define UI_IS_IPHONE_X           (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height >= 812.0f)
 #define NaviIPHONEX  (UI_IS_IPHONE_X ? 88.0f : 64.0f)
+#define TabIPHONEX    (UI_IS_IPHONE_X ? 83.0f : 49.0f)
+
 #define YGUserDefaults  [NSUserDefaults standardUserDefaults]
 
 #define YGNotFound(a,b)  [a rangeOfString:b].location ==NSNotFound

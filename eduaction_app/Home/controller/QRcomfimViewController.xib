@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRcomfimViewController">
+            <connections>
+                <outlet property="confimrBtn" destination="4Tr-cI-qTf" id="9Qb-QG-Met"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JTh-Hd-JTk">
+                    <rect key="frame" x="125" y="51" width="125" height="91"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="91" id="Unw-DB-ezF"/>
+                        <constraint firstAttribute="width" constant="125" id="ZMV-zW-PZz"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="即将在电脑上登录兽课网 同时下线移动端" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQz-Hd-eKV">
+                    <rect key="frame" x="116" y="172" width="143" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="2JG-Mn-dST"/>
+                        <constraint firstAttribute="width" constant="143" id="T1M-xL-4PT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Tr-cI-qTf">
+                    <rect key="frame" x="38" y="242" width="299" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="sNj-ON-tEs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="确认登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="confirmBtnclick:" destination="-1" eventType="touchUpInside" id="RPl-Yt-x02"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Tr-cI-qTf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="38" id="3U6-Yu-VJI"/>
+                <constraint firstItem="qQz-Hd-eKV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Lwh-ce-CJa"/>
+                <constraint firstItem="JTh-Hd-JTk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="51" id="SOW-bJ-L1p"/>
+                <constraint firstItem="4Tr-cI-qTf" firstAttribute="top" secondItem="qQz-Hd-eKV" secondAttribute="bottom" constant="23" id="YUk-Ie-bj4"/>
+                <constraint firstAttribute="trailing" secondItem="4Tr-cI-qTf" secondAttribute="trailing" constant="38" id="i7C-aB-JyW"/>
+                <constraint firstItem="JTh-Hd-JTk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uD6-sA-iy5"/>
+                <constraint firstItem="qQz-Hd-eKV" firstAttribute="top" secondItem="JTh-Hd-JTk" secondAttribute="bottom" constant="30" id="uZZ-Ap-d4K"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="110.19490254872565"/>
+        </view>
+    </objects>
+</document>

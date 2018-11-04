@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     [IQKeyboardManager sharedManager].enable = YES;
     [[LogManager sharedManager]config];
     //[IQKeyboardManager sharedManager].enableAutoToolbar = NO;
@@ -51,6 +52,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
 #pragma mark 跳转到登录界面
 -(void)gologinView{
     
@@ -58,6 +60,16 @@
     MyNav *nav = [[MyNav alloc]initWithRootViewController:cont];
     nav.navigationBarHidden = YES;
     [self.window setRootViewController:nav];
+    
+}
+#pragma mark 进入首页
+-(void)goTabarView
+{
+    
+    
+    MYtabarViewController * bar = [MYtabarViewController shareGWHomeViewController];
+    MyNav * nav=[[MyNav alloc]initWithRootViewController:bar];
+    self.window.rootViewController =  nav;
     
 }
 @end

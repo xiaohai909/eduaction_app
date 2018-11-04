@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
                            viewframe:(CGRect )AddViewframe;
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 + (NSString*)dictionaryToJson:(NSDictionary *)dic;
++ (UIImage*)createImageWithColor:(UIColor*)color;
 @end
 
 NS_ASSUME_NONNULL_END

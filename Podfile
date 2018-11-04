@@ -15,4 +15,6 @@ pod 'Masonry'
 pod 'FMDB'
 pod 'IQKeyboardManager'
 pod 'CocoaLumberjack'
+pod 'ImagePlayerView'
+pod 'TezButton'
 end
