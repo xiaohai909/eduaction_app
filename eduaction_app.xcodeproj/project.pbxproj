@@ -7,6 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045B11BD21912184001FC325 /* StudyTimeCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11B521912184001FC325 /* StudyTimeCVCell.xib */; };
+		045B11BE21912184001FC325 /* StudyTimeCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11B921912184001FC325 /* StudyTimeCVCell.m */; };
+		045B11BF21912184001FC325 /* StudyCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11BA21912184001FC325 /* StudyCVCell.xib */; };
+		045B11C021912184001FC325 /* StudyCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11BB21912184001FC325 /* StudyCVCell.m */; };
+		045B11C121912184001FC325 /* StudyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11BC21912184001FC325 /* StudyCollection.m */; };
+		045B11D121912198001FC325 /* ChapterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11C421912197001FC325 /* ChapterVC.m */; };
+		045B11D221912198001FC325 /* ChapterCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11C721912197001FC325 /* ChapterCVCell.m */; };
+		045B11D321912198001FC325 /* ChapterMainCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11C821912197001FC325 /* ChapterMainCVCell.xib */; };
+		045B11D421912198001FC325 /* ChapterMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11C921912197001FC325 /* ChapterMainCollection.m */; };
+		045B11D521912198001FC325 /* ChapterMainCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11CB21912197001FC325 /* ChapterMainCVCell.m */; };
+		045B11D621912198001FC325 /* RatioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11CD21912197001FC325 /* RatioView.m */; };
+		045B11D721912198001FC325 /* ChapterCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11CF21912197001FC325 /* ChapterCVCell.xib */; };
+		045B11DA21912FFF001FC325 /* ChapterListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11D921912FFF001FC325 /* ChapterListVC.m */; };
+		045B11DD219130BA001FC325 /* ChapterListCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11DC219130BA001FC325 /* ChapterListCollection.m */; };
+		045B11E0219133C0001FC325 /* ChapterScoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11DF219133C0001FC325 /* ChapterScoreVC.m */; };
+		045B11E32191344C001FC325 /* ChapterScoreCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11E22191344C001FC325 /* ChapterScoreCollection.m */; };
+		045B11E72191354D001FC325 /* ChapterScoreCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11E52191354D001FC325 /* ChapterScoreCVCell.m */; };
+		045B11E82191354D001FC325 /* ChapterScoreCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11E62191354D001FC325 /* ChapterScoreCVCell.xib */; };
+		045B11EC219138E1001FC325 /* ChapterScoreHeadCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11EA219138E1001FC325 /* ChapterScoreHeadCVCell.m */; };
+		045B11ED219138E1001FC325 /* ChapterScoreHeadCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11EB219138E1001FC325 /* ChapterScoreHeadCVCell.xib */; };
+		045B11F3219166C4001FC325 /* MakeProblemMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11F2219166C4001FC325 /* MakeProblemMainVC.m */; };
+		045B11F7219167AF001FC325 /* MakeProblemTopicCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11F5219167AF001FC325 /* MakeProblemTopicCVCell.m */; };
+		045B11F8219167AF001FC325 /* MakeProblemTopicCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11F6219167AF001FC325 /* MakeProblemTopicCVCell.xib */; };
+		045B11FC21916B2B001FC325 /* MakeProblemOptionCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11FA21916B2B001FC325 /* MakeProblemOptionCVCell.m */; };
+		045B11FD21916B2B001FC325 /* MakeProblemOptionCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11FB21916B2B001FC325 /* MakeProblemOptionCVCell.xib */; };
+		045B120021917081001FC325 /* MakeProblemMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11FF21917081001FC325 /* MakeProblemMainCollection.m */; };
+		045B120321917302001FC325 /* MakeProblemToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B120221917302001FC325 /* MakeProblemToolView.m */; };
 		3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E21BBAC21874FE70041CF70 /* LoginViewMode.m */; };
 		3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBA217DFDA8006C2860 /* AppDelegate.m */; };
 		3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBD217DFDA8006C2860 /* ViewController.m */; };
@@ -78,6 +105,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045B11B521912184001FC325 /* StudyTimeCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudyTimeCVCell.xib; sourceTree = "<group>"; };
+		045B11B621912184001FC325 /* StudyTimeCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyTimeCVCell.h; sourceTree = "<group>"; };
+		045B11B721912184001FC325 /* StudyCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyCVCell.h; sourceTree = "<group>"; };
+		045B11B821912184001FC325 /* StudyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyCollection.h; sourceTree = "<group>"; };
+		045B11B921912184001FC325 /* StudyTimeCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyTimeCVCell.m; sourceTree = "<group>"; };
+		045B11BA21912184001FC325 /* StudyCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudyCVCell.xib; sourceTree = "<group>"; };
+		045B11BB21912184001FC325 /* StudyCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyCVCell.m; sourceTree = "<group>"; };
+		045B11BC21912184001FC325 /* StudyCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyCollection.m; sourceTree = "<group>"; };
+		045B11C421912197001FC325 /* ChapterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterVC.m; sourceTree = "<group>"; };
+		045B11C521912197001FC325 /* ChapterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterVC.h; sourceTree = "<group>"; };
+		045B11C721912197001FC325 /* ChapterCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterCVCell.m; sourceTree = "<group>"; };
+		045B11C821912197001FC325 /* ChapterMainCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterMainCVCell.xib; sourceTree = "<group>"; };
+		045B11C921912197001FC325 /* ChapterMainCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterMainCollection.m; sourceTree = "<group>"; };
+		045B11CA21912197001FC325 /* RatioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatioView.h; sourceTree = "<group>"; };
+		045B11CB21912197001FC325 /* ChapterMainCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterMainCVCell.m; sourceTree = "<group>"; };
+		045B11CC21912197001FC325 /* ChapterCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterCVCell.h; sourceTree = "<group>"; };
+		045B11CD21912197001FC325 /* RatioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatioView.m; sourceTree = "<group>"; };
+		045B11CE21912197001FC325 /* ChapterMainCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterMainCollection.h; sourceTree = "<group>"; };
+		045B11CF21912197001FC325 /* ChapterCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterCVCell.xib; sourceTree = "<group>"; };
+		045B11D021912197001FC325 /* ChapterMainCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterMainCVCell.h; sourceTree = "<group>"; };
+		045B11D821912FFF001FC325 /* ChapterListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterListVC.h; sourceTree = "<group>"; };
+		045B11D921912FFF001FC325 /* ChapterListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterListVC.m; sourceTree = "<group>"; };
+		045B11DB219130BA001FC325 /* ChapterListCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterListCollection.h; sourceTree = "<group>"; };
+		045B11DC219130BA001FC325 /* ChapterListCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterListCollection.m; sourceTree = "<group>"; };
+		045B11DE219133C0001FC325 /* ChapterScoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterScoreVC.h; sourceTree = "<group>"; };
+		045B11DF219133C0001FC325 /* ChapterScoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterScoreVC.m; sourceTree = "<group>"; };
+		045B11E12191344C001FC325 /* ChapterScoreCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterScoreCollection.h; sourceTree = "<group>"; };
+		045B11E22191344C001FC325 /* ChapterScoreCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterScoreCollection.m; sourceTree = "<group>"; };
+		045B11E42191354D001FC325 /* ChapterScoreCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterScoreCVCell.h; sourceTree = "<group>"; };
+		045B11E52191354D001FC325 /* ChapterScoreCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterScoreCVCell.m; sourceTree = "<group>"; };
+		045B11E62191354D001FC325 /* ChapterScoreCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChapterScoreCVCell.xib; sourceTree = "<group>"; };
+		045B11E9219138E1001FC325 /* ChapterScoreHeadCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterScoreHeadCVCell.h; sourceTree = "<group>"; };
+		045B11EA219138E1001FC325 /* ChapterScoreHeadCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterScoreHeadCVCell.m; sourceTree = "<group>"; };
+		045B11EB219138E1001FC325 /* ChapterScoreHeadCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChapterScoreHeadCVCell.xib; sourceTree = "<group>"; };
+		045B11F1219166C4001FC325 /* MakeProblemMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemMainVC.h; sourceTree = "<group>"; };
+		045B11F2219166C4001FC325 /* MakeProblemMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemMainVC.m; sourceTree = "<group>"; };
+		045B11F4219167AF001FC325 /* MakeProblemTopicCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemTopicCVCell.h; sourceTree = "<group>"; };
+		045B11F5219167AF001FC325 /* MakeProblemTopicCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemTopicCVCell.m; sourceTree = "<group>"; };
+		045B11F6219167AF001FC325 /* MakeProblemTopicCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProblemTopicCVCell.xib; sourceTree = "<group>"; };
+		045B11F921916B2B001FC325 /* MakeProblemOptionCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemOptionCVCell.h; sourceTree = "<group>"; };
+		045B11FA21916B2B001FC325 /* MakeProblemOptionCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemOptionCVCell.m; sourceTree = "<group>"; };
+		045B11FB21916B2B001FC325 /* MakeProblemOptionCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProblemOptionCVCell.xib; sourceTree = "<group>"; };
+		045B11FE21917081001FC325 /* MakeProblemMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemMainCollection.h; sourceTree = "<group>"; };
+		045B11FF21917081001FC325 /* MakeProblemMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemMainCollection.m; sourceTree = "<group>"; };
+		045B120121917302001FC325 /* MakeProblemToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemToolView.h; sourceTree = "<group>"; };
+		045B120221917302001FC325 /* MakeProblemToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemToolView.m; sourceTree = "<group>"; };
 		3E21BBAB21874FE70041CF70 /* LoginViewMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewMode.h; sourceTree = "<group>"; };
 		3E21BBAC21874FE70041CF70 /* LoginViewMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewMode.m; sourceTree = "<group>"; };
 		3E3AEFB6217DFDA8006C2860 /* eduaction_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eduaction_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +274,105 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045B11B421912184001FC325 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				045B11B821912184001FC325 /* StudyCollection.h */,
+				045B11BC21912184001FC325 /* StudyCollection.m */,
+				045B11B721912184001FC325 /* StudyCVCell.h */,
+				045B11BB21912184001FC325 /* StudyCVCell.m */,
+				045B11BA21912184001FC325 /* StudyCVCell.xib */,
+				045B11B621912184001FC325 /* StudyTimeCVCell.h */,
+				045B11B921912184001FC325 /* StudyTimeCVCell.m */,
+				045B11B521912184001FC325 /* StudyTimeCVCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		045B11C221912197001FC325 /* Chapter */ = {
+			isa = PBXGroup;
+			children = (
+				045B11C321912197001FC325 /* Controller */,
+				045B11C621912197001FC325 /* View */,
+			);
+			path = Chapter;
+			sourceTree = "<group>";
+		};
+		045B11C321912197001FC325 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				045B11C521912197001FC325 /* ChapterVC.h */,
+				045B11C421912197001FC325 /* ChapterVC.m */,
+				045B11D821912FFF001FC325 /* ChapterListVC.h */,
+				045B11D921912FFF001FC325 /* ChapterListVC.m */,
+				045B11DE219133C0001FC325 /* ChapterScoreVC.h */,
+				045B11DF219133C0001FC325 /* ChapterScoreVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		045B11C621912197001FC325 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				045B11CE21912197001FC325 /* ChapterMainCollection.h */,
+				045B11C921912197001FC325 /* ChapterMainCollection.m */,
+				045B11DB219130BA001FC325 /* ChapterListCollection.h */,
+				045B11DC219130BA001FC325 /* ChapterListCollection.m */,
+				045B11E12191344C001FC325 /* ChapterScoreCollection.h */,
+				045B11E22191344C001FC325 /* ChapterScoreCollection.m */,
+				045B11CC21912197001FC325 /* ChapterCVCell.h */,
+				045B11C721912197001FC325 /* ChapterCVCell.m */,
+				045B11CF21912197001FC325 /* ChapterCVCell.xib */,
+				045B11D021912197001FC325 /* ChapterMainCVCell.h */,
+				045B11CB21912197001FC325 /* ChapterMainCVCell.m */,
+				045B11C821912197001FC325 /* ChapterMainCVCell.xib */,
+				045B11E42191354D001FC325 /* ChapterScoreCVCell.h */,
+				045B11E52191354D001FC325 /* ChapterScoreCVCell.m */,
+				045B11E62191354D001FC325 /* ChapterScoreCVCell.xib */,
+				045B11E9219138E1001FC325 /* ChapterScoreHeadCVCell.h */,
+				045B11EA219138E1001FC325 /* ChapterScoreHeadCVCell.m */,
+				045B11EB219138E1001FC325 /* ChapterScoreHeadCVCell.xib */,
+				045B11CA21912197001FC325 /* RatioView.h */,
+				045B11CD21912197001FC325 /* RatioView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		045B11EE21916697001FC325 /* MakeProblem */ = {
+			isa = PBXGroup;
+			children = (
+				045B11EF21916697001FC325 /* Controller */,
+				045B11F021916697001FC325 /* View */,
+			);
+			path = MakeProblem;
+			sourceTree = "<group>";
+		};
+		045B11EF21916697001FC325 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				045B11F1219166C4001FC325 /* MakeProblemMainVC.h */,
+				045B11F2219166C4001FC325 /* MakeProblemMainVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		045B11F021916697001FC325 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				045B11FE21917081001FC325 /* MakeProblemMainCollection.h */,
+				045B11FF21917081001FC325 /* MakeProblemMainCollection.m */,
+				045B11F4219167AF001FC325 /* MakeProblemTopicCVCell.h */,
+				045B11F5219167AF001FC325 /* MakeProblemTopicCVCell.m */,
+				045B11F6219167AF001FC325 /* MakeProblemTopicCVCell.xib */,
+				045B11F921916B2B001FC325 /* MakeProblemOptionCVCell.h */,
+				045B11FA21916B2B001FC325 /* MakeProblemOptionCVCell.m */,
+				045B11FB21916B2B001FC325 /* MakeProblemOptionCVCell.xib */,
+				045B120121917302001FC325 /* MakeProblemToolView.h */,
+				045B120221917302001FC325 /* MakeProblemToolView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3E3AEFAD217DFDA8006C2860 = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +578,9 @@
 		3ECB3621218AB1360008A109 /* online_study */ = {
 			isa = PBXGroup;
 			children = (
+				045B11EE21916697001FC325 /* MakeProblem */,
+				045B11C221912197001FC325 /* Chapter */,
+				045B11B421912184001FC325 /* View */,
 				3ECB3624218AC0F40008A109 /* controller */,
 			);
 			path = online_study;
@@ -567,11 +742,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045B11D321912198001FC325 /* ChapterMainCVCell.xib in Resources */,
+				045B11ED219138E1001FC325 /* ChapterScoreHeadCVCell.xib in Resources */,
 				3EA283482186EE1200B2D716 /* forgetpassview.xib in Resources */,
 				3EB08EB2218C76ED00849777 /* homeheaderCR2.xib in Resources */,
+				045B11BF21912184001FC325 /* StudyCVCell.xib in Resources */,
 				3EB08ECA218C922B00849777 /* QRcomfimViewController.xib in Resources */,
+				045B11F8219167AF001FC325 /* MakeProblemTopicCVCell.xib in Resources */,
+				045B11BD21912184001FC325 /* StudyTimeCVCell.xib in Resources */,
 				3E401A67218F498100D85448 /* SearchSecionV.xib in Resources */,
+				045B11E82191354D001FC325 /* ChapterScoreCVCell.xib in Resources */,
 				3E3AEFC6217DFDA9006C2860 /* LaunchScreen.storyboard in Resources */,
+				045B11D721912198001FC325 /* ChapterCVCell.xib in Resources */,
 				3EB08EBD218C853100849777 /* SGQRCode.bundle in Resources */,
 				3EB08EA0218C5BDC00849777 /* HomecourseCell.xib in Resources */,
 				3EB08EAD218C76E400849777 /* homeheaderCR.xib in Resources */,
@@ -581,6 +763,7 @@
 				3EA283432186E1BF00B2D716 /* cellphone_loginview.xib in Resources */,
 				3E83D2D3217E133F00E78B1C /* loginview.xib in Resources */,
 				3E3AEFC1217DFDA8006C2860 /* Main.storyboard in Resources */,
+				045B11FD21916B2B001FC325 /* MakeProblemOptionCVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,22 +855,33 @@
 			files = (
 				3EB08EAC218C76E400849777 /* homeheaderCR.m in Sources */,
 				3EDCF81E218F298800861D26 /* MySearchBar.m in Sources */,
+				045B11C021912184001FC325 /* StudyCVCell.m in Sources */,
 				3EB08EBE218C853100849777 /* GWQrFlashlightsManager.m in Sources */,
 				3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */,
 				3EA283462186EE0300B2D716 /* forgetpassview.m in Sources */,
 				3E83D2C4217E01F200E78B1C /* LogManager.m in Sources */,
 				3ECB361E218AAF0C0008A109 /* MYtabarViewController.m in Sources */,
+				045B11E72191354D001FC325 /* ChapterScoreCVCell.m in Sources */,
 				3EB08E96218C575200849777 /* HomeCollection.m in Sources */,
+				045B11FC21916B2B001FC325 /* MakeProblemOptionCVCell.m in Sources */,
 				3EB08E9F218C5BDC00849777 /* HomecourseCell.m in Sources */,
+				045B11D421912198001FC325 /* ChapterMainCollection.m in Sources */,
 				3E401A6A218F4F1900D85448 /* searchResultV.m in Sources */,
 				3EB08EC9218C922B00849777 /* QRcomfimViewController.m in Sources */,
 				3EB08EB1218C76ED00849777 /* homeheaderCR2.m in Sources */,
+				045B11F3219166C4001FC325 /* MakeProblemMainVC.m in Sources */,
+				045B11BE21912184001FC325 /* StudyTimeCVCell.m in Sources */,
 				3E83D2CB217E128100E78B1C /* BaseViewController.m in Sources */,
+				045B11F7219167AF001FC325 /* MakeProblemTopicCVCell.m in Sources */,
 				3E401A65218F496F00D85448 /* SearchSecionV.m in Sources */,
 				3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */,
 				3E83D2D1217E132900E78B1C /* loginview.m in Sources */,
+				045B11D121912198001FC325 /* ChapterVC.m in Sources */,
 				3EDCF824218F428900861D26 /* SearchhotAndhisV.m in Sources */,
+				045B11DD219130BA001FC325 /* ChapterListCollection.m in Sources */,
+				045B11E32191344C001FC325 /* ChapterScoreCollection.m in Sources */,
 				3ECB362A218AC1140008A109 /* MineViewController.m in Sources */,
+				045B11C121912184001FC325 /* StudyCollection.m in Sources */,
 				3EB08EC5218C85E000849777 /* ScanQRViewController.m in Sources */,
 				3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */,
 				3ECB362D218AC1250008A109 /* StudyViewController.m in Sources */,
@@ -695,15 +889,23 @@
 				3E3AEFC9217DFDA9006C2860 /* main.m in Sources */,
 				3E401A62218F433500D85448 /* UIView+PYSearchExtension.m in Sources */,
 				3EA283412186E1A600B2D716 /* cellphone_loginview.m in Sources */,
+				045B11EC219138E1001FC325 /* ChapterScoreHeadCVCell.m in Sources */,
 				3EB08EBF218C853100849777 /* GWScanQRvC.m in Sources */,
+				045B120021917081001FC325 /* MakeProblemMainCollection.m in Sources */,
 				3EDCF821218F2ADC00861D26 /* SearchViewController.m in Sources */,
 				3E83D2CE217E129300E78B1C /* LoginViewController.m in Sources */,
+				045B11E0219133C0001FC325 /* ChapterScoreVC.m in Sources */,
 				3EB08E8E218C353C00849777 /* HomeHeaderView.m in Sources */,
+				045B120321917302001FC325 /* MakeProblemToolView.m in Sources */,
 				3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */,
+				045B11D221912198001FC325 /* ChapterCVCell.m in Sources */,
 				3E83D2C1217E019200E78B1C /* MyNav.m in Sources */,
 				3EB08EA4218C5EC000849777 /* HomenewsCell.m in Sources */,
 				3E79DE642186B55700CD8AFC /* registerView.m in Sources */,
+				045B11D521912198001FC325 /* ChapterMainCVCell.m in Sources */,
+				045B11D621912198001FC325 /* RatioView.m in Sources */,
 				3EB08EBC218C853100849777 /* GWScanCodeManager.m in Sources */,
+				045B11DA21912FFF001FC325 /* ChapterListVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
