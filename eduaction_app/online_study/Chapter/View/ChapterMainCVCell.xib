@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChapterMainCVCell" id="gTV-IL-0wX" customClass="ChapterMainCVCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSH-tI-Rvt" customClass="RatioView">
+                        <rect key="frame" x="8" y="10.5" width="95" height="95"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="pSH-tI-Rvt" secondAttribute="height" multiplier="1:1" id="Kd0-Xt-u6w"/>
+                            <constraint firstAttribute="width" constant="95" id="eBo-qJ-3F3"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已答：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9H-cw-tgQ">
+                        <rect key="frame" x="142" y="26" width="113.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答对：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUs-4Z-phd">
+                        <rect key="frame" x="255.5" y="26" width="113.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17红6 /14题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEB-f2-ivX">
+                        <rect key="frame" x="142" y="59" width="113.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17红 题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1n-d3-iBM">
+                        <rect key="frame" x="255.5" y="59" width="113.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="YUs-4Z-phd" secondAttribute="trailing" constant="6" id="5kg-xq-2nX"/>
+                <constraint firstItem="gEB-f2-ivX" firstAttribute="width" secondItem="X9H-cw-tgQ" secondAttribute="width" id="EOl-5M-5f6"/>
+                <constraint firstItem="M1n-d3-iBM" firstAttribute="top" secondItem="gEB-f2-ivX" secondAttribute="top" id="GUt-IX-5Xc"/>
+                <constraint firstItem="X9H-cw-tgQ" firstAttribute="leading" secondItem="pSH-tI-Rvt" secondAttribute="trailing" constant="39" id="J3o-5m-qK5"/>
+                <constraint firstItem="M1n-d3-iBM" firstAttribute="width" secondItem="YUs-4Z-phd" secondAttribute="width" id="Kal-tg-MJn"/>
+                <constraint firstItem="YUs-4Z-phd" firstAttribute="leading" secondItem="X9H-cw-tgQ" secondAttribute="trailing" id="Ki4-UX-kgF"/>
+                <constraint firstItem="gEB-f2-ivX" firstAttribute="width" secondItem="X9H-cw-tgQ" secondAttribute="width" id="QkB-Yc-vFZ"/>
+                <constraint firstItem="YUs-4Z-phd" firstAttribute="top" secondItem="X9H-cw-tgQ" secondAttribute="top" id="T5L-db-EnW"/>
+                <constraint firstItem="pSH-tI-Rvt" firstAttribute="centerY" secondItem="SEy-5g-ep8" secondAttribute="centerY" id="VGt-7c-Wfw"/>
+                <constraint firstItem="X9H-cw-tgQ" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" constant="26" id="ZO7-II-mLm"/>
+                <constraint firstItem="pSH-tI-Rvt" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" constant="8" id="kdj-xA-O4m"/>
+                <constraint firstItem="YUs-4Z-phd" firstAttribute="width" secondItem="X9H-cw-tgQ" secondAttribute="width" id="oTP-6w-Xki"/>
+                <constraint firstItem="gEB-f2-ivX" firstAttribute="leading" secondItem="X9H-cw-tgQ" secondAttribute="leading" id="u24-Gs-lQz"/>
+                <constraint firstItem="gEB-f2-ivX" firstAttribute="top" secondItem="X9H-cw-tgQ" secondAttribute="bottom" constant="16" id="wB5-Pe-9bf"/>
+                <constraint firstItem="M1n-d3-iBM" firstAttribute="trailing" secondItem="YUs-4Z-phd" secondAttribute="trailing" id="wVX-YZ-c3c"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="lbl_leftNumber" destination="gEB-f2-ivX" id="jUI-6F-8dZ"/>
+                <outlet property="lbl_rightNumber" destination="M1n-d3-iBM" id="nsP-Jb-aFe"/>
+                <outlet property="view_ratio" destination="pSH-tI-Rvt" id="mkE-KJ-HYS"/>
+            </connections>
+            <point key="canvasLocation" x="268" y="152"/>
+        </collectionViewCell>
+    </objects>
+</document>

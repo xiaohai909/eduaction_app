@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StudyTimeCVCell" id="gTV-IL-0wX" customClass="StudyTimeCVCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCs-ek-jVs">
+                        <rect key="frame" x="6" y="6" width="363" height="159"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9q0-B7-p6q">
+                        <rect key="frame" x="18" y="15" width="63" height="63"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="63" id="HPk-NF-8ac"/>
+                            <constraint firstAttribute="width" secondItem="9q0-B7-p6q" secondAttribute="height" multiplier="1:1" id="lDn-X9-gvs"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqh-xw-Vsb">
+                        <rect key="frame" x="302" y="19" width="60" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="5Bg-Nj-U9d"/>
+                            <constraint firstAttribute="height" constant="23" id="csZ-Y4-exD"/>
+                        </constraints>
+                        <state key="normal" image="online_ico_recharge"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="考试倒计时 99 天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldf-Aa-C4L">
+                        <rect key="frame" x="99" y="31" width="203" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="完成测试10题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL9-HH-Q8J">
+                        <rect key="frame" x="99" y="56" width="178" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9-21 14:16到期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8G-i3-FGo">
+                        <rect key="frame" x="277" y="56" width="85" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="YCx-zV-dBj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online_ico_recording" translatesAutoresizingMaskIntoConstraints="NO" id="83f-tb-9Xk">
+                        <rect key="frame" x="18" y="101.5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="a8H-RJ-cQc"/>
+                            <constraint firstAttribute="width" secondItem="83f-tb-9Xk" secondAttribute="height" multiplier="1:1" id="iIq-jx-6aC"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCC-kI-lIT">
+                        <rect key="frame" x="38" y="95" width="324" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="上次学到“动物解刨学、组织学及胚胎...”答到第6题">
+                            <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huj-Zq-WEv">
+                        <rect key="frame" x="149" y="131" width="77" height="32"/>
+                        <state key="normal" image="online_ico_continue studying"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="83f-tb-9Xk" firstAttribute="centerY" secondItem="jCC-kI-lIT" secondAttribute="centerY" id="1RZ-cY-PX9"/>
+                <constraint firstItem="E8G-i3-FGo" firstAttribute="height" secondItem="kL9-HH-Q8J" secondAttribute="height" id="1ct-5N-FKg"/>
+                <constraint firstItem="Ldf-Aa-C4L" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" constant="31" id="1yu-Y5-2zt"/>
+                <constraint firstItem="Huj-Zq-WEv" firstAttribute="centerX" secondItem="SEy-5g-ep8" secondAttribute="centerX" id="5AH-k5-Bje"/>
+                <constraint firstItem="xqh-xw-Vsb" firstAttribute="leading" secondItem="Ldf-Aa-C4L" secondAttribute="trailing" id="5ez-wM-xyg"/>
+                <constraint firstItem="kL9-HH-Q8J" firstAttribute="leading" secondItem="Ldf-Aa-C4L" secondAttribute="leading" id="71z-Uf-Pqi"/>
+                <constraint firstItem="E8G-i3-FGo" firstAttribute="centerY" secondItem="kL9-HH-Q8J" secondAttribute="centerY" id="7RT-0D-QPd"/>
+                <constraint firstItem="9q0-B7-p6q" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" constant="15" id="9zk-2A-78h"/>
+                <constraint firstItem="xqh-xw-Vsb" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" constant="19" id="C1f-Us-ksX"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="mCs-ek-jVs" secondAttribute="trailing" constant="6" id="CDV-oi-3Yu"/>
+                <constraint firstItem="jCC-kI-lIT" firstAttribute="leading" secondItem="9q0-B7-p6q" secondAttribute="leading" constant="20" id="EoR-da-8Ik"/>
+                <constraint firstItem="mCs-ek-jVs" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" constant="6" id="FhU-OI-R8G"/>
+                <constraint firstItem="9q0-B7-p6q" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" constant="18" id="JpA-eU-2Ke"/>
+                <constraint firstItem="mCs-ek-jVs" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" constant="6" id="Lr4-w7-gaN"/>
+                <constraint firstItem="kL9-HH-Q8J" firstAttribute="top" secondItem="Ldf-Aa-C4L" secondAttribute="bottom" constant="4" id="NUv-hp-X3y"/>
+                <constraint firstItem="E8G-i3-FGo" firstAttribute="leading" secondItem="kL9-HH-Q8J" secondAttribute="trailing" id="So3-Fj-OYh"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="bottom" secondItem="mCs-ek-jVs" secondAttribute="bottom" constant="6" id="UIR-pc-GkT"/>
+                <constraint firstItem="jCC-kI-lIT" firstAttribute="trailing" secondItem="xqh-xw-Vsb" secondAttribute="trailing" id="WHC-nh-i5f"/>
+                <constraint firstItem="Ldf-Aa-C4L" firstAttribute="leading" secondItem="9q0-B7-p6q" secondAttribute="trailing" constant="18" id="Ylw-Xf-1rV"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="xqh-xw-Vsb" secondAttribute="trailing" constant="13" id="eGX-ek-Jc9"/>
+                <constraint firstItem="83f-tb-9Xk" firstAttribute="leading" secondItem="9q0-B7-p6q" secondAttribute="leading" id="jl8-Be-g4H"/>
+                <constraint firstItem="Huj-Zq-WEv" firstAttribute="top" secondItem="jCC-kI-lIT" secondAttribute="bottom" constant="8" id="l4w-Jv-I7i"/>
+                <constraint firstItem="E8G-i3-FGo" firstAttribute="trailing" secondItem="xqh-xw-Vsb" secondAttribute="trailing" id="vsa-Gb-3gh"/>
+                <constraint firstItem="jCC-kI-lIT" firstAttribute="top" secondItem="kL9-HH-Q8J" secondAttribute="bottom" constant="21" id="xv0-Bt-CVO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="375" height="171"/>
+            <connections>
+                <outlet property="btn_detail" destination="jCC-kI-lIT" id="xIu-cG-Cc4"/>
+                <outlet property="btn_goOn" destination="Huj-Zq-WEv" id="GRe-FS-TeV"/>
+                <outlet property="btn_recharge" destination="xqh-xw-Vsb" id="rN6-ez-Zr2"/>
+                <outlet property="img_clock" destination="83f-tb-9Xk" id="kk5-dh-xUL"/>
+                <outlet property="img_main" destination="9q0-B7-p6q" id="xs0-NH-Qff"/>
+                <outlet property="lbl_lastTime" destination="E8G-i3-FGo" id="vW6-Z6-Gqm"/>
+                <outlet property="lbl_number" destination="kL9-HH-Q8J" id="ir6-mK-SDx"/>
+                <outlet property="lbl_time" destination="Ldf-Aa-C4L" id="alk-eZ-izZ"/>
+                <outlet property="view_back" destination="mCs-ek-jVs" id="JtK-NI-e7t"/>
+            </connections>
+            <point key="canvasLocation" x="-204" y="146.17691154422789"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="online_ico_continue studying" width="77.5" height="32"/>
+        <image name="online_ico_recharge" width="61" height="23"/>
+        <image name="online_ico_recording" width="14" height="14"/>
+    </resources>
+</document>
