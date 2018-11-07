@@ -75,6 +75,7 @@
     [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
     self.tabBarController.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
     self.tabBarController.navigationItem.titleView = self.searchBtn;
+    self.tabBarController.navigationController.navigationBarHidden = NO;
 }
 /*
 #pragma mark - Navigation

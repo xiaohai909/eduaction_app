@@ -18,7 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
+    self.tabBarController.navigationItem.rightBarButtonItem =nil;
+    self.tabBarController.navigationItem.titleView = nil;
+}
 /*
 #pragma mark - Navigation
 

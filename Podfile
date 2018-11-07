@@ -17,4 +17,5 @@ pod 'IQKeyboardManager'
 pod 'CocoaLumberjack'
 pod 'ImagePlayerView'
 pod 'TezButton'
+pod 'YYCache'
 end

@@ -12,8 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchhotAndhisV : UIView
 @property(nonatomic,strong)RACSubject *LabClcik_action;
+@property (nonatomic,strong)NSMutableArray *hisArr;
 -(void)setupView:(NSArray *)titleArr;
-
+-(void)refreshview:(NSArray *)titleArr;
 @end
 
 NS_ASSUME_NONNULL_END
