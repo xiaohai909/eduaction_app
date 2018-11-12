@@ -17,4 +17,7 @@
 @property (nonatomic, assign) CGSize  py_size;
 @property (nonatomic, assign) CGPoint py_origin;
 
+@property (nonatomic, assign) CGFloat py_right;
+@property (nonatomic, assign) CGFloat py_bottom;
+
 @end

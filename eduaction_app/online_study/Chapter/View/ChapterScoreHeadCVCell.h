@@ -16,7 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lbl_content;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_left;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_right;
+@property (weak, nonatomic) IBOutlet UIButton *btn_back;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *btn_back_top;
 
 - (void)contentNumber:(NSString *)number;
 - (void)leftNumber:(NSString *)number andTotal:(NSString *)total;

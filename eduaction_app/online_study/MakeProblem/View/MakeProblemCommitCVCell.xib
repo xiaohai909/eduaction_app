@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MakeProblemCommitCVCell" id="gTV-IL-0wX" customClass="MakeProblemCommitCVCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ju-tr-nWM">
+                        <rect key="frame" x="20" y="11" width="41" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="4ju-tr-nWM" secondAttribute="height" multiplier="1:1" id="Lr9-nS-nuP"/>
+                            <constraint firstAttribute="width" constant="41" id="Ztb-8D-s5e"/>
+                        </constraints>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABCD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSr-yB-RDy">
+                        <rect key="frame" x="79" y="11" width="276" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2小时前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaZ-Rz-Cgo">
+                        <rect key="frame" x="79" y="35" width="100" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="WhZ-Fg-nv6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老师的声音好听" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4e-aO-EFu">
+                        <rect key="frame" x="79" y="63" width="276" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hId-oS-RIL">
+                        <rect key="frame" x="310" y="8" width="30" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="0">
+                            <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crN-mR-cWw">
+                        <rect key="frame" x="275" y="0.0" width="100" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="8wT-e2-L9Z"/>
+                            <constraint firstAttribute="width" constant="100" id="hUz-bR-Dk4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="      " image="wrong question_ico_ like">
+                            <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kdD-C7-H99">
+                        <rect key="frame" x="20" y="99" width="335" height="1"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="309-D3-nzw"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="VaZ-Rz-Cgo" firstAttribute="top" secondItem="LSr-yB-RDy" secondAttribute="bottom" constant="6" id="FEa-SO-fwI"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="kdD-C7-H99" secondAttribute="trailing" constant="20" id="HzF-zK-sxo"/>
+                <constraint firstItem="crN-mR-cWw" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" id="JtU-zH-Uwl"/>
+                <constraint firstItem="E4e-aO-EFu" firstAttribute="leading" secondItem="LSr-yB-RDy" secondAttribute="leading" id="OKc-MQ-a7f"/>
+                <constraint firstItem="hId-oS-RIL" firstAttribute="centerY" secondItem="crN-mR-cWw" secondAttribute="centerY" id="Zt6-Gj-weT"/>
+                <constraint firstItem="VaZ-Rz-Cgo" firstAttribute="leading" secondItem="LSr-yB-RDy" secondAttribute="leading" id="aME-VQ-yex"/>
+                <constraint firstItem="LSr-yB-RDy" firstAttribute="leading" secondItem="4ju-tr-nWM" secondAttribute="trailing" constant="18" id="dAS-d2-6pw"/>
+                <constraint firstItem="E4e-aO-EFu" firstAttribute="top" secondItem="VaZ-Rz-Cgo" secondAttribute="bottom" constant="16" id="dIP-y4-x3B"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="bottom" secondItem="kdD-C7-H99" secondAttribute="bottom" id="fBE-Nu-kZR"/>
+                <constraint firstItem="4ju-tr-nWM" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" constant="11" id="gWX-FC-rs5"/>
+                <constraint firstItem="hId-oS-RIL" firstAttribute="trailing" secondItem="crN-mR-cWw" secondAttribute="trailing" constant="-35" id="giU-Mm-gtc"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="crN-mR-cWw" secondAttribute="trailing" id="m3R-83-ev8"/>
+                <constraint firstItem="E4e-aO-EFu" firstAttribute="trailing" secondItem="LSr-yB-RDy" secondAttribute="trailing" id="oBJ-Ee-xKY"/>
+                <constraint firstItem="LSr-yB-RDy" firstAttribute="top" secondItem="4ju-tr-nWM" secondAttribute="top" id="pZu-0o-lNj"/>
+                <constraint firstItem="4ju-tr-nWM" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" constant="20" id="xxt-D3-CWg"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="LSr-yB-RDy" secondAttribute="trailing" constant="20" id="yNL-8j-mG3"/>
+                <constraint firstItem="kdD-C7-H99" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" constant="20" id="zS6-iN-zMi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="375" height="104"/>
+            <connections>
+                <outlet property="btn_head" destination="4ju-tr-nWM" id="BmX-b7-b5i"/>
+                <outlet property="btn_zan" destination="crN-mR-cWw" id="q34-6V-GPg"/>
+                <outlet property="lbl_content" destination="E4e-aO-EFu" id="gap-5X-XBb"/>
+                <outlet property="lbl_first" destination="LSr-yB-RDy" id="cyZ-QM-LJY"/>
+                <outlet property="lbl_second" destination="VaZ-Rz-Cgo" id="rmI-VJ-Tfc"/>
+            </connections>
+            <point key="canvasLocation" x="268" y="145.72713643178412"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="wrong question_ico_ like" width="13.5" height="13.5"/>
+    </resources>
+</document>

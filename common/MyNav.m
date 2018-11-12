@@ -17,6 +17,10 @@
         self.interactivePopGestureRecognizer.delegate = self;
         self.delegate = self;
     }
+    
+    //标题颜色
+    NSDictionary *dict = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:18]};
+    [self.navigationBar setTitleTextAttributes:dict];
 }
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {

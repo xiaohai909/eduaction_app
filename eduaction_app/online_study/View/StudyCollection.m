@@ -82,7 +82,7 @@ static NSString * const cell2 = @"StudyCVCell";
 {
     if (indexPath.section == 0) {
         StudyTimeCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-        [[cell.btn_goOn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [[cell.btn_recharge rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             if (self.blockGoOn) {
                 self.blockGoOn(@"充值");
             }
@@ -98,16 +98,8 @@ static NSString * const cell2 = @"StudyCVCell";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 1) {
-        if (self.blockGoOn) {
-            self.blockGoOn(self.array_title[indexPath.row]);
-        }
+    if (self.blockGoOn) {
+        self.blockGoOn(indexPath.section?self.array_title[indexPath.row]:@"继续学习");
     }
-    else{
-        if (self.blockGoOn) {
-            self.blockGoOn(@"继续学习");
-        }
-    }
-    
 }
 @end

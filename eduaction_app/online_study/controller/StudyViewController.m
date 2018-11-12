@@ -10,6 +10,9 @@
 #import "StudyCollection.h"
 
 #import "ChapterVC.h"
+#import "SimulateExameMainVC.h"
+#import "MakeProblemMainVC.h"
+#import "ConsolidateMainVC.h"
 
 @interface StudyViewController ()
 @property (nonatomic, strong) StudyCollection *collection_main;
@@ -56,10 +59,41 @@
                 
             }
             else if ([title isEqualToString:@"继续学习"]){
-                
+                //根据原来练习的章节继续学习
+                MakeProblemMainVC *vc = [MakeProblemMainVC new];
+                [vc setMode:MakeProblemMainModeRandomPractice];
+                [self.navigationController pushViewController:vc animated:YES];
             }
             else if ([title isEqualToString:@"章节练习"]) {
                 [self.navigationController pushViewController:[ChapterVC new] animated:YES];
+            }
+            else if ([title isEqualToString:@"模拟考试"]) {
+                [self.navigationController pushViewController:[SimulateExameMainVC new] animated:YES];
+            }
+            else if ([title isEqualToString:@"历年真题"]) {
+                
+            }
+            else if ([title isEqualToString:@"随机练习"]) {
+                MakeProblemMainVC *vc = [MakeProblemMainVC new];
+                [vc setMode:MakeProblemMainModeRandomPractice];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+            else if ([title isEqualToString:@"错题练习"]) {
+                //先到错题列表
+            }
+            else if ([title isEqualToString:@"巩固练习"]) {
+                //先到知识点分类界面
+                [self.navigationController pushViewController:[ConsolidateMainVC new] animated:YES];
+
+            }
+            else if ([title isEqualToString:@"考试大纲"]) {
+                
+            }
+            else if ([title isEqualToString:@"试题查找"]) {
+                
+            }
+            else if ([title isEqualToString:@"排行榜"]) {
+                
             }
         }];        
     }

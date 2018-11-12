@@ -106,4 +106,29 @@
     return self.frame.origin;
 }
 
+
+
+
+- (void)setPy_right:(CGFloat)py_right
+{
+    CGRect frame = self.frame;
+    frame.origin.x = py_right-frame.size.width;
+    self.frame = frame;
+}
+
+- (CGFloat)py_right
+{
+    return self.frame.origin.x+self.frame.size.width;
+}
+
+- (void)setPy_bottom:(CGFloat)py_bottom
+{
+    CGRect frame = self.frame;
+    frame.origin.y = py_bottom-frame.size.height;
+    self.frame = frame;
+}
+- (CGFloat)py_bottom
+{
+    return self.frame.origin.y+self.frame.size.height;
+}
 @end

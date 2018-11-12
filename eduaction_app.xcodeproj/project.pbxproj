@@ -34,6 +34,25 @@
 		045B11FD21916B2B001FC325 /* MakeProblemOptionCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11FB21916B2B001FC325 /* MakeProblemOptionCVCell.xib */; };
 		045B120021917081001FC325 /* MakeProblemMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11FF21917081001FC325 /* MakeProblemMainCollection.m */; };
 		045B120321917302001FC325 /* MakeProblemToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B120221917302001FC325 /* MakeProblemToolView.m */; };
+		04AC33E52192736200307E70 /* MakeProlemAnswerCRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC33E32192736200307E70 /* MakeProlemAnswerCRView.m */; };
+		04AC33E62192736200307E70 /* MakeProlemAnswerCRView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AC33E42192736200307E70 /* MakeProlemAnswerCRView.xib */; };
+		04AC33EA219287B200307E70 /* MakeProblemAnswerCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC33E8219287B200307E70 /* MakeProblemAnswerCVCell.m */; };
+		04AC33EB219287B200307E70 /* MakeProblemAnswerCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AC33E9219287B200307E70 /* MakeProblemAnswerCVCell.xib */; };
+		04AC33EF21928D7500307E70 /* MakeProblemCommitCRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC33ED21928D7500307E70 /* MakeProblemCommitCRView.m */; };
+		04AC33F021928D7500307E70 /* MakeProblemCommitCRView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AC33EE21928D7500307E70 /* MakeProblemCommitCRView.xib */; };
+		04AC33F42192B1EA00307E70 /* MakeProblemCommitCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC33F22192B1EA00307E70 /* MakeProblemCommitCVCell.m */; };
+		04AC33F52192B1EA00307E70 /* MakeProblemCommitCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AC33F32192B1EA00307E70 /* MakeProblemCommitCVCell.xib */; };
+		04AC33F82192DEBB00307E70 /* MakeProblemSceneCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC33F72192DEBB00307E70 /* MakeProblemSceneCollection.m */; };
+		04AC33FC2192E1AC00307E70 /* MakeProblemSceneCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC33FA2192E1AC00307E70 /* MakeProblemSceneCVCell.m */; };
+		04AC33FD2192E1AC00307E70 /* MakeProblemSceneCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AC33FB2192E1AC00307E70 /* MakeProblemSceneCVCell.xib */; };
+		04B1B12C2193DCF700EEB51E /* SimulateExameMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B12B2193DCF700EEB51E /* SimulateExameMainVC.m */; };
+		04B1B12F2193DD6D00EEB51E /* SimulateExameMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B12E2193DD6D00EEB51E /* SimulateExameMainCollection.m */; };
+		04B1B13221941D2F00EEB51E /* MakeProblemPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B13121941D2F00EEB51E /* MakeProblemPopView.m */; };
+		04B1B1342194200E00EEB51E /* MakeProblemPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B1B1332194200E00EEB51E /* MakeProblemPopView.xib */; };
+		04B1B137219458E900EEB51E /* MakeProblemQuestionCardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B136219458E900EEB51E /* MakeProblemQuestionCardVC.m */; };
+		04B1B13D21945AD600EEB51E /* ConsolidateMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B13C21945AD600EEB51E /* ConsolidateMainVC.m */; };
+		04B1B14121945B2700EEB51E /* ConsolidateMainHeadCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B13F21945B2700EEB51E /* ConsolidateMainHeadCVCell.m */; };
+		04B1B14221945B2700EEB51E /* ConsolidateMainHeadCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B1B14021945B2700EEB51E /* ConsolidateMainHeadCVCell.xib */; };
 		3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E21BBAC21874FE70041CF70 /* LoginViewMode.m */; };
 		3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBA217DFDA8006C2860 /* AppDelegate.m */; };
 		3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBD217DFDA8006C2860 /* ViewController.m */; };
@@ -151,6 +170,37 @@
 		045B11FF21917081001FC325 /* MakeProblemMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemMainCollection.m; sourceTree = "<group>"; };
 		045B120121917302001FC325 /* MakeProblemToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemToolView.h; sourceTree = "<group>"; };
 		045B120221917302001FC325 /* MakeProblemToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemToolView.m; sourceTree = "<group>"; };
+		04AC33E22192736200307E70 /* MakeProlemAnswerCRView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProlemAnswerCRView.h; sourceTree = "<group>"; };
+		04AC33E32192736200307E70 /* MakeProlemAnswerCRView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProlemAnswerCRView.m; sourceTree = "<group>"; };
+		04AC33E42192736200307E70 /* MakeProlemAnswerCRView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProlemAnswerCRView.xib; sourceTree = "<group>"; };
+		04AC33E7219287B200307E70 /* MakeProblemAnswerCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemAnswerCVCell.h; sourceTree = "<group>"; };
+		04AC33E8219287B200307E70 /* MakeProblemAnswerCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemAnswerCVCell.m; sourceTree = "<group>"; };
+		04AC33E9219287B200307E70 /* MakeProblemAnswerCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProblemAnswerCVCell.xib; sourceTree = "<group>"; };
+		04AC33EC21928D7500307E70 /* MakeProblemCommitCRView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemCommitCRView.h; sourceTree = "<group>"; };
+		04AC33ED21928D7500307E70 /* MakeProblemCommitCRView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemCommitCRView.m; sourceTree = "<group>"; };
+		04AC33EE21928D7500307E70 /* MakeProblemCommitCRView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProblemCommitCRView.xib; sourceTree = "<group>"; };
+		04AC33F12192B1EA00307E70 /* MakeProblemCommitCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemCommitCVCell.h; sourceTree = "<group>"; };
+		04AC33F22192B1EA00307E70 /* MakeProblemCommitCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemCommitCVCell.m; sourceTree = "<group>"; };
+		04AC33F32192B1EA00307E70 /* MakeProblemCommitCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProblemCommitCVCell.xib; sourceTree = "<group>"; };
+		04AC33F62192DEBB00307E70 /* MakeProblemSceneCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemSceneCollection.h; sourceTree = "<group>"; };
+		04AC33F72192DEBB00307E70 /* MakeProblemSceneCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemSceneCollection.m; sourceTree = "<group>"; };
+		04AC33F92192E1AC00307E70 /* MakeProblemSceneCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemSceneCVCell.h; sourceTree = "<group>"; };
+		04AC33FA2192E1AC00307E70 /* MakeProblemSceneCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemSceneCVCell.m; sourceTree = "<group>"; };
+		04AC33FB2192E1AC00307E70 /* MakeProblemSceneCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProblemSceneCVCell.xib; sourceTree = "<group>"; };
+		04B1B12A2193DCF700EEB51E /* SimulateExameMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulateExameMainVC.h; sourceTree = "<group>"; };
+		04B1B12B2193DCF700EEB51E /* SimulateExameMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulateExameMainVC.m; sourceTree = "<group>"; };
+		04B1B12D2193DD6D00EEB51E /* SimulateExameMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulateExameMainCollection.h; sourceTree = "<group>"; };
+		04B1B12E2193DD6D00EEB51E /* SimulateExameMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulateExameMainCollection.m; sourceTree = "<group>"; };
+		04B1B13021941D2F00EEB51E /* MakeProblemPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemPopView.h; sourceTree = "<group>"; };
+		04B1B13121941D2F00EEB51E /* MakeProblemPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemPopView.m; sourceTree = "<group>"; };
+		04B1B1332194200E00EEB51E /* MakeProblemPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProblemPopView.xib; sourceTree = "<group>"; };
+		04B1B135219458E900EEB51E /* MakeProblemQuestionCardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemQuestionCardVC.h; sourceTree = "<group>"; };
+		04B1B136219458E900EEB51E /* MakeProblemQuestionCardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemQuestionCardVC.m; sourceTree = "<group>"; };
+		04B1B13B21945AD600EEB51E /* ConsolidateMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateMainVC.h; sourceTree = "<group>"; };
+		04B1B13C21945AD600EEB51E /* ConsolidateMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMainVC.m; sourceTree = "<group>"; };
+		04B1B13E21945B2700EEB51E /* ConsolidateMainHeadCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateMainHeadCVCell.h; sourceTree = "<group>"; };
+		04B1B13F21945B2700EEB51E /* ConsolidateMainHeadCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMainHeadCVCell.m; sourceTree = "<group>"; };
+		04B1B14021945B2700EEB51E /* ConsolidateMainHeadCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsolidateMainHeadCVCell.xib; sourceTree = "<group>"; };
 		3E21BBAB21874FE70041CF70 /* LoginViewMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewMode.h; sourceTree = "<group>"; };
 		3E21BBAC21874FE70041CF70 /* LoginViewMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewMode.m; sourceTree = "<group>"; };
 		3E3AEFB6217DFDA8006C2860 /* eduaction_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eduaction_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,6 +402,8 @@
 			children = (
 				045B11F1219166C4001FC325 /* MakeProblemMainVC.h */,
 				045B11F2219166C4001FC325 /* MakeProblemMainVC.m */,
+				04B1B135219458E900EEB51E /* MakeProblemQuestionCardVC.h */,
+				04B1B136219458E900EEB51E /* MakeProblemQuestionCardVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,16 +411,91 @@
 		045B11F021916697001FC325 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04AC33F62192DEBB00307E70 /* MakeProblemSceneCollection.h */,
+				04AC33F72192DEBB00307E70 /* MakeProblemSceneCollection.m */,
 				045B11FE21917081001FC325 /* MakeProblemMainCollection.h */,
 				045B11FF21917081001FC325 /* MakeProblemMainCollection.m */,
+				04AC33F92192E1AC00307E70 /* MakeProblemSceneCVCell.h */,
+				04AC33FA2192E1AC00307E70 /* MakeProblemSceneCVCell.m */,
+				04AC33FB2192E1AC00307E70 /* MakeProblemSceneCVCell.xib */,
 				045B11F4219167AF001FC325 /* MakeProblemTopicCVCell.h */,
 				045B11F5219167AF001FC325 /* MakeProblemTopicCVCell.m */,
 				045B11F6219167AF001FC325 /* MakeProblemTopicCVCell.xib */,
 				045B11F921916B2B001FC325 /* MakeProblemOptionCVCell.h */,
 				045B11FA21916B2B001FC325 /* MakeProblemOptionCVCell.m */,
 				045B11FB21916B2B001FC325 /* MakeProblemOptionCVCell.xib */,
+				04AC33E22192736200307E70 /* MakeProlemAnswerCRView.h */,
+				04AC33E32192736200307E70 /* MakeProlemAnswerCRView.m */,
+				04AC33E42192736200307E70 /* MakeProlemAnswerCRView.xib */,
+				04AC33E7219287B200307E70 /* MakeProblemAnswerCVCell.h */,
+				04AC33E8219287B200307E70 /* MakeProblemAnswerCVCell.m */,
+				04AC33E9219287B200307E70 /* MakeProblemAnswerCVCell.xib */,
+				04AC33EC21928D7500307E70 /* MakeProblemCommitCRView.h */,
+				04AC33ED21928D7500307E70 /* MakeProblemCommitCRView.m */,
+				04AC33EE21928D7500307E70 /* MakeProblemCommitCRView.xib */,
+				04AC33F12192B1EA00307E70 /* MakeProblemCommitCVCell.h */,
+				04AC33F22192B1EA00307E70 /* MakeProblemCommitCVCell.m */,
+				04AC33F32192B1EA00307E70 /* MakeProblemCommitCVCell.xib */,
 				045B120121917302001FC325 /* MakeProblemToolView.h */,
 				045B120221917302001FC325 /* MakeProblemToolView.m */,
+				04B1B13021941D2F00EEB51E /* MakeProblemPopView.h */,
+				04B1B13121941D2F00EEB51E /* MakeProblemPopView.m */,
+				04B1B1332194200E00EEB51E /* MakeProblemPopView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04B1B1272193DCD700EEB51E /* SimulateExam */ = {
+			isa = PBXGroup;
+			children = (
+				04B1B1282193DCD700EEB51E /* Controller */,
+				04B1B1292193DCD700EEB51E /* view */,
+			);
+			path = SimulateExam;
+			sourceTree = "<group>";
+		};
+		04B1B1282193DCD700EEB51E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04B1B12A2193DCF700EEB51E /* SimulateExameMainVC.h */,
+				04B1B12B2193DCF700EEB51E /* SimulateExameMainVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04B1B1292193DCD700EEB51E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				04B1B12D2193DD6D00EEB51E /* SimulateExameMainCollection.h */,
+				04B1B12E2193DD6D00EEB51E /* SimulateExameMainCollection.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		04B1B13821945ABF00EEB51E /* Consolidate */ = {
+			isa = PBXGroup;
+			children = (
+				04B1B13921945ABF00EEB51E /* Controller */,
+				04B1B13A21945ABF00EEB51E /* View */,
+			);
+			path = Consolidate;
+			sourceTree = "<group>";
+		};
+		04B1B13921945ABF00EEB51E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04B1B13B21945AD600EEB51E /* ConsolidateMainVC.h */,
+				04B1B13C21945AD600EEB51E /* ConsolidateMainVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04B1B13A21945ABF00EEB51E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04B1B13E21945B2700EEB51E /* ConsolidateMainHeadCVCell.h */,
+				04B1B13F21945B2700EEB51E /* ConsolidateMainHeadCVCell.m */,
+				04B1B14021945B2700EEB51E /* ConsolidateMainHeadCVCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -578,6 +705,8 @@
 		3ECB3621218AB1360008A109 /* online_study */ = {
 			isa = PBXGroup;
 			children = (
+				04B1B13821945ABF00EEB51E /* Consolidate */,
+				04B1B1272193DCD700EEB51E /* SimulateExam */,
 				045B11EE21916697001FC325 /* MakeProblem */,
 				045B11C221912197001FC325 /* Chapter */,
 				045B11B421912184001FC325 /* View */,
@@ -742,28 +871,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B1B1342194200E00EEB51E /* MakeProblemPopView.xib in Resources */,
 				045B11D321912198001FC325 /* ChapterMainCVCell.xib in Resources */,
 				045B11ED219138E1001FC325 /* ChapterScoreHeadCVCell.xib in Resources */,
 				3EA283482186EE1200B2D716 /* forgetpassview.xib in Resources */,
+				04AC33F52192B1EA00307E70 /* MakeProblemCommitCVCell.xib in Resources */,
 				3EB08EB2218C76ED00849777 /* homeheaderCR2.xib in Resources */,
 				045B11BF21912184001FC325 /* StudyCVCell.xib in Resources */,
 				3EB08ECA218C922B00849777 /* QRcomfimViewController.xib in Resources */,
+				04AC33FD2192E1AC00307E70 /* MakeProblemSceneCVCell.xib in Resources */,
 				045B11F8219167AF001FC325 /* MakeProblemTopicCVCell.xib in Resources */,
 				045B11BD21912184001FC325 /* StudyTimeCVCell.xib in Resources */,
 				3E401A67218F498100D85448 /* SearchSecionV.xib in Resources */,
 				045B11E82191354D001FC325 /* ChapterScoreCVCell.xib in Resources */,
+				04B1B14221945B2700EEB51E /* ConsolidateMainHeadCVCell.xib in Resources */,
 				3E3AEFC6217DFDA9006C2860 /* LaunchScreen.storyboard in Resources */,
 				045B11D721912198001FC325 /* ChapterCVCell.xib in Resources */,
+				04AC33EB219287B200307E70 /* MakeProblemAnswerCVCell.xib in Resources */,
 				3EB08EBD218C853100849777 /* SGQRCode.bundle in Resources */,
 				3EB08EA0218C5BDC00849777 /* HomecourseCell.xib in Resources */,
 				3EB08EAD218C76E400849777 /* homeheaderCR.xib in Resources */,
 				3E79DE662186B56700CD8AFC /* registerView.xib in Resources */,
 				3E3AEFC3217DFDA9006C2860 /* Assets.xcassets in Resources */,
 				3EB08EA5218C5EC000849777 /* HomenewsCell.xib in Resources */,
+				04AC33E62192736200307E70 /* MakeProlemAnswerCRView.xib in Resources */,
 				3EA283432186E1BF00B2D716 /* cellphone_loginview.xib in Resources */,
 				3E83D2D3217E133F00E78B1C /* loginview.xib in Resources */,
 				3E3AEFC1217DFDA8006C2860 /* Main.storyboard in Resources */,
 				045B11FD21916B2B001FC325 /* MakeProblemOptionCVCell.xib in Resources */,
+				04AC33F021928D7500307E70 /* MakeProblemCommitCRView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,7 +990,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB08EAC218C76E400849777 /* homeheaderCR.m in Sources */,
+				04B1B13D21945AD600EEB51E /* ConsolidateMainVC.m in Sources */,
 				3EDCF81E218F298800861D26 /* MySearchBar.m in Sources */,
+				04AC33EA219287B200307E70 /* MakeProblemAnswerCVCell.m in Sources */,
 				045B11C021912184001FC325 /* StudyCVCell.m in Sources */,
 				3EB08EBE218C853100849777 /* GWQrFlashlightsManager.m in Sources */,
 				3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */,
@@ -862,15 +1000,19 @@
 				3E83D2C4217E01F200E78B1C /* LogManager.m in Sources */,
 				3ECB361E218AAF0C0008A109 /* MYtabarViewController.m in Sources */,
 				045B11E72191354D001FC325 /* ChapterScoreCVCell.m in Sources */,
+				04B1B12C2193DCF700EEB51E /* SimulateExameMainVC.m in Sources */,
+				04AC33F82192DEBB00307E70 /* MakeProblemSceneCollection.m in Sources */,
 				3EB08E96218C575200849777 /* HomeCollection.m in Sources */,
 				045B11FC21916B2B001FC325 /* MakeProblemOptionCVCell.m in Sources */,
 				3EB08E9F218C5BDC00849777 /* HomecourseCell.m in Sources */,
+				04AC33E52192736200307E70 /* MakeProlemAnswerCRView.m in Sources */,
 				045B11D421912198001FC325 /* ChapterMainCollection.m in Sources */,
 				3E401A6A218F4F1900D85448 /* searchResultV.m in Sources */,
 				3EB08EC9218C922B00849777 /* QRcomfimViewController.m in Sources */,
 				3EB08EB1218C76ED00849777 /* homeheaderCR2.m in Sources */,
 				045B11F3219166C4001FC325 /* MakeProblemMainVC.m in Sources */,
 				045B11BE21912184001FC325 /* StudyTimeCVCell.m in Sources */,
+				04AC33EF21928D7500307E70 /* MakeProblemCommitCRView.m in Sources */,
 				3E83D2CB217E128100E78B1C /* BaseViewController.m in Sources */,
 				045B11F7219167AF001FC325 /* MakeProblemTopicCVCell.m in Sources */,
 				3E401A65218F496F00D85448 /* SearchSecionV.m in Sources */,
@@ -878,6 +1020,7 @@
 				3E83D2D1217E132900E78B1C /* loginview.m in Sources */,
 				045B11D121912198001FC325 /* ChapterVC.m in Sources */,
 				3EDCF824218F428900861D26 /* SearchhotAndhisV.m in Sources */,
+				04B1B13221941D2F00EEB51E /* MakeProblemPopView.m in Sources */,
 				045B11DD219130BA001FC325 /* ChapterListCollection.m in Sources */,
 				045B11E32191344C001FC325 /* ChapterScoreCollection.m in Sources */,
 				3ECB362A218AC1140008A109 /* MineViewController.m in Sources */,
@@ -885,9 +1028,12 @@
 				3EB08EC5218C85E000849777 /* ScanQRViewController.m in Sources */,
 				3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */,
 				3ECB362D218AC1250008A109 /* StudyViewController.m in Sources */,
+				04B1B137219458E900EEB51E /* MakeProblemQuestionCardVC.m in Sources */,
+				04AC33FC2192E1AC00307E70 /* MakeProblemSceneCVCell.m in Sources */,
 				3ECB3627218AC1070008A109 /* HomeViewController.m in Sources */,
 				3E3AEFC9217DFDA9006C2860 /* main.m in Sources */,
 				3E401A62218F433500D85448 /* UIView+PYSearchExtension.m in Sources */,
+				04B1B12F2193DD6D00EEB51E /* SimulateExameMainCollection.m in Sources */,
 				3EA283412186E1A600B2D716 /* cellphone_loginview.m in Sources */,
 				045B11EC219138E1001FC325 /* ChapterScoreHeadCVCell.m in Sources */,
 				3EB08EBF218C853100849777 /* GWScanQRvC.m in Sources */,
@@ -903,6 +1049,8 @@
 				3EB08EA4218C5EC000849777 /* HomenewsCell.m in Sources */,
 				3E79DE642186B55700CD8AFC /* registerView.m in Sources */,
 				045B11D521912198001FC325 /* ChapterMainCVCell.m in Sources */,
+				04B1B14121945B2700EEB51E /* ConsolidateMainHeadCVCell.m in Sources */,
+				04AC33F42192B1EA00307E70 /* MakeProblemCommitCVCell.m in Sources */,
 				045B11D621912198001FC325 /* RatioView.m in Sources */,
 				3EB08EBC218C853100849777 /* GWScanCodeManager.m in Sources */,
 				045B11DA21912FFF001FC325 /* ChapterListVC.m in Sources */,

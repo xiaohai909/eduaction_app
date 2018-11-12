@@ -10,8 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MakeProblemMainVC : BaseViewController
+typedef NS_ENUM(NSUInteger, MakeProblemMainMode) {
+    MakeProblemMainModeSimulateExam,//模拟考试
 
+    MakeProblemMainModeErrorPractice,//错题练习
+    MakeProblemMainModeRandomPractice,//随机练习
+};
+@interface MakeProblemMainVC : BaseViewController
+- (void)setMode:(MakeProblemMainMode)mode;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -27,4 +27,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage*)createImageWithColor:(UIColor*)color;
 @end
 
+
+
+@interface UIButton (Creat_Category)
+- (void)setVerticalModeTopOffset:(CGFloat)topOffset andBottom:(CGFloat)bottomOffset;
+- (void)setHorizontalModeLeftOffset:(CGFloat)leftOffset andRight:(CGFloat)rightOffset;
+@end
+
+@interface UIViewController (Pop_Category)
+- (void)showViewInWindowWithView:(UIView *)view;
+- (void)hideViewInWindowView:(UIView *)view;
+@end
+
 NS_ASSUME_NONNULL_END

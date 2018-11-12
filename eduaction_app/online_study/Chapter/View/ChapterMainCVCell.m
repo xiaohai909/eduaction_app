@@ -14,7 +14,7 @@
     [super awakeFromNib];
     // Initialization code
     
-    [self.view_ratio creatRatioViewWithNumber:0.05 andType:RatioViewTypeRed];
+    [self.view_ratio creatRatioViewWithNumber:0.05 andType:RatioViewTypeRedLine];
     
     
     self.contentView.backgroundColor = [UIColor whiteColor];

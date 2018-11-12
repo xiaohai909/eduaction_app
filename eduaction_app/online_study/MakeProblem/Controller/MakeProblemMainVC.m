@@ -7,13 +7,24 @@
 //
 
 #import "MakeProblemMainVC.h"
-#import "MakeProblemMainCollection.h"
+#import "MakeProblemSceneCollection.h"
+#import "MakeProblemToolView.h"
+
+#import "MakeProblemPopView.h"
+#import "ChapterScoreVC.h"
 
 @interface MakeProblemMainVC ()
-@property (nonatomic, strong) MakeProblemMainCollection *collection_main;
-@property (nonatomic, strong) UIView *view_bottom;//底部工具栏
+@property (nonatomic, strong) MakeProblemSceneCollection *collection_main;
+@property (nonatomic, strong) MakeProblemToolView *view_bottom;//底部工具栏
+@property (nonatomic, strong) MakeProblemToolView *view_change;//只在错题练习的时候，可以切换模式
+@property (nonatomic, strong) MakeProblemToolView *view_more;//只在随机练习的时候，可以有更多操作
 
+@property (nonatomic, assign) MakeProblemMainMode viewMode;//做题的类型
 @end
+
+/*
+ 这里有一个比较大的问题，题目更改的时候，底下的工具栏是要针对题目而变得
+ */
 
 @implementation MakeProblemMainVC
 
@@ -21,36 +32,182 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_red"] forBarMetrics:UIBarMetricsDefault];
-    self.title = @"做题类型";
+    self.navigationController.navigationBarHidden = NO;
     
+    //键盘的
+    [[IQKeyboardManager sharedManager] setEnable:NO];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[IQKeyboardManager sharedManager] setEnable:YES];
+}
+#pragma mark --- 从外部带回来的参数
+- (void)setMode:(MakeProblemMainMode)mode {
+    self.viewMode = mode;
+    
+    //设置完参数，界面才要加载
+    [self setVCTitle];
     [self.view addSubview:self.collection_main];
     [self.view addSubview:self.view_bottom];
 }
+- (void)setVCTitle {
+    if (self.viewMode == MakeProblemMainModeSimulateExam) {
+        self.title = @"模拟考试";
+    }
+    else if (self.viewMode == MakeProblemMainModeErrorPractice) {
+        self.title = @"错题练习";
+    }
+    else {
+        self.title = @"随机练习";
+    }
+}
+- (MakeProblemMode)getSceneCollectionMode{//获得题目的类型
+    if (self.viewMode == MakeProblemMainModeSimulateExam) {
+        return MakeProblemModeExam;
+    }//非考试模式下，默认为答题模式，切换得根据工具栏选择来切换
+    else {
+        return MakeProblemModeAnswer;
+    }
+}
+- (MakeProblemToolType)getBottomToolMode{//获得底下工具栏的类型
+    if (self.viewMode == MakeProblemMainModeSimulateExam) {
+        return MakeProblemToolTypeSimulateExam;
+    }
+    else if (self.viewMode == MakeProblemMainModeErrorPractice) {
+        return MakeProblemToolTypeErrorPractice;
+    }
+    else {
+        return MakeProblemToolTypeRandomPractice;
+    }
+}
 #pragma --- view creat
-- (MakeProblemMainCollection *)collection_main {
+- (MakeProblemSceneCollection *)collection_main {
     if (!_collection_main) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.minimumLineSpacing = 0.5;
         layout.minimumInteritemSpacing = 0.5;
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
-        _collection_main = [[MakeProblemMainCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth,ZTHeight-NaviIPHONEX-41} collectionViewLayout:layout];
+        _collection_main = [[MakeProblemSceneCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth,ZTHeight-NaviIPHONEX} collectionViewLayout:layout andType:[self getSceneCollectionMode]];
+        //错题练习随机练习都是答题模式，是不是背题就得看浏览模式还是答题模式
+        _collection_main.showsHorizontalScrollIndicator = NO;
+        _collection_main.pagingEnabled = YES;
         _collection_main.backgroundColor = [UIColor whiteColor];
         
-//        @weakify(self)
-//        [_collection_main setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
-//            @strongify(self)
-//            //跳转到做题
-//            [self.navigationController pushViewController:[MakeProblemMainVC new] animated:YES];
-//        }];
+        //题目更改的时候
+        [RACObserve(_collection_main, currentPage) subscribeNext:^(NSNumber *newPage) {
+            [self viewBottomChange:newPage];
+        }];
+        
     }
     return _collection_main;
 }
-- (UIView *)view_bottom {
+- (MakeProblemToolView *)view_bottom {
     if (!_view_bottom) {
-        _view_bottom = [[UIView alloc] initWithFrame:(CGRect){0,self.collection_main.py_height+self.collection_main.py_y,ZTWidth,41}];
+        _view_bottom = [[MakeProblemToolView alloc] initWithFrame:(CGRect){0,ZTHeight-NaviIPHONEX-41,ZTWidth,41}];
+        [_view_bottom creatToolViewWithType:[self getBottomToolMode]];//这个根据
+        
+        @weakify(self)
+        [_view_bottom setBlockGoOn:^(UIButton * _Nonnull btn) {
+           //这里判断每个类型的对应的操作
+            @strongify(self)
+            [self viewBottomAction:btn];
+        }];
     }
     return _view_bottom;
 }
+//只在错题练习的时候会加载
+- (MakeProblemToolView *)view_change
+{
+    if (!_view_change) {
+        _view_change = [[MakeProblemToolView alloc] initWithFrame:(CGRect){ZTWidth/2,ZTHeight-NaviIPHONEX-41-41*2-30,ZTWidth/4,41*2}];
+        [_view_change creatToolViewWithType:MakeProblemToolTypeChangeMode];
+        
+        @weakify(self)
+        @weakify(_view_change)
+        [_view_change setBlockGoOn:^(UIButton * _Nonnull btn) {
+            //这里判断每个类型的对应的操作
+            @strongify(self)
+            @strongify(_view_change)
+            if ([btn.titleLabel.text isEqualToString:@"浏览模式"]) {
+                self.collection_main.viewMode = MakeProblemModeMemory;//背诵
+            }
+            else{//答题模式
+                self.collection_main.viewMode = MakeProblemModeAnswer;//答题模式
+            }
+            _view_change.hidden = YES;
+        }];        
+        //
+        _view_change.hidden = YES;
+        [self.view addSubview:_view_change];
+    }
+    [self.view bringSubviewToFront:_view_change];
+    return _view_change;
+}
+//只在随机练习的时候有机会加载
+- (MakeProblemToolView *)view_more
+{
+    if (!_view_more) {
+        _view_more = [[MakeProblemToolView alloc] initWithFrame:(CGRect){ZTWidth/4*3,ZTHeight-NaviIPHONEX-41-41*4-30,ZTWidth/4,41*4}];
+        [_view_more creatToolViewWithType:MakeProblemToolTypeMoreMode];
+        
+        @weakify(self)
+        @weakify(_view_more)
+        [_view_more setBlockGoOn:^(UIButton * _Nonnull btn) {
+            //这里判断每个类型的对应的操作
+            @strongify(self)
+            @strongify(_view_more)
+            if ([btn.titleLabel.text isEqualToString:@"考试模式"]) {
+                self.collection_main.viewMode = MakeProblemModeExam;//考试
+            }
+            else if ([btn.titleLabel.text isEqualToString:@"背题模式"]) {
+                self.collection_main.viewMode = MakeProblemModeMemory;//背诵
+            }
+            else{//答题模式
+                self.collection_main.viewMode = MakeProblemModeAnswer;//答题模式
+            }
+            _view_more.hidden = YES;
+        }];
+        _view_more.hidden = YES;
+        [self.view addSubview:_view_more];
+    }
+    [self.view bringSubviewToFront:_view_more];
+    return _view_more;
+}
+#pragma mark --- 针对不同的题目设置底下的工具栏
+- (void)viewBottomChange:(NSNumber *)currentPage
+{
+    //设置bottomView的状态,就收藏和笔记
+    
+}
+- (void)viewBottomAction:(UIButton *)btn {
+    //self.collection_main.currentPage,获取对应的题目的信息，并做对应的操作
+    btn.selected = !btn.selected;//这个要看本道题的状态了
+    if ([btn.titleLabel.text isEqualToString:@"收藏"]) {
+        
+    }
+    else if ([btn.titleLabel.text isEqualToString:@"笔记"]) {
+        [self showViewInWindowWithView:[MakeProblemPopView creatNotePopView]];
+    }
+    else if ([btn.titleLabel.text isEqualToString:@"切换"]) {
+        self.view_change.hidden = !self.view_change.hidden;
+    }
+    else if ([btn.titleLabel.text isEqualToString:@"更多"]) {
+        self.view_more.hidden = !self.view_more.hidden;
+    }
+    else if ([btn.titleLabel.text isEqualToString:@"设置"]) {
+        [self showViewInWindowWithView:[MakeProblemPopView creatSetPopView]];
+    }
+    else if ([btn.titleLabel.text isEqualToString:@"批阅"]) {
+    /*
+     1.如果当前已回答完所有题目，直接跳转到我的成绩；
+     2.如果未回答完所有题目，则计算已答问题的正确率
+     */
+        [self.navigationController pushViewController:[ChapterScoreVC new] animated:YES];
+    }
+    
+}
+
 /*
 #pragma mark - Navigation
 

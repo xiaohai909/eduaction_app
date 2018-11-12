@@ -164,3 +164,67 @@
     
 }
 @end
+
+
+//左右：1：图片 文字   2：文字 图片
+//上下：3：图片 文字   4：文字 图片
+@implementation UIButton (Creat_Category)
+
+- (void)setVerticalModeTopOffset:(CGFloat)topOffset andBottom:(CGFloat)bottomOffset {
+    
+    [self setImageEdgeInsets:UIEdgeInsetsMake(-(self.py_height - self.imageView.py_height) / 2 + topOffset, (self.py_width - self.imageView.py_width) / 2 - self.imageView.py_x, 0, -(self.py_width - self.imageView.py_width) / 2 + self.imageView.py_x)];
+    
+    [self setTitleEdgeInsets:UIEdgeInsetsMake(0, (self.py_width - self.titleLabel.py_width) / 2 - self.titleLabel.py_x, -((self.py_height - self.titleLabel.py_height) / 2 + (self.py_height - (self.titleLabel.py_bottom)) / 2) + bottomOffset, self.titleLabel.py_x - (self.py_width - self.titleLabel.py_width) / 2)];
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+}
+
+- (void)setHorizontalModeLeftOffset:(CGFloat)leftOffset andRight:(CGFloat)rightOffset {
+    
+    CGFloat titleLeft = self.imageView.py_width;
+    if (leftOffset && self.titleLabel.py_x - self.imageView.py_width > leftOffset) {
+        titleLeft -= -titleLeft - leftOffset;
+    }
+    [self setTitleEdgeInsets:UIEdgeInsetsMake(0, -titleLeft, 0, titleLeft)];
+    
+    CGFloat imageRight = self.titleLabel.py_width;
+    if (rightOffset && self.py_width > self.imageView.py_right + rightOffset) {
+        imageRight += imageRight - rightOffset;
+    }
+    [self setImageEdgeInsets:UIEdgeInsetsMake(0, imageRight, 0, -imageRight)];
+}
+
+@end
+
+
+@implementation UIViewController (Pop_Category)
+
+- (void)showViewInWindowWithView:(UIView *)view
+{
+    UIButton *bg = [[UIApplication sharedApplication].keyWindow viewWithTag:110];
+    if (!bg) {
+        bg = [UIButton buttonWithType:UIButtonTypeCustom];
+        bg.frame = CGRectMake(0, 0, ZTWidth, ZTHeight);
+    }
+    bg.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.5];
+    bg.tag = 110;
+    [bg addSubview:view];
+    [[bg rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [self hideViewInWindowView:view];
+    }];
+    [[UIApplication sharedApplication].keyWindow addSubview:bg];
+    [UIView animateWithDuration:0.3 animations:^{
+        view.py_bottom = ZTHeight;
+    }];
+}
+
+- (void)hideViewInWindowView:(UIView *)view
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        view.py_y = ZTHeight;
+    } completion:^(BOOL finished) {
+        [view.superview removeFromSuperview];
+        [view removeFromSuperview];
+    }];
+}
+@end
+

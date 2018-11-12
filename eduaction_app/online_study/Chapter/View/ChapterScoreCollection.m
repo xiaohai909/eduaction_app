@@ -75,6 +75,11 @@ static NSString * const cell2 = @"ChapterScoreCVCell";
         [cell contentNumber:@"50"];
         [cell leftNumber:@"7" andTotal:@"42"];
         [cell rightNumber:@"48" andTotal:@"120"];
+        [[cell.btn_back rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            if (self.blockGoOn) {
+                self.blockGoOn(indexPath);
+            }
+        }];
         return cell;
     }
     else {
@@ -87,8 +92,11 @@ static NSString * const cell2 = @"ChapterScoreCVCell";
     }
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.blockGoOn) {
-        self.blockGoOn(indexPath);
+    if (indexPath.section == 1) {
+        if (self.blockGoOn) {
+            self.blockGoOn(indexPath);
+        }
     }
+    
 }
 @end

@@ -13,6 +13,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    if (UI_IS_IPHONE_X) {
+        self.btn_back_top.constant = 44;
+    }
 }
 - (void)contentNumber:(NSString *)number {
     self.lbl_content.text = [NSString stringWithFormat:@"很遗憾，您本章正确率为 %@%@\n再接再厉！！",number,@"%"];

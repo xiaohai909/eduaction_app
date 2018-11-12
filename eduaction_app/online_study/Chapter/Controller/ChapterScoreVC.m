@@ -49,8 +49,26 @@
         @weakify(self)
         [_collection_main setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
             @strongify(self)
-            //跳转到做题
-            [self.navigationController pushViewController:[MakeProblemMainVC new] animated:YES];
+            if (indexPath.section == 0) {
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+            else{
+                //跳转到,@"本章错题",@"本章收藏",@"本章笔记",@"试错解析"
+                if (indexPath.row == 0) {
+                    MakeProblemMainVC *vc = [MakeProblemMainVC new];
+                    [vc setMode:MakeProblemMainModeErrorPractice];//MakeProblemMainModeSimulateExam,MakeProblemMainModeErrorPractice,MakeProblemMainModeRandomPractice,
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+                else if (indexPath.row == 1) {
+                    
+                }
+                else if (indexPath.row == 2) {
+                
+                }
+                else {
+                    
+                }
+            }
         }];
     }
     return _collection_main;
@@ -73,7 +91,9 @@
         [[_btn_redo rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self)
             //跳转到做题
-            [self.navigationController pushViewController:[MakeProblemMainVC new] animated:YES];
+            MakeProblemMainVC *vc = [MakeProblemMainVC new];
+            [vc setMode:MakeProblemMainModeErrorPractice];//MakeProblemMainModeSimulateExam,MakeProblemMainModeErrorPractice,MakeProblemMainModeRandomPractice,
+            [self.navigationController pushViewController:vc animated:YES];
         }];
     }
     return _btn_redo;

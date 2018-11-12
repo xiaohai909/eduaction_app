@@ -13,7 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    [self.view_ratio creatRatioViewWithNumber:0.05 andType:RatioViewTypeYellow];
+//    [self.view_ratio creatRatioViewWithNumber:0.05 andType:RatioViewTypeYellow];
 }
 
 

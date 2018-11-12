@@ -51,7 +51,7 @@ static NSString * const cell1 = @"ChapterCVCell";
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ChapterCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-    [cell.view_ratio creatRatioViewWithNumber:0.05 andType:RatioViewTypeBlue];
+    [cell.view_ratio creatRatioViewWithNumber:0.5 andType:RatioViewTypeBlue];
     cell.btn_check.hidden = indexPath.row%2?YES:NO;
     return cell;
 }
