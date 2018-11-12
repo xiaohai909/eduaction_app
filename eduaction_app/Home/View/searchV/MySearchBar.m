@@ -26,7 +26,7 @@
             //            [[[(UITextField*)[sBar.subviews objectAtIndex:0] subviews] objectAtIndex:i] setFont:[UIFont fontWithName:@"CustomFont" size:15]];
             UITextField* search=[[(UITextField*)[self.subviews objectAtIndex:0]subviews] objectAtIndex:i];
             //search.delegate = self;
-            search.backgroundColor=HexRGB(0xe8e8e9);
+            search.backgroundColor=HexRGB(0xffffff);
             search.textColor=[UIColor blackColor];
             if(_isKindSearch==NO){
             search.frame=CGRectMake(10, NaviIPHONEX - 36, ZTWidth-10-52.5, 28);
@@ -61,6 +61,7 @@
         [_CancelBtn setTitleColor:HexRGB(0xFFFFFF) forState:UIControlStateNormal];
 //        [_CancelBtn setTitleColor:HexRGB(0x157efb) forState:UIControlStateDisabled];
         [_CancelBtn setTitle:@"搜索" forState:UIControlStateNormal];
+        [_CancelBtn setTitle:@"取消" forState:UIControlStateSelected];
         [_CancelBtn addTarget:self action:@selector(GoBackView:) forControlEvents:UIControlEventTouchUpInside];
         _CancelBtn.titleLabel.font=[UIFont systemFontOfSize:17];
         [_CancelBtn setExclusiveTouch:YES];

@@ -21,6 +21,7 @@
 {
     if ([super initWithFrame:frame]) {
         
+        self.hisArr = [[NSMutableArray alloc]init];
         self.LabClcik_action = [RACSubject subject];
     }
     return self;
@@ -54,7 +55,27 @@
     
     
 }
+-(void)refreshview:(NSArray *)titleArr{
+
+    for (UIView *view in self.subviews) {
+        
+        [view removeFromSuperview];
+    }
+    
+
+
+    if (titleArr.count > 0) {
+
+    [self setupView:titleArr];
+        
+    }
+    
+}
+    
 -(void)setupView:(NSArray *)titleArr{
+    
+    [self.hisArr removeAllObjects];
+    [self.hisArr addObjectsFromArray:titleArr];
     
     for (NSString *str in titleArr) {
         
@@ -64,7 +85,7 @@
     CGFloat contview_w = ZTWidth - 20;
     
     
-    CGFloat currentX = 20;
+    CGFloat currentX = 10;
     CGFloat currentY = 0;
     CGFloat countRow = 0;
     CGFloat countCol = 0;
@@ -74,7 +95,7 @@
         // When the number of search words is too large, the width is width of the contentView
         if (subView.py_width > contview_w) subView.py_width = contview_w;
         if (currentX + subView.py_width + labspcae * countRow > contview_w) {
-            subView.py_x = 20;
+            subView.py_x = 10;
             subView.py_y = (currentY += subView.py_height) + labspcae * ++countCol;
             currentX = subView.py_width;
             countRow = 1;

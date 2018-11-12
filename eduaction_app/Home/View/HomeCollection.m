@@ -11,7 +11,7 @@ static NSString * const cell1 = @"HomecourseCell";
 static NSString * const cell2 = @"HomenewsCell";
 static NSString * const HID = @"HomeCollHeadV";
 static NSString * const HID2 = @"HometestplanHeader";
-
+static NSString * const HID3 = @"Hometestfooter";
 @implementation HomeCollection
 {
     NSMutableArray *deviceArr;
@@ -37,6 +37,7 @@ static NSString * const HID2 = @"HometestplanHeader";
         [self registerNib:[UINib nibWithNibName:NSStringFromClass([homeheaderCR2 class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HID2];
 
  
+        [self registerNib:[UINib nibWithNibName:NSStringFromClass([homeFooterRefresh class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:HID3];
         
         self.delegate =self;
         self.dataSource =self;
@@ -107,7 +108,12 @@ static NSString * const HID2 = @"HometestplanHeader";
     }
     return (CGSize){ZTWidth,44};
 }
-
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
+    if (section == 1) {
+          return (CGSize){ZTWidth,36};
+    }
+    return CGSizeZero;
+}
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 
@@ -115,10 +121,7 @@ static NSString * const HID2 = @"HometestplanHeader";
     
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
-{
-    return CGSizeZero;
-}
+
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
@@ -142,6 +145,11 @@ static NSString * const HID2 = @"HometestplanHeader";
             
 
              return headVc;
+        }
+        else if (kind == UICollectionElementKindSectionFooter){
+            
+            homeFooterRefresh *footer= [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:HID3 forIndexPath:indexPath];
+             return footer;
         }
         
     }

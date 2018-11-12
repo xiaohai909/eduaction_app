@@ -65,7 +65,14 @@
 		3E401A62218F433500D85448 /* UIView+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E401A60218F433500D85448 /* UIView+PYSearchExtension.m */; };
 		3E401A65218F496F00D85448 /* SearchSecionV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E401A64218F496F00D85448 /* SearchSecionV.m */; };
 		3E401A67218F498100D85448 /* SearchSecionV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E401A66218F498100D85448 /* SearchSecionV.xib */; };
-		3E401A6A218F4F1900D85448 /* searchResultV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E401A69218F4F1900D85448 /* searchResultV.m */; };
+		3E635FB421928061006FC152 /* Searchkey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E635FB321928061006FC152 /* Searchkey.m */; };
+		3E635FBA219282CD006FC152 /* AlertStringView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E635FB6219282CD006FC152 /* AlertStringView.strings */; };
+		3E635FBB219282CD006FC152 /* AlertStringView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E635FB8219282CD006FC152 /* AlertStringView.xib */; };
+		3E635FBC219282CD006FC152 /* AbbAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E635FB9219282CD006FC152 /* AbbAlertView.m */; };
+		3E635FC421928A0A006FC152 /* SearchResultH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E635FC221928A0A006FC152 /* SearchResultH.m */; };
+		3E635FC521928A0A006FC152 /* SearchResultH.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E635FC321928A0A006FC152 /* SearchResultH.xib */; };
+		3E635FC821928E81006FC152 /* searchresultCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E635FC721928E81006FC152 /* searchresultCV.m */; };
+		3E635FCC21929377006FC152 /* MainCollectionFowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E635FCB21929377006FC152 /* MainCollectionFowLayout.m */; };
 		3E79DE642186B55700CD8AFC /* registerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E79DE632186B55700CD8AFC /* registerView.m */; };
 		3E79DE662186B56700CD8AFC /* registerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E79DE652186B56700CD8AFC /* registerView.xib */; };
 		3E83D2C1217E019200E78B1C /* MyNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2C0217E019200E78B1C /* MyNav.m */; };
@@ -75,6 +82,8 @@
 		3E83D2D1217E132900E78B1C /* loginview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2D0217E132900E78B1C /* loginview.m */; };
 		3E83D2D3217E133F00E78B1C /* loginview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E83D2D2217E133F00E78B1C /* loginview.xib */; };
 		3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2D5217E21A600E78B1C /* CommonFunciton.m */; };
+		3E8AEDA421927B0F007CF326 /* homeFooterRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AEDA221927B0F007CF326 /* homeFooterRefresh.m */; };
+		3E8AEDA521927B0F007CF326 /* homeFooterRefresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AEDA321927B0F007CF326 /* homeFooterRefresh.xib */; };
 		3EA283412186E1A600B2D716 /* cellphone_loginview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA283402186E1A600B2D716 /* cellphone_loginview.m */; };
 		3EA283432186E1BF00B2D716 /* cellphone_loginview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA283422186E1BF00B2D716 /* cellphone_loginview.xib */; };
 		3EA283462186EE0300B2D716 /* forgetpassview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA283452186EE0300B2D716 /* forgetpassview.m */; };
@@ -225,8 +234,19 @@
 		3E401A63218F496F00D85448 /* SearchSecionV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchSecionV.h; sourceTree = "<group>"; };
 		3E401A64218F496F00D85448 /* SearchSecionV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchSecionV.m; sourceTree = "<group>"; };
 		3E401A66218F498100D85448 /* SearchSecionV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSecionV.xib; sourceTree = "<group>"; };
-		3E401A68218F4F1900D85448 /* searchResultV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = searchResultV.h; sourceTree = "<group>"; };
-		3E401A69218F4F1900D85448 /* searchResultV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searchResultV.m; sourceTree = "<group>"; };
+		3E635FB221928061006FC152 /* Searchkey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Searchkey.h; sourceTree = "<group>"; };
+		3E635FB321928061006FC152 /* Searchkey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Searchkey.m; sourceTree = "<group>"; };
+		3E635FB6219282CD006FC152 /* AlertStringView.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = AlertStringView.strings; sourceTree = "<group>"; };
+		3E635FB7219282CD006FC152 /* AbbAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbbAlertView.h; sourceTree = "<group>"; };
+		3E635FB8219282CD006FC152 /* AlertStringView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertStringView.xib; sourceTree = "<group>"; };
+		3E635FB9219282CD006FC152 /* AbbAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbbAlertView.m; sourceTree = "<group>"; };
+		3E635FC121928A0A006FC152 /* SearchResultH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultH.h; sourceTree = "<group>"; };
+		3E635FC221928A0A006FC152 /* SearchResultH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultH.m; sourceTree = "<group>"; };
+		3E635FC321928A0A006FC152 /* SearchResultH.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultH.xib; sourceTree = "<group>"; };
+		3E635FC621928E81006FC152 /* searchresultCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = searchresultCV.h; sourceTree = "<group>"; };
+		3E635FC721928E81006FC152 /* searchresultCV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searchresultCV.m; sourceTree = "<group>"; };
+		3E635FCA21929377006FC152 /* MainCollectionFowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionFowLayout.h; sourceTree = "<group>"; };
+		3E635FCB21929377006FC152 /* MainCollectionFowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionFowLayout.m; sourceTree = "<group>"; };
 		3E79DE622186B55700CD8AFC /* registerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = registerView.h; sourceTree = "<group>"; };
 		3E79DE632186B55700CD8AFC /* registerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = registerView.m; sourceTree = "<group>"; };
 		3E79DE652186B56700CD8AFC /* registerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = registerView.xib; sourceTree = "<group>"; };
@@ -244,6 +264,9 @@
 		3E83D2D2217E133F00E78B1C /* loginview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loginview.xib; sourceTree = "<group>"; };
 		3E83D2D4217E21A600E78B1C /* CommonFunciton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFunciton.h; sourceTree = "<group>"; };
 		3E83D2D5217E21A600E78B1C /* CommonFunciton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonFunciton.m; sourceTree = "<group>"; };
+		3E8AEDA121927B0F007CF326 /* homeFooterRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = homeFooterRefresh.h; sourceTree = "<group>"; };
+		3E8AEDA221927B0F007CF326 /* homeFooterRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homeFooterRefresh.m; sourceTree = "<group>"; };
+		3E8AEDA321927B0F007CF326 /* homeFooterRefresh.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeFooterRefresh.xib; sourceTree = "<group>"; };
 		3EA2833F2186E1A600B2D716 /* cellphone_loginview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cellphone_loginview.h; sourceTree = "<group>"; };
 		3EA283402186E1A600B2D716 /* cellphone_loginview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cellphone_loginview.m; sourceTree = "<group>"; };
 		3EA283422186E1BF00B2D716 /* cellphone_loginview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellphone_loginview.xib; sourceTree = "<group>"; };
@@ -565,6 +588,7 @@
 		3E3AEFEB217DFF51006C2860 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				3E635FB5219282C4006FC152 /* alertview */,
 				3E401A61218F433500D85448 /* UIView+PYSearchExtension.h */,
 				3E401A60218F433500D85448 /* UIView+PYSearchExtension.m */,
 				3E83D2C2217E01F200E78B1C /* LogManager.h */,
@@ -579,6 +603,41 @@
 				3E83D2D5217E21A600E78B1C /* CommonFunciton.m */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		3E635FB5219282C4006FC152 /* alertview */ = {
+			isa = PBXGroup;
+			children = (
+				3E635FB7219282CD006FC152 /* AbbAlertView.h */,
+				3E635FB9219282CD006FC152 /* AbbAlertView.m */,
+				3E635FB6219282CD006FC152 /* AlertStringView.strings */,
+				3E635FB8219282CD006FC152 /* AlertStringView.xib */,
+			);
+			path = alertview;
+			sourceTree = "<group>";
+		};
+		3E635FC0219289C4006FC152 /* searchV */ = {
+			isa = PBXGroup;
+			children = (
+				3E635FC921929370006FC152 /* layout */,
+				3EDCF81D218F298800861D26 /* MySearchBar.h */,
+				3EDCF81C218F298800861D26 /* MySearchBar.m */,
+				3E635FC121928A0A006FC152 /* SearchResultH.h */,
+				3E635FC221928A0A006FC152 /* SearchResultH.m */,
+				3E635FC321928A0A006FC152 /* SearchResultH.xib */,
+				3E635FC621928E81006FC152 /* searchresultCV.h */,
+				3E635FC721928E81006FC152 /* searchresultCV.m */,
+			);
+			path = searchV;
+			sourceTree = "<group>";
+		};
+		3E635FC921929370006FC152 /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				3E635FCA21929377006FC152 /* MainCollectionFowLayout.h */,
+				3E635FCB21929377006FC152 /* MainCollectionFowLayout.m */,
+			);
+			path = layout;
 			sourceTree = "<group>";
 		};
 		3E83D2C5217E125700E78B1C /* Login */ = {
@@ -628,11 +687,19 @@
 			path = viewmode;
 			sourceTree = "<group>";
 		};
+		3E8AEDA621927EE6007CF326 /* cache */ = {
+			isa = PBXGroup;
+			children = (
+				3E635FB221928061006FC152 /* Searchkey.h */,
+				3E635FB321928061006FC152 /* Searchkey.m */,
+			);
+			path = cache;
+			sourceTree = "<group>";
+		};
 		3EB08E8B218C352A00849777 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3EDCF81D218F298800861D26 /* MySearchBar.h */,
-				3EDCF81C218F298800861D26 /* MySearchBar.m */,
+				3E635FC0219289C4006FC152 /* searchV */,
 				3EB08E8C218C353C00849777 /* HomeHeaderView.h */,
 				3EB08E8D218C353C00849777 /* HomeHeaderView.m */,
 				3EB08E94218C575200849777 /* HomeCollection.h */,
@@ -654,8 +721,9 @@
 				3E401A63218F496F00D85448 /* SearchSecionV.h */,
 				3E401A64218F496F00D85448 /* SearchSecionV.m */,
 				3E401A66218F498100D85448 /* SearchSecionV.xib */,
-				3E401A68218F4F1900D85448 /* searchResultV.h */,
-				3E401A69218F4F1900D85448 /* searchResultV.m */,
+				3E8AEDA121927B0F007CF326 /* homeFooterRefresh.h */,
+				3E8AEDA221927B0F007CF326 /* homeFooterRefresh.m */,
+				3E8AEDA321927B0F007CF326 /* homeFooterRefresh.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -687,6 +755,7 @@
 		3ECB361F218AB1360008A109 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3E8AEDA621927EE6007CF326 /* cache */,
 				3EB08EB3218C853100849777 /* ScanQR */,
 				3EB08E8B218C352A00849777 /* View */,
 				3ECB3622218AC0DD0008A109 /* controller */,
@@ -873,6 +942,7 @@
 			files = (
 				04B1B1342194200E00EEB51E /* MakeProblemPopView.xib in Resources */,
 				045B11D321912198001FC325 /* ChapterMainCVCell.xib in Resources */,
+				3E635FC521928A0A006FC152 /* SearchResultH.xib in Resources */,
 				045B11ED219138E1001FC325 /* ChapterScoreHeadCVCell.xib in Resources */,
 				3EA283482186EE1200B2D716 /* forgetpassview.xib in Resources */,
 				04AC33F52192B1EA00307E70 /* MakeProblemCommitCVCell.xib in Resources */,
@@ -881,7 +951,9 @@
 				3EB08ECA218C922B00849777 /* QRcomfimViewController.xib in Resources */,
 				04AC33FD2192E1AC00307E70 /* MakeProblemSceneCVCell.xib in Resources */,
 				045B11F8219167AF001FC325 /* MakeProblemTopicCVCell.xib in Resources */,
+				3E8AEDA521927B0F007CF326 /* homeFooterRefresh.xib in Resources */,
 				045B11BD21912184001FC325 /* StudyTimeCVCell.xib in Resources */,
+				3E635FBA219282CD006FC152 /* AlertStringView.strings in Resources */,
 				3E401A67218F498100D85448 /* SearchSecionV.xib in Resources */,
 				045B11E82191354D001FC325 /* ChapterScoreCVCell.xib in Resources */,
 				04B1B14221945B2700EEB51E /* ConsolidateMainHeadCVCell.xib in Resources */,
@@ -897,6 +969,7 @@
 				04AC33E62192736200307E70 /* MakeProlemAnswerCRView.xib in Resources */,
 				3EA283432186E1BF00B2D716 /* cellphone_loginview.xib in Resources */,
 				3E83D2D3217E133F00E78B1C /* loginview.xib in Resources */,
+				3E635FBB219282CD006FC152 /* AlertStringView.xib in Resources */,
 				3E3AEFC1217DFDA8006C2860 /* Main.storyboard in Resources */,
 				045B11FD21916B2B001FC325 /* MakeProblemOptionCVCell.xib in Resources */,
 				04AC33F021928D7500307E70 /* MakeProblemCommitCRView.xib in Resources */,
@@ -959,6 +1032,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TezButton/TezButton.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -976,6 +1050,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TezButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1007,17 +1082,19 @@
 				3EB08E9F218C5BDC00849777 /* HomecourseCell.m in Sources */,
 				04AC33E52192736200307E70 /* MakeProlemAnswerCRView.m in Sources */,
 				045B11D421912198001FC325 /* ChapterMainCollection.m in Sources */,
-				3E401A6A218F4F1900D85448 /* searchResultV.m in Sources */,
 				3EB08EC9218C922B00849777 /* QRcomfimViewController.m in Sources */,
 				3EB08EB1218C76ED00849777 /* homeheaderCR2.m in Sources */,
 				045B11F3219166C4001FC325 /* MakeProblemMainVC.m in Sources */,
+				3E635FBC219282CD006FC152 /* AbbAlertView.m in Sources */,
 				045B11BE21912184001FC325 /* StudyTimeCVCell.m in Sources */,
 				04AC33EF21928D7500307E70 /* MakeProblemCommitCRView.m in Sources */,
 				3E83D2CB217E128100E78B1C /* BaseViewController.m in Sources */,
 				045B11F7219167AF001FC325 /* MakeProblemTopicCVCell.m in Sources */,
 				3E401A65218F496F00D85448 /* SearchSecionV.m in Sources */,
+				3E635FCC21929377006FC152 /* MainCollectionFowLayout.m in Sources */,
 				3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */,
 				3E83D2D1217E132900E78B1C /* loginview.m in Sources */,
+				3E8AEDA421927B0F007CF326 /* homeFooterRefresh.m in Sources */,
 				045B11D121912198001FC325 /* ChapterVC.m in Sources */,
 				3EDCF824218F428900861D26 /* SearchhotAndhisV.m in Sources */,
 				04B1B13221941D2F00EEB51E /* MakeProblemPopView.m in Sources */,
@@ -1031,6 +1108,8 @@
 				04B1B137219458E900EEB51E /* MakeProblemQuestionCardVC.m in Sources */,
 				04AC33FC2192E1AC00307E70 /* MakeProblemSceneCVCell.m in Sources */,
 				3ECB3627218AC1070008A109 /* HomeViewController.m in Sources */,
+				3E635FC821928E81006FC152 /* searchresultCV.m in Sources */,
+				3E635FC421928A0A006FC152 /* SearchResultH.m in Sources */,
 				3E3AEFC9217DFDA9006C2860 /* main.m in Sources */,
 				3E401A62218F433500D85448 /* UIView+PYSearchExtension.m in Sources */,
 				04B1B12F2193DD6D00EEB51E /* SimulateExameMainCollection.m in Sources */,
@@ -1046,6 +1125,7 @@
 				3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */,
 				045B11D221912198001FC325 /* ChapterCVCell.m in Sources */,
 				3E83D2C1217E019200E78B1C /* MyNav.m in Sources */,
+				3E635FB421928061006FC152 /* Searchkey.m in Sources */,
 				3EB08EA4218C5EC000849777 /* HomenewsCell.m in Sources */,
 				3E79DE642186B55700CD8AFC /* registerView.m in Sources */,
 				045B11D521912198001FC325 /* ChapterMainCVCell.m in Sources */,

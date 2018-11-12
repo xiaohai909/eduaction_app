@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="homeFooterRefresh">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khJ-Pk-kgo">
+                    <rect key="frame" x="128" y="11" width="64" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="5LI-wh-ZBs"/>
+                        <constraint firstAttribute="width" constant="64" id="pJN-Kd-pKh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="换一批">
+                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="khJ-Pk-kgo" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="TP5-5T-ltq"/>
+                <constraint firstItem="khJ-Pk-kgo" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="qbi-ht-g12"/>
+            </constraints>
+            <connections>
+                <outlet property="changebtn" destination="khJ-Pk-kgo" id="Nna-Xz-gKA"/>
+            </connections>
+            <point key="canvasLocation" x="19" y="115"/>
+        </collectionReusableView>
+    </objects>
+</document>
