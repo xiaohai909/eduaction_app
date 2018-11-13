@@ -32,7 +32,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+   
     
     [self.navigationController.navigationBar setTitleTextAttributes:
      
@@ -71,17 +71,19 @@
     self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:back];
     self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:album];
 
+    @weakify(self);
     [[back rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
         [self.navigationController popViewControllerAnimated:YES];
     }];
     [[album rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-       
-      
+
+
     }];
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
-    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     if (isStop) {
         
         [[GWScanCodeManager sharedScanQR] GWStartRunning];
@@ -123,6 +125,9 @@
     [self.scanQr removeTimer];
     [[GWScanCodeManager sharedScanQR]GWStopRunning];
     [GWScanCodeManager sharedScanQR].delegate = nil;
+    
+}
+-(void)dealloc{
     
 }
 /*

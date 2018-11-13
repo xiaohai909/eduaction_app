@@ -28,13 +28,10 @@
     
     self.title = @"扫描二维码登录";
     
-    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
-    [back setImage:[UIImage imageNamed:@"top_btn_return"] forState:UIControlStateNormal];
-    self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:back];
+  
+    [self setnav_BackBtn];
     
-    [[back rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
+   
     
     [self.confimrBtn setBackgroundImage:[CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:self.confimrBtn.frame gradientDir:leftToright] forState:UIControlStateNormal];
     

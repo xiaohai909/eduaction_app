@@ -29,28 +29,42 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+   
+    //[self.tabBarController.navigationController setNavigationBarHidden:YES animated:NO];
+   
 }
-
+-(void)viewWillLayoutSubviews{
+    
+    [super viewWillLayoutSubviews];
+}
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [self.tabBarController.navigationController setNavigationBarHidden:YES animated:NO];
+   
+}
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden = NO;
+
 }
 
 #pragma --- view creat
 - (StudyCollection *)collection_main {
     if (!_collection_main) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.minimumLineSpacing = 0.5;
-        layout.minimumInteritemSpacing = 0.5;
-        
+        layout.minimumLineSpacing = 0;
+        layout.minimumInteritemSpacing = 0;
+        layout.sectionInset = UIEdgeInsetsZero;
         
         //@[@"章节练习",@"模拟考试",@"历年真题",@"随机练习",@"错题练习",@"巩固练习",@"考试大纲",@"试题查找",@"排行榜"];
         _collection_main = [[StudyCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth, ZTHeight-TabIPHONEX} collectionViewLayout:layout];
         _collection_main.backgroundColor = [UIColor whiteColor];
+        _collection_main.showsVerticalScrollIndicator =NO;
         
-        _collection_main.bounces = NO;
-        
+//        _collection_main.bounces = NO;
+        XFAdjustsScrollViewInsets(_collection_main);
         //跳转动作
         @weakify(self)
         [_collection_main setBlockGoOn:^(NSString * _Nonnull title) {

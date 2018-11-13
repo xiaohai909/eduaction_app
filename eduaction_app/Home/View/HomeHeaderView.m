@@ -32,6 +32,7 @@
     if ([super initWithFrame:frame]) {
         
         
+        _ClickHeader_btn = [RACSubject subject];
         
         [self setSCview];
         [self setup_secbg];
@@ -104,6 +105,11 @@
                 make.size.mas_equalTo(CGSizeMake(btnwidth, btnwidth));
                 make.left.mas_equalTo(leftspace+(btn_bwt_spcae+btnwidth)*j);
                 make.top.mas_equalTo(topspace+(btnwidth+titlespcae+centerspcae+btn_title_height)*i);
+                
+            }];
+            [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+                
+                [_ClickHeader_btn sendNext:@(btn.tag)];
                 
             }];
             UILabel *lab = [[UILabel alloc]init];
