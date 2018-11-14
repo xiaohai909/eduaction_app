@@ -103,8 +103,8 @@
         
         _mySearchBar.delegate = self;
         _mySearchBar.Mydelaget=self;
-
-        _mySearchBar.backgroundColor =HexRGB(0xFF6B6B);
+        _mySearchBar.backgroundImage = [CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:CGRectMake(0, 0, ZTWidth, NaviIPHONEX) gradientDir:leftToright];
+//        _mySearchBar.backgroundColor =HexRGB(0xFF6B6B);
         _mySearchBar.isKindSearch=YES;
         
         
@@ -113,18 +113,18 @@
         
         
         
-        for (UIView *view in _mySearchBar.subviews) {
-            // for before iOS7.0
-            if ([view isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
-                [view removeFromSuperview];
-                break;
-            }
-            // for later iOS7.0(include)
-            if ([view isKindOfClass:NSClassFromString(@"UIView")] && view.subviews.count > 0) {
-                [[view.subviews objectAtIndex:0] removeFromSuperview];
-                break;
-            }
-        }
+//        for (UIView *view in _mySearchBar.subviews) {
+//            // for before iOS7.0
+//            if ([view isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
+//                [view removeFromSuperview];
+//                break;
+//            }
+//            // for later iOS7.0(include)
+//            if ([view isKindOfClass:NSClassFromString(@"UIView")] && view.subviews.count > 0) {
+//                [[view.subviews objectAtIndex:0] removeFromSuperview];
+//                break;
+//            }
+//        }
         
     }
     return _mySearchBar;

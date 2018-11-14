@@ -1,33 +1,33 @@
 //
-//  MineViewController.m
+//  trainViewController.m
 //  eduaction_app
 //
-//  Created by legendlxd on 2018/11/1.
+//  Created by legendlxd on 2018/11/7.
 //  Copyright © 2018年 diandang. All rights reserved.
 //
 
-#import "MineViewController.h"
+#import "trainViewController.h"
 
-@interface MineViewController ()
+@interface trainViewController ()
 
 @end
 
-@implementation MineViewController
+@implementation trainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    [self setnav_BackBtn];
+  
+    
     // Do any additional setup after loading the view.
 }
--(void)viewDidAppear:(BOOL)animated{
-     [self.navigationController setNavigationBarHidden:YES animated:NO];
-}
-- (void)viewWillAppear:(BOOL)animated {
- 
+-(void)viewWillAppear:(BOOL)animated{
     
-    //[self.navigationController setNavigationBarHidden:YES animated:NO];
-    
-    self.tabBarController.navigationItem.rightBarButtonItem =nil;
-    self.tabBarController.navigationItem.titleView = nil;
+   
+    [super viewWillAppear:animated];
+    [self setnavbg_defa];
 }
 /*
 #pragma mark - Navigation

@@ -75,6 +75,7 @@
 		04BBFB8D219AB34C0088196E /* ConsolidateProblemCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBFB8B219AB34C0088196E /* ConsolidateProblemCVCell.xib */; };
 		04BBFB93219AB5200088196E /* MyCollectionMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB92219AB5200088196E /* MyCollectionMainCollection.m */; };
 		3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E21BBAC21874FE70041CF70 /* LoginViewMode.m */; };
+		3E32D0B7219910F300E45154 /* trainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E32D0B6219910F300E45154 /* trainViewController.m */; };
 		3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBA217DFDA8006C2860 /* AppDelegate.m */; };
 		3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBD217DFDA8006C2860 /* ViewController.m */; };
 		3E3AEFC1217DFDA8006C2860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBF217DFDA8006C2860 /* Main.storyboard */; };
@@ -272,6 +273,8 @@
 		04BBFB92219AB5200088196E /* MyCollectionMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionMainCollection.m; sourceTree = "<group>"; };
 		3E21BBAB21874FE70041CF70 /* LoginViewMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewMode.h; sourceTree = "<group>"; };
 		3E21BBAC21874FE70041CF70 /* LoginViewMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewMode.m; sourceTree = "<group>"; };
+		3E32D0B5219910F300E45154 /* trainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trainViewController.h; sourceTree = "<group>"; };
+		3E32D0B6219910F300E45154 /* trainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trainViewController.m; sourceTree = "<group>"; };
 		3E3AEFB6217DFDA8006C2860 /* eduaction_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eduaction_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3AEFB9217DFDA8006C2860 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E3AEFBA217DFDA8006C2860 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -645,6 +648,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3E32D0B4219910F300E45154 /* trainVc */ = {
+			isa = PBXGroup;
+			children = (
+				3E32D0B5219910F300E45154 /* trainViewController.h */,
+				3E32D0B6219910F300E45154 /* trainViewController.m */,
+			);
+			path = trainVc;
+			sourceTree = "<group>";
+		};
 		3E3AEFAD217DFDA8006C2860 = {
 			isa = PBXGroup;
 			children = (
@@ -910,6 +922,7 @@
 		3ECB3622218AC0DD0008A109 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				3E32D0B4219910F300E45154 /* trainVc */,
 				3ECB3625218AC1070008A109 /* HomeViewController.h */,
 				3ECB3626218AC1070008A109 /* HomeViewController.m */,
 				3EB08EC3218C85E000849777 /* ScanQRViewController.h */,
@@ -1247,6 +1260,7 @@
 				3E635FC821928E81006FC152 /* searchresultCV.m in Sources */,
 				3E635FC421928A0A006FC152 /* SearchResultH.m in Sources */,
 				3E3AEFC9217DFDA9006C2860 /* main.m in Sources */,
+				3E32D0B7219910F300E45154 /* trainViewController.m in Sources */,
 				3E401A62218F433500D85448 /* UIView+PYSearchExtension.m in Sources */,
 				04B1B12F2193DD6D00EEB51E /* SimulateExameMainCollection.m in Sources */,
 				04BBFB8C219AB34C0088196E /* ConsolidateProblemCVCell.m in Sources */,

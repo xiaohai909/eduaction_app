@@ -11,6 +11,7 @@
 #import "HomeCollection.h"
 #import "ScanQRViewController.h"
 #import "SearchViewController.h"
+#import "trainViewController.h"
 @interface HomeViewController ()
 @property(strong,nonatomic)UIButton *rightBtn;
 @property(strong,nonatomic)UIButton *searchBtn;
@@ -22,15 +23,17 @@
     if (!_homeCollectionV) {
         UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
         
-        _homeCollectionV = [[HomeCollection alloc]initWithFrame:CGRectMake(0, NaviIPHONEX, ZTWidth, ZTHeight-NaviIPHONEX-TabIPHONEX) collectionViewLayout:layout];
-        _homeCollectionV.backgroundColor = [UIColor clearColor];
+        _homeCollectionV = [[HomeCollection alloc]initWithFrame:CGRectMake(0, 0, ZTWidth, ZTHeight-NaviIPHONEX-TabIPHONEX) collectionViewLayout:layout];
+        _homeCollectionV.backgroundColor =  HexRGB(0xF1F0F0);
+   
+        //XFAdjustsScrollViewInsets(_homeCollectionV);
     }
     return _homeCollectionV;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = HexRGB(0xF1F0F0);
+ 
     
     self.rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.rightBtn setImage:[UIImage imageNamed:@"index_btn_scan"] forState:UIControlStateNormal];
@@ -62,7 +65,13 @@
     
     
     HomeHeaderView *header = [[HomeHeaderView alloc]initWithFrame:CGRectMake(0, -(ZTWidth*0.4+bgheight+104), ZTWidth, ZTWidth*0.4+bgheight+104)];
-    
+    @weakify(self);
+    [header.ClickHeader_btn subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        DDLogVerbose(@"点击首页按钮%@",x);
+        [self headerjump:x];
+       
+    }];
     [self.view addSubview:self.homeCollectionV];
     self.homeCollectionV.contentInset = UIEdgeInsetsMake(ZTWidth*0.4+bgheight+104, 0, 0, 0);
     [self.homeCollectionV addSubview:header];
@@ -72,10 +81,68 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     
-    [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+    //[self.navigationController.navigationBar setBackgroundImage:[CommonFunciton createImageWithColor:HexRGB(0xFFFFFF)] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[CommonFunciton createImageWithColor:HexRGB(0xFFFFFF)] forBarMetrics:UIBarMetricsDefault];
     self.tabBarController.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
+    
     self.tabBarController.navigationItem.titleView = self.searchBtn;
-    self.tabBarController.navigationController.navigationBarHidden = NO;
+    
+}
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+-(void)headerjump:(id)x{
+    
+    switch ([x integerValue]) {
+#pragma mark 跳转到培训界面
+        case 1:
+        {
+            trainViewController *cont = [[trainViewController alloc]init];
+            [self.navigationController pushViewController:cont animated:YES];
+            
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            
+        }
+            break;
+        case 4:
+        {
+            
+        }
+            break;
+        case 5:
+        {
+            
+        }
+            break;
+        case 6:
+        {
+            
+        }
+            break;
+        case 7:
+        {
+            
+        }
+            break;
+        case 8:
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
 }
 /*
 #pragma mark - Navigation

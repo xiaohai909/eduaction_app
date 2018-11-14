@@ -18,7 +18,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeHeaderView : UIView<ImagePlayerViewDelegate>
-
+@property(nonatomic,strong)RACSubject *ClickHeader_btn;
 @end
 
 NS_ASSUME_NONNULL_END

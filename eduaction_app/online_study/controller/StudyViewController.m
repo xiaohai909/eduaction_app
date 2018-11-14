@@ -35,7 +35,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden = NO;
+
 }
 
 #pragma --- view creat
@@ -49,9 +49,10 @@
         //@[@"章节练习",@"模拟考试",@"历年真题",@"随机练习",@"错题练习",@"巩固练习",@"考试大纲",@"试题查找",@"排行榜"];
         _collection_main = [[StudyCollection alloc] initWithFrame:(CGRect){0, UI_IS_IPHONE_X?0:-20, ZTWidth, UI_IS_IPHONE_X?ZTHeight-TabIPHONEX:ZTHeight-TabIPHONEX+20} collectionViewLayout:layout];
         _collection_main.backgroundColor = [UIColor whiteColor];
+        _collection_main.showsVerticalScrollIndicator =NO;
         
-        _collection_main.bounces = YES;
-        
+//        _collection_main.bounces = NO;
+        XFAdjustsScrollViewInsets(_collection_main);
         //跳转动作
         @weakify(self)
         [_collection_main setBlockGoOn:^(NSString * _Nonnull title) {

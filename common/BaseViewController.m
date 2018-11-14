@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 
+
 @interface BaseViewController ()
 
 @end
@@ -18,7 +19,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    //self.automaticallyAdjustsScrollViewInsets = NO;
     // Do any additional setup after loading the view.
     if (self.navigationController.viewControllers.count>1 && self.navigationItem.leftBarButtonItem==nil) {
         [self createNavigationLeftItem:YES andImage:@"top_btn_return" andTitle:@"   "];
@@ -27,6 +28,16 @@
 -(void)setnavbg_defa{
     
      [self.navigationController.navigationBar setBackgroundImage:[CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:CGRectMake(0, 0, ZTWidth, NaviIPHONEX) gradientDir:leftToright] forBarMetrics:UIBarMetricsDefault];
+}
+-(void)setnav_BackBtn{
+    
+    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
+    back.frame=CGRectMake(0, 0, 44,NaviIPHONEX);
+    [back setImage:[UIImage imageNamed:@"top_btn_return"] forState:UIControlStateNormal];
+    [[back rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:back];
 }
 - (UIButton *)createNavigationLeftItem:(BOOL)isLeft andImage:(NSString * )imageName andTitle:(NSString * )title
 {
