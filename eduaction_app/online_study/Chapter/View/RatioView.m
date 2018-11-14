@@ -83,7 +83,7 @@
         ratioNumber = [numbers[i] floatValue]*100;
         
         CAShapeLayer *layer = [CAShapeLayer layer];
-        layer.frame = (CGRect){0,0,self.py_width-10-i*2,self.py_width-10-i*2};
+        layer.frame = (CGRect){0,0,self.py_width-i*2,self.py_width-i*2};
         radius = layer.frame.size.width/2.0;
         
         UIBezierPath *path = [UIBezierPath bezierPath];
@@ -103,6 +103,7 @@
     }
 }
 
+#pragma mark --- creat
 - (void)creatLineLayer:(CGRect)frame
 {
     layer_line = [CAShapeLayer layer];

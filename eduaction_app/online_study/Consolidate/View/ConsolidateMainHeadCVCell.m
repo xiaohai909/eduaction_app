@@ -13,9 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    if (UI_IS_IPHONE_X) {
-        self.btn_back_top.constant = 44;
-    }
+    self.btn_back_top.constant = UI_IS_IPHONE_X?44:20;
     [self.view_ratio creatColorfulRatioViewWithNumbers:@[@(0.5),@(0.3),@(0.2)]];
 }
 @end

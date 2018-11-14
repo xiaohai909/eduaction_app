@@ -63,7 +63,7 @@ lbl</string>
                             <constraint firstItem="gtQ-lu-upa" firstAttribute="leading" secondItem="mgy-qt-ELf" secondAttribute="leading" constant="20" id="vm2-45-Zw9"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8V8-KO-uGX">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index_ico_head" translatesAutoresizingMaskIntoConstraints="NO" id="8V8-KO-uGX">
                         <rect key="frame" x="30" y="51" width="53" height="53"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="53" id="MlB-fq-cOd"/>
@@ -71,12 +71,12 @@ lbl</string>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8B-Z5-jXW">
-                        <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="8Km-fS-BgB"/>
-                            <constraint firstAttribute="width" constant="80" id="x9Q-yI-yeR"/>
+                            <constraint firstAttribute="width" constant="70" id="x9Q-yI-yeR"/>
                         </constraints>
-                        <state key="normal" title="back"/>
+                        <state key="normal" title="     " image="top_btn_return"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成绩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15S-dF-SYz">
                         <rect key="frame" x="169" y="11.5" width="37" height="21"/>
@@ -120,5 +120,7 @@ lbl</string>
     </objects>
     <resources>
         <image name="grade_ico_dialogue" width="240" height="62"/>
+        <image name="index_ico_head" width="64" height="64"/>
+        <image name="top_btn_return" width="12" height="21"/>
     </resources>
 </document>

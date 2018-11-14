@@ -31,12 +31,12 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-ES-usZ">
-                        <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="fCx-uD-uS0"/>
-                            <constraint firstAttribute="width" constant="80" id="fmv-Ua-5Ed"/>
+                            <constraint firstAttribute="width" constant="70" id="fmv-Ua-5Ed"/>
                         </constraints>
-                        <state key="normal" title="back"/>
+                        <state key="normal" title="     " image="top_btn_return"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="巩固练习" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEU-1y-vle">
                         <rect key="frame" x="151" y="11.5" width="73.5" height="21"/>
@@ -121,5 +121,6 @@
         <image name="consolidate_ico_answer" width="15" height="15"/>
         <image name="consolidate_ico_not answered" width="12" height="12"/>
         <image name="consolidate_ico_wrong answer" width="12" height="12"/>
+        <image name="top_btn_return" width="12" height="21"/>
     </resources>
 </document>

@@ -21,8 +21,9 @@ typedef NS_ENUM(NSUInteger, MakeProblemToolType) {
 
 @interface MakeProblemToolView : UIView
 @property (nonatomic, assign) MakeProblemToolType toolType;
-- (void)creatToolViewWithType:(MakeProblemToolType)type;//按照类型创建
 @property (nonatomic, copy) void (^blockGoOn)(UIButton *btn);
+
+- (void)creatToolViewWithType:(MakeProblemToolType)type;//按照类型创建
 @end
 
 NS_ASSUME_NONNULL_END

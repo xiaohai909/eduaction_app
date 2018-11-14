@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MakeProblemQuestionCardVC : BaseViewController
-
+@property (nonatomic, strong) NSMutableArray *array_models;//数据
+@property (nonatomic, copy) void (^blockGoOn)(NSIndexPath *indexPath);
 @end
 
 NS_ASSUME_NONNULL_END

@@ -12,6 +12,7 @@
 
 #import "MakeProblemPopView.h"
 #import "ChapterScoreVC.h"
+#import "MakeProblemQuestionCardVC.h"
 
 @interface MakeProblemMainVC ()
 @property (nonatomic, strong) MakeProblemSceneCollection *collection_main;
@@ -31,16 +32,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_red"] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBarHidden = NO;
-    
-    //键盘的
-    [[IQKeyboardManager sharedManager] setEnable:NO];
+    self.title = @"随机练习";
 }
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [[IQKeyboardManager sharedManager] setEnable:YES];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self createNavigationLeftItem:YES andImage:@"top_btn_return" andTitle:@"   "];
+    UIButton *btn = [self createNavigationLeftItem:NO andImage:@"" andTitle:@"题卡"];
+    [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        MakeProblemQuestionCardVC *vc = [MakeProblemQuestionCardVC new];
+        [vc setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
+            self.collection_main.currentPage = @(indexPath.row);
+//            [self viewBottomChange:indexPath.row];
+            [self.collection_main selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionLeft];
+        }];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    [self.navigationController.navigationBar setBackgroundImage:[CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:CGRectMake(0, 0, ZTWidth, NaviIPHONEX) gradientDir:leftToright] forBarMetrics:UIBarMetricsDefault];
 }
+
 #pragma mark --- 从外部带回来的参数
 - (void)setMode:(MakeProblemMainMode)mode {
     self.viewMode = mode;
@@ -88,7 +97,7 @@
         layout.minimumInteritemSpacing = 0.5;
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
-        _collection_main = [[MakeProblemSceneCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth,ZTHeight-NaviIPHONEX} collectionViewLayout:layout andType:[self getSceneCollectionMode]];
+        _collection_main = [[MakeProblemSceneCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth,ZTHeight-NaviIPHONEX-self.view_bottom.py_height} collectionViewLayout:layout andType:[self getSceneCollectionMode]];
         //错题练习随机练习都是答题模式，是不是背题就得看浏览模式还是答题模式
         _collection_main.showsHorizontalScrollIndicator = NO;
         _collection_main.pagingEnabled = YES;

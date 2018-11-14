@@ -23,7 +23,7 @@
                         <rect key="frame" x="6" y="6" width="363" height="159"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9q0-B7-p6q">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index_ico_head" translatesAutoresizingMaskIntoConstraints="NO" id="9q0-B7-p6q">
                         <rect key="frame" x="18" y="15" width="63" height="63"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="63" id="HPk-NF-8ac"/>
@@ -122,6 +122,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="index_ico_head" width="64" height="64"/>
         <image name="online_ico_continue studying" width="77.5" height="32"/>
         <image name="online_ico_recharge" width="61" height="23"/>
         <image name="online_ico_recording" width="14" height="14"/>

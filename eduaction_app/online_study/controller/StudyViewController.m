@@ -13,6 +13,7 @@
 #import "SimulateExameMainVC.h"
 #import "MakeProblemMainVC.h"
 #import "ConsolidateMainVC.h"
+#import "RechargeMainVC.h"
 
 @interface StudyViewController ()
 @property (nonatomic, strong) StudyCollection *collection_main;
@@ -46,17 +47,17 @@
         
         
         //@[@"章节练习",@"模拟考试",@"历年真题",@"随机练习",@"错题练习",@"巩固练习",@"考试大纲",@"试题查找",@"排行榜"];
-        _collection_main = [[StudyCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth, ZTHeight-TabIPHONEX} collectionViewLayout:layout];
+        _collection_main = [[StudyCollection alloc] initWithFrame:(CGRect){0, UI_IS_IPHONE_X?0:-20, ZTWidth, UI_IS_IPHONE_X?ZTHeight-TabIPHONEX:ZTHeight-TabIPHONEX+20} collectionViewLayout:layout];
         _collection_main.backgroundColor = [UIColor whiteColor];
         
-        _collection_main.bounces = NO;
+        _collection_main.bounces = YES;
         
         //跳转动作
         @weakify(self)
         [_collection_main setBlockGoOn:^(NSString * _Nonnull title) {
             @strongify(self)
             if ([title isEqualToString:@"充值"]) {
-                
+                [self.navigationController pushViewController:[RechargeMainVC new] animated:YES];
             }
             else if ([title isEqualToString:@"继续学习"]){
                 //根据原来练习的章节继续学习

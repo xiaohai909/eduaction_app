@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_red"] forBarMetrics:UIBarMetricsDefault];
+    [self setnavbg_defa];
     self.title = @"章节列表";
     
     [self.view addSubview:self.collection_main];

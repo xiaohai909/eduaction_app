@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseViewController : UIViewController
 -(void)setnavbg_defa;
+- (UIButton *)createNavigationLeftItem:(BOOL)isLeft andImage:(NSString *)imageName andTitle:(NSString *)title;
 @end
 
 NS_ASSUME_NONNULL_END

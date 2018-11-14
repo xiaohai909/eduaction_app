@@ -10,6 +10,9 @@
 #import "ChapterScoreCollection.h"
 
 #import "MakeProblemMainVC.h"
+#import "ConsolidateMyWrongMainVC.h"
+#import "MyCollectionMainVC.h"
+#import "ConsolidateMyNoteVC.h"
 
 @interface ChapterScoreVC ()
 @property (nonatomic, strong) ChapterScoreCollection *collection_main;
@@ -21,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_red"] forBarMetrics:UIBarMetricsDefault];
+    [self setnavbg_defa];
     self.title = @"成绩";
     
     [self.view addSubview:self.collection_main];
@@ -43,8 +46,10 @@
         layout.minimumLineSpacing = 0.5;
         layout.minimumInteritemSpacing = 0.5;
         
-        _collection_main = [[ChapterScoreCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth,UI_IS_IPHONE_X?(274+100*2+10):(230+100*2+10)} collectionViewLayout:layout];
+        _collection_main = [[ChapterScoreCollection alloc] initWithFrame:(CGRect){0,UI_IS_IPHONE_X?0:-20, ZTWidth,UI_IS_IPHONE_X?(274+100*2+10):(230+100*2+10+20)} collectionViewLayout:layout];
         _collection_main.backgroundColor = HexRGB(0xF1F0F0);
+        
+        _collection_main.scrollEnabled = NO;
         
         @weakify(self)
         [_collection_main setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
@@ -55,18 +60,19 @@
             else{
                 //跳转到,@"本章错题",@"本章收藏",@"本章笔记",@"试错解析"
                 if (indexPath.row == 0) {
+                    [self.navigationController pushViewController:[ConsolidateMyWrongMainVC new] animated:YES];
+                }
+                else if (indexPath.row == 1) {
+                    [self.navigationController pushViewController:[MyCollectionMainVC new] animated:YES];
+
+                }
+                else if (indexPath.row == 2) {
+                    [self.navigationController pushViewController:[ConsolidateMyNoteVC new] animated:YES];
+                }
+                else {
                     MakeProblemMainVC *vc = [MakeProblemMainVC new];
                     [vc setMode:MakeProblemMainModeErrorPractice];//MakeProblemMainModeSimulateExam,MakeProblemMainModeErrorPractice,MakeProblemMainModeRandomPractice,
                     [self.navigationController pushViewController:vc animated:YES];
-                }
-                else if (indexPath.row == 1) {
-                    
-                }
-                else if (indexPath.row == 2) {
-                
-                }
-                else {
-                    
                 }
             }
         }];
