@@ -14,6 +14,10 @@
 #import "MakeProblemMainVC.h"
 #import "ConsolidateMainVC.h"
 #import "RechargeMainVC.h"
+#import "SyllabusMainVC.h"
+#import "SQSearchView.h"
+#import "SearchQuestionMainVC.h"
+#import "ConsolidateMyWrongMainVC.h"
 
 @interface StudyViewController ()
 @property (nonatomic, strong) StudyCollection *collection_main;
@@ -26,11 +30,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.collection_main];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+    self.tabBarController.navigationItem.rightBarButtonItem =nil;
+    self.tabBarController.navigationItem.titleView = nil;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -82,17 +89,17 @@
             }
             else if ([title isEqualToString:@"错题练习"]) {
                 //先到错题列表
+                [self.navigationController pushViewController:[ConsolidateMyWrongMainVC new] animated:YES];
             }
             else if ([title isEqualToString:@"巩固练习"]) {
                 //先到知识点分类界面
                 [self.navigationController pushViewController:[ConsolidateMainVC new] animated:YES];
-
             }
-            else if ([title isEqualToString:@"考试大纲"]) {
-                
+            else if ([title isEqualToString:@"考试大纲"]) {                
+                [self.navigationController pushViewController:[SyllabusMainVC new] animated:YES];
             }
             else if ([title isEqualToString:@"试题查找"]) {
-                
+                [self.navigationController pushViewController:[SearchQuestionMainVC new] animated:YES];
             }
             else if ([title isEqualToString:@"排行榜"]) {
                 

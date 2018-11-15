@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lbl_content_left;
 
 - (void)setCollectionModify:(BOOL)modify andTitle:(NSString *)title;
+- (void)setSyllabusMainTitle:(NSString *)title;
 @end
 
 NS_ASSUME_NONNULL_END

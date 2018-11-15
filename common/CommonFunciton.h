@@ -39,4 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hideViewInWindowView:(UIView *)view;
 @end
 
+@interface UIView (Creat_Category)
++(instancetype)instancetypeWithXib;
+@end
+
 NS_ASSUME_NONNULL_END

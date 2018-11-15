@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SyllabusMainCRView" id="U6b-Vx-4bR" customClass="SyllabusMainCRView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWP-Hf-P8m">
+                    <rect key="frame" x="16" y="14" width="12" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="12" id="73Y-dE-81w"/>
+                    </constraints>
+                    <state key="normal" image="outline_ico_down"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年考试大纲" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykz-vi-4Jz">
+                    <rect key="frame" x="36" y="17" width="274" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qch-ep-Eeb">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <connections>
+                        <action selector="btnAction:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="hn6-tl-3C3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ykz-vi-4Jz" firstAttribute="leading" secondItem="sWP-Hf-P8m" secondAttribute="trailing" constant="8" id="0h6-Gk-J8x"/>
+                <constraint firstItem="Qch-ep-Eeb" firstAttribute="centerY" secondItem="9Gg-ye-v9C" secondAttribute="centerY" id="6cZ-A9-LNS"/>
+                <constraint firstItem="Qch-ep-Eeb" firstAttribute="centerX" secondItem="9Gg-ye-v9C" secondAttribute="centerX" id="Dqi-fd-NN6"/>
+                <constraint firstItem="Qch-ep-Eeb" firstAttribute="height" secondItem="U6b-Vx-4bR" secondAttribute="height" id="JzV-2J-USg"/>
+                <constraint firstItem="9Gg-ye-v9C" firstAttribute="trailing" secondItem="ykz-vi-4Jz" secondAttribute="trailing" constant="10" id="LPY-Nd-61R"/>
+                <constraint firstItem="sWP-Hf-P8m" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" constant="16" id="SQx-tS-EX7"/>
+                <constraint firstItem="Qch-ep-Eeb" firstAttribute="width" secondItem="U6b-Vx-4bR" secondAttribute="width" id="YyA-Z2-R0O"/>
+                <constraint firstItem="ykz-vi-4Jz" firstAttribute="centerY" secondItem="sWP-Hf-P8m" secondAttribute="centerY" id="ng4-az-RtA"/>
+                <constraint firstItem="sWP-Hf-P8m" firstAttribute="centerY" secondItem="9Gg-ye-v9C" secondAttribute="centerY" id="oDL-Xd-c4i"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
+            <connections>
+                <outlet property="btn_action" destination="Qch-ep-Eeb" id="fuL-1r-bQB"/>
+                <outlet property="btn_sign" destination="sWP-Hf-P8m" id="qdL-qb-8PV"/>
+                <outlet property="btn_sign_left" destination="SQx-tS-EX7" id="rWc-bB-BLA"/>
+                <outlet property="lbl_content" destination="ykz-vi-4Jz" id="rCK-WV-WHJ"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="outline_ico_down" width="8.5" height="8.5"/>
+    </resources>
+</document>

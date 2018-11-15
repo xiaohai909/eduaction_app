@@ -49,6 +49,23 @@
 		04AC33F82192DEBB00307E70 /* MakeProblemSceneCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC33F72192DEBB00307E70 /* MakeProblemSceneCollection.m */; };
 		04AC33FC2192E1AC00307E70 /* MakeProblemSceneCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC33FA2192E1AC00307E70 /* MakeProblemSceneCVCell.m */; };
 		04AC33FD2192E1AC00307E70 /* MakeProblemSceneCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AC33FB2192E1AC00307E70 /* MakeProblemSceneCVCell.xib */; };
+		04ACCD38219D07F100716953 /* SyllabusMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD37219D07F100716953 /* SyllabusMainVC.m */; };
+		04ACCD3C219D083900716953 /* SyllabusMainCRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD3A219D083900716953 /* SyllabusMainCRView.m */; };
+		04ACCD3D219D083900716953 /* SyllabusMainCRView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ACCD3B219D083900716953 /* SyllabusMainCRView.xib */; };
+		04ACCD40219D0C9B00716953 /* SyllabusMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD3F219D0C9B00716953 /* SyllabusMainCollection.m */; };
+		04ACCD44219D120A00716953 /* SyllabusMainCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD42219D120A00716953 /* SyllabusMainCVCell.m */; };
+		04ACCD45219D120A00716953 /* SyllabusMainCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ACCD43219D120A00716953 /* SyllabusMainCVCell.xib */; };
+		04ACCD48219D424B00716953 /* SyllabusMainPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD47219D424B00716953 /* SyllabusMainPopView.m */; };
+		04ACCD4A219D425B00716953 /* SyllabusMainPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ACCD49219D425B00716953 /* SyllabusMainPopView.xib */; };
+		04ACCD84219D7B0100716953 /* SearchQuestionMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD83219D7B0100716953 /* SearchQuestionMainVC.m */; };
+		04ACCD87219D840600716953 /* SearchQuestionMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD86219D840600716953 /* SearchQuestionMainView.m */; };
+		04ACCD96219D8E4700716953 /* SearchMainCRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD8A219D8E4700716953 /* SearchMainCRView.m */; };
+		04ACCD97219D8E4700716953 /* SearchKeyCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD8B219D8E4700716953 /* SearchKeyCVCell.m */; };
+		04ACCD98219D8E4700716953 /* SQSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD8C219D8E4700716953 /* SQSearchBar.m */; };
+		04ACCD99219D8E4700716953 /* SearchMainCRView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ACCD8D219D8E4700716953 /* SearchMainCRView.xib */; };
+		04ACCD9A219D8E4700716953 /* SearchCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD8E219D8E4700716953 /* SearchCollection.m */; };
+		04ACCD9B219D8E4700716953 /* SearchKeyCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ACCD90219D8E4700716953 /* SearchKeyCVCell.xib */; };
+		04ACCD9C219D8E4700716953 /* SQSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ACCD95219D8E4700716953 /* SQSearchView.m */; };
 		04B1B12C2193DCF700EEB51E /* SimulateExameMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B12B2193DCF700EEB51E /* SimulateExameMainVC.m */; };
 		04B1B12F2193DD6D00EEB51E /* SimulateExameMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B12E2193DD6D00EEB51E /* SimulateExameMainCollection.m */; };
 		04B1B13221941D2F00EEB51E /* MakeProblemPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B13121941D2F00EEB51E /* MakeProblemPopView.m */; };
@@ -225,6 +242,35 @@
 		04AC33F92192E1AC00307E70 /* MakeProblemSceneCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemSceneCVCell.h; sourceTree = "<group>"; };
 		04AC33FA2192E1AC00307E70 /* MakeProblemSceneCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemSceneCVCell.m; sourceTree = "<group>"; };
 		04AC33FB2192E1AC00307E70 /* MakeProblemSceneCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProblemSceneCVCell.xib; sourceTree = "<group>"; };
+		04ACCD36219D07F100716953 /* SyllabusMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyllabusMainVC.h; sourceTree = "<group>"; };
+		04ACCD37219D07F100716953 /* SyllabusMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyllabusMainVC.m; sourceTree = "<group>"; };
+		04ACCD39219D083900716953 /* SyllabusMainCRView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyllabusMainCRView.h; sourceTree = "<group>"; };
+		04ACCD3A219D083900716953 /* SyllabusMainCRView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyllabusMainCRView.m; sourceTree = "<group>"; };
+		04ACCD3B219D083900716953 /* SyllabusMainCRView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SyllabusMainCRView.xib; sourceTree = "<group>"; };
+		04ACCD3E219D0C9B00716953 /* SyllabusMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyllabusMainCollection.h; sourceTree = "<group>"; };
+		04ACCD3F219D0C9B00716953 /* SyllabusMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyllabusMainCollection.m; sourceTree = "<group>"; };
+		04ACCD41219D120A00716953 /* SyllabusMainCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyllabusMainCVCell.h; sourceTree = "<group>"; };
+		04ACCD42219D120A00716953 /* SyllabusMainCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyllabusMainCVCell.m; sourceTree = "<group>"; };
+		04ACCD43219D120A00716953 /* SyllabusMainCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SyllabusMainCVCell.xib; sourceTree = "<group>"; };
+		04ACCD46219D424A00716953 /* SyllabusMainPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyllabusMainPopView.h; sourceTree = "<group>"; };
+		04ACCD47219D424B00716953 /* SyllabusMainPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyllabusMainPopView.m; sourceTree = "<group>"; };
+		04ACCD49219D425B00716953 /* SyllabusMainPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SyllabusMainPopView.xib; sourceTree = "<group>"; };
+		04ACCD82219D7B0100716953 /* SearchQuestionMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchQuestionMainVC.h; sourceTree = "<group>"; };
+		04ACCD83219D7B0100716953 /* SearchQuestionMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchQuestionMainVC.m; sourceTree = "<group>"; };
+		04ACCD85219D840600716953 /* SearchQuestionMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchQuestionMainView.h; sourceTree = "<group>"; };
+		04ACCD86219D840600716953 /* SearchQuestionMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchQuestionMainView.m; sourceTree = "<group>"; };
+		04ACCD8A219D8E4700716953 /* SearchMainCRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchMainCRView.m; sourceTree = "<group>"; };
+		04ACCD8B219D8E4700716953 /* SearchKeyCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchKeyCVCell.m; sourceTree = "<group>"; };
+		04ACCD8C219D8E4700716953 /* SQSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSearchBar.m; sourceTree = "<group>"; };
+		04ACCD8D219D8E4700716953 /* SearchMainCRView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchMainCRView.xib; sourceTree = "<group>"; };
+		04ACCD8E219D8E4700716953 /* SearchCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCollection.m; sourceTree = "<group>"; };
+		04ACCD8F219D8E4700716953 /* SQSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSearchView.h; sourceTree = "<group>"; };
+		04ACCD90219D8E4700716953 /* SearchKeyCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchKeyCVCell.xib; sourceTree = "<group>"; };
+		04ACCD91219D8E4700716953 /* SearchKeyCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchKeyCVCell.h; sourceTree = "<group>"; };
+		04ACCD92219D8E4700716953 /* SearchMainCRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchMainCRView.h; sourceTree = "<group>"; };
+		04ACCD93219D8E4700716953 /* SearchCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCollection.h; sourceTree = "<group>"; };
+		04ACCD94219D8E4700716953 /* SQSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSearchBar.h; sourceTree = "<group>"; };
+		04ACCD95219D8E4700716953 /* SQSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSearchView.m; sourceTree = "<group>"; };
 		04B1B12A2193DCF700EEB51E /* SimulateExameMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulateExameMainVC.h; sourceTree = "<group>"; };
 		04B1B12B2193DCF700EEB51E /* SimulateExameMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulateExameMainVC.m; sourceTree = "<group>"; };
 		04B1B12D2193DD6D00EEB51E /* SimulateExameMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulateExameMainCollection.h; sourceTree = "<group>"; };
@@ -561,6 +607,97 @@
 				04BBFB84219A7D7E0088196E /* RechargeMainBottomView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04ACCD33219D07B700716953 /* Syllabus */ = {
+			isa = PBXGroup;
+			children = (
+				04ACCD34219D07B700716953 /* Controller */,
+				04ACCD35219D07B700716953 /* View */,
+			);
+			path = Syllabus;
+			sourceTree = "<group>";
+		};
+		04ACCD34219D07B700716953 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04ACCD36219D07F100716953 /* SyllabusMainVC.h */,
+				04ACCD37219D07F100716953 /* SyllabusMainVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04ACCD35219D07B700716953 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04ACCD3E219D0C9B00716953 /* SyllabusMainCollection.h */,
+				04ACCD3F219D0C9B00716953 /* SyllabusMainCollection.m */,
+				04ACCD39219D083900716953 /* SyllabusMainCRView.h */,
+				04ACCD3A219D083900716953 /* SyllabusMainCRView.m */,
+				04ACCD3B219D083900716953 /* SyllabusMainCRView.xib */,
+				04ACCD41219D120A00716953 /* SyllabusMainCVCell.h */,
+				04ACCD42219D120A00716953 /* SyllabusMainCVCell.m */,
+				04ACCD43219D120A00716953 /* SyllabusMainCVCell.xib */,
+				04ACCD46219D424A00716953 /* SyllabusMainPopView.h */,
+				04ACCD47219D424B00716953 /* SyllabusMainPopView.m */,
+				04ACCD49219D425B00716953 /* SyllabusMainPopView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04ACCD6A219D7ADB00716953 /* SearchQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				04ACCD88219D8E4700716953 /* Search */,
+				04ACCD6B219D7ADB00716953 /* Controller */,
+				04ACCD7A219D7ADB00716953 /* View */,
+			);
+			path = SearchQuestion;
+			sourceTree = "<group>";
+		};
+		04ACCD6B219D7ADB00716953 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04ACCD82219D7B0100716953 /* SearchQuestionMainVC.h */,
+				04ACCD83219D7B0100716953 /* SearchQuestionMainVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04ACCD7A219D7ADB00716953 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04ACCD85219D840600716953 /* SearchQuestionMainView.h */,
+				04ACCD86219D840600716953 /* SearchQuestionMainView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04ACCD88219D8E4700716953 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				04ACCD89219D8E4700716953 /* Views */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		04ACCD89219D8E4700716953 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04ACCD8A219D8E4700716953 /* SearchMainCRView.m */,
+				04ACCD8B219D8E4700716953 /* SearchKeyCVCell.m */,
+				04ACCD8C219D8E4700716953 /* SQSearchBar.m */,
+				04ACCD8D219D8E4700716953 /* SearchMainCRView.xib */,
+				04ACCD8E219D8E4700716953 /* SearchCollection.m */,
+				04ACCD8F219D8E4700716953 /* SQSearchView.h */,
+				04ACCD90219D8E4700716953 /* SearchKeyCVCell.xib */,
+				04ACCD91219D8E4700716953 /* SearchKeyCVCell.h */,
+				04ACCD92219D8E4700716953 /* SearchMainCRView.h */,
+				04ACCD93219D8E4700716953 /* SearchCollection.h */,
+				04ACCD94219D8E4700716953 /* SQSearchBar.h */,
+				04ACCD95219D8E4700716953 /* SQSearchView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		04B1B1272193DCD700EEB51E /* SimulateExam */ = {
@@ -908,6 +1045,8 @@
 		3ECB3621218AB1360008A109 /* online_study */ = {
 			isa = PBXGroup;
 			children = (
+				04ACCD6A219D7ADB00716953 /* SearchQuestion */,
+				04ACCD33219D07B700716953 /* Syllabus */,
 				0477160321999F6F0051FB83 /* Recharge */,
 				04B1B13821945ABF00EEB51E /* Consolidate */,
 				04B1B1272193DCD700EEB51E /* SimulateExam */,
@@ -1085,17 +1224,21 @@
 				04AC33F52192B1EA00307E70 /* MakeProblemCommitCVCell.xib in Resources */,
 				3EB08EB2218C76ED00849777 /* homeheaderCR2.xib in Resources */,
 				0477160221999B1C0051FB83 /* ConsolidateOptionCVCell.xib in Resources */,
+				04ACCD3D219D083900716953 /* SyllabusMainCRView.xib in Resources */,
 				045B11BF21912184001FC325 /* StudyCVCell.xib in Resources */,
 				3EB08ECA218C922B00849777 /* QRcomfimViewController.xib in Resources */,
 				04AC33FD2192E1AC00307E70 /* MakeProblemSceneCVCell.xib in Resources */,
 				045B11F8219167AF001FC325 /* MakeProblemTopicCVCell.xib in Resources */,
 				3E8AEDA521927B0F007CF326 /* homeFooterRefresh.xib in Resources */,
 				045B11BD21912184001FC325 /* StudyTimeCVCell.xib in Resources */,
+				04ACCD99219D8E4700716953 /* SearchMainCRView.xib in Resources */,
 				3E635FBA219282CD006FC152 /* AlertStringView.strings in Resources */,
 				3E401A67218F498100D85448 /* SearchSecionV.xib in Resources */,
 				045B11E82191354D001FC325 /* ChapterScoreCVCell.xib in Resources */,
 				04B1B14221945B2700EEB51E /* ConsolidateMainHeadCVCell.xib in Resources */,
+				04ACCD45219D120A00716953 /* SyllabusMainCVCell.xib in Resources */,
 				3E3AEFC6217DFDA9006C2860 /* LaunchScreen.storyboard in Resources */,
+				04ACCD4A219D425B00716953 /* SyllabusMainPopView.xib in Resources */,
 				045B11D721912198001FC325 /* ChapterCVCell.xib in Resources */,
 				04AC33EB219287B200307E70 /* MakeProblemAnswerCVCell.xib in Resources */,
 				3EB08EBD218C853100849777 /* SGQRCode.bundle in Resources */,
@@ -1112,6 +1255,7 @@
 				3E3AEFC1217DFDA8006C2860 /* Main.storyboard in Resources */,
 				045B11FD21916B2B001FC325 /* MakeProblemOptionCVCell.xib in Resources */,
 				04AC33F021928D7500307E70 /* MakeProblemCommitCRView.xib in Resources */,
+				04ACCD9B219D8E4700716953 /* SearchKeyCVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1213,6 +1357,7 @@
 				3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */,
 				3EA283462186EE0300B2D716 /* forgetpassview.m in Sources */,
 				3E83D2C4217E01F200E78B1C /* LogManager.m in Sources */,
+				04ACCD3C219D083900716953 /* SyllabusMainCRView.m in Sources */,
 				3ECB361E218AAF0C0008A109 /* MYtabarViewController.m in Sources */,
 				045B11E72191354D001FC325 /* ChapterScoreCVCell.m in Sources */,
 				04B1B12C2193DCF700EEB51E /* SimulateExameMainVC.m in Sources */,
@@ -1255,12 +1400,15 @@
 				04BBFB85219A7D7E0088196E /* RechargeMainBottomView.m in Sources */,
 				04B1B137219458E900EEB51E /* MakeProblemQuestionCardVC.m in Sources */,
 				0477160821999F960051FB83 /* RechargeMainVC.m in Sources */,
+				04ACCD96219D8E4700716953 /* SearchMainCRView.m in Sources */,
+				04ACCD9C219D8E4700716953 /* SQSearchView.m in Sources */,
 				04AC33FC2192E1AC00307E70 /* MakeProblemSceneCVCell.m in Sources */,
 				3ECB3627218AC1070008A109 /* HomeViewController.m in Sources */,
 				3E635FC821928E81006FC152 /* searchresultCV.m in Sources */,
 				3E635FC421928A0A006FC152 /* SearchResultH.m in Sources */,
 				3E3AEFC9217DFDA9006C2860 /* main.m in Sources */,
 				3E32D0B7219910F300E45154 /* trainViewController.m in Sources */,
+				04ACCD97219D8E4700716953 /* SearchKeyCVCell.m in Sources */,
 				3E401A62218F433500D85448 /* UIView+PYSearchExtension.m in Sources */,
 				04B1B12F2193DD6D00EEB51E /* SimulateExameMainCollection.m in Sources */,
 				04BBFB8C219AB34C0088196E /* ConsolidateProblemCVCell.m in Sources */,
@@ -1270,13 +1418,18 @@
 				3EB08EBF218C853100849777 /* GWScanQRvC.m in Sources */,
 				045B120021917081001FC325 /* MakeProblemMainCollection.m in Sources */,
 				3EDCF821218F2ADC00861D26 /* SearchViewController.m in Sources */,
+				04ACCD44219D120A00716953 /* SyllabusMainCVCell.m in Sources */,
+				04ACCD84219D7B0100716953 /* SearchQuestionMainVC.m in Sources */,
 				3E83D2CE217E129300E78B1C /* LoginViewController.m in Sources */,
 				045B11E0219133C0001FC325 /* ChapterScoreVC.m in Sources */,
 				3EB08E8E218C353C00849777 /* HomeHeaderView.m in Sources */,
+				04ACCD40219D0C9B00716953 /* SyllabusMainCollection.m in Sources */,
 				0477160B2199A0140051FB83 /* RechargeMainView.m in Sources */,
 				045B120321917302001FC325 /* MakeProblemToolView.m in Sources */,
 				0477160121999B1C0051FB83 /* ConsolidateOptionCVCell.m in Sources */,
+				04ACCD9A219D8E4700716953 /* SearchCollection.m in Sources */,
 				04B3C078219BBCE80035C995 /* ConsolidateNoteMainCollection.m in Sources */,
+				04ACCD98219D8E4700716953 /* SQSearchBar.m in Sources */,
 				04B3C084219BC2410035C995 /* ConsolidateMyWrongMainCollection.m in Sources */,
 				3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */,
 				04BBFB93219AB5200088196E /* MyCollectionMainCollection.m in Sources */,
@@ -1286,12 +1439,15 @@
 				04B3C07E219BC0180035C995 /* ConsolidateFalibilityMainCollection.m in Sources */,
 				3EB08EA4218C5EC000849777 /* HomenewsCell.m in Sources */,
 				3E79DE642186B55700CD8AFC /* registerView.m in Sources */,
+				04ACCD48219D424B00716953 /* SyllabusMainPopView.m in Sources */,
 				045B11D521912198001FC325 /* ChapterMainCVCell.m in Sources */,
 				04B1B14121945B2700EEB51E /* ConsolidateMainHeadCVCell.m in Sources */,
 				04AC33F42192B1EA00307E70 /* MakeProblemCommitCVCell.m in Sources */,
 				045B11D621912198001FC325 /* RatioView.m in Sources */,
 				3EB08EBC218C853100849777 /* GWScanCodeManager.m in Sources */,
+				04ACCD38219D07F100716953 /* SyllabusMainVC.m in Sources */,
 				045B11DA21912FFF001FC325 /* ChapterListVC.m in Sources */,
+				04ACCD87219D840600716953 /* SearchQuestionMainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,7 +45,7 @@
     if (imageName.length) {
         UIImage *image = [UIImage imageNamed:imageName];
         CGFloat width = [imageName boundingRectWithSize:CGSizeMake(MAXFLOAT, 30) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.width+4;
-        btn.frame = CGRectMake(0, 0, width+20, 30);
+        btn.frame = CGRectMake(0, 0, width, 30);
         btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         [btn setImage:image forState:UIControlStateNormal];
         [btn setTitle:title forState:UIControlStateNormal];

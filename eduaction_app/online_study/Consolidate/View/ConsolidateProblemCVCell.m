@@ -29,4 +29,9 @@
     }
     
 }
+
+- (void)setSyllabusMainTitle:(NSString *)title
+{
+    
+}
 @end
