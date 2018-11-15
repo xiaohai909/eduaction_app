@@ -35,7 +35,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-
+    self.navigationController.navigationBarHidden = NO;
 }
 
 #pragma --- view creat
@@ -52,7 +52,7 @@
         _collection_main.showsVerticalScrollIndicator =NO;
         
 //        _collection_main.bounces = NO;
-        XFAdjustsScrollViewInsets(_collection_main);
+//        XFAdjustsScrollViewInsets(_collection_main);
         //跳转动作
         @weakify(self)
         [_collection_main setBlockGoOn:^(NSString * _Nonnull title) {
