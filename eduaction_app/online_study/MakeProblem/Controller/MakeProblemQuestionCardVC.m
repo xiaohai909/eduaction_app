@@ -9,6 +9,9 @@
 #import "MakeProblemQuestionCardVC.h"
 #import "MakeProblemQuestionCardCVCell.h"
 
+
+#import "MakeProblemMainModel.h"
+
 @interface MakeProblemQuestionCardVC ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) UICollectionView *collection_main;
 @end
@@ -51,7 +54,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 150;//self.array_models.count;
+    return self.array_models.count;
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
@@ -66,25 +69,28 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MakeProblemQuestionCardCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MakeProblemQuestionCardCVCell" forIndexPath:indexPath];
-    //f根据model判断正确与否
-    if (indexPath.row == 2 ||indexPath.row == 9 ||indexPath.row == 12 ||indexPath.row == 13) {
-        [cell setBtnTiltle:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1] andMode:QuestionCardModeWrong];
-    }
-    else if (indexPath.row == 20) {
-        [cell setBtnTiltle:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1] andMode:QuestionCardModeNow];
-    }
-    else if (indexPath.row<20) {
-        [cell setBtnTiltle:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1] andMode:QuestionCardModeRight];
-    }
-    else{
-        [cell setBtnTiltle:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1] andMode:QuestionCardModeNormal];
-    }
+    [cell setBtnTiltle:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1] andMode:[self getCarMode:self.array_models[indexPath.row] andRow:indexPath.row]];
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (self.blockGoOn) {
         self.blockGoOn(indexPath);
         [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (QuestionCardMode)getCarMode:(MakeProblemMainModel *)model andRow:(NSInteger)row
+{
+    if (model.isSelelct) {
+        if (model.selectTrue) {
+            return self.now_row==row?QuestionCardModeNowRight:QuestionCardModeRight;
+        }
+        else{
+            return self.now_row==row?QuestionCardModeNowWrong:QuestionCardModeWrong;
+        }
+    }
+    else{
+        return self.now_row==row?QuestionCardModeNowNormal:QuestionCardModeNormal;
     }
 }
 /*

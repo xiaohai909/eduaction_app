@@ -14,6 +14,8 @@
 #import "ChapterScoreVC.h"
 #import "MakeProblemQuestionCardVC.h"
 
+#import "MakeProblemMainModel.h"
+
 @interface MakeProblemMainVC ()
 @property (nonatomic, strong) MakeProblemSceneCollection *collection_main;
 @property (nonatomic, strong) MakeProblemToolView *view_bottom;//底部工具栏
@@ -21,6 +23,10 @@
 @property (nonatomic, strong) MakeProblemToolView *view_more;//只在随机练习的时候，可以有更多操作
 
 @property (nonatomic, assign) MakeProblemMainMode viewMode;//做题的类型
+
+@property (nonatomic, strong) NSMutableArray *array_models;
+
+
 @end
 
 /*
@@ -40,9 +46,11 @@
     UIButton *btn = [self createNavigationLeftItem:NO andImage:@"" andTitle:@"题卡"];
     [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         MakeProblemQuestionCardVC *vc = [MakeProblemQuestionCardVC new];
+        vc.array_models = self.array_models;
+        vc.now_row = [self.collection_main.currentPage integerValue];
+        
         [vc setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
             self.collection_main.currentPage = @(indexPath.row);
-//            [self viewBottomChange:indexPath.row];
             [self.collection_main selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionLeft];
         }];
         [self.navigationController pushViewController:vc animated:YES];
@@ -58,6 +66,11 @@
     [self setVCTitle];
     [self.view addSubview:self.collection_main];
     [self.view addSubview:self.view_bottom];
+    
+    //设置数据
+    self.array_models = [NSMutableArray arrayWithObjects:[MakeProblemMainModel new],[MakeProblemMainModel new],[MakeProblemMainModel new],[MakeProblemMainModel new],[MakeProblemMainModel new],[MakeProblemMainModel new],[MakeProblemMainModel new],[MakeProblemMainModel new],[MakeProblemMainModel new],[MakeProblemMainModel new],[MakeProblemMainModel new],[MakeProblemMainModel new], nil];
+    self.collection_main.array_models = self.array_models;
+    [self.collection_main reloadData];
 }
 - (void)setVCTitle {
     if (self.viewMode == MakeProblemMainModeSimulateExam) {
@@ -205,7 +218,14 @@
         self.view_more.hidden = !self.view_more.hidden;
     }
     else if ([btn.titleLabel.text isEqualToString:@"设置"]) {
-        [self showViewInWindowWithView:[MakeProblemPopView creatSetPopView]];
+        MakeProblemPopView *view =[MakeProblemPopView creatSetPopView];
+        [view setBlockChange:^{
+            NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:MakeProblemSetMessage];
+            self.collection_main.isAutoReturn = [[dic objectForKey:MakeProblemSetMessageGO] boolValue];
+            self.collection_main.addTextFont = [[dic objectForKey:MakeProblemSetMessageTextFont] integerValue];
+            [self.collection_main reloadData];
+        }];
+        [self showViewInWindowWithView:view];
     }
     else if ([btn.titleLabel.text isEqualToString:@"批阅"]) {
     /*

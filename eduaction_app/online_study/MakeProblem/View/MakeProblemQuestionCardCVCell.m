@@ -34,8 +34,17 @@
             self.btn_number.backgroundColor = HexRGBAlpha(0x179AF5,0.5);
             [self.btn_number setTitleColor:HexRGB(0x1273CE) forState:UIControlStateNormal];
             break;
-        case QuestionCardModeNow:
+            
+        case QuestionCardModeNowNormal:
+            self.btn_number.backgroundColor = HexRGB(0x333333);
+            [self.btn_number setTitleColor:HexRGB(0xFFFFFF) forState:UIControlStateNormal];
+            break;
+        case QuestionCardModeNowRight:
             self.btn_number.backgroundColor = HexRGB(0xFF6B6B);
+            [self.btn_number setTitleColor:HexRGB(0xFFFFFF) forState:UIControlStateNormal];
+            break;
+        case QuestionCardModeNowWrong:
+            self.btn_number.backgroundColor = HexRGB(0x179AF5);
             [self.btn_number setTitleColor:HexRGB(0xFFFFFF) forState:UIControlStateNormal];
             break;
         default:

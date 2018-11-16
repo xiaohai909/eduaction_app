@@ -8,6 +8,11 @@
 
 #import "MakeProblemPopView.h"
 
+NSString *const MakeProblemSetMessage = @"MakeProblemSetMessage";
+NSString *const MakeProblemSetMessageGO = @"MakeProblemSetMessageGO";
+NSString *const MakeProblemSetMessageTextFont = @"MakeProblemSetMessageTextFont";
+
+
 @implementation MakeProblemPopView
 
 /*
@@ -33,20 +38,45 @@
         [setView.btn_bigger setVerticalModeTopOffset:2 andBottom:-25];
         
         setView.layer.cornerRadius = 5;
+        
+        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:MakeProblemSetMessage]];
+        setView.switch_auto.on = [[dic objectForKey:MakeProblemSetMessageGO] boolValue];
+        NSInteger tag = [[dic objectForKey:MakeProblemSetMessageTextFont] integerValue];
+        if (tag == 0) {
+            setView.btn_normal.selected = YES;
+        }
+        else if (tag == 1){
+            setView.btn_big.selected = YES;
+        }
+        else if (tag == 2){
+            setView.btn_bigger.selected = YES;
+        }
 
     });
     //数据控制,跳转下一题，字体大小
-
     return setView;
 }
 - (IBAction)switchChange:(UISwitch *)sender {
     sender.on = !sender.on;
     //改变存储
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:MakeProblemSetMessage]];
+    [dic setObject:[NSNumber numberWithBool:sender.on] forKey:MakeProblemSetMessageGO];
+    [[NSUserDefaults standardUserDefaults] setObject:dic forKey:MakeProblemSetMessage];
+    if (self.blockChange) {
+        self.blockChange();
+    }
+    
 }
 - (IBAction)btnTextFontChange:(UIButton *)sender {
     self.btn_normal.selected = self.btn_big.selected = self.btn_bigger.selected = NO;
     sender.selected = YES;
     //改变存储
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:MakeProblemSetMessage]];
+    [dic setObject:[NSNumber numberWithInteger:sender.tag] forKey:MakeProblemSetMessageTextFont];//
+    [[NSUserDefaults standardUserDefaults] setObject:dic forKey:MakeProblemSetMessage];
+    if (self.blockChange) {
+        self.blockChange();
+    }
 }
 
 

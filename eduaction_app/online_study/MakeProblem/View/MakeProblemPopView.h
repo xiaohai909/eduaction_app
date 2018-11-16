@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+extern NSString *const MakeProblemSetMessage;
+extern NSString *const MakeProblemSetMessageGO;
+extern NSString *const MakeProblemSetMessageTextFont;//字体添加的倍数
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 //可以在这里用xib创建多个view
@@ -20,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *btn_send;
 @property (weak, nonatomic) IBOutlet UITextView *view_text;
 
+@property (nonatomic, copy) void (^blockChange)();
 
 + (MakeProblemPopView *)creatSetPopView;
 + (MakeProblemPopView *)creatNotePopView;

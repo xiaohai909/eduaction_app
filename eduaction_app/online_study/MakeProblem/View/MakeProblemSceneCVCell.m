@@ -20,6 +20,8 @@
 
     self.collection_main = [[MakeProblemMainCollection alloc] initWithFrame:(CGRect){0, 0, self.py_width,self.py_height} collectionViewLayout:layout andType:MakeProblemModeExam];
     self.collection_main.backgroundColor = [UIColor whiteColor];
+    self.collection_main.isAutoReturn = self.isAutoReturn;
+    self.collection_main.addTextFont = self.addTextFont;
     [self addSubview:self.collection_main];
     
 //    self.view_bottom = [[MakeProblemToolView alloc] initWithFrame:(CGRect){0,ZTHeight-NaviIPHONEX-41,ZTWidth,41}];

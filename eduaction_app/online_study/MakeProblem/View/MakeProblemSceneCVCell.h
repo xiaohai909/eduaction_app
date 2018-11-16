@@ -13,6 +13,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MakeProblemSceneCVCell : UICollectionViewCell
+@property (nonatomic, assign) BOOL isAutoReturn;//是否自动跳转
+@property (nonatomic, assign) NSInteger addTextFont;//字体更改的倍数
 @property (strong, nonatomic) MakeProblemMainCollection *collection_main;
 @property (strong, nonatomic) MakeProblemToolView *view_bottom;
 @property (nonatomic, copy) void (^blockGoOn)(UIButton *btn);

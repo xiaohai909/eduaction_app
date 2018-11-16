@@ -14,7 +14,9 @@ typedef NS_ENUM(NSUInteger, QuestionCardMode) {
     QuestionCardModeNormal,
     QuestionCardModeRight,
     QuestionCardModeWrong,
-    QuestionCardModeNow
+    QuestionCardModeNowNormal,
+    QuestionCardModeNowRight,
+    QuestionCardModeNowWrong
 };
 
 @interface MakeProblemQuestionCardCVCell : UICollectionViewCell

@@ -63,9 +63,10 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
 }
 
 #pragma mark -- model
-- (void)setModel:(MakeProblemMode)viewMode andFrame:(CGRect)frame {
+- (void)setModel:(MakeProblemMode)viewMode andFrame:(CGRect)frame andModel:(MakeProblemMainModel *)model {
     self.frame = frame;
     self.viewMode = viewMode;
+    self.model = model;
     
     //用户选择
 //    self.indexPath = [NSIndexPath indexPathForRow:random()%5 inSection:1];
@@ -75,12 +76,12 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
 #pragma mark --- set
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    if (self.indexPath && (self.viewMode != MakeProblemModeExam)) {//用户已经选择且不是考试模式
+    if (self.model.isSelelct && (self.viewMode != MakeProblemModeExam)) {//用户已经选择且不是考试模式
+//    if (self.indexPath && (self.viewMode != MakeProblemModeExam)) {//用户已经选择且不是考试模式
         //还要看是不是自动跳转
-#warning 这里还要加一个判断是不是自动跳转
-//        if (YES) {
-//            return 2;
-//        }
+        if (self.isAutoReturn && self.model.selectTrue) {
+            return 2;
+        }
         return 4;
     }
     else {
@@ -127,7 +128,7 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
         if (indexPath.section == 2) {
             //答对了还是答错了
             MakeProlemAnswerCRView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:crView1 forIndexPath:indexPath];
-            view.btn_state.selected = (self.viewMode == MakeProblemModeMemory)?YES:[self nowIsRight:self.indexPath];//用户选择的是正确的还是错误的
+            view.btn_state.selected = (self.viewMode == MakeProblemModeMemory)?YES:self.model.selectTrue;//用户选择的是正确的还是错误的
             return view;
         }
         else if (indexPath.section == 3) {
@@ -171,15 +172,12 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
     if (indexPath.section == 0) {
         MakeProblemTopicCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
         cell.img_content_height.constant = indexPath.row%2?100:0;
+        cell.lbl_now.text = [NSString stringWithFormat:@"%ld",self.tag+1];
+        cell.lbl_total.text = [NSString stringWithFormat:@"/%ld",self.allNumber];
         return cell;
     }
     else if (indexPath.section == 1) {
         MakeProblemOptionCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell2 forIndexPath:indexPath];
-        //如果是背题模式，那就直接将正确答案显示出来
-//        [cell setContent:@"普通答案" andRow:indexPath.row andState:OptionStateRight];
-//        [cell setContent:@"正确答案" andRow:indexPath.row andState:OptionStateNormal];
-        
-        //其他情况就要判断用户是否已经选择，如果已经选择就提示正确答案，还有选择的是错误答案
         [cell setContent:@"答案" andRow:indexPath.row andState:[self stateForIndexPath:indexPath]];
         return cell;
     }
@@ -204,21 +202,39 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
      1.如果是考试模式，就不提示解析，要不要告诉对方正确与否呢
      2.如果是其他情况都要告诉对方问题解析
      */
-    if (!self.indexPath.section) {//单选，选择完后就不能再选
-        self.indexPath = indexPath;
-#warning 这里要加一个判断，是不是自动跳转到下一题
-        //如果自动跳转到下一题，就reloadSections 然后跳转到下一题
-        //如果不是，才要按照类型来展示界面
-        if (self.viewMode == MakeProblemModeExam) {
-            //如果是考试模式，显示一下答案就行
+    if (!self.model.isSelelct) {//是否已经选择
+//    if (!self.indexPath.section) {//单选，选择完后就不能再选
+        self.model.selelct = [NSString stringWithFormat:@"%ld",indexPath.row];
+//        self.indexPath = indexPath;
+        
+        //如果这题选对了且能自动跳转到下一题才自动跳转
+        if (self.isAutoReturn && self.model.selectTrue) {
+            //进入下一题
             [collectionView reloadSections:[NSIndexSet indexSetWithIndex:1]];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                if (self.blockGoOn) {
+                    self.blockGoOn();
+                }
+            });
         }
         else{
-            //如果是其他模式，那就要把解析等其他信息显示出来
-            [collectionView reloadData];
+            //如果自动跳转到下一题，就reloadSections 然后跳转到下一题
+            //如果不是，才要按照类型来展示界面
+            if (self.viewMode == MakeProblemModeExam) {
+                //如果是考试模式，
+                //显示一下答案就行
+                [collectionView reloadSections:[NSIndexSet indexSetWithIndex:1]];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    if (self.blockGoOn) {
+                        self.blockGoOn();
+                    }
+                });
+            }
+            else{
+                //如果是其他模式，那就要把解析等其他信息显示出来
+                [collectionView reloadData];
+            }
         }
-        
-        
     }
 }
 
@@ -227,21 +243,25 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
 //现在这个位置的答案是正确的吗
 - (BOOL)nowIsRight:(NSIndexPath *)indexPath
 {
-    return (indexPath.row == 2)?YES:NO;
+    return [self.model isTrueResult:[NSString stringWithFormat:@"%ld",indexPath.row]];
+//    return (indexPath.row == 2)?YES:NO;
 }
 //当前cell的转态
 - (OptionState)stateForIndexPath:(NSIndexPath *)indexPath
 {
     //现在是正确答案
     if([self nowIsRight:indexPath] ) {
-        if (self.indexPath||self.viewMode == MakeProblemModeMemory) {//用户已经选择过，背题模式,都可以直接显示
+        if (self.model.isSelelct||self.viewMode == MakeProblemModeMemory) {//用户已经选择过，背题模式,都可以直接显示
+//        if (self.indexPath||self.viewMode == MakeProblemModeMemory) {//用户已经选择过，背题模式,都可以直接显示
             return OptionStateRight;
         }//用户还没选择，但是要看这个不是背题模式
         return OptionStateNormal;
     }
-    else {//现在不是正确答案
-        //用户选择了这个
-        if ([indexPath isEqual:self.indexPath] && self.viewMode != MakeProblemModeMemory ) {//用户选的,且当前状态不是背题模式
+    else {
+        //现在不是正确答案
+        //用户选择了这个错误的答案
+        if ([self.model.selelct isEqualToString:[NSString stringWithFormat:@"%ld",indexPath.row]] && self.viewMode != MakeProblemModeMemory ) {//用户选的,且当前状态不是背题模式
+//        if ([indexPath isEqual:self.indexPath] && self.viewMode != MakeProblemModeMemory ) {//用户选的,且当前状态不是背题模式
             return OptionStateError;//用户选错了
         }
         return OptionStateNormal;
