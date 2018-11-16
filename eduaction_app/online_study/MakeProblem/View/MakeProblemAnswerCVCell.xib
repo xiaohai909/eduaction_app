@@ -34,10 +34,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-B0-sTv">
-                        <rect key="frame" x="155" y="14.5" width="38" height="16"/>
+                        <rect key="frame" x="155" y="12.5" width="42" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="16" id="255-Ad-YgH"/>
-                            <constraint firstAttribute="width" constant="38" id="OOg-Y5-712"/>
+                            <constraint firstAttribute="height" constant="20" id="255-Ad-YgH"/>
+                            <constraint firstAttribute="width" constant="42" id="OOg-Y5-712"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="报错">

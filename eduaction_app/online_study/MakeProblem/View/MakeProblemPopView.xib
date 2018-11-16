@@ -58,7 +58,7 @@
                         <action selector="btnTextFontChange:" destination="muy-Ve-VMb" eventType="touchUpInside" id="buK-hk-pHa"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuh-Ve-Oad">
+                <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuh-Ve-Oad">
                     <rect key="frame" x="240" y="72.5" width="56" height="35"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="大号" image="subject_btn_standard_no">
@@ -69,7 +69,7 @@
                         <action selector="btnTextFontChange:" destination="muy-Ve-VMb" eventType="touchUpInside" id="QAz-bj-Dpl"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqe-pz-8OK">
+                <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqe-pz-8OK">
                     <rect key="frame" x="296" y="72.5" width="56" height="35"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="特大" image="subject_btn_standard_no">

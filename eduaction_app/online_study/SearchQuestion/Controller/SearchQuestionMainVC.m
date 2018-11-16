@@ -59,7 +59,7 @@
         [[_searchBar.leftBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [self.navigationController popViewControllerAnimated:YES];
         }];//点击搜索，弹出搜索框
-        [[_searchBar.textField rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [[_searchBar.searchBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [self showViewInWindowWithView:self.searchView];
         }];
     }
@@ -80,7 +80,7 @@
             @strongify(self)
             //将shurukuang 
             NSLog(@"%@",keyValue);
-            self.searchBar.searchBtn.titleLabel.text = @"关键字";
+            [self.searchBar.searchBtn setTitle:@"关键字" forState:UIControlStateNormal];
             //去搜索
         }];
         [_searchView.collection_main setBlockClean:^{

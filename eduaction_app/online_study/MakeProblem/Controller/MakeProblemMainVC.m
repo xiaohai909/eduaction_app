@@ -206,7 +206,7 @@
     //self.collection_main.currentPage,获取对应的题目的信息，并做对应的操作
     btn.selected = !btn.selected;//这个要看本道题的状态了
     if ([btn.titleLabel.text isEqualToString:@"收藏"]) {
-        
+#warning 收藏还没做
     }
     else if ([btn.titleLabel.text isEqualToString:@"笔记"]) {
         [self showViewInWindowWithView:[MakeProblemPopView creatNotePopView]];
@@ -232,11 +232,71 @@
      1.如果当前已回答完所有题目，直接跳转到我的成绩；
      2.如果未回答完所有题目，则计算已答问题的正确率
      */
-        [self.navigationController pushViewController:[ChapterScoreVC new] animated:YES];
+        BOOL isAll = NO;
+        NSString *rightPercent = [self countModels:0 isAll:isAll];
+        if (isAll) {
+            [self.navigationController pushViewController:[ChapterScoreVC new] animated:YES];
+        }
+        else{
+            NSString *message = [NSString stringWithFormat:@"本次练习正确率%@",rightPercent];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:message preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
     }
-    
+    else if ([btn.titleLabel.text isEqualToString:@"交卷"]) {
+        //提示是否交卷
+        NSString *message = [NSString stringWithFormat:@"还剩%@道题未答，确定交卷吗",[self countModels:1 isAll:NO]];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:message preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //交卷
+        }];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alert addAction:confirm];
+        [alert addAction:cancel];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
-
+//计算做题
+- (NSString *)countModels:(NSInteger)type isAll:(BOOL)all
+{
+    NSMutableArray *wrong = [NSMutableArray array];
+    NSMutableArray *right = [NSMutableArray array];
+    NSMutableArray *normal = [NSMutableArray array];
+    for (MakeProblemMainModel *model in self.array_models) {
+        if (model.isSelelct) {
+            if (model.selectTrue) {
+                [right addObject:model];
+            }
+            else{
+                [wrong addObject:model];
+            }
+        }
+        else{
+            [normal addObject:model];
+        }
+    }
+    if (normal.count == 0) {
+        all = YES;
+    }
+    if (type == 0) {//批阅
+        if (wrong.count+right.count == 0) {
+            return @"0";
+        }
+        return [NSString stringWithFormat:@"%.2f%@",((float)right.count/(float)(wrong.count+right.count))*100,@"%"];//正确率
+    }
+    else if(type == 1){//交卷
+        return [NSString stringWithFormat:@"%lu",(unsigned long)normal.count];//未做题
+    }
+    else{
+        return @"";
+    }
+}
 /*
 #pragma mark - Navigation
 

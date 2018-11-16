@@ -89,7 +89,7 @@
     for (int i=0; i<2; i++) {
         CGRect frame = (CGRect){0,1+self.image_layer.frame.size.height/2*i,self.image_layer.frame.size.width,self.image_layer.frame.size.height/4-2};
         CALayer *layer = [[CALayer alloc] init];
-        layer.backgroundColor = HexRGB(0xFEFEFE).CGColor;
+        layer.backgroundColor = HexRGB(0xFFFFFF).CGColor;
         layer.frame = frame;
         [self.image_layer addSublayer:layer];
     }

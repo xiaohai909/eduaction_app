@@ -50,6 +50,8 @@
         [self creatNumberLayer:(CGRect){0,0,self.py_width-30,self.py_width-30}];
         [self creatLbl:(CGRect){0,0,self.py_width-40,self.py_width-40}];
         self.lbl_number.center = centrePoint;
+        
+        [self addSubview:[self creatShadowLayer:(CGRect){(self.py_width-50)/2,self.py_height,50,1}]];
     }
     else if (type == RatioViewTypeYellowLine) {
         [self creatBottomLayer:(CGRect){0,0,self.py_width-15,self.py_width-15}];
@@ -104,6 +106,18 @@
 }
 
 #pragma mark --- creat
+- (UIView *)creatShadowLayer:(CGRect)frame
+{
+    UIView *view = [[UIView alloc] init];
+    view.frame = frame;
+    view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    view.layer.shadowColor = [UIColor groupTableViewBackgroundColor].CGColor;
+    view.layer.shadowOffset = CGSizeMake(5,5);
+    view.layer.shadowOpacity = 1;
+    view.layer.shadowRadius = 9;
+    view.layer.cornerRadius = 0.5;
+    return view;
+}
 - (void)creatLineLayer:(CGRect)frame
 {
     layer_line = [CAShapeLayer layer];

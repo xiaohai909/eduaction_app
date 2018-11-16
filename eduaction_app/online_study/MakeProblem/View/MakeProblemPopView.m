@@ -38,22 +38,21 @@ NSString *const MakeProblemSetMessageTextFont = @"MakeProblemSetMessageTextFont"
         [setView.btn_bigger setVerticalModeTopOffset:2 andBottom:-25];
         
         setView.layer.cornerRadius = 5;
-        
-        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:MakeProblemSetMessage]];
-        setView.switch_auto.on = [[dic objectForKey:MakeProblemSetMessageGO] boolValue];
-        NSInteger tag = [[dic objectForKey:MakeProblemSetMessageTextFont] integerValue];
-        if (tag == 0) {
-            setView.btn_normal.selected = YES;
-        }
-        else if (tag == 1){
-            setView.btn_big.selected = YES;
-        }
-        else if (tag == 2){
-            setView.btn_bigger.selected = YES;
-        }
-
     });
     //数据控制,跳转下一题，字体大小
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:MakeProblemSetMessage]];
+    setView.switch_auto.on = [[dic objectForKey:MakeProblemSetMessageGO] boolValue];
+    NSInteger tag = [[dic objectForKey:MakeProblemSetMessageTextFont] integerValue];
+    setView.btn_normal.selected = setView.btn_big.selected = setView.btn_bigger.selected = NO;
+    if (tag == 0) {
+        setView.btn_normal.selected = YES;
+    }
+    else if (tag == 2){
+        setView.btn_big.selected = YES;
+    }
+    else if (tag == 4){
+        setView.btn_bigger.selected = YES;
+    }
     return setView;
 }
 - (IBAction)switchChange:(UISwitch *)sender {
@@ -65,8 +64,8 @@ NSString *const MakeProblemSetMessageTextFont = @"MakeProblemSetMessageTextFont"
     if (self.blockChange) {
         self.blockChange();
     }
-    
 }
+
 - (IBAction)btnTextFontChange:(UIButton *)sender {
     self.btn_normal.selected = self.btn_big.selected = self.btn_bigger.selected = NO;
     sender.selected = YES;
@@ -79,10 +78,8 @@ NSString *const MakeProblemSetMessageTextFont = @"MakeProblemSetMessageTextFont"
     }
 }
 
-
 + (MakeProblemPopView *)creatNotePopView
 {
-    
     static MakeProblemPopView *noteView;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

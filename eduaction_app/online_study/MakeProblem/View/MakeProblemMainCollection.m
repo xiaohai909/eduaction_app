@@ -174,15 +174,31 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
         cell.img_content_height.constant = indexPath.row%2?100:0;
         cell.lbl_now.text = [NSString stringWithFormat:@"%ld",self.tag+1];
         cell.lbl_total.text = [NSString stringWithFormat:@"/%ld",self.allNumber];
+        
+        //字体变化
+        cell.lbl_now.font = [UIFont systemFontOfSize:16+self.addTextFont];
+        cell.lbl_total.font = [UIFont systemFontOfSize:16+self.addTextFont];
+//        cell.lbl_type.font = [UIFont systemFontOfSize:14+self.addTextFont];
+        //这里type就不单独写了，跟content一起z写
+        cell.lbl_content.font = [UIFont systemFontOfSize:14+self.addTextFont];
         return cell;
     }
     else if (indexPath.section == 1) {
         MakeProblemOptionCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell2 forIndexPath:indexPath];
         [cell setContent:@"答案" andRow:indexPath.row andState:[self stateForIndexPath:indexPath]];
+        
+        //字体变化
+        cell.btn_order.titleLabel.font = [UIFont systemFontOfSize:14+self.addTextFont];
+        cell.btn_content.titleLabel.font = [UIFont systemFontOfSize:14+self.addTextFont];
         return cell;
     }
     else if (indexPath.section == 2) {
         MakeProblemAnswerCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell3 forIndexPath:indexPath];
+        
+        //字体变化
+        cell.btn_wrong.titleLabel.font = [UIFont systemFontOfSize:12+self.addTextFont];
+        cell.lbl_title.font = [UIFont systemFontOfSize:14+self.addTextFont];
+        cell.lbl_detail.font = [UIFont systemFontOfSize:14+self.addTextFont];
         return cell;
     }
     else {
