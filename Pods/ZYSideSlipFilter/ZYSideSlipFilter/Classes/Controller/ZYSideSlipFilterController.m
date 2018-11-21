@@ -17,8 +17,9 @@
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
-#define SLIP_ORIGIN_FRAME CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH - _sideSlipLeading, SCREEN_HEIGHT)
-#define SLIP_DISTINATION_FRAME CGRectMake(_sideSlipLeading, 0, SCREEN_WIDTH - _sideSlipLeading, SCREEN_HEIGHT)
+#define SLIP_ORIGIN_FRAME CGRectMake(SCREEN_WIDTH, NaviIPHONEX +42, SCREEN_WIDTH - _sideSlipLeading, SCREEN_HEIGHT-42-NaviIPHONEX)
+
+#define SLIP_DISTINATION_FRAME CGRectMake(_sideSlipLeading, NaviIPHONEX +42, SCREEN_WIDTH - _sideSlipLeading, SCREEN_HEIGHT-42-NaviIPHONEX)
 
 const CGFloat ANIMATION_DURATION_DEFAULT = 0.3f;
 const CGFloat SIDE_SLIP_LEADING_DEFAULT = 60;
@@ -251,7 +252,7 @@ id (*objc_msgSendCreateCellWithIndexPath)(id self, SEL _cmd, NSIndexPath *) = (v
 
 - (UIView *)backCover {
     if (!_backCover) {
-        _backCover = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        _backCover = [[UIView alloc] initWithFrame:CGRectMake(0, NaviIPHONEX+42, SCREEN_WIDTH, SCREEN_HEIGHT - NaviIPHONEX - 42)];
         [_backCover setBackgroundColor:[UIColor hexColor:FILTER_BACKGROUND_COVER_COLOR]];
         [_backCover setAlpha:FILTER_BACKGROUND_COVER_ALPHA];
         [_backCover addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickBackCover:)]];

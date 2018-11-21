@@ -32,4 +32,5 @@ extern NSString * const FILTER_NAVIGATION_CONTROLLER_CLASS;
 #define IS_IPHONE  [[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPhone
 #define UI_IS_IPHONE_X           (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height >= 812.0f)
 #define BOTTOM_BUTTON_HEIGHT UI_IS_IPHONE_X?64:44
+#define NaviIPHONEX  (UI_IS_IPHONE_X ? 88.0f : 64.0f)
 @end

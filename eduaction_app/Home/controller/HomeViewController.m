@@ -57,7 +57,7 @@
     
         SearchViewController *cont = [[SearchViewController alloc]init];
         MyNav *nav =[[MyNav alloc]initWithRootViewController:cont];
-        nav.navigationBarHidden = YES;
+        //nav.navigationBarHidden = YES;
         [self presentViewController:nav animated:YES completion:nil];
     }];
     

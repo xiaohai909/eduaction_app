@@ -162,6 +162,7 @@
 		3EDCF81E218F298800861D26 /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF81C218F298800861D26 /* MySearchBar.m */; };
 		3EDCF821218F2ADC00861D26 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF820218F2ADC00861D26 /* SearchViewController.m */; };
 		3EDCF824218F428900861D26 /* SearchhotAndhisV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF823218F428900861D26 /* SearchhotAndhisV.m */; };
+		3EE08AE321A5439E00832D1A /* UIButton+ImageRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE08AE121A5439E00832D1A /* UIButton+ImageRight.m */; };
 		3EE6F4D921A19E810068F78D /* myNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6F4D821A19E810068F78D /* myNetworkManager.m */; };
 		3EE6F4DD21A252640068F78D /* trainLeftTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6F4DC21A252640068F78D /* trainLeftTab.m */; };
 		3EE6F4E121A253260068F78D /* trainLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6F4DF21A253260068F78D /* trainLeftCell.m */; };
@@ -465,6 +466,8 @@
 		3EDCF820218F2ADC00861D26 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		3EDCF822218F428900861D26 /* SearchhotAndhisV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchhotAndhisV.h; sourceTree = "<group>"; };
 		3EDCF823218F428900861D26 /* SearchhotAndhisV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchhotAndhisV.m; sourceTree = "<group>"; };
+		3EE08AE121A5439E00832D1A /* UIButton+ImageRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageRight.m"; sourceTree = "<group>"; };
+		3EE08AE221A5439E00832D1A /* UIButton+ImageRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageRight.h"; sourceTree = "<group>"; };
 		3EE6F4D721A19E810068F78D /* myNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myNetworkManager.h; sourceTree = "<group>"; };
 		3EE6F4D821A19E810068F78D /* myNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myNetworkManager.m; sourceTree = "<group>"; };
 		3EE6F4DB21A252640068F78D /* trainLeftTab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trainLeftTab.h; sourceTree = "<group>"; };
@@ -924,6 +927,8 @@
 		3E3AEFEB217DFF51006C2860 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				3EE08AE221A5439E00832D1A /* UIButton+ImageRight.h */,
+				3EE08AE121A5439E00832D1A /* UIButton+ImageRight.m */,
 				3EE6F4D621A199850068F78D /* netMnager */,
 				3E635FB5219282C4006FC152 /* alertview */,
 				3E401A61218F433500D85448 /* UIView+PYSearchExtension.h */,
@@ -1595,6 +1600,7 @@
 				3E83D2C1217E019200E78B1C /* MyNav.m in Sources */,
 				3E635FB421928061006FC152 /* Searchkey.m in Sources */,
 				04B3C07E219BC0180035C995 /* ConsolidateFalibilityMainCollection.m in Sources */,
+				3EE08AE321A5439E00832D1A /* UIButton+ImageRight.m in Sources */,
 				3EB08EA4218C5EC000849777 /* HomenewsCell.m in Sources */,
 				3E6AFE9C21A29B3D00E07AD7 /* searchWithKindVC.m in Sources */,
 				3E79DE642186B55700CD8AFC /* registerView.m in Sources */,

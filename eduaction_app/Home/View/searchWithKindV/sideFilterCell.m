@@ -137,7 +137,7 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"ITEM_WIDTH %@ %@ %@",@(ITEM_WIDTH),@(CELL_WIDTH),@(ITEM_HEIGHT));
+    //NSLog(@"ITEM_WIDTH %@ %@ %@",@(ITEM_WIDTH),@(CELL_WIDTH),@(ITEM_HEIGHT));
     return CGSizeMake(ITEM_WIDTH, ITEM_HEIGHT);
     //return CGSizeMake(20, 20);
 }

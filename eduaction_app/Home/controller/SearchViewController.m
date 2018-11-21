@@ -103,9 +103,19 @@
         
         _mySearchBar.delegate = self;
         _mySearchBar.Mydelaget=self;
-        _mySearchBar.backgroundImage = [CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:CGRectMake(0, 0, ZTWidth, NaviIPHONEX) gradientDir:leftToright];
-//        _mySearchBar.backgroundColor =HexRGB(0xFF6B6B);
+        
+    
+       // [_mySearchBar setBackgroundColor:[UIColor clearColor]];
+        //[_mySearchBar setBarTintColor:nil];
+
+        //[_mySearchBar setScopeBarBackgroundImage:[CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:CGRectMake(0, 0, ZTWidth, 20) gradientDir:leftToright]];
+        
+        //[_mySearchBar setBackgroundImage:[CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:CGRectMake(0, 0, ZTWidth, 1) gradientDir:leftToright] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+        
+        //_mySearchBar.backgroundImage = [UIImage imageNamed:@"curriculum_bottom_btn_bg"];
         _mySearchBar.isKindSearch=YES;
+        UIImageView *bgView = [[UIImageView alloc]initWithImage:[CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:CGRectMake(0, 0, ZTWidth, NaviIPHONEX) gradientDir:leftToright]];
+        bgView.frame = CGRectMake(0, 0, ZTWidth, NaviIPHONEX);
         
         
         
@@ -113,18 +123,20 @@
         
         
         
-//        for (UIView *view in _mySearchBar.subviews) {
-//            // for before iOS7.0
-//            if ([view isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
-//                [view removeFromSuperview];
-//                break;
-//            }
-//            // for later iOS7.0(include)
-//            if ([view isKindOfClass:NSClassFromString(@"UIView")] && view.subviews.count > 0) {
-//                [[view.subviews objectAtIndex:0] removeFromSuperview];
-//                break;
-//            }
-//        }
+        for (UIView *view in _mySearchBar.subviews) {
+            // for before iOS7.0
+            if ([view isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
+                [view removeFromSuperview];
+                break;
+            }
+            // for later iOS7.0(include)
+            if ([view isKindOfClass:NSClassFromString(@"UIView")] && view.subviews.count > 0) {
+                NSLog(@"%@",[[view.subviews objectAtIndex:0] description]);
+                [[view.subviews objectAtIndex:0] removeFromSuperview];
+                [view insertSubview:bgView atIndex:0];
+                break;
+            }
+        }
         
     }
     return _mySearchBar;
@@ -132,10 +144,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view addSubview:self.mySearchBar];
+  
+    [self setnavbg_defa];
+    
     [self.view addSubview:self.hotSec];
     
     [self.view addSubview:self.hotView];
+    
+    
     [self.hotView setupView:@[@"Java奥术大师大大大大大大大少时诵诗书所大", @"Python", @"Objective-C", @"Swift", @"C", @"C++", @"PHP", @"C#", @"Perl", @"Go", @"JavaScript", @"R", @"Ruby", @"MATLAB"]];
     [self.view addSubview:self.hisSec];
     self.hisSec.frame = CGRectMake(0, CGRectGetMaxY(self.hotView.frame), ZTWidth, 44);
@@ -146,9 +162,12 @@
         [self.hisSearchView setupView:arr];
     }
     [self.view addSubview:self.resultV];
-    
-   
+    [self.view addSubview:self.mySearchBar];
+    //[self.view addSubview:self.mySearchBar];
     // Do any additional setup after loading the view.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 -(void)ClickBackBtn:(UIButton *)btn{
     [self dismissViewControllerAnimated:YES completion:nil];
