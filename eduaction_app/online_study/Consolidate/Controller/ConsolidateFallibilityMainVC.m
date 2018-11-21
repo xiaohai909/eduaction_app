@@ -32,6 +32,9 @@
     
     self.collection_main.array_models = [@[@"1",@"2",@"3",@"4",@"5",@"1",@"2",@"3",@"4",@"5",@"1",@"2",@"3",@"4",@"5"] mutableCopy];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 #pragma --- view creat
 - (ConsolidateFalibilityMainCollection *)collection_main {
     if (!_collection_main) {

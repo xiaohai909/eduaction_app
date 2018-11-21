@@ -67,7 +67,42 @@
     }
     return btn;
 }
-
+-(void)setRigthbtn_inNav:(UIImage *)image andtitle:(NSString *)titile{
+    
+    self.rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+   
+    [self.rightBtn addTarget:self action:@selector(rightAction:) forControlEvents:UIControlEventTouchUpInside];
+   
+    if (titile.length > 0) {
+        
+        [self.rightBtn setTitle:titile forState:UIControlStateNormal];
+    }
+    if (image != nil) {
+        
+         [self.rightBtn setImage:image forState:UIControlStateNormal];
+    }
+     self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
+    
+}
+-(void)setNavTitle:(NSString *)title
+{
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     
+     
+     
+     @{NSFontAttributeName:[UIFont systemFontOfSize:18],
+       
+       
+       
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    self.title = title;
+}
+-(void)rightAction:(UIButton *)sender{
+    
+    
+}
 /*
 #pragma mark - Navigation
 

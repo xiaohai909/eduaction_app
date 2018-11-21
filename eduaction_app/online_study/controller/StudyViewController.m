@@ -20,6 +20,9 @@
 #import "ConsolidateMyWrongMainVC.h"
 
 @interface StudyViewController ()
+{
+    BOOL firstIn;
+}
 @property (nonatomic, strong) StudyCollection *collection_main;
 
 @end
@@ -28,21 +31,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    firstIn = YES;
     // Do any additional setup after loading the view.
     [self.view addSubview:self.collection_main];
+    @weakify(self);
+    
+    [[[[noticeSubjectmanager sharenoticeSubjectmanager] shouldTabar_jump] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        
+        self->firstIn = YES;
+        
+    }];
     
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+   
     self.tabBarController.navigationItem.rightBarButtonItem =nil;
     self.tabBarController.navigationItem.titleView = nil;
+    
+    if (firstIn) {
+         firstIn = NO;
+       
+    }
+    else{
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        
+    }
+   
+    
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+     self.navigationController.navigationBarHidden = YES;
+}
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden = NO;
 }
 
 #pragma --- view creat

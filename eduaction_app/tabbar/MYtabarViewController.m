@@ -30,6 +30,9 @@ static MYtabarViewController * mainViewInstance=nil;
     self.navigationItem.hidesBackButton = YES;
     
     [self setupView];
+    
+    self.delegate = self;
+    
     // Do any additional setup after loading the view.
 }
 -(void)setupView
@@ -128,6 +131,16 @@ static MYtabarViewController * mainViewInstance=nil;
     UIImage *selectImage = [UIImage imageNamed:selectImageName];
     selectImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item.selectedImage = selectImage;
+}
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    
+    if (tabBarController.selectedIndex == 1) {
+        
+        [[[noticeSubjectmanager sharenoticeSubjectmanager] shouldTabar_jump] sendNext:nil];
+        
+    }
+    return YES;
+    
 }
 
 /*

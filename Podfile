@@ -18,4 +18,5 @@ pod 'CocoaLumberjack'
 pod 'ImagePlayerView'
 pod 'TezButton'
 pod 'YYCache'
+pod 'ZYSideSlipFilter'
 end

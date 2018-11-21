@@ -29,7 +29,9 @@
     self.view_main.btn_left.backgroundColor = HexRGB(0xFFE7E7);
     self.view_main.blockCharge(@"￥248");
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 - (void)setDefaultView {
     self.view_main = [[RechargeMainView alloc] initWithFrame:(CGRect){0,0,ZTWidth,ZTHeight-NaviIPHONEX-44}];
     [self.view addSubview:self.view_main];

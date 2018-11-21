@@ -26,7 +26,10 @@
     
     [self.view addSubview:self.collection_main];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 /*
 #pragma mark - Navigation
 

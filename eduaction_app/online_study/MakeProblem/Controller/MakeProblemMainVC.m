@@ -42,9 +42,14 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self createNavigationLeftItem:YES andImage:@"top_btn_return" andTitle:@"   "];
     UIButton *btn = [self createNavigationLeftItem:NO andImage:@"" andTitle:@"题卡"];
+    
+    @weakify(self);
     [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
         MakeProblemQuestionCardVC *vc = [MakeProblemQuestionCardVC new];
         vc.array_models = self.array_models;
         vc.now_row = [self.collection_main.currentPage integerValue];

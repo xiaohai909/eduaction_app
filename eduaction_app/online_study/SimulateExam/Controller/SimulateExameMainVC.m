@@ -48,4 +48,8 @@
     }
     return _collection_main;
 }
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 @end

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MYtabarViewController : UITabBarController
+@interface MYtabarViewController : UITabBarController<UITabBarControllerDelegate>
 +(MYtabarViewController *)shareGWHomeViewController;
 + (MYtabarViewController *) instance;
 @end

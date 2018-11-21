@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E45EA28E24D3E2EAAFE84377A685632E"
+               BlueprintIdentifier = "2F17A73124818EEF1B5F1E026D666EB3"
                BlueprintName = "TezButton"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "TezButton.framework">

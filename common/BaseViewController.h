@@ -26,9 +26,13 @@ invocation.selector = @selector(setContentInsetAdjustmentBehavior:);\
 _Pragma("clang diagnostic pop")\
 } while (0)
 @interface BaseViewController : UIViewController
+@property (nonatomic,strong)UIButton *rightBtn;
 -(void)setnavbg_defa;
 -(void)setnav_BackBtn;
 - (UIButton *)createNavigationLeftItem:(BOOL)isLeft andImage:(NSString *)imageName andTitle:(NSString *)title;
+-(void)setRigthbtn_inNav:(UIImage *)image andtitle:(NSString *)titile;
+-(void)rightAction:(UIButton *)sender;
+-(void)setNavTitle:(NSString *)title;
 @end
 
 NS_ASSUME_NONNULL_END

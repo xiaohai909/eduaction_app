@@ -1,0 +1,6 @@
+framework module ZYSideSlipFilter {
+  umbrella header "ZYSideSlipFilter-umbrella.h"
+
+  export *
+  module * { export * }
+}

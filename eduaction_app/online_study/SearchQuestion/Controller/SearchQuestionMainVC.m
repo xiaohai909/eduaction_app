@@ -35,6 +35,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     self.navigationController.navigationBarHidden = YES;
     self.tabBarController.navigationItem.rightBarButtonItem =nil;
     self.tabBarController.navigationItem.titleView = nil;
@@ -42,7 +43,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden = NO;
+
 }
 
 #pragma mark ---

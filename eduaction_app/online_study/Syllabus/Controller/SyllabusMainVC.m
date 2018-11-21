@@ -24,6 +24,10 @@
     self.title = @"考试大纲";
     [self.view addSubview:self.collection_main];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 #pragma --- view creat
 - (SyllabusMainCollection *)collection_main {
     if (!_collection_main) {
