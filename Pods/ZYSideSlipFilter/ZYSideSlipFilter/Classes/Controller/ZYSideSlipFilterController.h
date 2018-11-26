@@ -10,6 +10,7 @@
 
 typedef void (^SideSlipFilterCommitBlock)(NSArray *dataList);
 typedef void (^SideSlipFilterResetBlock)(NSArray *dataList);
+typedef void (^SideSlipFilterdismiss)();
 
 @interface ZYSideSlipFilterController : UIViewController
 @property (assign, nonatomic) CGFloat animationDuration;
@@ -21,6 +22,6 @@ typedef void (^SideSlipFilterResetBlock)(NSArray *dataList);
                      resetBlock:(SideSlipFilterResetBlock)resetBlock
                     commitBlock:(SideSlipFilterCommitBlock)commitBlock;
 - (void)show;
-- (void)dismiss;
+- (void)dismiss:(SideSlipFilterdismiss)dismissBlock;
 - (void)reloadData;
 @end

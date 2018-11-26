@@ -31,6 +31,7 @@ id (*objc_msgSendCreateCellWithIndexPath)(id self, SEL _cmd, NSIndexPath *) = (v
 @interface ZYSideSlipFilterController () <UITableViewDelegate, UITableViewDataSource, SideSlipBaseTableViewCellDelegate>
 @property (copy, nonatomic) SideSlipFilterCommitBlock commitBlock;
 @property (copy, nonatomic) SideSlipFilterResetBlock resetBlock;
+@property (copy, nonatomic) SideSlipFilterdismiss dismissBlock;
 @property (weak, nonatomic) UINavigationController *filterNavigation;
 @property (strong, nonatomic) UITableView *mainTableView;
 @property (strong, nonatomic) UIView *backCover;
@@ -98,10 +99,11 @@ id (*objc_msgSendCreateCellWithIndexPath)(id self, SEL _cmd, NSIndexPath *) = (v
     }];
 }
 
-- (void)dismiss {
+- (void)dismiss:(SideSlipFilterdismiss)dismissBlock {
     [UIView animateWithDuration:_animationDuration animations:^{
         [self.navigationController.view setFrame:SLIP_ORIGIN_FRAME];
     } completion:^(BOOL finished) {
+        dismissBlock();
         [_backCover removeFromSuperview];
         [self.navigationController.view removeFromSuperview];
         [self.navigationController removeFromParentViewController];
@@ -160,7 +162,11 @@ id (*objc_msgSendCreateCellWithIndexPath)(id self, SEL _cmd, NSIndexPath *) = (v
 }
 
 - (void)clickBackCover:(id)sender {
-    [self dismiss];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"clickBackCover" object:nil];
+    [self dismiss:^{
+        
+    }];
 }
 
 - (void)reloadData {

@@ -222,7 +222,7 @@
         DDLogVerbose(@"%@", [CommonFunciton dictionaryToJson:x]);
         
         
-        [k_appDelegate goTabarView];
+        //[k_appDelegate goTabarView];
     }];
     
 

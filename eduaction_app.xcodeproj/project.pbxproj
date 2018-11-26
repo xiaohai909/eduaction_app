@@ -163,6 +163,7 @@
 		3EDCF821218F2ADC00861D26 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF820218F2ADC00861D26 /* SearchViewController.m */; };
 		3EDCF824218F428900861D26 /* SearchhotAndhisV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF823218F428900861D26 /* SearchhotAndhisV.m */; };
 		3EE08AE321A5439E00832D1A /* UIButton+ImageRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE08AE121A5439E00832D1A /* UIButton+ImageRight.m */; };
+		3EE08AE621A5B7A600832D1A /* topFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE08AE521A5B7A600832D1A /* topFilterCell.m */; };
 		3EE6F4D921A19E810068F78D /* myNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6F4D821A19E810068F78D /* myNetworkManager.m */; };
 		3EE6F4DD21A252640068F78D /* trainLeftTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6F4DC21A252640068F78D /* trainLeftTab.m */; };
 		3EE6F4E121A253260068F78D /* trainLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6F4DF21A253260068F78D /* trainLeftCell.m */; };
@@ -468,6 +469,8 @@
 		3EDCF823218F428900861D26 /* SearchhotAndhisV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchhotAndhisV.m; sourceTree = "<group>"; };
 		3EE08AE121A5439E00832D1A /* UIButton+ImageRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageRight.m"; sourceTree = "<group>"; };
 		3EE08AE221A5439E00832D1A /* UIButton+ImageRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageRight.h"; sourceTree = "<group>"; };
+		3EE08AE421A5B7A600832D1A /* topFilterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = topFilterCell.h; sourceTree = "<group>"; };
+		3EE08AE521A5B7A600832D1A /* topFilterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = topFilterCell.m; sourceTree = "<group>"; };
 		3EE6F4D721A19E810068F78D /* myNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myNetworkManager.h; sourceTree = "<group>"; };
 		3EE6F4D821A19E810068F78D /* myNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myNetworkManager.m; sourceTree = "<group>"; };
 		3EE6F4DB21A252640068F78D /* trainLeftTab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trainLeftTab.h; sourceTree = "<group>"; };
@@ -1006,6 +1009,8 @@
 				3E7564B721A4FE70009A766C /* sideFilterCell.h */,
 				3E7564B821A4FE70009A766C /* sideFilterCell.m */,
 				3E7564B921A4FE70009A766C /* sideFilterCell.xib */,
+				3EE08AE421A5B7A600832D1A /* topFilterCell.h */,
+				3EE08AE521A5B7A600832D1A /* topFilterCell.m */,
 			);
 			path = searchWithKindV;
 			sourceTree = "<group>";
@@ -1598,6 +1603,7 @@
 				04BBFB93219AB5200088196E /* MyCollectionMainCollection.m in Sources */,
 				045B11D221912198001FC325 /* ChapterCVCell.m in Sources */,
 				3E83D2C1217E019200E78B1C /* MyNav.m in Sources */,
+				3EE08AE621A5B7A600832D1A /* topFilterCell.m in Sources */,
 				3E635FB421928061006FC152 /* Searchkey.m in Sources */,
 				04B3C07E219BC0180035C995 /* ConsolidateFalibilityMainCollection.m in Sources */,
 				3EE08AE321A5439E00832D1A /* UIButton+ImageRight.m in Sources */,

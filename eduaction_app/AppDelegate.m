@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [myNetworkManager sharemyNetworkManager];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     [IQKeyboardManager sharedManager].enable = YES;
     [[LogManager sharedManager]config];

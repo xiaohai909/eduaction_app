@@ -12,6 +12,7 @@
 #import "ScanQRViewController.h"
 #import "SearchViewController.h"
 #import "trainViewController.h"
+#import "searchWithKindVC.h"
 @interface HomeViewController ()
 @property(strong,nonatomic)UIButton *rightBtn;
 @property(strong,nonatomic)UIButton *searchBtn;
@@ -103,8 +104,11 @@
             
         }
             break;
+#pragma mark 技能培训
         case 2:
         {
+            searchWithKindVC *cont =[[searchWithKindVC alloc]init];
+            [self.navigationController pushViewController:cont animated:YES];
             
         }
             break;

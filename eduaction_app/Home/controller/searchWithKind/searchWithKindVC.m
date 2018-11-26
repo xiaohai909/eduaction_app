@@ -30,11 +30,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setnavbg_defa];
+    
     self.filterVM = [[searchKindVM alloc]init];
 
     [self.view addSubview:self.topMenu];
 
-    
+    self.view.backgroundColor =  HexRGB(0xF1F0F0);
+   
+   
 
     // Do any additional setup after loading the view.
 }

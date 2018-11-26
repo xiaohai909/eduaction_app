@@ -60,6 +60,8 @@
             @strongify(self);
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 
+               
+                
                 if (self.loginview_mobile.length == 0) {
                     
                     [subscriber sendNext:@{@"msg":@"用户名不能为空"}];
@@ -69,6 +71,14 @@
                     [subscriber sendNext:@{@"msg":@"密码不能为空"}];
                     [subscriber sendCompleted];
                 }
+                [[myNetworkManager sharemyNetworkManager] regedit:self.loginview_mobile Andpassword:self.loginview_password AndactivationCode:@"111111" Andsuccess:^(id  _Nonnull response) {
+                    
+                    [subscriber sendCompleted];
+                    
+                } Andfailure:^(NSError * _Nonnull err) {
+                    
+                    [subscriber sendCompleted];
+                }];
                 [subscriber sendNext:@{@"msg":@"登录中"}];
                 return nil;
             }];

@@ -10,10 +10,11 @@
 #import "searchKindVM.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TopfilteringV : UIView
+@interface TopfilteringV : UIView<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)searchKindVM *viewMode;
 @property (strong, nonatomic) ZYSideSlipFilterController *filterController;
 -(void)setfilterV:(UIViewController *)view;
+-(void)updatefilterArr:(NSArray *)arr;
 @end
 
 NS_ASSUME_NONNULL_END

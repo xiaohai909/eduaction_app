@@ -30,6 +30,7 @@
 #import "noticeSubjectmanager.h"
 #import <ZYSideSlipFilter/ZYSideSlipFilter-umbrella.h>
 #import "UIButton+ImageRight.h"
+#import "myNetworkManager.h"
 #if DEBUG
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #else
