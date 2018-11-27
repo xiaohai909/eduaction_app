@@ -131,7 +131,7 @@
 }
 - (MakeProblemToolView *)view_bottom {
     if (!_view_bottom) {
-        _view_bottom = [[MakeProblemToolView alloc] initWithFrame:(CGRect){0,ZTHeight-NaviIPHONEX-41,ZTWidth,41}];
+        _view_bottom = [[MakeProblemToolView alloc] initWithFrame:(CGRect){0,ZTHeight-NaviIPHONEX-45,ZTWidth,45}];
         [_view_bottom creatToolViewWithType:[self getBottomToolMode]];//这个根据
         
         @weakify(self)

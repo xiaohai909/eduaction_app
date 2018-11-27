@@ -34,7 +34,7 @@ static NSString * const cell2 = @"StudyCVCell";
         [self registerNib:[UINib nibWithNibName:NSStringFromClass([StudyTimeCVCell class]) bundle:nil] forCellWithReuseIdentifier:cell1];
         [self registerNib:[UINib nibWithNibName:NSStringFromClass([StudyCVCell class]) bundle:nil] forCellWithReuseIdentifier:cell2];
         
-        self.contentInset = UIEdgeInsetsMake(self.img_head.py_height-(UI_IS_IPHONE_X?64:0), 0, 0, 0);
+        self.contentInset = UIEdgeInsetsMake(self.img_head.py_height, 0, 0, 0);
         [self addSubview:self.img_head];
         self.delegate = self;
         self.dataSource = self;
