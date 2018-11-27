@@ -43,6 +43,14 @@ typedef NS_ENUM(NSInteger,GradientDirection)
 #define scale_w (ZTWidth/375.0)
 #define scale_H (ZTHeight/667.0)
 
+
+#define LL_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define LL_SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define Iphone6Scale(x) ((x) * LL_SCREEN_WIDTH / 375.0f)
+
+#define HeaderViewHeight 30
+#define WeekViewHeight 40
+
 #pragma mark 通知通用字符串
 
 

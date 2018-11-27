@@ -11,8 +11,13 @@
 #import "HomenewsCell.h"
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, searchtype){
+    forsearchtype,
+    forrecommendtype,
+};
 @interface searchresultCV : UICollectionView<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic,strong)NSArray *headtitile;
+@property (nonatomic,assign)searchtype type;
 @end
 
 NS_ASSUME_NONNULL_END

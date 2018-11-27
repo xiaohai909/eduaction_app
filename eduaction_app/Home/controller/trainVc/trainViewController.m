@@ -59,7 +59,7 @@
    
     [super viewWillAppear:animated];
     
-    [self setNavTitle:@"选择分类"];
+  
     
     [self setnavbg_defa];
     

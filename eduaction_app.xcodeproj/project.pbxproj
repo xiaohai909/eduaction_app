@@ -92,6 +92,16 @@
 		04BBFB8C219AB34C0088196E /* ConsolidateProblemCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB8A219AB34C0088196E /* ConsolidateProblemCVCell.m */; };
 		04BBFB8D219AB34C0088196E /* ConsolidateProblemCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBFB8B219AB34C0088196E /* ConsolidateProblemCVCell.xib */; };
 		04BBFB93219AB5200088196E /* MyCollectionMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB92219AB5200088196E /* MyCollectionMainCollection.m */; };
+		3E0AE2E521AC296A00AB6180 /* recommandVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0AE2E421AC296A00AB6180 /* recommandVC.m */; };
+		3E14D86221ADA30500165FF8 /* courseCalendarV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D86121ADA30500165FF8 /* courseCalendarV.m */; };
+		3E14D86521ADA41A00165FF8 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D86321ADA41A00165FF8 /* NSDate+Formatter.m */; };
+		3E14D86821ADAD7700165FF8 /* MonthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D86721ADAD7700165FF8 /* MonthModel.m */; };
+		3E14D86B21ADAF5600165FF8 /* CalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D86A21ADAF5600165FF8 /* CalendarCell.m */; };
+		3E14D86E21ADAFBD00165FF8 /* CalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D86D21ADAFBD00165FF8 /* CalendarHeaderView.m */; };
+		3E14D87121ADB08200165FF8 /* couresListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D87021ADB08200165FF8 /* couresListVC.m */; };
+		3E14D87521ADBA0600165FF8 /* courseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D87321ADBA0600165FF8 /* courseListCell.m */; };
+		3E14D87621ADBA0600165FF8 /* courseListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E14D87421ADBA0600165FF8 /* courseListCell.xib */; };
+		3E14D87921ADBE5D00165FF8 /* courselistT.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D87821ADBE5D00165FF8 /* courselistT.m */; };
 		3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E21BBAC21874FE70041CF70 /* LoginViewMode.m */; };
 		3E32D0B7219910F300E45154 /* trainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E32D0B6219910F300E45154 /* trainViewController.m */; };
 		3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBA217DFDA8006C2860 /* AppDelegate.m */; };
@@ -341,6 +351,25 @@
 		04BBFB8B219AB34C0088196E /* ConsolidateProblemCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsolidateProblemCVCell.xib; sourceTree = "<group>"; };
 		04BBFB91219AB5200088196E /* MyCollectionMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionMainCollection.h; sourceTree = "<group>"; };
 		04BBFB92219AB5200088196E /* MyCollectionMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionMainCollection.m; sourceTree = "<group>"; };
+		3E0AE2E321AC296A00AB6180 /* recommandVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = recommandVC.h; sourceTree = "<group>"; };
+		3E0AE2E421AC296A00AB6180 /* recommandVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = recommandVC.m; sourceTree = "<group>"; };
+		3E14D86021ADA30500165FF8 /* courseCalendarV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = courseCalendarV.h; sourceTree = "<group>"; };
+		3E14D86121ADA30500165FF8 /* courseCalendarV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = courseCalendarV.m; sourceTree = "<group>"; };
+		3E14D86321ADA41A00165FF8 /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
+		3E14D86421ADA41A00165FF8 /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
+		3E14D86621ADAD7700165FF8 /* MonthModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthModel.h; sourceTree = "<group>"; };
+		3E14D86721ADAD7700165FF8 /* MonthModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthModel.m; sourceTree = "<group>"; };
+		3E14D86921ADAF5600165FF8 /* CalendarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarCell.h; sourceTree = "<group>"; };
+		3E14D86A21ADAF5600165FF8 /* CalendarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarCell.m; sourceTree = "<group>"; };
+		3E14D86C21ADAFBD00165FF8 /* CalendarHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarHeaderView.h; sourceTree = "<group>"; };
+		3E14D86D21ADAFBD00165FF8 /* CalendarHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarHeaderView.m; sourceTree = "<group>"; };
+		3E14D86F21ADB08200165FF8 /* couresListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = couresListVC.h; sourceTree = "<group>"; };
+		3E14D87021ADB08200165FF8 /* couresListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = couresListVC.m; sourceTree = "<group>"; };
+		3E14D87221ADBA0600165FF8 /* courseListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = courseListCell.h; sourceTree = "<group>"; };
+		3E14D87321ADBA0600165FF8 /* courseListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = courseListCell.m; sourceTree = "<group>"; };
+		3E14D87421ADBA0600165FF8 /* courseListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = courseListCell.xib; sourceTree = "<group>"; };
+		3E14D87721ADBE5D00165FF8 /* courselistT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = courselistT.h; sourceTree = "<group>"; };
+		3E14D87821ADBE5D00165FF8 /* courselistT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = courselistT.m; sourceTree = "<group>"; };
 		3E21BBAB21874FE70041CF70 /* LoginViewMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewMode.h; sourceTree = "<group>"; };
 		3E21BBAC21874FE70041CF70 /* LoginViewMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewMode.m; sourceTree = "<group>"; };
 		3E32D0B5219910F300E45154 /* trainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trainViewController.h; sourceTree = "<group>"; };
@@ -856,6 +885,52 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3E0AE2E021AC26A200AB6180 /* courseVC */ = {
+			isa = PBXGroup;
+			children = (
+				3E14D86F21ADB08200165FF8 /* couresListVC.h */,
+				3E14D87021ADB08200165FF8 /* couresListVC.m */,
+			);
+			name = courseVC;
+			path = ../View/courseVC;
+			sourceTree = "<group>";
+		};
+		3E0AE2E121AC26B100AB6180 /* courseVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = courseVC;
+			sourceTree = "<group>";
+		};
+		3E0AE2E221AC295200AB6180 /* recommandVC */ = {
+			isa = PBXGroup;
+			children = (
+				3E0AE2E321AC296A00AB6180 /* recommandVC.h */,
+				3E0AE2E421AC296A00AB6180 /* recommandVC.m */,
+			);
+			path = recommandVC;
+			sourceTree = "<group>";
+		};
+		3E14D85F21ADA2EE00165FF8 /* CalendarV */ = {
+			isa = PBXGroup;
+			children = (
+				3E14D86021ADA30500165FF8 /* courseCalendarV.h */,
+				3E14D86121ADA30500165FF8 /* courseCalendarV.m */,
+				3E14D86621ADAD7700165FF8 /* MonthModel.h */,
+				3E14D86721ADAD7700165FF8 /* MonthModel.m */,
+				3E14D86921ADAF5600165FF8 /* CalendarCell.h */,
+				3E14D86A21ADAF5600165FF8 /* CalendarCell.m */,
+				3E14D86C21ADAFBD00165FF8 /* CalendarHeaderView.h */,
+				3E14D86D21ADAFBD00165FF8 /* CalendarHeaderView.m */,
+				3E14D87221ADBA0600165FF8 /* courseListCell.h */,
+				3E14D87321ADBA0600165FF8 /* courseListCell.m */,
+				3E14D87421ADBA0600165FF8 /* courseListCell.xib */,
+				3E14D87721ADBE5D00165FF8 /* courselistT.h */,
+				3E14D87821ADBE5D00165FF8 /* courselistT.m */,
+			);
+			path = CalendarV;
+			sourceTree = "<group>";
+		};
 		3E32D0B4219910F300E45154 /* trainVc */ = {
 			isa = PBXGroup;
 			children = (
@@ -930,6 +1005,8 @@
 		3E3AEFEB217DFF51006C2860 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				3E14D86421ADA41A00165FF8 /* NSDate+Formatter.h */,
+				3E14D86321ADA41A00165FF8 /* NSDate+Formatter.m */,
 				3EE08AE221A5439E00832D1A /* UIButton+ImageRight.h */,
 				3EE08AE121A5439E00832D1A /* UIButton+ImageRight.m */,
 				3EE6F4D621A199850068F78D /* netMnager */,
@@ -1085,6 +1162,7 @@
 		3EB08E8B218C352A00849777 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3E14D85F21ADA2EE00165FF8 /* CalendarV */,
 				3E7564C421A500E4009A766C /* searchVmode */,
 				3E6AFE9D21A29BDF00E07AD7 /* searchWithKindV */,
 				3EE6F4DA21A252320068F78D /* trainV */,
@@ -1179,6 +1257,9 @@
 		3ECB3622218AC0DD0008A109 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				3E0AE2E021AC26A200AB6180 /* courseVC */,
+				3E0AE2E221AC295200AB6180 /* recommandVC */,
+				3E0AE2E121AC26B100AB6180 /* courseVC */,
 				3E6AFE9921A29B2900E07AD7 /* searchWithKind */,
 				3E32D0B4219910F300E45154 /* trainVc */,
 				3ECB3625218AC1070008A109 /* HomeViewController.h */,
@@ -1367,6 +1448,7 @@
 				045B11D321912198001FC325 /* ChapterMainCVCell.xib in Resources */,
 				3E635FC521928A0A006FC152 /* SearchResultH.xib in Resources */,
 				3EE6F4E721A257BA0068F78D /* trainRightCell.xib in Resources */,
+				3E14D87621ADBA0600165FF8 /* courseListCell.xib in Resources */,
 				045B11ED219138E1001FC325 /* ChapterScoreHeadCVCell.xib in Resources */,
 				04B3C08F219BFD140035C995 /* MakeProblemQuestionCardCVCell.xib in Resources */,
 				3EA283482186EE1200B2D716 /* forgetpassview.xib in Resources */,
@@ -1503,9 +1585,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB08EAC218C76E400849777 /* homeheaderCR.m in Sources */,
+				3E14D87921ADBE5D00165FF8 /* courselistT.m in Sources */,
 				04B1B13D21945AD600EEB51E /* ConsolidateMainVC.m in Sources */,
 				3EDCF81E218F298800861D26 /* MySearchBar.m in Sources */,
 				04AC33EA219287B200307E70 /* MakeProblemAnswerCVCell.m in Sources */,
+				3E14D86821ADAD7700165FF8 /* MonthModel.m in Sources */,
 				045B11C021912184001FC325 /* StudyCVCell.m in Sources */,
 				04B3C087219BC9C90035C995 /* ConsolidateScoreLineView.m in Sources */,
 				044F97DE219E6B05002295CA /* MakeProblemMainModel.m in Sources */,
@@ -1531,6 +1615,7 @@
 				3E635FBC219282CD006FC152 /* AbbAlertView.m in Sources */,
 				045B11BE21912184001FC325 /* StudyTimeCVCell.m in Sources */,
 				04AC33EF21928D7500307E70 /* MakeProblemCommitCRView.m in Sources */,
+				3E14D86221ADA30500165FF8 /* courseCalendarV.m in Sources */,
 				3E83D2CB217E128100E78B1C /* BaseViewController.m in Sources */,
 				045B11F7219167AF001FC325 /* MakeProblemTopicCVCell.m in Sources */,
 				04B3C075219BBBF20035C995 /* ConsolidateMyNoteVC.m in Sources */,
@@ -1541,8 +1626,10 @@
 				3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */,
 				3EE6F4EF21A291870068F78D /* trainRightCollection.m in Sources */,
 				04B3C06F219BB1B90035C995 /* ConsolidateHotMainVC.m in Sources */,
+				3E0AE2E521AC296A00AB6180 /* recommandVC.m in Sources */,
 				3EE6F4E621A257BA0068F78D /* trainRightCell.m in Sources */,
 				3E83D2D1217E132900E78B1C /* loginview.m in Sources */,
+				3E14D87521ADBA0600165FF8 /* courseListCell.m in Sources */,
 				04BBFB88219AAE080088196E /* MyCollectionMainVC.m in Sources */,
 				3E8AEDA421927B0F007CF326 /* homeFooterRefresh.m in Sources */,
 				045B11D121912198001FC325 /* ChapterVC.m in Sources */,
@@ -1584,6 +1671,7 @@
 				3EB08EBF218C853100849777 /* GWScanQRvC.m in Sources */,
 				045B120021917081001FC325 /* MakeProblemMainCollection.m in Sources */,
 				3EDCF821218F2ADC00861D26 /* SearchViewController.m in Sources */,
+				3E14D86521ADA41A00165FF8 /* NSDate+Formatter.m in Sources */,
 				04ACCD44219D120A00716953 /* SyllabusMainCVCell.m in Sources */,
 				04ACCD84219D7B0100716953 /* SearchQuestionMainVC.m in Sources */,
 				3E83D2CE217E129300E78B1C /* LoginViewController.m in Sources */,
@@ -1597,10 +1685,13 @@
 				0477160121999B1C0051FB83 /* ConsolidateOptionCVCell.m in Sources */,
 				04ACCD9A219D8E4700716953 /* SearchCollection.m in Sources */,
 				04B3C078219BBCE80035C995 /* ConsolidateNoteMainCollection.m in Sources */,
+				3E14D86B21ADAF5600165FF8 /* CalendarCell.m in Sources */,
 				04ACCD98219D8E4700716953 /* SQSearchBar.m in Sources */,
+				3E14D86E21ADAFBD00165FF8 /* CalendarHeaderView.m in Sources */,
 				04B3C084219BC2410035C995 /* ConsolidateMyWrongMainCollection.m in Sources */,
 				3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */,
 				04BBFB93219AB5200088196E /* MyCollectionMainCollection.m in Sources */,
+				3E14D87121ADB08200165FF8 /* couresListVC.m in Sources */,
 				045B11D221912198001FC325 /* ChapterCVCell.m in Sources */,
 				3E83D2C1217E019200E78B1C /* MyNav.m in Sources */,
 				3EE08AE621A5B7A600832D1A /* topFilterCell.m in Sources */,
