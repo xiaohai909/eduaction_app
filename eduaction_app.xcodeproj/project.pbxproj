@@ -92,6 +92,12 @@
 		04BBFB8C219AB34C0088196E /* ConsolidateProblemCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB8A219AB34C0088196E /* ConsolidateProblemCVCell.m */; };
 		04BBFB8D219AB34C0088196E /* ConsolidateProblemCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBFB8B219AB34C0088196E /* ConsolidateProblemCVCell.xib */; };
 		04BBFB93219AB5200088196E /* MyCollectionMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB92219AB5200088196E /* MyCollectionMainCollection.m */; };
+		04C5ED4121ACEB3A0024F826 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5ED3721ACEB3A0024F826 /* MineViewController.m */; };
+		04C5ED4221ACEB3A0024F826 /* MineMainCRView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C5ED3921ACEB3A0024F826 /* MineMainCRView.xib */; };
+		04C5ED4321ACEB3A0024F826 /* MineTitleCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C5ED3A21ACEB3A0024F826 /* MineTitleCVCell.xib */; };
+		04C5ED4421ACEB3A0024F826 /* MineTitleCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5ED3B21ACEB3A0024F826 /* MineTitleCVCell.m */; };
+		04C5ED4521ACEB3A0024F826 /* MineMainCRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5ED3D21ACEB3A0024F826 /* MineMainCRView.m */; };
+		04C5ED4621ACEB3A0024F826 /* MineMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5ED3F21ACEB3A0024F826 /* MineMainCollection.m */; };
 		3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E21BBAC21874FE70041CF70 /* LoginViewMode.m */; };
 		3E32D0B7219910F300E45154 /* trainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E32D0B6219910F300E45154 /* trainViewController.m */; };
 		3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBA217DFDA8006C2860 /* AppDelegate.m */; };
@@ -157,7 +163,6 @@
 		3EB08ECA218C922B00849777 /* QRcomfimViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB08EC8218C922B00849777 /* QRcomfimViewController.xib */; };
 		3ECB361E218AAF0C0008A109 /* MYtabarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB361D218AAF0C0008A109 /* MYtabarViewController.m */; };
 		3ECB3627218AC1070008A109 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB3626218AC1070008A109 /* HomeViewController.m */; };
-		3ECB362A218AC1140008A109 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB3629218AC1140008A109 /* MineViewController.m */; };
 		3ECB362D218AC1250008A109 /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB362C218AC1250008A109 /* StudyViewController.m */; };
 		3EDCF81E218F298800861D26 /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF81C218F298800861D26 /* MySearchBar.m */; };
 		3EDCF821218F2ADC00861D26 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDCF820218F2ADC00861D26 /* SearchViewController.m */; };
@@ -341,6 +346,16 @@
 		04BBFB8B219AB34C0088196E /* ConsolidateProblemCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsolidateProblemCVCell.xib; sourceTree = "<group>"; };
 		04BBFB91219AB5200088196E /* MyCollectionMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionMainCollection.h; sourceTree = "<group>"; };
 		04BBFB92219AB5200088196E /* MyCollectionMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionMainCollection.m; sourceTree = "<group>"; };
+		04C5ED3621ACEB3A0024F826 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		04C5ED3721ACEB3A0024F826 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		04C5ED3921ACEB3A0024F826 /* MineMainCRView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineMainCRView.xib; sourceTree = "<group>"; };
+		04C5ED3A21ACEB3A0024F826 /* MineTitleCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineTitleCVCell.xib; sourceTree = "<group>"; };
+		04C5ED3B21ACEB3A0024F826 /* MineTitleCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTitleCVCell.m; sourceTree = "<group>"; };
+		04C5ED3C21ACEB3A0024F826 /* MineMainCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMainCollection.h; sourceTree = "<group>"; };
+		04C5ED3D21ACEB3A0024F826 /* MineMainCRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMainCRView.m; sourceTree = "<group>"; };
+		04C5ED3E21ACEB3A0024F826 /* MineTitleCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTitleCVCell.h; sourceTree = "<group>"; };
+		04C5ED3F21ACEB3A0024F826 /* MineMainCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMainCollection.m; sourceTree = "<group>"; };
+		04C5ED4021ACEB3A0024F826 /* MineMainCRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMainCRView.h; sourceTree = "<group>"; };
 		3E21BBAB21874FE70041CF70 /* LoginViewMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewMode.h; sourceTree = "<group>"; };
 		3E21BBAC21874FE70041CF70 /* LoginViewMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewMode.m; sourceTree = "<group>"; };
 		3E32D0B5219910F300E45154 /* trainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trainViewController.h; sourceTree = "<group>"; };
@@ -457,8 +472,6 @@
 		3ECB361D218AAF0C0008A109 /* MYtabarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYtabarViewController.m; sourceTree = "<group>"; };
 		3ECB3625218AC1070008A109 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		3ECB3626218AC1070008A109 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		3ECB3628218AC1140008A109 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
-		3ECB3629218AC1140008A109 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		3ECB362B218AC1250008A109 /* StudyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
 		3ECB362C218AC1250008A109 /* StudyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		3EDCF81C218F298800861D26 /* MySearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySearchBar.m; sourceTree = "<group>"; };
@@ -856,6 +869,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04C5ED3421ACEB3A0024F826 /* MineMain */ = {
+			isa = PBXGroup;
+			children = (
+				04C5ED3521ACEB3A0024F826 /* controller */,
+				04C5ED3821ACEB3A0024F826 /* views */,
+			);
+			path = MineMain;
+			sourceTree = "<group>";
+		};
+		04C5ED3521ACEB3A0024F826 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C5ED3621ACEB3A0024F826 /* MineViewController.h */,
+				04C5ED3721ACEB3A0024F826 /* MineViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		04C5ED3821ACEB3A0024F826 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				04C5ED3C21ACEB3A0024F826 /* MineMainCollection.h */,
+				04C5ED3F21ACEB3A0024F826 /* MineMainCollection.m */,
+				04C5ED4021ACEB3A0024F826 /* MineMainCRView.h */,
+				04C5ED3D21ACEB3A0024F826 /* MineMainCRView.m */,
+				04C5ED3921ACEB3A0024F826 /* MineMainCRView.xib */,
+				04C5ED3E21ACEB3A0024F826 /* MineTitleCVCell.h */,
+				04C5ED3B21ACEB3A0024F826 /* MineTitleCVCell.m */,
+				04C5ED3A21ACEB3A0024F826 /* MineTitleCVCell.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		3E32D0B4219910F300E45154 /* trainVc */ = {
 			isa = PBXGroup;
 			children = (
@@ -1155,7 +1201,7 @@
 		3ECB3620218AB1360008A109 /* mine */ = {
 			isa = PBXGroup;
 			children = (
-				3ECB3623218AC0E60008A109 /* controller */,
+				04C5ED3421ACEB3A0024F826 /* MineMain */,
 			);
 			path = mine;
 			sourceTree = "<group>";
@@ -1190,15 +1236,6 @@
 				3EB08EC8218C922B00849777 /* QRcomfimViewController.xib */,
 				3EDCF81F218F2ADC00861D26 /* SearchViewController.h */,
 				3EDCF820218F2ADC00861D26 /* SearchViewController.m */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		3ECB3623218AC0E60008A109 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				3ECB3628218AC1140008A109 /* MineViewController.h */,
-				3ECB3629218AC1140008A109 /* MineViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1367,6 +1404,7 @@
 				045B11D321912198001FC325 /* ChapterMainCVCell.xib in Resources */,
 				3E635FC521928A0A006FC152 /* SearchResultH.xib in Resources */,
 				3EE6F4E721A257BA0068F78D /* trainRightCell.xib in Resources */,
+				04C5ED4221ACEB3A0024F826 /* MineMainCRView.xib in Resources */,
 				045B11ED219138E1001FC325 /* ChapterScoreHeadCVCell.xib in Resources */,
 				04B3C08F219BFD140035C995 /* MakeProblemQuestionCardCVCell.xib in Resources */,
 				3EA283482186EE1200B2D716 /* forgetpassview.xib in Resources */,
@@ -1402,6 +1440,7 @@
 				3EB08EA5218C5EC000849777 /* HomenewsCell.xib in Resources */,
 				04AC33E62192736200307E70 /* MakeProlemAnswerCRView.xib in Resources */,
 				3EA283432186E1BF00B2D716 /* cellphone_loginview.xib in Resources */,
+				04C5ED4321ACEB3A0024F826 /* MineTitleCVCell.xib in Resources */,
 				3E83D2D3217E133F00E78B1C /* loginview.xib in Resources */,
 				3E635FBB219282CD006FC152 /* AlertStringView.xib in Resources */,
 				3E3AEFC1217DFDA8006C2860 /* Main.storyboard in Resources */,
@@ -1535,6 +1574,7 @@
 				045B11F7219167AF001FC325 /* MakeProblemTopicCVCell.m in Sources */,
 				04B3C075219BBBF20035C995 /* ConsolidateMyNoteVC.m in Sources */,
 				04B3C072219BB2250035C995 /* ConsolidateHotMainCollection.m in Sources */,
+				04C5ED4121ACEB3A0024F826 /* MineViewController.m in Sources */,
 				3E401A65218F496F00D85448 /* SearchSecionV.m in Sources */,
 				3EE6F4EB21A25B370068F78D /* trainRightHead.m in Sources */,
 				3E635FCC21929377006FC152 /* MainCollectionFowLayout.m in Sources */,
@@ -1555,10 +1595,10 @@
 				04B3C07B219BBEDA0035C995 /* ConsolidateFallibilityMainVC.m in Sources */,
 				045B11E32191344C001FC325 /* ChapterScoreCollection.m in Sources */,
 				3E6AFEA321A2A3E800E07AD7 /* noticeSubjectmanager.m in Sources */,
-				3ECB362A218AC1140008A109 /* MineViewController.m in Sources */,
 				045B11C121912184001FC325 /* StudyCollection.m in Sources */,
 				3EB08EC5218C85E000849777 /* ScanQRViewController.m in Sources */,
 				3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */,
+				04C5ED4521ACEB3A0024F826 /* MineMainCRView.m in Sources */,
 				3ECB362D218AC1250008A109 /* StudyViewController.m in Sources */,
 				04BBFB85219A7D7E0088196E /* RechargeMainBottomView.m in Sources */,
 				04B1B137219458E900EEB51E /* MakeProblemQuestionCardVC.m in Sources */,
@@ -1573,6 +1613,7 @@
 				3E3AEFC9217DFDA9006C2860 /* main.m in Sources */,
 				3E32D0B7219910F300E45154 /* trainViewController.m in Sources */,
 				04ACCD97219D8E4700716953 /* SearchKeyCVCell.m in Sources */,
+				04C5ED4421ACEB3A0024F826 /* MineTitleCVCell.m in Sources */,
 				3E401A62218F433500D85448 /* UIView+PYSearchExtension.m in Sources */,
 				3EE6F4DD21A252640068F78D /* trainLeftTab.m in Sources */,
 				04B1B12F2193DD6D00EEB51E /* SimulateExameMainCollection.m in Sources */,
@@ -1617,6 +1658,7 @@
 				04AC33F42192B1EA00307E70 /* MakeProblemCommitCVCell.m in Sources */,
 				045B11D621912198001FC325 /* RatioView.m in Sources */,
 				3EB08EBC218C853100849777 /* GWScanCodeManager.m in Sources */,
+				04C5ED4621ACEB3A0024F826 /* MineMainCollection.m in Sources */,
 				04ACCD38219D07F100716953 /* SyllabusMainVC.m in Sources */,
 				045B11DA21912FFF001FC325 /* ChapterListVC.m in Sources */,
 				04ACCD87219D840600716953 /* SearchQuestionMainView.m in Sources */,
@@ -1794,7 +1836,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7UYQ2P7DV8;
+				DEVELOPMENT_TEAM = G28GH562NU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/common/mypchfile.pch";
 				INFOPLIST_FILE = eduaction_app/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -1817,7 +1859,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7UYQ2P7DV8;
+				DEVELOPMENT_TEAM = G28GH562NU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/common/mypchfile.pch";
 				INFOPLIST_FILE = eduaction_app/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
