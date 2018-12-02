@@ -22,7 +22,7 @@
     //self.automaticallyAdjustsScrollViewInsets = NO;
     // Do any additional setup after loading the view.
     if (self.navigationController.viewControllers.count>1 && self.navigationItem.leftBarButtonItem==nil) {
-        [self createNavigationLeftItem:YES andImage:@"top_btn_return" andTitle:@"   "];
+        self.leftBtn = [self createNavigationLeftItem:YES andImage:@"top_btn_return" andTitle:@"   "];
     }
 }
 -(void)setnavbg_defa{
@@ -34,7 +34,9 @@
     UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
     back.frame=CGRectMake(0, 0, 44,NaviIPHONEX);
     [back setImage:[UIImage imageNamed:@"top_btn_return"] forState:UIControlStateNormal];
+    @weakify(self);
     [[back rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
         [self.navigationController popViewControllerAnimated:YES];
     }];
     self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:back];
@@ -49,7 +51,9 @@
         btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         [btn setImage:image forState:UIControlStateNormal];
         [btn setTitle:title forState:UIControlStateNormal];
-        [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @weakify(self);
+        self.leftDis = [[[btn rac_signalForControlEvents:UIControlEventTouchUpInside]takeUntil:self.rac_willDeallocSignal] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self);
             [self.navigationController popViewControllerAnimated:YES];
         }];
     }

@@ -39,7 +39,7 @@
     [super viewDidLoad];
     
     
-    [self setnav_BackBtn];
+ 
   
     [self.view addSubview:self.myTab];
     [self.view addSubview:self.myCollectionV];

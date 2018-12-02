@@ -102,7 +102,7 @@
     //mgr.responseSerializer=[AFJSONResponseSerializer serializer];
     //mgr.requestSerializer=[AFHTTPRequestSerializer serializer];
     mgr.requestSerializer.timeoutInterval=10.f;
-    
+
     mgr.requestSerializer = [AFJSONRequestSerializer serializer];
     mgr.responseSerializer = [AFJSONResponseSerializer serializer];
     

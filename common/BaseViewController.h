@@ -27,6 +27,8 @@ _Pragma("clang diagnostic pop")\
 } while (0)
 @interface BaseViewController : UIViewController
 @property (nonatomic,strong)UIButton *rightBtn;
+@property (nonatomic,strong)UIButton *leftBtn;
+@property (nonatomic,strong)RACDisposable *leftDis;
 -(void)setnavbg_defa;
 -(void)setnav_BackBtn;
 - (UIButton *)createNavigationLeftItem:(BOOL)isLeft andImage:(NSString *)imageName andTitle:(NSString *)title;

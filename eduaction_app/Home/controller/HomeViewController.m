@@ -15,6 +15,8 @@
 #import "searchWithKindVC.h"
 #import "recommandVC.h"
 #import "couresListVC.h"
+#import "testGuideVC.h"
+#import "medicineVC.h"
 @interface HomeViewController ()
 @property(strong,nonatomic)UIButton *rightBtn;
 @property(strong,nonatomic)UIButton *searchBtn;
@@ -125,6 +127,7 @@
             
         }
             break;
+#pragma mark 公开课
         case 4:
         {
             recommandVC *cont =[[recommandVC alloc]init];
@@ -133,18 +136,26 @@
             
         }
             break;
+#pragma mark 下载管理
         case 5:
         {
             
         }
             break;
+#pragma mark 考试指南
         case 6:
         {
-            
+            testGuideVC *cont =[[testGuideVC alloc]init];
+            [cont setNavTitle:@"考试指南"];
+            [self.navigationController pushViewController:cont animated:YES];
         }
             break;
+#pragma mark 药物查询
         case 7:
         {
+            medicineVC *cont =[[medicineVC alloc]init];
+            [cont setNavTitle:@"药物查询"];
+            [self.navigationController pushViewController:cont animated:YES];
             
         }
             break;

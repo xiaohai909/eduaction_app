@@ -50,6 +50,8 @@ id (*objc_msgSendCreateCellWithIndexPath)(id self, SEL _cmd, NSIndexPath *) = (v
         _resetBlock = resetBlock;
         _commitBlock = commitBlock;
         UINavigationController *filterNavigation = [[NSClassFromString(FILTER_NAVIGATION_CONTROLLER_CLASS) alloc] initWithRootViewController:self];
+        //MyNav *filterNavigation = [[MyNav alloc] initWithRootViewController:self];
+        //filterNavigation.interactivePopGestureRecognizer.enabled = NO;
         [filterNavigation setNavigationBarHidden:YES];
         filterNavigation.navigationBar.translucent = NO;
         [filterNavigation.view setFrame:SLIP_ORIGIN_FRAME];
@@ -71,9 +73,7 @@ id (*objc_msgSendCreateCellWithIndexPath)(id self, SEL _cmd, NSIndexPath *) = (v
     [self.view addSubview:bottomView];
     
     NSDictionary *views = @{@"mainTableView":self.mainTableView, @"bottomView":bottomView};
-
-    
-    
+        
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:bottomView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:BOTTOM_BUTTON_HEIGHT]];
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[mainTableView]|" options:NSLayoutFormatAlignAllCenterX metrics:nil views:views]];
@@ -103,10 +103,11 @@ id (*objc_msgSendCreateCellWithIndexPath)(id self, SEL _cmd, NSIndexPath *) = (v
     [UIView animateWithDuration:_animationDuration animations:^{
         [self.navigationController.view setFrame:SLIP_ORIGIN_FRAME];
     } completion:^(BOOL finished) {
-        dismissBlock();
+       
         [_backCover removeFromSuperview];
         [self.navigationController.view removeFromSuperview];
         [self.navigationController removeFromParentViewController];
+        dismissBlock();
     }];
 }
 

@@ -23,13 +23,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setnavbg_defa];
+    
     
     [self.view addSubview:self.calendarV];
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
-    
+    [self setnavbg_defa];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 /*

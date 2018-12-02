@@ -14,7 +14,7 @@
     NSMutableArray *filterData1;
     NSMutableArray *filterData2;
     
-    NSInteger selectTopindex;
+
     
     NSInteger selectindex_1;
     NSInteger selectindex_2;
@@ -29,6 +29,7 @@
     // Drawing code
 }
 */
+@synthesize selectTopindex;
 -(instancetype)initWithFrame:(CGRect)frame{
     
     if ([super initWithFrame:frame]) {
@@ -38,6 +39,7 @@
         filterData1 = [[NSMutableArray alloc]initWithArray:@[@"全部课程",@"阅读写作"]];
         filterData2 = [[NSMutableArray alloc]initWithArray:@[@"热门课程",@"最新开课"]];
         selectTopindex  = 0;
+        self.clickIndex = [RACSubject subject];
         
         topView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ZTWidth, 40)];
         topView.backgroundColor = [UIColor whiteColor];
@@ -85,7 +87,7 @@
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesture)];
         [bottomV addGestureRecognizer:tap];
         
-        kinSelectTab =[[UITableView alloc]initWithFrame:CGRectMake(0, 40, ZTWidth, (ZTHeight - 40 - NaviIPHONEX)/2.0) style:UITableViewStyleGrouped];
+        kinSelectTab =[[UITableView alloc]initWithFrame:CGRectMake(0, 40, ZTWidth, (filterData1.count*44<(ZTHeight - 40 - NaviIPHONEX)/2.0)?filterData1.count*44:(ZTHeight - 40 - NaviIPHONEX)/2.0) style:UITableViewStyleGrouped];
         kinSelectTab.delegate = self;
         kinSelectTab.dataSource =self;
         kinSelectTab.hidden = YES;
@@ -108,8 +110,10 @@
     kinSelectTab.hidden = YES;
     UIButton *btn1 = [topView viewWithTag:1];
     UIButton *btn2 = [topView viewWithTag:2];
+    UIButton *btn3 = [topView viewWithTag:3];
     btn1.selected = NO;
     btn2.selected = NO;
+    btn3.selected = NO;
     self.backgroundColor = [UIColor clearColor];
 }
 -(void)updatefilterArr:(NSArray *)arr{
@@ -123,6 +127,7 @@
     UIButton *btn3 = [topView viewWithTag:3];
     
     if (sender.tag ==3) {
+        selectTopindex = 2;
         self.backgroundColor = [UIColor clearColor];
         btn1.selected = NO;
         btn2.selected = NO;
@@ -150,6 +155,7 @@
         selectTopindex = 0;
          [kinSelectTab reloadData];
          [kinSelectTab selectRowAtIndexPath:[NSIndexPath indexPathForRow:selectindex_1 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+        kinSelectTab.frame =CGRectMake(0, 40, ZTWidth, (filterData1.count*44<(ZTHeight - 40 - NaviIPHONEX)/2.0)?filterData1.count*44:(ZTHeight - 40 - NaviIPHONEX)/2.0);
         }
         else{
         kinSelectTab.hidden = YES;
@@ -169,21 +175,22 @@
             selectTopindex = 1;
             [kinSelectTab reloadData];
             [kinSelectTab selectRowAtIndexPath:[NSIndexPath indexPathForRow:selectindex_2 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+            kinSelectTab.frame =CGRectMake(0, 40, ZTWidth, (filterData2.count*44<(ZTHeight - 40 - NaviIPHONEX)/2.0)?filterData1.count*44:(ZTHeight - 40 - NaviIPHONEX)/2.0);
         }
         else{
             kinSelectTab.hidden = YES;
             [kinSelectTab reloadData];
         }
-        
+      
     }
     sender.selected = !sender.selected;
-    
+    [self.clickIndex sendNext:@(selectTopindex)];
     
 }
 -(void)setfilterV:(UIViewController *)view{
-    
+    @weakify(self);
     self.filterController = [[ZYSideSlipFilterController alloc] initWithSponsor:view resetBlock:^(NSArray *dataList) {
-        
+        @strongify(self);
         
         [self.viewMode resetFunction:dataList];
         
@@ -263,5 +270,9 @@
         selectindex_2 =indexPath.row;
     }
     
+}
+-(void)dealloc{
+    
+
 }
 @end

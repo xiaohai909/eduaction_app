@@ -1,26 +1,28 @@
 //
-//  recommandVC.m
+//  medicineVC.m
 //  eduaction_app
 //
-//  Created by legendlxd on 2018/11/26.
+//  Created by legendlxd on 2018/11/30.
 //  Copyright © 2018年 diandang. All rights reserved.
 //
 
-#import "recommandVC.h"
+#import "medicineVC.h"
+#import "BATableViewIndex.h"
 #import "searchresultCV.h"
 #import "MainCollectionFowLayout.h"
-@interface recommandVC ()
+@interface medicineVC ()
+@property (nonatomic,strong)BATableViewIndex *indexTab;
 @property(strong,nonatomic)searchresultCV *resultV;
 @end
 
-@implementation recommandVC
+@implementation medicineVC
 -(searchresultCV *)resultV
 {
     if (!_resultV) {
         MainCollectionFowLayout * layout = [[MainCollectionFowLayout alloc]init];
         
         _resultV = [[searchresultCV alloc]initWithFrame:CGRectMake(0, 0, ZTWidth, ZTHeight-NaviIPHONEX) collectionViewLayout:layout];
-        _resultV.headtitile = @[@"推荐",@"免费课程",@"积分兑换"];
+        _resultV.headtitile = @[@"药品名",@"商品名",@"配伍禁忌"];
         _resultV.showsVerticalScrollIndicator = NO;
         _resultV.backgroundColor = [UIColor whiteColor];
         _resultV.type = forrecommendtype;
@@ -30,9 +32,6 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-  
-    
     [self.view addSubview:self.resultV];
     // Do any additional setup after loading the view.
 }

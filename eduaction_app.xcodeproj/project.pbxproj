@@ -102,6 +102,7 @@
 		3E14D87521ADBA0600165FF8 /* courseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D87321ADBA0600165FF8 /* courseListCell.m */; };
 		3E14D87621ADBA0600165FF8 /* courseListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E14D87421ADBA0600165FF8 /* courseListCell.xib */; };
 		3E14D87921ADBE5D00165FF8 /* courselistT.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D87821ADBE5D00165FF8 /* courselistT.m */; };
+		3E1D9F6A21AEF2E700056DF9 /* BATableViewIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1D9F6821AEF2E700056DF9 /* BATableViewIndex.m */; };
 		3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E21BBAC21874FE70041CF70 /* LoginViewMode.m */; };
 		3E32D0B7219910F300E45154 /* trainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E32D0B6219910F300E45154 /* trainViewController.m */; };
 		3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBA217DFDA8006C2860 /* AppDelegate.m */; };
@@ -126,6 +127,7 @@
 		3E6AFE9C21A29B3D00E07AD7 /* searchWithKindVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AFE9B21A29B3D00E07AD7 /* searchWithKindVC.m */; };
 		3E6AFEA021A29C4300E07AD7 /* TopfilteringV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AFE9F21A29C4300E07AD7 /* TopfilteringV.m */; };
 		3E6AFEA321A2A3E800E07AD7 /* noticeSubjectmanager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AFEA221A2A3E800E07AD7 /* noticeSubjectmanager.m */; };
+		3E6CDF5421B0576D00B6058D /* medicineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CDF5321B0576D00B6058D /* medicineVC.m */; };
 		3E7564BA21A4FE70009A766C /* sideFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7564B821A4FE70009A766C /* sideFilterCell.m */; };
 		3E7564BB21A4FE70009A766C /* sideFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E7564B921A4FE70009A766C /* sideFilterCell.xib */; };
 		3E7564BE21A50009009A766C /* FilterBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7564BD21A50009009A766C /* FilterBaseCollectionViewCell.m */; };
@@ -144,6 +146,11 @@
 		3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2D5217E21A600E78B1C /* CommonFunciton.m */; };
 		3E8AEDA421927B0F007CF326 /* homeFooterRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AEDA221927B0F007CF326 /* homeFooterRefresh.m */; };
 		3E8AEDA521927B0F007CF326 /* homeFooterRefresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AEDA321927B0F007CF326 /* homeFooterRefresh.xib */; };
+		3E8FB22021B0518500FBD5E8 /* testGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8FB21F21B0518500FBD5E8 /* testGuideVC.m */; };
+		3E8FB22321B051B800FBD5E8 /* testGuideDetailVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8FB22221B051B800FBD5E8 /* testGuideDetailVc.m */; };
+		3E8FB22821B0527E00FBD5E8 /* testGuideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8FB22621B0527E00FBD5E8 /* testGuideCell.m */; };
+		3E8FB22921B0527E00FBD5E8 /* testGuideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8FB22721B0527E00FBD5E8 /* testGuideCell.xib */; };
+		3E8FB22C21B0535B00FBD5E8 /* testCommTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8FB22B21B0535B00FBD5E8 /* testCommTab.m */; };
 		3EA283412186E1A600B2D716 /* cellphone_loginview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA283402186E1A600B2D716 /* cellphone_loginview.m */; };
 		3EA283432186E1BF00B2D716 /* cellphone_loginview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA283422186E1BF00B2D716 /* cellphone_loginview.xib */; };
 		3EA283462186EE0300B2D716 /* forgetpassview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA283452186EE0300B2D716 /* forgetpassview.m */; };
@@ -370,6 +377,8 @@
 		3E14D87421ADBA0600165FF8 /* courseListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = courseListCell.xib; sourceTree = "<group>"; };
 		3E14D87721ADBE5D00165FF8 /* courselistT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = courselistT.h; sourceTree = "<group>"; };
 		3E14D87821ADBE5D00165FF8 /* courselistT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = courselistT.m; sourceTree = "<group>"; };
+		3E1D9F6821AEF2E700056DF9 /* BATableViewIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATableViewIndex.m; sourceTree = "<group>"; };
+		3E1D9F6921AEF2E700056DF9 /* BATableViewIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATableViewIndex.h; sourceTree = "<group>"; };
 		3E21BBAB21874FE70041CF70 /* LoginViewMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewMode.h; sourceTree = "<group>"; };
 		3E21BBAC21874FE70041CF70 /* LoginViewMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewMode.m; sourceTree = "<group>"; };
 		3E32D0B5219910F300E45154 /* trainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trainViewController.h; sourceTree = "<group>"; };
@@ -415,6 +424,8 @@
 		3E6AFE9F21A29C4300E07AD7 /* TopfilteringV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopfilteringV.m; sourceTree = "<group>"; };
 		3E6AFEA121A2A3E800E07AD7 /* noticeSubjectmanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = noticeSubjectmanager.h; sourceTree = "<group>"; };
 		3E6AFEA221A2A3E800E07AD7 /* noticeSubjectmanager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = noticeSubjectmanager.m; sourceTree = "<group>"; };
+		3E6CDF5221B0576D00B6058D /* medicineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = medicineVC.h; sourceTree = "<group>"; };
+		3E6CDF5321B0576D00B6058D /* medicineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = medicineVC.m; sourceTree = "<group>"; };
 		3E7564B721A4FE70009A766C /* sideFilterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sideFilterCell.h; sourceTree = "<group>"; };
 		3E7564B821A4FE70009A766C /* sideFilterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sideFilterCell.m; sourceTree = "<group>"; };
 		3E7564B921A4FE70009A766C /* sideFilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sideFilterCell.xib; sourceTree = "<group>"; };
@@ -447,6 +458,15 @@
 		3E8AEDA121927B0F007CF326 /* homeFooterRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = homeFooterRefresh.h; sourceTree = "<group>"; };
 		3E8AEDA221927B0F007CF326 /* homeFooterRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homeFooterRefresh.m; sourceTree = "<group>"; };
 		3E8AEDA321927B0F007CF326 /* homeFooterRefresh.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeFooterRefresh.xib; sourceTree = "<group>"; };
+		3E8FB21E21B0518500FBD5E8 /* testGuideVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testGuideVC.h; sourceTree = "<group>"; };
+		3E8FB21F21B0518500FBD5E8 /* testGuideVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testGuideVC.m; sourceTree = "<group>"; };
+		3E8FB22121B051B800FBD5E8 /* testGuideDetailVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testGuideDetailVc.h; sourceTree = "<group>"; };
+		3E8FB22221B051B800FBD5E8 /* testGuideDetailVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testGuideDetailVc.m; sourceTree = "<group>"; };
+		3E8FB22521B0527E00FBD5E8 /* testGuideCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testGuideCell.h; sourceTree = "<group>"; };
+		3E8FB22621B0527E00FBD5E8 /* testGuideCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testGuideCell.m; sourceTree = "<group>"; };
+		3E8FB22721B0527E00FBD5E8 /* testGuideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testGuideCell.xib; sourceTree = "<group>"; };
+		3E8FB22A21B0535B00FBD5E8 /* testCommTab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testCommTab.h; sourceTree = "<group>"; };
+		3E8FB22B21B0535B00FBD5E8 /* testCommTab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testCommTab.m; sourceTree = "<group>"; };
 		3EA2833F2186E1A600B2D716 /* cellphone_loginview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cellphone_loginview.h; sourceTree = "<group>"; };
 		3EA283402186E1A600B2D716 /* cellphone_loginview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cellphone_loginview.m; sourceTree = "<group>"; };
 		3EA283422186E1BF00B2D716 /* cellphone_loginview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellphone_loginview.xib; sourceTree = "<group>"; };
@@ -1005,6 +1025,8 @@
 		3E3AEFEB217DFF51006C2860 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				3E1D9F6921AEF2E700056DF9 /* BATableViewIndex.h */,
+				3E1D9F6821AEF2E700056DF9 /* BATableViewIndex.m */,
 				3E14D86421ADA41A00165FF8 /* NSDate+Formatter.h */,
 				3E14D86321ADA41A00165FF8 /* NSDate+Formatter.m */,
 				3EE08AE221A5439E00832D1A /* UIButton+ImageRight.h */,
@@ -1092,6 +1114,15 @@
 			path = searchWithKindV;
 			sourceTree = "<group>";
 		};
+		3E6CDF5121B0575600B6058D /* medicineVc */ = {
+			isa = PBXGroup;
+			children = (
+				3E6CDF5221B0576D00B6058D /* medicineVC.h */,
+				3E6CDF5321B0576D00B6058D /* medicineVC.m */,
+			);
+			path = medicineVc;
+			sourceTree = "<group>";
+		};
 		3E7564C421A500E4009A766C /* searchVmode */ = {
 			isa = PBXGroup;
 			children = (
@@ -1159,9 +1190,33 @@
 			path = cache;
 			sourceTree = "<group>";
 		};
+		3E8FB21D21B0516C00FBD5E8 /* testGuideVc */ = {
+			isa = PBXGroup;
+			children = (
+				3E8FB21E21B0518500FBD5E8 /* testGuideVC.h */,
+				3E8FB21F21B0518500FBD5E8 /* testGuideVC.m */,
+				3E8FB22121B051B800FBD5E8 /* testGuideDetailVc.h */,
+				3E8FB22221B051B800FBD5E8 /* testGuideDetailVc.m */,
+			);
+			path = testGuideVc;
+			sourceTree = "<group>";
+		};
+		3E8FB22421B0523400FBD5E8 /* testGuideV */ = {
+			isa = PBXGroup;
+			children = (
+				3E8FB22521B0527E00FBD5E8 /* testGuideCell.h */,
+				3E8FB22621B0527E00FBD5E8 /* testGuideCell.m */,
+				3E8FB22721B0527E00FBD5E8 /* testGuideCell.xib */,
+				3E8FB22A21B0535B00FBD5E8 /* testCommTab.h */,
+				3E8FB22B21B0535B00FBD5E8 /* testCommTab.m */,
+			);
+			path = testGuideV;
+			sourceTree = "<group>";
+		};
 		3EB08E8B218C352A00849777 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3E8FB22421B0523400FBD5E8 /* testGuideV */,
 				3E14D85F21ADA2EE00165FF8 /* CalendarV */,
 				3E7564C421A500E4009A766C /* searchVmode */,
 				3E6AFE9D21A29BDF00E07AD7 /* searchWithKindV */,
@@ -1257,6 +1312,8 @@
 		3ECB3622218AC0DD0008A109 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				3E6CDF5121B0575600B6058D /* medicineVc */,
+				3E8FB21D21B0516C00FBD5E8 /* testGuideVc */,
 				3E0AE2E021AC26A200AB6180 /* courseVC */,
 				3E0AE2E221AC295200AB6180 /* recommandVC */,
 				3E0AE2E121AC26B100AB6180 /* courseVC */,
@@ -1444,6 +1501,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E8FB22921B0527E00FBD5E8 /* testGuideCell.xib in Resources */,
 				04B1B1342194200E00EEB51E /* MakeProblemPopView.xib in Resources */,
 				045B11D321912198001FC325 /* ChapterMainCVCell.xib in Resources */,
 				3E635FC521928A0A006FC152 /* SearchResultH.xib in Resources */,
@@ -1594,7 +1652,9 @@
 				04B3C087219BC9C90035C995 /* ConsolidateScoreLineView.m in Sources */,
 				044F97DE219E6B05002295CA /* MakeProblemMainModel.m in Sources */,
 				3EB08EBE218C853100849777 /* GWQrFlashlightsManager.m in Sources */,
+				3E8FB22821B0527E00FBD5E8 /* testGuideCell.m in Sources */,
 				3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */,
+				3E8FB22021B0518500FBD5E8 /* testGuideVC.m in Sources */,
 				3EA283462186EE0300B2D716 /* forgetpassview.m in Sources */,
 				3E83D2C4217E01F200E78B1C /* LogManager.m in Sources */,
 				04ACCD3C219D083900716953 /* SyllabusMainCRView.m in Sources */,
@@ -1627,6 +1687,7 @@
 				3EE6F4EF21A291870068F78D /* trainRightCollection.m in Sources */,
 				04B3C06F219BB1B90035C995 /* ConsolidateHotMainVC.m in Sources */,
 				3E0AE2E521AC296A00AB6180 /* recommandVC.m in Sources */,
+				3E1D9F6A21AEF2E700056DF9 /* BATableViewIndex.m in Sources */,
 				3EE6F4E621A257BA0068F78D /* trainRightCell.m in Sources */,
 				3E83D2D1217E132900E78B1C /* loginview.m in Sources */,
 				3E14D87521ADBA0600165FF8 /* courseListCell.m in Sources */,
@@ -1640,6 +1701,7 @@
 				045B11DD219130BA001FC325 /* ChapterListCollection.m in Sources */,
 				04B3C081219BC1CC0035C995 /* ConsolidateMyWrongMainVC.m in Sources */,
 				04B3C07B219BBEDA0035C995 /* ConsolidateFallibilityMainVC.m in Sources */,
+				3E8FB22321B051B800FBD5E8 /* testGuideDetailVc.m in Sources */,
 				045B11E32191344C001FC325 /* ChapterScoreCollection.m in Sources */,
 				3E6AFEA321A2A3E800E07AD7 /* noticeSubjectmanager.m in Sources */,
 				3ECB362A218AC1140008A109 /* MineViewController.m in Sources */,
@@ -1656,6 +1718,7 @@
 				04AC33FC2192E1AC00307E70 /* MakeProblemSceneCVCell.m in Sources */,
 				3ECB3627218AC1070008A109 /* HomeViewController.m in Sources */,
 				3E635FC821928E81006FC152 /* searchresultCV.m in Sources */,
+				3E6CDF5421B0576D00B6058D /* medicineVC.m in Sources */,
 				3E635FC421928A0A006FC152 /* SearchResultH.m in Sources */,
 				3E3AEFC9217DFDA9006C2860 /* main.m in Sources */,
 				3E32D0B7219910F300E45154 /* trainViewController.m in Sources */,
@@ -1667,6 +1730,7 @@
 				04BBFB8C219AB34C0088196E /* ConsolidateProblemCVCell.m in Sources */,
 				04B3C08E219BFD140035C995 /* MakeProblemQuestionCardCVCell.m in Sources */,
 				3EA283412186E1A600B2D716 /* cellphone_loginview.m in Sources */,
+				3E8FB22C21B0535B00FBD5E8 /* testCommTab.m in Sources */,
 				045B11EC219138E1001FC325 /* ChapterScoreHeadCVCell.m in Sources */,
 				3EB08EBF218C853100849777 /* GWScanQRvC.m in Sources */,
 				045B120021917081001FC325 /* MakeProblemMainCollection.m in Sources */,
