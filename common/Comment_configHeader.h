@@ -20,6 +20,10 @@ typedef NS_ENUM(NSInteger,GradientDirection)
     /** 从右上角至左下角*/
     uprightTolowLeft
 };
+#define isfirstUser @"isfirstUser"
+#define islogin @"islogin"
+#define YGUserDefaults  [NSUserDefaults standardUserDefaults]
+
 #define k_appDelegate  ((AppDelegate *)[[UIApplication sharedApplication]delegate])
 #define HexRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define HexRGBAlpha(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
@@ -36,7 +40,7 @@ typedef NS_ENUM(NSInteger,GradientDirection)
 #define YGNotFound(a,b)  [a rangeOfString:b].location ==NSNotFound
 #define YGFound(a,b)  [a rangeOfString:b].location !=NSNotFound
 
-#define lineColor  HexRGB(0xEFEFEF)
+#define lineColor_app  HexRGB(0xEFEFEF)
 #define btn_selectcolor_black HexRGB(0x454545)
 #define btn_normalcolor_white HexRGB(0xFFFFFF)
 

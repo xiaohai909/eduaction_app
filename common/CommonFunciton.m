@@ -9,6 +9,46 @@
 #import "CommonFunciton.h"
 
 @implementation CommonFunciton
++(UIViewController *)theTopviewControler{
+    UIViewController *rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
+    
+    UIViewController *parent = rootVC;
+    
+    while ((parent = rootVC.presentedViewController) != nil ) {
+        rootVC = parent;
+    }
+    
+    while ([rootVC isKindOfClass:[UINavigationController class]]) {
+        rootVC = [(UINavigationController *)rootVC topViewController];
+    }
+    
+    return rootVC;
+}
++(UIAlertController *)showAlert:(NSString *)message  AndOK_str:(NSString *)oktitle AndCancel_str:(NSString *)canceltitle AndClickOK:(void (^)(int index))OK{
+    
+    
+    
+    
+    
+    UIAlertAction * confirmAction = [UIAlertAction actionWithTitle:oktitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+                                     {
+                                         OK(1);
+                                     }];
+    
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:message preferredStyle: UIAlertControllerStyleAlert];
+    if (canceltitle.length > 0) {
+        
+        UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:canceltitle style:UIAlertActionStyleDestructive handler:nil];
+        [alertController addAction:cancelAction];
+    }
+    
+    [alertController addAction:confirmAction];
+    
+    
+    return alertController;
+    
+}
 + (UIImage*) BgImageFromColors:(NSArray*)colors
                      withFrame: (CGRect)frame
                    gradientDir:(GradientDirection)gradientDir
@@ -226,6 +266,8 @@
         [view removeFromSuperview];
     }];
 }
+
+
 @end
 
 

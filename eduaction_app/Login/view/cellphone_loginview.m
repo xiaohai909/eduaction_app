@@ -125,8 +125,8 @@
     self.go_reg_btn.layer.masksToBounds = YES;
     self.go_reg_btn.layer.cornerRadius = 20;
     
-    self.line1.backgroundColor = lineColor;
-    self.line2.backgroundColor = lineColor;
+    self.line1.backgroundColor = lineColor_app;
+    self.line2.backgroundColor = lineColor_app;
     
 }
 @end

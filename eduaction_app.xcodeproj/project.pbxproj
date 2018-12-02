@@ -144,6 +144,11 @@
 		3E83D2D1217E132900E78B1C /* loginview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2D0217E132900E78B1C /* loginview.m */; };
 		3E83D2D3217E133F00E78B1C /* loginview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E83D2D2217E133F00E78B1C /* loginview.xib */; };
 		3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E83D2D5217E21A600E78B1C /* CommonFunciton.m */; };
+		3E89FD1521B42B0700D1E012 /* GWProgressHUB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E89FD1421B42B0700D1E012 /* GWProgressHUB.m */; };
+		3E89FD1821B42C7500D1E012 /* GuideVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E89FD1721B42C7500D1E012 /* GuideVc.m */; };
+		3E89FD1B21B42C8900D1E012 /* initAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E89FD1A21B42C8900D1E012 /* initAppVC.m */; };
+		3E89FD2821B4364000D1E012 /* commResResultObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E89FD2421B4363F00D1E012 /* commResResultObj.m */; };
+		3E89FD2921B4364000D1E012 /* commResBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E89FD2521B4364000D1E012 /* commResBaseClass.m */; };
 		3E8AEDA421927B0F007CF326 /* homeFooterRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AEDA221927B0F007CF326 /* homeFooterRefresh.m */; };
 		3E8AEDA521927B0F007CF326 /* homeFooterRefresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AEDA321927B0F007CF326 /* homeFooterRefresh.xib */; };
 		3E8FB22021B0518500FBD5E8 /* testGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8FB21F21B0518500FBD5E8 /* testGuideVC.m */; };
@@ -455,6 +460,17 @@
 		3E83D2D2217E133F00E78B1C /* loginview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loginview.xib; sourceTree = "<group>"; };
 		3E83D2D4217E21A600E78B1C /* CommonFunciton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFunciton.h; sourceTree = "<group>"; };
 		3E83D2D5217E21A600E78B1C /* CommonFunciton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonFunciton.m; sourceTree = "<group>"; };
+		3E89FD1321B42B0700D1E012 /* GWProgressHUB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWProgressHUB.h; sourceTree = "<group>"; };
+		3E89FD1421B42B0700D1E012 /* GWProgressHUB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWProgressHUB.m; sourceTree = "<group>"; };
+		3E89FD1621B42C7500D1E012 /* GuideVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideVc.h; sourceTree = "<group>"; };
+		3E89FD1721B42C7500D1E012 /* GuideVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideVc.m; sourceTree = "<group>"; };
+		3E89FD1921B42C8800D1E012 /* initAppVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = initAppVC.h; sourceTree = "<group>"; };
+		3E89FD1A21B42C8900D1E012 /* initAppVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = initAppVC.m; sourceTree = "<group>"; };
+		3E89FD1F21B435E400D1E012 /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
+		3E89FD2421B4363F00D1E012 /* commResResultObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commResResultObj.m; sourceTree = "<group>"; };
+		3E89FD2521B4364000D1E012 /* commResBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commResBaseClass.m; sourceTree = "<group>"; };
+		3E89FD2621B4364000D1E012 /* commResResultObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commResResultObj.h; sourceTree = "<group>"; };
+		3E89FD2721B4364000D1E012 /* commResBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commResBaseClass.h; sourceTree = "<group>"; };
 		3E8AEDA121927B0F007CF326 /* homeFooterRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = homeFooterRefresh.h; sourceTree = "<group>"; };
 		3E8AEDA221927B0F007CF326 /* homeFooterRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homeFooterRefresh.m; sourceTree = "<group>"; };
 		3E8AEDA321927B0F007CF326 /* homeFooterRefresh.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeFooterRefresh.xib; sourceTree = "<group>"; };
@@ -986,6 +1002,7 @@
 		3E3AEFB8217DFDA8006C2860 /* eduaction_app */ = {
 			isa = PBXGroup;
 			children = (
+				3E89FD1221B42AA700D1E012 /* guideV */,
 				3ECB361F218AB1360008A109 /* Home */,
 				3ECB3620218AB1360008A109 /* mine */,
 				3ECB3621218AB1360008A109 /* online_study */,
@@ -1025,6 +1042,9 @@
 		3E3AEFEB217DFF51006C2860 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				3E89FD1C21B435A900D1E012 /* baseMode */,
+				3E89FD1321B42B0700D1E012 /* GWProgressHUB.h */,
+				3E89FD1421B42B0700D1E012 /* GWProgressHUB.m */,
 				3E1D9F6921AEF2E700056DF9 /* BATableViewIndex.h */,
 				3E1D9F6821AEF2E700056DF9 /* BATableViewIndex.m */,
 				3E14D86421ADA41A00165FF8 /* NSDate+Formatter.h */,
@@ -1179,6 +1199,29 @@
 				3E21BBAC21874FE70041CF70 /* LoginViewMode.m */,
 			);
 			path = viewmode;
+			sourceTree = "<group>";
+		};
+		3E89FD1221B42AA700D1E012 /* guideV */ = {
+			isa = PBXGroup;
+			children = (
+				3E89FD1621B42C7500D1E012 /* GuideVc.h */,
+				3E89FD1721B42C7500D1E012 /* GuideVc.m */,
+				3E89FD1921B42C8800D1E012 /* initAppVC.h */,
+				3E89FD1A21B42C8900D1E012 /* initAppVC.m */,
+			);
+			path = guideV;
+			sourceTree = "<group>";
+		};
+		3E89FD1C21B435A900D1E012 /* baseMode */ = {
+			isa = PBXGroup;
+			children = (
+				3E89FD2721B4364000D1E012 /* commResBaseClass.h */,
+				3E89FD2521B4364000D1E012 /* commResBaseClass.m */,
+				3E89FD2621B4364000D1E012 /* commResResultObj.h */,
+				3E89FD2421B4363F00D1E012 /* commResResultObj.m */,
+				3E89FD1F21B435E400D1E012 /* DataModels.h */,
+			);
+			path = baseMode;
 			sourceTree = "<group>";
 		};
 		3E8AEDA621927EE6007CF326 /* cache */ = {
@@ -1596,6 +1639,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-eduaction_app/Pods-eduaction_app-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
@@ -1608,6 +1652,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TezButton/TezButton.framework",
+				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 				"${BUILT_PRODUCTS_DIR}/ZYSideSlipFilter/ZYSideSlipFilter.framework",
 			);
@@ -1615,6 +1660,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCUUID.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
@@ -1627,6 +1673,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TezButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZYSideSlipFilter.framework",
 			);
@@ -1656,6 +1703,7 @@
 				3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */,
 				3E8FB22021B0518500FBD5E8 /* testGuideVC.m in Sources */,
 				3EA283462186EE0300B2D716 /* forgetpassview.m in Sources */,
+				3E89FD2821B4364000D1E012 /* commResResultObj.m in Sources */,
 				3E83D2C4217E01F200E78B1C /* LogManager.m in Sources */,
 				04ACCD3C219D083900716953 /* SyllabusMainCRView.m in Sources */,
 				3ECB361E218AAF0C0008A109 /* MYtabarViewController.m in Sources */,
@@ -1677,6 +1725,7 @@
 				04AC33EF21928D7500307E70 /* MakeProblemCommitCRView.m in Sources */,
 				3E14D86221ADA30500165FF8 /* courseCalendarV.m in Sources */,
 				3E83D2CB217E128100E78B1C /* BaseViewController.m in Sources */,
+				3E89FD2921B4364000D1E012 /* commResBaseClass.m in Sources */,
 				045B11F7219167AF001FC325 /* MakeProblemTopicCVCell.m in Sources */,
 				04B3C075219BBBF20035C995 /* ConsolidateMyNoteVC.m in Sources */,
 				04B3C072219BB2250035C995 /* ConsolidateHotMainCollection.m in Sources */,
@@ -1697,6 +1746,7 @@
 				3E7564CA21A50441009A766C /* searchKindVM.m in Sources */,
 				3EDCF824218F428900861D26 /* SearchhotAndhisV.m in Sources */,
 				04B1B13221941D2F00EEB51E /* MakeProblemPopView.m in Sources */,
+				3E89FD1821B42C7500D1E012 /* GuideVc.m in Sources */,
 				3E7564BE21A50009009A766C /* FilterBaseCollectionViewCell.m in Sources */,
 				045B11DD219130BA001FC325 /* ChapterListCollection.m in Sources */,
 				04B3C081219BC1CC0035C995 /* ConsolidateMyWrongMainVC.m in Sources */,
@@ -1740,6 +1790,7 @@
 				04ACCD84219D7B0100716953 /* SearchQuestionMainVC.m in Sources */,
 				3E83D2CE217E129300E78B1C /* LoginViewController.m in Sources */,
 				3E7564C221A50024009A766C /* FilterCommonCollectionViewCell.m in Sources */,
+				3E89FD1521B42B0700D1E012 /* GWProgressHUB.m in Sources */,
 				045B11E0219133C0001FC325 /* ChapterScoreVC.m in Sources */,
 				3EB08E8E218C353C00849777 /* HomeHeaderView.m in Sources */,
 				04ACCD40219D0C9B00716953 /* SyllabusMainCollection.m in Sources */,
@@ -1764,6 +1815,7 @@
 				3EE08AE321A5439E00832D1A /* UIButton+ImageRight.m in Sources */,
 				3EB08EA4218C5EC000849777 /* HomenewsCell.m in Sources */,
 				3E6AFE9C21A29B3D00E07AD7 /* searchWithKindVC.m in Sources */,
+				3E89FD1B21B42C8900D1E012 /* initAppVC.m in Sources */,
 				3E79DE642186B55700CD8AFC /* registerView.m in Sources */,
 				04ACCD48219D424B00716953 /* SyllabusMainPopView.m in Sources */,
 				045B11D521912198001FC325 /* ChapterMainCVCell.m in Sources */,

@@ -12,14 +12,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginViewMode : NSObject
 @property(nonatomic, strong) RACCommand *subscribeCommand_loginbtn;
-
 @property(nonatomic, strong) RACCommand *subscribeCommand_QQ;
 @property(nonatomic, strong) RACCommand *subscribeCommand_wx;
 
-@property(nonatomic, strong) NSString *loginview_mobile;
+@property(nonatomic, strong) RACCommand *subscribeCommand_regCodebtn;
+@property(nonatomic, strong) RACCommand *subscribeCommand_regGo;
 
+@property(nonatomic, strong) NSString *loginview_mobile;
 @property(nonatomic, strong) NSString *loginview_password;
 
+@property(nonatomic, strong) NSString *regView_mobile;
+@property(nonatomic, strong) NSString *regView_password;
+@property(nonatomic, strong) NSString *regView_password_again;
+@property(nonatomic, strong) NSString *smscode;
+@property(nonatomic, strong) NSString *regView_inviteCode;
 @end
 
 NS_ASSUME_NONNULL_END

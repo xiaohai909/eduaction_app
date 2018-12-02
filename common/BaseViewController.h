@@ -31,10 +31,13 @@ _Pragma("clang diagnostic pop")\
 @property (nonatomic,strong)RACDisposable *leftDis;
 -(void)setnavbg_defa;
 -(void)setnav_BackBtn;
+-(void)gologinView;
 - (UIButton *)createNavigationLeftItem:(BOOL)isLeft andImage:(NSString *)imageName andTitle:(NSString *)title;
 -(void)setRigthbtn_inNav:(UIImage *)image andtitle:(NSString *)titile;
 -(void)rightAction:(UIButton *)sender;
 -(void)setNavTitle:(NSString *)title;
+-(void)goTabarView;
+-(void)refreshSession:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure;
 @end
 
 NS_ASSUME_NONNULL_END

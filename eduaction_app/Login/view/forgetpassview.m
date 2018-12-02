@@ -138,9 +138,9 @@
     self.forgetbtn.layer.masksToBounds = YES;
     self.forgetbtn.layer.cornerRadius = 20;
     
-    self.line1.backgroundColor = lineColor;
-    self.line2.backgroundColor = lineColor;
-    self.line3.backgroundColor = lineColor;
+    self.line1.backgroundColor = lineColor_app;
+    self.line2.backgroundColor = lineColor_app;
+    self.line3.backgroundColor = lineColor_app;
     
 }
 

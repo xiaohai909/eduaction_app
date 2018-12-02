@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "GuideVc.h"
+#import "initAppVC.h"
 @interface AppDelegate ()
 
 @end
@@ -21,8 +22,22 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     [IQKeyboardManager sharedManager].enable = YES;
     [[LogManager sharedManager]config];
+    
+    if (![YGUserDefaults boolForKey:isfirstUser]) {
+        
+        [self goGuide:YES];
+    }
+    else{
+        [self goGuide:NO];
+    }
+    
+    
+    
     //[IQKeyboardManager sharedManager].enableAutoToolbar = NO;
-    [self gologinView];
+    
+    
+
+    
     return YES;
 }
 
@@ -54,23 +69,24 @@
 }
 
 
-#pragma mark 跳转到登录界面
--(void)gologinView{
-    
-    LoginViewController *cont = [[LoginViewController alloc]init];
-    MyNav *nav = [[MyNav alloc]initWithRootViewController:cont];
-    nav.navigationBarHidden = YES;
-    [self.window setRootViewController:nav];
-    
-}
-#pragma mark 进入首页
--(void)goTabarView
+
+
+#pragma mark 第一次进入引导页
+-(void)goGuide:(BOOL)first
 {
     
-    
-    MYtabarViewController * bar = [MYtabarViewController shareGWHomeViewController];
-    MyNav * nav=[[MyNav alloc]initWithRootViewController:bar];
-    self.window.rootViewController =  nav;
+    if (first) {
+        GuideVc * Vc = [[GuideVc alloc]init];
+        
+        self.window.rootViewController =  Vc;
+    }
+    else{
+        
+        initAppVC *cont =[[initAppVC alloc]init];
+        self.window.rootViewController = cont;
+    }
+   
     
 }
+
 @end

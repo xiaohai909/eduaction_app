@@ -107,6 +107,37 @@
     
     
 }
+#pragma mark 进入首页
+-(void)goTabarView
+{
+    
+    
+    MYtabarViewController * bar = [MYtabarViewController shareGWHomeViewController];
+    MyNav * nav=[[MyNav alloc]initWithRootViewController:bar];
+    k_appDelegate.window.rootViewController =  nav;
+    
+}
+#pragma mark 跳转到登录界面
+-(void)gologinView{
+    
+    LoginViewController *cont = [[LoginViewController alloc]init];
+    MyNav *nav = [[MyNav alloc]initWithRootViewController:cont];
+    nav.navigationBarHidden = YES;
+    [k_appDelegate.window setRootViewController:nav];
+    
+}
+-(void)refreshSession:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure{
+    
+    
+    [[myNetworkManager sharemyNetworkManager]requestSessionAndsuccess:^(id  _Nonnull response) {
+        
+        success(response);
+        
+    } Andfailure:^(NSError * _Nonnull err) {
+        
+        failure(err);
+    }];
+}
 /*
 #pragma mark - Navigation
 

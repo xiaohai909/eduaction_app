@@ -163,12 +163,25 @@
 #pragma mark 绑定viewmode
 -(void)bindWithViewModel{
     
+    
+    @weakify(self);
     RAC(self.viewModel, loginview_mobile) = self.myview.user_mobile.rac_textSignal;
     self.myview.log_inbtn.rac_command = self.viewModel.subscribeCommand_loginbtn;
     RAC(self.viewModel, loginview_password) = self.myview.user_password.rac_textSignal;
     
+    RAC(self.viewModel, regView_mobile) = self.myview_reg.mobilenumber.rac_textSignal;
+    RAC(self.viewModel, regView_inviteCode) = self.myview_reg.invation_field.rac_textSignal;
+    RAC(self.viewModel, regView_password) = self.myview_reg.password_field.rac_textSignal;
+    RAC(self.viewModel, regView_password_again) = self.myview_reg.passwordagain_field.rac_textSignal;
+    RAC(self.viewModel, smscode) = self.myview_reg.code.rac_textSignal;
+    
+    
     self.myview.QQ.rac_command = self.viewModel.subscribeCommand_QQ;
     self.myview.WX.rac_command = self.viewModel.subscribeCommand_wx;
+    
+    self.myview_reg.codebtn.rac_command = self.viewModel.subscribeCommand_regCodebtn;
+    self.myview_reg.go_reg_btn.rac_command = self.viewModel.subscribeCommand_regGo;
+    
     
     [[self.viewModel.subscribeCommand_QQ.executing skip:1] subscribeNext:^(id x) {
         if ([x boolValue] == YES) { // 正在执行
@@ -206,11 +219,15 @@
     
     
     [[self.viewModel.subscribeCommand_loginbtn.executing skip:1] subscribeNext:^(id x) {
+       
         if ([x boolValue] == YES) { // 正在执行
+            
             DDLogVerbose(@"当前正在执行%@", x);
+           
         }else {
             // 执行完成/没有执行
             DDLogVerbose(@"执行完成/没有执行");
+           
         }
     }];
     
@@ -218,13 +235,65 @@
     
     [self.viewModel.subscribeCommand_loginbtn.executionSignals.switchToLatest subscribeNext:^(id x) {
 #pragma mark 登录状态
+        @strongify(self);
         
-        DDLogVerbose(@"%@", [CommonFunciton dictionaryToJson:x]);
+
+        if ([x isKindOfClass:[commResBaseClass class]]) {
+            commResBaseClass *mode = x;
+            [[GWProgressHUB sharedYGGWProgressHUB] YGDismiss:self.view];
+            
+            if (mode.resultCode == 10000) {
+                
+                [self goTabarView];
+            }
+            else{
+                popAlert(mode.resultMsg, 2);
+            }
+            
+        }
         
         
-        [k_appDelegate goTabarView];
+        
+    }];
+    [self.viewModel.subscribeCommand_regCodebtn.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+#pragma mark 注册验证码
+         @strongify(self);
+        if ([x isKindOfClass:[commResBaseClass class]]) {
+            
+            
+            commResBaseClass *mode = x;
+            
+            
+            if (mode.resultCode == 10000) {
+                
+                
+            }
+            else{
+                popAlert(mode.resultMsg, 2);
+            }
+            
+        }
+        
     }];
     
+    [self.viewModel.subscribeCommand_regGo.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        if ([x isKindOfClass:[commResBaseClass class]]) {
+            
+            
+            commResBaseClass *mode = x;
+            
+            
+            if (mode.resultCode == 10000) {
+                
+                
+            }
+            else{
+                popAlert(mode.resultMsg, 2);
+            }
+            
+        }
+    }];
 
 
   
@@ -272,7 +341,9 @@
     
     // Do any additional setup after loading the view.
 }
-
+-(void)dealloc{
+    
+}
 /*
 #pragma mark - Navigation
 
