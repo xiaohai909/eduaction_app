@@ -98,8 +98,8 @@ static NSString * const cell1 = @"MineUserCVCell";
 #pragma mark ---
 - (void)getTitle:(UILabel *)title detailLable:(UILabel *)detailTitle withIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *array_title = @[@[@"头像"],@[@"职业",@"签名"],@[@"昵称",@"性格",@"地区"],@[@"手机",@"微信",@"QQ",@"修改密码",@"实名认证"]];
-    NSArray *array_detail = @[@[@"头像"],@[@"",@""],@[@"Vet.lian",@"未知",@"未知地区"],@[@"152****5037",@"未绑定",@"QQ",@"",@"未认证"]];
+    NSArray *array_title = @[@[@"头像"],@[@"职业",@"签名"],@[@"昵称",@"性别",@"地区"],@[@"手机",@"微信",@"QQ",@"修改密码",@"实名认证"]];
+    NSArray *array_detail = @[@[@"头像"],@[@"",@""],@[@"Vet.lian",@"男",@"未知地区"],@[@"152****5037",@"未绑定",@"QQ",@"",@"未认证"]];
     title.text = array_title[indexPath.section][indexPath.row];
     detailTitle.text = array_detail[indexPath.section][indexPath.row];
 }

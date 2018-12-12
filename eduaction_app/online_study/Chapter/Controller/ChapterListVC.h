@@ -7,11 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "ChapterListModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ChapterListVC : BaseViewController
-
+@property (nonatomic, strong) ChapterListModel *model;
 @end
 
 NS_ASSUME_NONNULL_END

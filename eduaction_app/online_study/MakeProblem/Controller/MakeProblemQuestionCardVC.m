@@ -11,9 +11,11 @@
 
 
 #import "MakeProblemMainModel.h"
+#import "ChapterScoreModel.h"
 
 @interface MakeProblemQuestionCardVC ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) UICollectionView *collection_main;
+@property (nonatomic, strong) ChapterScoreModel *model;
 @end
 
 @implementation MakeProblemQuestionCardVC
@@ -29,6 +31,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.collection_main.mj_header beginRefreshing];
 }
 #pragma mark --- view
 - (UICollectionView *)collection_main {
@@ -46,6 +49,10 @@
         _collection_main.delegate = self;
         _collection_main.dataSource = self;
         
+        //数据
+        [_collection_main setupHeaderRefresh:^{
+            [self request];
+        }];        
     }
     return _collection_main;
 }
@@ -57,7 +64,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.array_models.count;
+    return self.model.questionCard.count;
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
@@ -72,7 +79,7 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MakeProblemQuestionCardCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MakeProblemQuestionCardCVCell" forIndexPath:indexPath];
-    [cell setBtnTiltle:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1] andMode:[self getCarMode:self.array_models[indexPath.row] andRow:indexPath.row]];
+    [cell setBtnTiltle:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1] andMode:[self getCarMode:self.model.questionCard[indexPath.row]]];
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -82,19 +89,50 @@
     }
 }
 
-- (QuestionCardMode)getCarMode:(MakeProblemMainModel *)model andRow:(NSInteger)row
+- (QuestionCardMode)getCarMode:(MakeProblemCardModel *)model
 {
-    if (model.isSelelct) {
-        if (model.selectTrue) {
-            return self.now_row==row?QuestionCardModeNowRight:QuestionCardModeRight;
+    if (model.answerId.length) {
+        if ([model.correct isEqualToString:@"1"]) {
+            return self.now_row==[model.rownum integerValue]?QuestionCardModeNowRight:QuestionCardModeRight;
+        }
+        else if ([model.correct isEqualToString:@"0"]){
+            return self.now_row==[model.rownum integerValue]?QuestionCardModeNowWrong:QuestionCardModeWrong;
         }
         else{
-            return self.now_row==row?QuestionCardModeNowWrong:QuestionCardModeWrong;
+            return self.now_row==[model.rownum integerValue]?QuestionCardModeNowNormal:QuestionCardModeNormal;
         }
     }
     else{
-        return self.now_row==row?QuestionCardModeNowNormal:QuestionCardModeNormal;
+        return self.now_row==[model.rownum integerValue]?QuestionCardModeNowNormal:QuestionCardModeNormal;
     }
+}
+//- (QuestionCardMode)getCarMode:(MakeProblemMainModel *)model andRow:(NSInteger)row
+//{
+//    if (model.questionAnswer) {
+//        if ([model.questionAnswer.correct isEqualToString:@"1"]) {
+//            return self.now_row==row?QuestionCardModeNowRight:QuestionCardModeRight;
+//        }
+//        else if ([model.questionAnswer.correct isEqualToString:@"0"]){
+//            return self.now_row==row?QuestionCardModeNowWrong:QuestionCardModeWrong;
+//        }
+//        else{
+//            return self.now_row==row?QuestionCardModeNowNormal:QuestionCardModeNormal;
+//        }
+//    }
+//    else{
+//        return self.now_row==row?QuestionCardModeNowNormal:QuestionCardModeNormal;
+//    }
+//}
+#pragma mark --
+- (void)request
+{
+    [SQNetworkInterface iRequestChapterScoreParames:@{@"questionHouse":self.questionHouse,@"userId":@"33"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
+        if (state == CODE_SUCCESS) {
+            self.model = [ChapterScoreModel mj_objectWithKeyValues:resultData];;
+        }
+        [self.collection_main reloadData];
+        [self.collection_main stopHeaderRefresh];
+    }];
 }
 /*
 #pragma mark - Navigation

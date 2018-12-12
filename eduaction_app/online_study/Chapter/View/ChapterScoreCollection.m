@@ -72,10 +72,13 @@ static NSString * const cell2 = @"ChapterScoreCVCell";
 {
     if (indexPath.section == 0) {
         ChapterScoreHeadCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-        [cell contentNumber:@"50"];
-        [cell leftNumber:@"7" andTotal:@"42"];
-        [cell rightNumber:@"48" andTotal:@"120"];
-        [[cell.btn_back rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        if (self.model) {
+            [cell contentNumber:[NSString stringWithFormat:@"%@",self.model.correctLv]];
+            [cell leftNumber:[NSString stringWithFormat:@"%@",self.model.correctCount] andTotal:[NSString stringWithFormat:@"%@",self.model.answerCount]];
+            [cell rightNumber:[NSString stringWithFormat:@"%@",self.model.answerCount] andTotal:[NSString stringWithFormat:@"%@",self.model.questionCount]];
+        }
+        //takeUntil:cell.rac_prepareForReuseSignal保证只对当前的cell响应，重用的cell不响应
+        [[[cell.btn_back rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(__kindof UIControl * _Nullable x) {
             if (self.blockGoOn) {
                 self.blockGoOn(indexPath);
             }
@@ -85,9 +88,16 @@ static NSString * const cell2 = @"ChapterScoreCVCell";
     else {
         ChapterScoreCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell2 forIndexPath:indexPath];
         NSArray *array_image = @[@"grade_ico_wrong question",@"grade_ico_collection",@"grade_ico_notes",@"grade_ico_analysis"];
-        NSArray *array_title = @[@"本章错题",@"本章收藏",@"本章笔记",@"试错解析"];
-        NSArray *array_detail = @[[NSString stringWithFormat:@"做错%@题，未做%@题",@"11",@"72"],@"收藏起来，反复练习",@"学到成功 少不了笔记",@"错题解析 还要练习哦"];
-        [cell setImageName:array_image[indexPath.row] andTitle:array_title[indexPath.row] andDetail:array_detail[indexPath.row]];
+        NSArray *array_title = @[@"本章错题",@"本章收藏",@"本章笔记",@"错题解析"];
+        if (self.model) {
+            NSArray *array_detail = @[[NSString stringWithFormat:@"做错%@题，未做%@题",self.model.wrongCount,self.model.leftCount],@"收藏起来，反复练习",@"学到成功 少不了笔记",@"错题解析 还要练习哦"];
+            [cell setImageName:array_image[indexPath.row] andTitle:array_title[indexPath.row] andDetail:array_detail[indexPath.row]];
+        }
+        else{
+            NSArray *array_detail = @[@"做错0题，未做0题",@"收藏起来，反复练习",@"学到成功 少不了笔记",@"错题解析 还要练习哦"];
+            [cell setImageName:array_image[indexPath.row] andTitle:array_title[indexPath.row] andDetail:array_detail[indexPath.row]];
+        }
+    
         return cell;
     }
 }

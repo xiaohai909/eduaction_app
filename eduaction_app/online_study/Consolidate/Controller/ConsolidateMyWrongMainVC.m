@@ -9,11 +9,15 @@
 #import "ConsolidateMyWrongMainVC.h"
 #import "ConsolidateMyWrongMainCollection.h"
 #import "RechargeMainBottomView.h"
+#import "ConsolidateBottomPageView.h"
 
 @interface ConsolidateMyWrongMainVC ()
 @property (nonatomic, strong) ConsolidateMyWrongMainCollection *collection_main;
 @property (nonatomic, strong) UIButton *btn_right;
 @property (nonatomic, strong) RechargeMainBottomView *view_bottom;
+@property (nonatomic, strong) ConsolidateBottomPageView *view_page;
+@property (nonatomic, strong) DataModel *data_model;
+
 @end
 
 @implementation ConsolidateMyWrongMainVC
@@ -30,9 +34,8 @@
     
     self.title = @"我的错题";
     [self.view addSubview:self.collection_main];
+    [self.view addSubview:self.view_page];
     [self.view addSubview:self.view_bottom];
-    
-    self.collection_main.array_models = [@[@"1",@"2",@"3",@"4",@"5"] mutableCopy];
     
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -46,15 +49,55 @@
         layout.minimumLineSpacing = 1.0;
         layout.minimumInteritemSpacing = 4.0;
         
-        _collection_main = [[ConsolidateMyWrongMainCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth, ZTHeight-NaviIPHONEX} collectionViewLayout:layout];
+        _collection_main = [[ConsolidateMyWrongMainCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth, ZTHeight-NaviIPHONEX-self.view_page.py_height} collectionViewLayout:layout];
         _collection_main.backgroundColor = HexRGB(0xF1F0F0);
         @weakify(self)
         [_collection_main setBlockAllChoise:^(BOOL all) {
             @strongify(self)
             self.view_bottom.btn_left.selected = all;
         }];
+        //数据
+        [self requestRefresh:YES];
     }
     return _collection_main;
+}
+- (ConsolidateBottomPageView *)view_page
+{
+    if (!_view_page) {
+        _view_page = [ConsolidateBottomPageView instancetypeWithXib];
+        _view_page.frame = (CGRect){0,ZTHeight-NaviIPHONEX-TabIPHONEX,ZTWidth,TabIPHONEX};
+        
+        @weakify(self)
+        _view_page.tag = 1;
+        [[_view_page.btn_last rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
+            if (self.view_page.tag>1) {
+                self.view_page.tag -= 1;
+                self.collection_main.array_models = (NSMutableArray *)[self.data_model.result subarrayWithRange:NSMakeRange((self.view_page.tag-1)*10, 10)];
+                [self.collection_main reloadData];
+            }
+            else{
+                DDLogVerbose(@"没有上一页");
+            }
+        }];
+        [[_view_page.btn_next rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
+            if (self.view_page.tag>1) {
+                self.view_page.tag += 1;
+                if (self.data_model.pageNumber>=_view_page.tag) {
+                    self.collection_main.array_models = (NSMutableArray *)[self.data_model.result subarrayWithRange:NSMakeRange((self.view_page.tag-1)*10, 10)];
+                    [self.collection_main reloadData];
+                }
+                else{
+                    [self requestRefresh:NO];
+                }
+            }
+            else{
+                DDLogVerbose(@"没有下一页");
+            }
+        }];
+    }
+    return _view_page;
 }
 - (RechargeMainBottomView *)view_bottom {
     if (!_view_bottom) {
@@ -68,8 +111,13 @@
                 [self changeViewMode];
             }
             else if ([title isEqualToString:@"移除"]) {
-                [self.collection_main.array_models removeObjectsInArray:self.collection_main.set_choise.allObjects];
-                [self.collection_main reloadData];
+                //如果当前页删除了数据，那后面的数据就要重新获取
+                self.data_model.pageNumber = self.view_page.tag;
+                self.data_model.result = (NSMutableArray *)[self.data_model.result subarrayWithRange:NSMakeRange(0, (self.view_page.tag-1)*10)];
+                self.collection_main.set_choise = [NSMutableSet set];
+                [self.collection_main setCollectionModify:NO andAll:NO];
+                
+                [self requestDelete:self.collection_main.set_choise];
             }
             else{
                 [self.collection_main setCollectionModify:self.btn_right.selected andAll:self.view_bottom.btn_left.selected];
@@ -96,5 +144,71 @@
             self.view_bottom.py_y = ZTHeight;
         }];
     }
+}
+
+
+#pragma mark --- request
+- (void)requestRefresh:(BOOL)refresh
+{
+    NSInteger page = refresh?1:self.data_model.pageNumber+1;
+    if (self.questionHouse) {
+        //获取本章节本题型的收藏
+        [SQNetworkInterface iRequestChapterScoreDetailListParames:@{@"questionHouse":self.questionHouse,@"type":self.myWrongType,@"userId":@"33",@"page":@(page),@"rows":@"10"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
+            if (state == CODE_SUCCESS) {
+                NSMutableArray *array = [ConsolidateMyWrongModel mj_objectArrayWithKeyValuesArray:resultData];
+                self.collection_main.array_models = array;
+                
+                NSInteger pageCount = ([total integerValue]%10)?([total integerValue]/10+1):([total integerValue]/10);
+                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(page),@(pageCount)];
+                self.title = [NSString stringWithFormat:@"我的错题（%@）",total];
+                
+                if (refresh) {
+                    self.data_model = [DataModel new];
+                    self.data_model.result = [NSMutableArray arrayWithArray:array];
+                }
+                else{
+                    self.data_model.pageNumber = page;
+                    [self.data_model.result addObjectsFromArray:array];
+                }
+                if (array.count == 0 || array.count<10) {
+                    [self.collection_main.mj_footer endRefreshingWithNoMoreData];
+                }
+            }
+            [self.collection_main reloadData];
+            [self.collection_main stopHeaderRefresh];
+        }];
+    }
+    else{
+        //获取本章节本题型的收藏
+        [SQNetworkInterface iRequestConsolidateMyWrongParames:@{@"userId":@"33",@"page":@(page),@"rows":@"10"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
+            if (state == CODE_SUCCESS) {
+                NSMutableArray *array = [ConsolidateMyWrongModel mj_objectArrayWithKeyValuesArray:resultData];
+                self.collection_main.array_models = array;
+                
+                NSInteger pageCount = ([total integerValue]%10)?([total integerValue]/10+1):([total integerValue]/10);
+                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(page),@(pageCount)];
+                self.title = [NSString stringWithFormat:@"我的错题（%@）",total];
+                
+                if (refresh) {
+                    self.data_model = [DataModel new];
+                    self.data_model.result = [NSMutableArray arrayWithArray:array];
+                }
+                else{
+                    self.data_model.pageNumber = page;
+                    [self.data_model.result addObjectsFromArray:array];
+                }
+                if (array.count == 0 || array.count<10) {
+                    [self.collection_main.mj_footer endRefreshingWithNoMoreData];
+                }
+            }
+            [self.collection_main reloadData];
+            [self.collection_main stopHeaderRefresh];
+        }];
+    }
+    
+}
+- (void)requestDelete:(NSMutableSet *)deleteSet
+{
+
 }
 @end

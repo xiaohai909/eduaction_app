@@ -52,11 +52,18 @@
         self.lbl_number.center = centrePoint;
         
         [self addSubview:[self creatShadowLayer:(CGRect){(self.py_width-50)/2,self.py_height,50,1}]];
+        
+        [layer_number setStrokeStart:0];
+        [layer_number setStrokeEnd:1];
     }
     else if (type == RatioViewTypeYellowLine) {
         [self creatBottomLayer:(CGRect){0,0,self.py_width-15,self.py_width-15}];
         if (ratioNumber) {
+            layer_number.hidden = NO;
             [self creatNumberLayer:(CGRect){0,0,self.py_width-15,self.py_width-15}];
+        }
+        else{
+            layer_number.hidden = YES;
         }
         [self creatLbl:(CGRect){0,0,self.py_width-25,self.py_width-25}];
         self.lbl_number.center = centrePoint;
@@ -64,7 +71,11 @@
     else{
         [self creatBottomLayer:(CGRect){0,0,self.py_width-35,self.py_width-35}];
         if (ratioNumber) {
+            layer_number.hidden = NO;
             [self creatNumberLayer:(CGRect){0,0,self.py_width-25,self.py_width-25}];
+        }
+        else{
+            layer_number.hidden = YES;
         }
         [self creatLbl:(CGRect){0,self.py_width-15,self.py_width,15}];
     }
@@ -120,10 +131,12 @@
 }
 - (void)creatLineLayer:(CGRect)frame
 {
-    layer_line = [CAShapeLayer layer];
-    layer_line.frame = frame;
+    if (!layer_line) {
+        layer_line = [CAShapeLayer layer];
+        layer_line.frame = frame;
+        [self.layer addSublayer:layer_line];
+    }
     radius = layer_line.frame.size.width/2.0;
-    
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path addArcWithCenter:centrePoint radius:radius startAngle:-M_PI_2 endAngle:M_PI+M_PI_4/2 clockwise:YES];
     
@@ -131,15 +144,15 @@
     layer_line.strokeColor = [[UIColor redColor] colorWithAlphaComponent:0.5].CGColor;
     layer_line.fillColor = [UIColor clearColor].CGColor;
     layer_line.lineWidth = 1.0;
-    
-    [self.layer addSublayer:layer_line];
 }
 
 - (void)creatBottomLayer:(CGRect)frame {
-    layer_bottom = [CAShapeLayer layer];
-    layer_bottom.frame = frame;
+    if (!layer_bottom) {
+        layer_bottom = [CAShapeLayer layer];
+        layer_bottom.frame = frame;
+        [self.layer addSublayer:layer_bottom];
+    }
     radius = layer_bottom.frame.size.width/2.0;
-    
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path addArcWithCenter:centrePoint radius:radius startAngle:-M_PI_2 endAngle:2*M_PI-M_PI_2 clockwise:YES];
     
@@ -164,15 +177,15 @@
         layer_bottom.fillColor = HexRGB(0xFFF0DF).CGColor;
         layer_bottom.lineWidth = 5.0;
     }
-    
-    [self.layer addSublayer:layer_bottom];
 }
 
 - (void)creatNumberLayer:(CGRect)frame {
-    layer_number = [CAShapeLayer layer];
-    layer_number.frame = frame;
+    if (!layer_number) {
+        layer_number = [CAShapeLayer layer];
+        layer_number.frame = frame;
+        [self.layer addSublayer:layer_number];
+    }
     radius = layer_number.frame.size.width/2.0;
-    
     UIBezierPath *path = [UIBezierPath bezierPath];
     if (ratioType == RatioViewTypeRedLine) {
         [path addArcWithCenter:centrePoint radius:radius startAngle:-M_PI_2 endAngle:(2*M_PI)/100.0*ratioNumber-M_PI_2 clockwise:YES];
@@ -210,13 +223,34 @@
         layer_number.shadowOffset = CGSizeMake(2,2);
         layer_number.shadowRadius = 2;
     }
+    
     layer_number.path = path.CGPath;
-    [self.layer addSublayer:layer_number];
+    [layer_number addAnimation:[self pathBasicAnimateWithPath:path] forKey:@"strokeEndAnimation"];
 }
+- (CABasicAnimation *)pathBasicAnimateWithPath:(UIBezierPath *)path
+{
+    if (radius == RatioViewTypeRedLine) {
+        CABasicAnimation *animate = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        animate.removedOnCompletion = NO;
+        animate.duration = 2;
+        animate.fromValue =  [NSNumber numberWithFloat:0.0f];
+        animate.toValue = [NSNumber numberWithFloat:1.0f];
+        return animate;
+    }
+    else{
+        
+        return nil;
+    }
+   
+}
+
 - (void)creatLbl:(CGRect)frame {
-    self.lbl_number = [[UILabel alloc] initWithFrame:frame];
-    self.lbl_number.numberOfLines = 0;
-    self.lbl_number.textAlignment = NSTextAlignmentCenter;
+    if (!_lbl_number) {
+        self.lbl_number = [[UILabel alloc] initWithFrame:frame];
+        self.lbl_number.numberOfLines = 0;
+        self.lbl_number.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.lbl_number];
+    }
     
     NSString *ratio = [NSString stringWithFormat:@"%.2f",ratioNumber];
     BOOL zero = [[[ratio componentsSeparatedByString:@"."] lastObject] isEqualToString:@"00"];
@@ -240,6 +274,5 @@
             self.lbl_number.textColor = HexRGB(0xFFA841);
         }
     }
-    [self addSubview:self.lbl_number];
 }
 @end

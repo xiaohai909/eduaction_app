@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChapterScoreModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ChapterScoreCollection : UICollectionView<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@property (nonatomic, strong) ChapterScoreModel *model;
 @property (nonatomic, copy) void (^blockGoOn)(NSIndexPath *indexPath);
 @end
 

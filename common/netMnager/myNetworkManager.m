@@ -9,11 +9,7 @@
 #import "myNetworkManager.h"
 #import "AFNetworkReachabilityManager.h"
 #import "AFNetworking-umbrella.h"
-#define severAddress @"http://118.24.128.225/"
-//#define severAddress @"http://118.24.128.225"
-#define ContentType @"application/json"
-#define ContentType1 @"text/html"
-#define appId @"app_mobile"
+
 @implementation myNetworkManager
 {
     AFNetworkReachabilityManager *network_manager;

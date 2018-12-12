@@ -82,7 +82,7 @@
             else if ([title isEqualToString:@"继续学习"]){
                 //根据原来练习的章节继续学习
                 MakeProblemMainVC *vc = [MakeProblemMainVC new];
-                [vc setMode:MakeProblemMainModeRandomPractice];
+                [vc setMode:MakeProblemMainModeRandomPractice andShowMode:MakeProblemModeAnswer];
                 [self.navigationController pushViewController:vc animated:YES];
             }
             else if ([title isEqualToString:@"章节练习"]) {
@@ -96,7 +96,7 @@
             }
             else if ([title isEqualToString:@"随机练习"]) {
                 MakeProblemMainVC *vc = [MakeProblemMainVC new];
-                [vc setMode:MakeProblemMainModeRandomPractice];
+                [vc setMode:MakeProblemMainModeRandomPractice andShowMode:MakeProblemModeAnswer];
                 [self.navigationController pushViewController:vc animated:YES];
             }
             else if ([title isEqualToString:@"错题练习"]) {

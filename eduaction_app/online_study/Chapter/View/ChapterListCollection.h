@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ChapterListCollection : UICollectionView<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@property (nonatomic, strong) DataModel *data_model;
+@property (nonatomic, copy) void (^blockScore)(NSIndexPath *indexPath);
 @property (nonatomic, copy) void (^blockGoOn)(NSIndexPath *indexPath);
 @end
 

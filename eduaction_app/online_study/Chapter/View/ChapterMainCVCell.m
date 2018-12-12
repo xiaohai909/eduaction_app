@@ -14,9 +14,6 @@
     [super awakeFromNib];
     // Initialization code
     
-    [self.view_ratio creatRatioViewWithNumber:0.05 andType:RatioViewTypeRedLine];
-    
-    
     self.contentView.backgroundColor = [UIColor whiteColor];
     self.contentView.layer.shadowColor = HexRGBAlpha(0x212121,0.2).CGColor;
     self.contentView.layer.shadowOffset = CGSizeMake(0,2);

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChapterCleanView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question_practise_ico_delete" translatesAutoresizingMaskIntoConstraints="NO" id="ao4-Gd-vBD">
+                    <rect key="frame" x="147.5" y="59" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ao4-Gd-vBD" secondAttribute="height" multiplier="1:1" id="dqh-6H-y1Q"/>
+                        <constraint firstAttribute="width" constant="80" id="or1-JF-ax8"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="清空答题将会清除您全部章节的答题记录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdF-Hz-Llk">
+                    <rect key="frame" x="58.5" y="189" width="258" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs0-Tc-ici">
+                    <rect key="frame" x="23" y="257" width="329" height="45"/>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="sh1-J4-vwk"/>
+                    </constraints>
+                    <state key="normal" title="立即清除"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="包括您的错题也将被清除，但是收藏和笔记依旧保留" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c22-KA-kJC">
+                    <rect key="frame" x="35" y="211" width="305" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="c22-KA-kJC" firstAttribute="top" secondItem="sdF-Hz-Llk" secondAttribute="bottom" constant="5" id="5Pd-Md-ySr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gs0-Tc-ici" secondAttribute="trailing" constant="23" id="6ic-zz-9NJ"/>
+                <constraint firstItem="ao4-Gd-vBD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="59" id="CXi-8b-MfV"/>
+                <constraint firstItem="c22-KA-kJC" firstAttribute="centerX" secondItem="ao4-Gd-vBD" secondAttribute="centerX" id="CtM-yx-x8u"/>
+                <constraint firstItem="ao4-Gd-vBD" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Gn6-ue-7D2"/>
+                <constraint firstItem="sdF-Hz-Llk" firstAttribute="centerX" secondItem="ao4-Gd-vBD" secondAttribute="centerX" id="T4y-hX-MVs"/>
+                <constraint firstItem="gs0-Tc-ici" firstAttribute="top" secondItem="c22-KA-kJC" secondAttribute="bottom" constant="30" id="UFC-31-XR7"/>
+                <constraint firstItem="gs0-Tc-ici" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="23" id="cpN-9V-7AN"/>
+                <constraint firstItem="sdF-Hz-Llk" firstAttribute="top" secondItem="ao4-Gd-vBD" secondAttribute="bottom" constant="50" id="sq3-dy-rBT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btn_clean" destination="gs0-Tc-ici" id="n5A-hC-qzM"/>
+            </connections>
+            <point key="canvasLocation" x="-162.40000000000001" y="-10.794602698650676"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="question_practise_ico_delete" width="80" height="80"/>
+    </resources>
+</document>

@@ -13,9 +13,15 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-//    [self.view_ratio creatRatioViewWithNumber:0.05 andType:RatioViewTypeYellow];
 }
 
-
+- (void)setChapterMainModel:(ChapterListModel *)model
+{
+    if (model) {
+        self.btn_check.hidden = YES;
+        self.lbl_title.text = model.name;
+        self.lbl_detail.text = [NSString stringWithFormat:@"已答题%@/%@",model.answerCount,model.questCount];
+    }
+}
 
 @end

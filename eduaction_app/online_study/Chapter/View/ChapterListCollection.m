@@ -30,13 +30,15 @@ static NSString * const cell1 = @"ChapterCVCell";
         
         self.delegate = self;
         self.dataSource = self;
+        
+        self.data_model = [DataModel new];
     }
     return self;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 19;
+    return self.data_model.result.count;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
@@ -50,9 +52,17 @@ static NSString * const cell1 = @"ChapterCVCell";
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    ChapterListModel *model = self.data_model.result[indexPath.row];
+    
     ChapterCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-    [cell.view_ratio creatRatioViewWithNumber:0.5 andType:RatioViewTypeBlue];
-    cell.btn_check.hidden = indexPath.row%2?YES:NO;
+    [cell setChapterMainModel:model];
+    [cell.view_ratio creatRatioViewWithNumber:[model.correctLv floatValue]/100.0 andType:RatioViewTypeBlue];
+    cell.btn_check.hidden = [model.answerCount floatValue]>0?NO:YES;
+    [[[cell.btn_check rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        if (self.blockScore) {
+            self.blockScore(indexPath);
+        }
+    }];
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {

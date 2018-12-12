@@ -14,9 +14,12 @@
 #import "MyCollectionMainVC.h"
 #import "ConsolidateMyNoteVC.h"
 
+#import "ChapterScoreModel.h"
+
 @interface ChapterScoreVC ()
 @property (nonatomic, strong) ChapterScoreCollection *collection_main;
 @property (nonatomic, strong) UIButton *btn_redo;// 重做
+
 @end
 
 @implementation ChapterScoreVC
@@ -32,12 +35,13 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self request];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 #pragma --- view creat
 - (ChapterScoreCollection *)collection_main {
@@ -58,24 +62,38 @@
                 [self.navigationController popViewControllerAnimated:YES];
             }
             else{
-                //跳转到,@"本章错题",@"本章收藏",@"本章笔记",@"试错解析"
-                if (indexPath.row == 0) {
-                    [self.navigationController pushViewController:[ConsolidateMyWrongMainVC new] animated:YES];
-                }
-                else if (indexPath.row == 1) {
-                    [self.navigationController pushViewController:[MyCollectionMainVC new] animated:YES];
-
-                }
-                else if (indexPath.row == 2) {
-                    [self.navigationController pushViewController:[ConsolidateMyNoteVC new] animated:YES];
-                }
-                else {
-                    MakeProblemMainVC *vc = [MakeProblemMainVC new];
-                    [vc setMode:MakeProblemMainModeErrorPractice];//MakeProblemMainModeSimulateExam,MakeProblemMainModeErrorPractice,MakeProblemMainModeRandomPractice,
-                    [self.navigationController pushViewController:vc animated:YES];
+                if (self.collection_main.model) {
+                    //跳转到,@"本章错题",@"本章收藏",@"本章笔记",@"试错解析"
+                    if (indexPath.row == 0) {
+                        ConsolidateMyWrongMainVC *vc = [ConsolidateMyWrongMainVC new];
+                        vc.questionHouse = self.questionHouse;
+                        vc.myWrongType = self.collection_main.model.correct;
+                        [self.navigationController pushViewController:vc animated:YES];
+                    }
+                    else if (indexPath.row == 1) {
+                        MyCollectionMainVC *vc = [MyCollectionMainVC new];
+                        vc.questionHouse = self.questionHouse;
+                        vc.myCollectionType = self.collection_main.model.collection;
+                        [self.navigationController pushViewController:vc animated:YES];
+                    }
+                    else if (indexPath.row == 2) {
+                        ConsolidateMyNoteVC *vc = [ConsolidateMyNoteVC new];
+                        vc.questionHouse = self.questionHouse;
+                        vc.myNoteType = self.collection_main.model.notes;
+                        [self.navigationController pushViewController:vc animated:YES];
+                    }
+                    else {
+                        //错题解析
+                        MakeProblemMainVC *vc = [MakeProblemMainVC new];
+                        vc.questionHouse = self.questionHouse;
+                        vc.myWrongType = self.collection_main.model.analysis;
+                        [vc setMode:MakeProblemMainModeErrorPractice andShowMode:MakeProblemModeMemory];
+                        [self.navigationController pushViewController:vc animated:YES];
+                    }
                 }
             }
         }];
+        //数据
     }
     return _collection_main;
 }
@@ -85,8 +103,8 @@
         _btn_redo.frame = (CGRect){15,self.collection_main.py_height+85,ZTWidth-30,45};
         _btn_redo.titleLabel.font = [UIFont systemFontOfSize:16];
         [_btn_redo setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_btn_redo setTitle:@"重做本章" forState:UIControlStateNormal];
-        [_btn_redo setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        [_btn_redo setTitle:@"  重做本章" forState:UIControlStateNormal];
+        [_btn_redo setImage:[UIImage imageNamed:@"refresh"] forState:UIControlStateNormal];
         [_btn_redo setBackgroundImage:[CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:_btn_redo.frame gradientDir:leftToright] forState:UIControlStateNormal];
         
         _btn_redo.backgroundColor = HexRGB(0xF15A51);
@@ -96,13 +114,41 @@
         @weakify(self)
         [[_btn_redo rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self)
+//            [self requestRedo];
+            
             //跳转到做题
             MakeProblemMainVC *vc = [MakeProblemMainVC new];
-            [vc setMode:MakeProblemMainModeErrorPractice];//MakeProblemMainModeSimulateExam,MakeProblemMainModeErrorPractice,MakeProblemMainModeRandomPractice,
+            vc.questionHouse = self.questionHouse;
+            [vc setMode:MakeProblemMainModeErrorPractice andShowMode:MakeProblemModeAnswer];
             [self.navigationController pushViewController:vc animated:YES];
         }];
     }
     return _btn_redo;
+}
+
+#pragma mark --- request
+- (void)request
+{
+    [SQNetworkInterface iRequestChapterScoreParames:@{@"questionHouse":self.questionHouse,@"userId":@"33"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
+        if (state == CODE_SUCCESS) {
+            self.collection_main.model = [ChapterScoreModel mj_objectWithKeyValues:resultData];;
+        }
+        [self.collection_main reloadData];
+        [self.collection_main stopHeaderRefresh];
+    }];
+}
+- (void)requestRedo
+{
+    [SQNetworkInterface iRequestChapterRedoParames:@{@"questionHouse":self.questionHouse,@"userId":@"33"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
+        if (state == CODE_SUCCESS) {
+//            [self request];//更新数据
+            //跳转到做题
+            MakeProblemMainVC *vc = [MakeProblemMainVC new];
+            vc.questionHouse = self.questionHouse;
+            [vc setMode:MakeProblemMainModeErrorPractice andShowMode:MakeProblemModeAnswer];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }];
 }
 /*
 #pragma mark - Navigation

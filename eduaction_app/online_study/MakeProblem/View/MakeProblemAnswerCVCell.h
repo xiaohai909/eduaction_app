@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lbl_title;
 @property (weak, nonatomic) IBOutlet UIButton *btn_wrong;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_detail;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,7 +20,7 @@
     self.btn_order.layer.borderColor = HexRGB(0xFF6B6B).CGColor;
 }
 
-- (void)setContent:(NSString *)title andRow:(NSInteger)row andState:(OptionState)state {
+- (void)setContent:(NSString *)title andOption:(NSString *)option andState:(OptionState)state {
     if (state == OptionStateError) {
         self.btn_order.layer.borderWidth = 0.0;
         [self.btn_order setImage:[UIImage imageNamed:@"wrong question_btn_fork"] forState:UIControlStateNormal];
@@ -36,14 +36,14 @@
     else{
         self.btn_order.layer.borderWidth = 1.0;
         [self.btn_order setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-        [self.btn_order setTitle:[self getOption:row] forState:UIControlStateNormal];
+        [self.btn_order setTitle:option forState:UIControlStateNormal];
         [self.btn_content setTitleColor:HexRGB(0x1F1F1F) forState:UIControlStateNormal];
     }
     
     [self.btn_content setTitle:title forState:UIControlStateNormal];
 }
-- (NSString *)getOption:(NSInteger)row
-{
-    return [@"ABCDEFGHIJKLMNOPQRSTUVWXYZ" substringWithRange:NSMakeRange(row, 1)];
-}
+//+ (NSString *)getOption:(NSInteger)row
+//{
+//    return [@"ABCDEFGHIJKLMNOPQRSTUVWXYZ" substringWithRange:NSMakeRange(row, 1)];
+//}
 @end

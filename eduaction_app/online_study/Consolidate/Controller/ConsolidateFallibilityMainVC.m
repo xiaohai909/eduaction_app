@@ -9,11 +9,13 @@
 #import "ConsolidateFallibilityMainVC.h"
 #import "ConsolidateFalibilityMainCollection.h"
 #import "RechargeMainBottomView.h"
+#import "ConsolidateBottomPageView.h"
 
 @interface ConsolidateFallibilityMainVC ()
 @property (nonatomic, strong) ConsolidateFalibilityMainCollection *collection_main;
 @property (nonatomic, strong) UIButton *btn_right;
 @property (nonatomic, strong) RechargeMainBottomView *view_bottom;
+@property (nonatomic, strong) ConsolidateBottomPageView *view_page;
 @end
 
 @implementation ConsolidateFallibilityMainVC
@@ -28,6 +30,7 @@
     
     self.title = @"易错试题";
     [self.view addSubview:self.collection_main];
+    [self.view addSubview:self.view_page];
     [self.view addSubview:self.view_bottom];
     
     self.collection_main.array_models = [@[@"1",@"2",@"3",@"4",@"5",@"1",@"2",@"3",@"4",@"5",@"1",@"2",@"3",@"4",@"5"] mutableCopy];
@@ -43,7 +46,7 @@
         layout.minimumLineSpacing = 0.0;
         layout.minimumInteritemSpacing = 4.0;
         
-        _collection_main = [[ConsolidateFalibilityMainCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth, ZTHeight-NaviIPHONEX} collectionViewLayout:layout];
+        _collection_main = [[ConsolidateFalibilityMainCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth, ZTHeight-NaviIPHONEX-self.view_page.py_height} collectionViewLayout:layout];
         _collection_main.backgroundColor = HexRGB(0xF1F0F0);
         //        @weakify(self)
         //        [_collection_main setBlockAllChoise:^(BOOL all) {
@@ -52,6 +55,14 @@
         //        }];
     }
     return _collection_main;
+}
+- (ConsolidateBottomPageView *)view_page
+{
+    if (!_view_page) {
+        _view_page = [ConsolidateBottomPageView instancetypeWithXib];
+        _view_page.frame = (CGRect){0,ZTHeight-TabIPHONEX,ZTWidth,TabIPHONEX};
+    }
+    return _view_page;
 }
 - (RechargeMainBottomView *)view_bottom {
     if (!_view_bottom) {

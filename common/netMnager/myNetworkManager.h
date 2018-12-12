@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#define severAddress @"http://118.24.128.225/"
+//#define severAddress @"http://118.24.128.225"
+#define ContentType @"application/json"
+#define ContentType1 @"text/html"
+#define appId @"app_mobile"
+
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, RequestMethodType){
     RequestMethodTypePost = 1,

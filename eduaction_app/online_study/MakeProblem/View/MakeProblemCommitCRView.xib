@@ -83,6 +83,7 @@
             <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
             <connections>
                 <outlet property="btn_detail" destination="2pa-nH-9sa" id="zYl-hz-kc1"/>
+                <outlet property="lbl_title" destination="S2s-v2-fmP" id="Joe-CF-eI4"/>
             </connections>
             <point key="canvasLocation" x="-8" y="39"/>
         </collectionReusableView>

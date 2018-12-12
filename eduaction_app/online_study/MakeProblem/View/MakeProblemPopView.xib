@@ -112,6 +112,7 @@
                 <outlet property="btn_bigger" destination="lqe-pz-8OK" id="Lt9-MY-Cku"/>
                 <outlet property="btn_normal" destination="o9v-dL-8oX" id="pWg-EJ-j5E"/>
                 <outlet property="btn_send" destination="Vca-iq-l3P" id="zE4-HB-Sf6"/>
+                <outlet property="lbl_title" destination="icw-Lt-2yM" id="43u-Ke-cTY"/>
                 <outlet property="switch_auto" destination="ew8-37-nb3" id="bUP-28-gBk"/>
                 <outlet property="view_text" destination="gKw-8j-NfD" id="ed6-z6-r6K"/>
             </connections>
@@ -163,12 +164,15 @@
                         <constraint firstAttribute="height" constant="1" id="J1z-Eq-13f"/>
                     </constraints>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="点击这里，添加笔记" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gKw-8j-NfD">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gKw-8j-NfD" customClass="IQTextView">
                     <rect key="frame" x="16" y="56" width="343" height="187"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="点击这里，添加笔记"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="delegate" destination="-1" id="jsA-9H-iWZ"/>
                     </connections>
@@ -197,6 +201,7 @@
                 <outlet property="btn_bigger" destination="lqe-pz-8OK" id="kbD-j3-ZL3"/>
                 <outlet property="btn_normal" destination="o9v-dL-8oX" id="FFB-Sl-hy1"/>
                 <outlet property="btn_send" destination="Vca-iq-l3P" id="X7T-ic-Hzd"/>
+                <outlet property="lbl_title" destination="icw-Lt-2yM" id="Wix-P5-jYx"/>
                 <outlet property="switch_auto" destination="ew8-37-nb3" id="K6E-wn-RW5"/>
                 <outlet property="view_text" destination="gKw-8j-NfD" id="c9M-Bf-aIU"/>
             </connections>

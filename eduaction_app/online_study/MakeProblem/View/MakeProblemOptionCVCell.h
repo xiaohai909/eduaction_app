@@ -21,7 +21,9 @@ typedef NS_ENUM(NSUInteger, OptionState) {
 @property (weak, nonatomic) IBOutlet UIButton *btn_content;
 
 
-- (void)setContent:(NSString *)title andRow:(NSInteger)row andState:(OptionState)state;
+- (void)setContent:(NSString *)title andOption:(NSString *)option andState:(OptionState)state;
+
+//+ (NSString *)getOption:(NSInteger)row;
 @end
 
 NS_ASSUME_NONNULL_END
