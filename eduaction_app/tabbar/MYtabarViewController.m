@@ -7,6 +7,7 @@
 //
 
 #import "MYtabarViewController.h"
+#import "MineUserVC.h"
 static MYtabarViewController * mainViewInstance=nil;
 @interface MYtabarViewController ()
 
@@ -137,6 +138,11 @@ static MYtabarViewController * mainViewInstance=nil;
     if (tabBarController.selectedIndex == 1) {
         
         [[[noticeSubjectmanager sharenoticeSubjectmanager] shouldTabar_jump] sendNext:nil];
+        
+    }
+    if (tabBarController.selectedIndex == 2) {
+        
+        [[[noticeSubjectmanager sharenoticeSubjectmanager] shouldTabar_jump2] sendNext:nil];
         
     }
     return YES;

@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CommonFunciton : NSObject
++(UIViewController *)theTopviewControler;
 + (void)drawLinearGradient:(CGContextRef)context
                       path:(CGPathRef)path startColor:(CGColorRef)startColor
                   endColor:(CGColorRef)endColor;
@@ -25,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 + (NSString*)dictionaryToJson:(NSDictionary *)dic;
 + (UIImage*)createImageWithColor:(UIColor*)color;
+
++(UIAlertController *)showAlert:(NSString *)message  AndOK_str:(NSString *)oktitle AndCancel_str:(NSString *)canceltitle AndClickOK:(void (^)(int index))OK;
 @end
 
 

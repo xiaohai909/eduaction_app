@@ -47,18 +47,18 @@
                     <state key="highlighted" title="注册"/>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4lH-y3-Xyo">
-                    <rect key="frame" x="65" y="303" width="285" height="30"/>
+                    <rect key="frame" x="65" y="347" width="285" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_ico_password02" translatesAutoresizingMaskIntoConstraints="NO" id="wLm-3j-wmo">
-                    <rect key="frame" x="25" y="363" width="32" height="32"/>
+                    <rect key="frame" x="25" y="407" width="32" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_ico_password" translatesAutoresizingMaskIntoConstraints="NO" id="GW6-a1-8tp">
-                    <rect key="frame" x="25" y="302" width="32" height="32"/>
+                    <rect key="frame" x="25" y="346" width="32" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2yF-bn-KbF">
@@ -99,19 +99,19 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请确认密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXk-li-Lki">
-                    <rect key="frame" x="65" y="364" width="285" height="30"/>
+                    <rect key="frame" x="65" y="408" width="285" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ug0-Tz-NHd">
-                    <rect key="frame" x="25" y="342" width="325" height="1"/>
+                    <rect key="frame" x="25" y="386" width="325" height="1"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hT1-ks-oQZ">
-                    <rect key="frame" x="25" y="403" width="325" height="1"/>
+                    <rect key="frame" x="25" y="447" width="325" height="1"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
@@ -128,6 +128,30 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="确认"/>
                 </button>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYr-uB-FBJ">
+                    <rect key="frame" x="65" y="297" width="137" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_ico_code" translatesAutoresizingMaskIntoConstraints="NO" id="8e6-qu-uB8">
+                    <rect key="frame" x="25" y="296" width="32" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBd-AD-5D2">
+                    <rect key="frame" x="25" y="336" width="325" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmv-XD-atZ">
+                    <rect key="frame" x="198" y="297" width="69" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="获取验证码">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -138,12 +162,16 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="back" destination="BIo-93-4Fa" id="760-bV-ICZ"/>
+                <outlet property="code" destination="QYr-uB-FBJ" id="rPj-o2-RHM"/>
+                <outlet property="codebtn" destination="vmv-XD-atZ" id="473-11-8aF"/>
+                <outlet property="codeicon" destination="8e6-qu-uB8" id="Bb4-NN-uLK"/>
                 <outlet property="forgetbtn" destination="GnY-P8-p5d" id="DXX-F9-sMD"/>
                 <outlet property="lab1" destination="FUF-YY-pco" id="u8y-s0-cnV"/>
                 <outlet property="lab2" destination="ksg-nd-TPr" id="Lht-sE-UQo"/>
                 <outlet property="line1" destination="goF-Og-Aqi" id="Ggq-Ap-EP1"/>
                 <outlet property="line2" destination="Ug0-Tz-NHd" id="zoS-gf-E2O"/>
                 <outlet property="line3" destination="hT1-ks-oQZ" id="62B-ob-fvj"/>
+                <outlet property="line4" destination="RBd-AD-5D2" id="ymn-4T-zSO"/>
                 <outlet property="login_btn" destination="0T3-Wl-osH" id="wRs-vc-2s3"/>
                 <outlet property="logo_view" destination="2yF-bn-KbF" id="HxA-AZ-pEK"/>
                 <outlet property="mobileicon" destination="ivl-fN-YSh" id="3PE-lX-PpU"/>
@@ -158,6 +186,7 @@
         </view>
     </objects>
     <resources>
+        <image name="login_ico_code" width="18" height="18"/>
         <image name="login_ico_password" width="18" height="18"/>
         <image name="login_ico_password02" width="18" height="18"/>
         <image name="login_ico_phone" width="18" height="18"/>

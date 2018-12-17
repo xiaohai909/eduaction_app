@@ -141,7 +141,9 @@
         make.height.mas_equalTo(84);
         make.width.mas_equalTo((ZTWidth-30)/2.0);
     }];
-    
+    [[todaybtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [_ClickHeader_btn sendNext:@(9)];
+    }];
     hisbtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [hisbtn setBackgroundImage:[UIImage imageNamed:@"iindex_sort_btn_10"] forState:UIControlStateNormal];
     [self addSubview:hisbtn];
@@ -150,6 +152,9 @@
         make.top.mas_equalTo(secbg.mas_bottom).offset(10);
         make.height.mas_equalTo(84);
         make.width.mas_equalTo((ZTWidth-30)/2.0);
+    }];
+    [[hisbtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [_ClickHeader_btn sendNext:@(10)];
     }];
     
 }

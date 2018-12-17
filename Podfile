@@ -19,4 +19,5 @@ pod 'ImagePlayerView'
 pod 'TezButton'
 pod 'YYCache'
 pod 'ZYSideSlipFilter'
+pod 'FCUUID'
 end

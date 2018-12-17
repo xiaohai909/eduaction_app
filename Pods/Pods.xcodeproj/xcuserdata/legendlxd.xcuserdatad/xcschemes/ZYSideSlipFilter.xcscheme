@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C44198DBC04CC923CCA82067C03C956A"
+               BlueprintIdentifier = "833D6D58C9ED2DB9212635CA21147D2D"
                BlueprintName = "ZYSideSlipFilter"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "ZYSideSlipFilter.framework">

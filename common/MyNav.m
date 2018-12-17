@@ -12,8 +12,10 @@
 
 -(void)viewDidLoad
 {
+    
     if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
     {
+       
         self.interactivePopGestureRecognizer.delegate = self;
         self.delegate = self;
     }
@@ -48,17 +50,18 @@
     if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]&&self.ShouldNointeractivePopGestureRecognizer==NO) {
         
         self.interactivePopGestureRecognizer.enabled = YES;
-//        DDLogVerbose(@"%@",[viewController description]);
+        NSLog(@"%@",[viewController description]);
         
-//        if ([[viewController description] containsString:@"GWProjectVc"]) {
-//             self.interactivePopGestureRecognizer.enabled = NO;
-//        }
-//        else
+        if ([[viewController description] containsString:@"searchWithKindVC"]) {
+             self.interactivePopGestureRecognizer.enabled = NO;
+        }
+        else{
         if(self.interactivePopGestureRecognizer_NO){
             
              self.interactivePopGestureRecognizer.enabled = NO;
 
         }
+    }
     }
 }
 

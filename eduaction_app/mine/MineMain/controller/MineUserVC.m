@@ -15,7 +15,10 @@
 #import "MineChangePasswardVC.h"
 #import "MineChangePhoneVC.h"
 
-@interface MineUserVC ()<WCNAreaPickerDelegate>
+@interface MineUserVC ()
+{
+    BOOL firstIn;
+}
 @property (nonatomic, strong) MineUserCollection *collection_main;
 @end
 
@@ -29,6 +32,13 @@
     self.title = @"个人资料";
     
     [self.view addSubview:self.collection_main];
+    
+    @weakify(self);
+    [[[[noticeSubjectmanager sharenoticeSubjectmanager] shouldTabar_jump2] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        self->firstIn = YES;
+    }];
+    
 }
 - (MineUserCollection *)collection_main {
     if (!_collection_main) {
@@ -58,7 +68,7 @@
             else if (indexPath.section == 2) {
                 if (indexPath.row == 1) {
                     //选择性别
-                    [self sheetAlertController:@"性别"];
+                    //[self sheetAlertController:@"性别"];
                 }
                 else if (indexPath.row == 2) {
                     //选择地区
@@ -83,40 +93,24 @@
     }
     return _collection_main;
 }
-
-#pragma mark --- actions
-- (void)sheetAlertController:(NSString *)type
-{
-    NSString *title;
-    NSArray *titles;
-    if ([type isEqualToString:@"职业"]) {
-        title = @"选择方式";
-        titles = @[@"学生",@"宠物医生",@"宠物医生助理",@"宠物美容师",@"猪场兽医",@"牛场兽医",@"禽场兽医",@"马场兽医",@"兽医科研工作者",@"其他"];
-    }
-    else if ([type isEqualToString:@"性别"]){
-        title = @"选择性别";
-        titles = @[@"男",@"女"];
-    }
-    UIAlertController *sheet = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    for (NSString *title in titles) {
-        UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            //选择的职业
-            NSLog(@"%@",title);
-        }];
-        [sheet addAction:action];
-    }
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-    }];
-    [sheet addAction:cancel];
-    [self presentViewController:sheet animated:YES completion:nil];
+- (void)viewWillAppear:(BOOL)animated {
+    
+    
+    //[self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    self.tabBarController.navigationItem.rightBarButtonItem =nil;
+    self.tabBarController.navigationItem.titleView = nil;
+//    if (firstIn) {
+//        firstIn = NO;
+//    }
+//    else{
+//        [self.navigationController setNavigationBarHidden:YES animated:YES];
+//    }
 }
-- (void)pickerDidChangeStatus:(WCNAreaPickerView *)picker
-{
-    //选择的地址
-    if (picker.locate) {
-        NSString  *area = [NSString stringWithFormat:@"%@%@%@",picker.locate.state,picker.locate.city,picker.locate.district];
-        NSLog(@"%@",area);
-    }
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+//    self.navigationController.navigationBarHidden = YES;
 }
 /*
 #pragma mark - Navigation

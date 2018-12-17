@@ -39,7 +39,7 @@
     [super viewDidLoad];
     
     
-    [self setnav_BackBtn];
+ 
   
     [self.view addSubview:self.myTab];
     [self.view addSubview:self.myCollectionV];
@@ -59,7 +59,7 @@
    
     [super viewWillAppear:animated];
     
-    [self setNavTitle:@"选择分类"];
+  
     
     [self setnavbg_defa];
     

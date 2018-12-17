@@ -93,8 +93,8 @@
         make.top.mas_equalTo(self.user_password.mas_bottom).offset(2);
         
     }];
-    self.underline1.backgroundColor = lineColor;
-    self.underline2.backgroundColor = lineColor;
+    self.underline1.backgroundColor = lineColor_app;
+    self.underline2.backgroundColor = lineColor_app;
     
     [self.log_inbtn  mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-space_left);

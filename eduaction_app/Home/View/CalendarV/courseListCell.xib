@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="courseListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEw-Tu-tEm">
+                        <rect key="frame" x="13" y="33" width="27.5" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="zpu-5o-vtV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irt-mo-AFL">
+                        <rect key="frame" x="48" y="0.0" width="1" height="87.5"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="vRL-XN-Xdu"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWX-Ml-3zd">
+                        <rect key="frame" x="59" y="86.5" width="261" height="1"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="3H7-d8-isa"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="course_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="BfD-SB-IDL">
+                        <rect key="frame" x="302" y="35" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="BfD-SB-IDL" secondAttribute="height" multiplier="1:1" id="61f-g8-2tK"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="四个字的" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7e-kc-wgz">
+                        <rect key="frame" x="247" y="33.5" width="41" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="41" id="Q6h-xX-vf6"/>
+                            <constraint firstAttribute="height" constant="21" id="sQe-c8-LmG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="1" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slN-bq-5fI">
+                        <rect key="frame" x="60" y="21" width="172" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="mdl-mQ-IyC"/>
+                        </constraints>
+                        <string key="text">《微生物篇》——细菌的结构与生理（二）</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0y-Tq-3q1">
+                        <rect key="frame" x="60" y="63" width="172" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="AWX-Ml-3zd" secondAttribute="trailing" id="1YL-VB-rho"/>
+                    <constraint firstItem="BfD-SB-IDL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5lV-G7-jUM"/>
+                    <constraint firstItem="g0y-Tq-3q1" firstAttribute="top" secondItem="slN-bq-5fI" secondAttribute="bottom" constant="10" id="6AY-rd-c4J"/>
+                    <constraint firstItem="slN-bq-5fI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="9VF-4u-2Cz"/>
+                    <constraint firstItem="OEw-Tu-tEm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="KTX-rE-diq"/>
+                    <constraint firstItem="g0y-Tq-3q1" firstAttribute="leading" secondItem="irt-mo-AFL" secondAttribute="trailing" constant="11" id="MpZ-7I-XDQ"/>
+                    <constraint firstItem="BfD-SB-IDL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="16" id="OKd-wz-Ln0"/>
+                    <constraint firstItem="irt-mo-AFL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="48" id="WkW-T3-QpO"/>
+                    <constraint firstItem="U7e-kc-wgz" firstAttribute="leading" secondItem="slN-bq-5fI" secondAttribute="trailing" constant="15" id="Wrs-c6-YdO"/>
+                    <constraint firstItem="g0y-Tq-3q1" firstAttribute="trailing" secondItem="slN-bq-5fI" secondAttribute="trailing" id="Xxz-Oq-Dmm"/>
+                    <constraint firstItem="U7e-kc-wgz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ct3-b3-bqX"/>
+                    <constraint firstItem="BfD-SB-IDL" firstAttribute="leading" secondItem="U7e-kc-wgz" secondAttribute="trailing" constant="14" id="egR-2h-IQz"/>
+                    <constraint firstItem="OEw-Tu-tEm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="i3f-4y-ye9"/>
+                    <constraint firstItem="AWX-Ml-3zd" firstAttribute="leading" secondItem="irt-mo-AFL" secondAttribute="trailing" constant="10" id="lkH-uf-v85"/>
+                    <constraint firstAttribute="bottom" secondItem="irt-mo-AFL" secondAttribute="bottom" id="pMr-cP-EeO"/>
+                    <constraint firstItem="irt-mo-AFL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sYo-Di-t6e"/>
+                    <constraint firstItem="slN-bq-5fI" firstAttribute="leading" secondItem="irt-mo-AFL" secondAttribute="trailing" constant="11" id="wpK-k9-ixp"/>
+                    <constraint firstAttribute="bottom" secondItem="AWX-Ml-3zd" secondAttribute="bottom" id="zu7-8k-BCd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="180.80000000000001" y="80.959520239880064"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="course_arrow" width="18" height="18"/>
+    </resources>
+</document>

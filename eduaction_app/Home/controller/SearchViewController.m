@@ -31,6 +31,7 @@
     _resultV.showsVerticalScrollIndicator = NO;
     _resultV.backgroundColor = [UIColor whiteColor];
     _resultV.hidden = YES;
+    _resultV.type = forsearchtype;
 
     }
     return _resultV;
@@ -39,7 +40,6 @@
 {
     if (!_hotSec) {
         _hotSec =[SearchSecionV creatXib];
-        _hotSec.frame = CGRectMake(0, NaviIPHONEX, ZTWidth, 44);
         _hotSec.titleV.text = @"热门搜索";
         _hotSec.actionBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
         
@@ -148,9 +148,8 @@
     [self setnavbg_defa];
     
     [self.view addSubview:self.hotSec];
-    
+    self.hotSec.frame =CGRectMake(0, NaviIPHONEX, ZTWidth, 44);
     [self.view addSubview:self.hotView];
-    
     
     [self.hotView setupView:@[@"Java奥术大师大大大大大大大少时诵诗书所大", @"Python", @"Objective-C", @"Swift", @"C", @"C++", @"PHP", @"C#", @"Perl", @"Go", @"JavaScript", @"R", @"Ruby", @"MATLAB"]];
     [self.view addSubview:self.hisSec];
@@ -163,6 +162,7 @@
     }
     [self.view addSubview:self.resultV];
     [self.view addSubview:self.mySearchBar];
+    
     //[self.view addSubview:self.mySearchBar];
     // Do any additional setup after loading the view.
 }
