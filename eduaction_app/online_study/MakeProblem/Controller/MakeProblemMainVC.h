@@ -18,7 +18,8 @@ typedef NS_ENUM(NSUInteger, MakeProblemMainVCMode) {
     MakeProblemMainVCChapterPractice,//章节练习
     MakeProblemMainVCMyWrong,//错题练习
     MakeProblemMainVCSimulateExame,//模拟考场
-    MakeProblemMainVCRandomPractice//随机练习
+    MakeProblemMainVCRandomPractice,//随机练习
+    MakeProblemMainVCMyNote//我的笔记
 };
 
 @interface MakeProblemMainVC : BaseViewController

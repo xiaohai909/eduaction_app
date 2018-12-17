@@ -11,6 +11,8 @@
 #import "RechargeMainBottomView.h"
 #import "ConsolidateBottomPageView.h"
 
+#import "MakeProblemMainVC.h"
+
 @interface MyCollectionMainVC ()
 @property (nonatomic, strong) MyCollectionMainCollection *collection_main;
 @property (nonatomic, strong) UIButton *btn_right;
@@ -58,6 +60,20 @@
         [_collection_main setBlockAllChoise:^(BOOL all) {
             @strongify(self)
             self.view_bottom.btn_left.selected = all;
+        }];
+        [_collection_main setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
+            @strongify(self)
+            //选择其中其中一道题，然后跳转到错题解析
+            if (self.questionHouse) {
+                //本章笔记就不跳了
+            }
+            else{
+                //我的笔记就要跳
+                MakeProblemMainVC *vc = [MakeProblemMainVC new];
+                vc.lastNum = [NSString stringWithFormat:@"%ld",indexPath.section+1+(self.view_page.tag-1)*10];
+                [vc setMakeProblemVC:MakeProblemMainVCMyWrong];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
         }];
         //数据
         [self requestRefresh:YES];

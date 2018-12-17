@@ -88,6 +88,10 @@ typedef NS_ENUM(NSUInteger, MakeProblemMainMode) {
         self.title = @"随机练习";
         [self setMode:MakeProblemMainModeRandomPractice andShowMode:MakeProblemModeAnswer];
     }
+    else if(vcMode == MakeProblemMainVCMyNote ){
+        self.title = @"我的笔记";
+        [self setMode:MakeProblemMainModeRandomPractice andShowMode:MakeProblemModeAnswer];
+    }
     NSInteger page = self.lastNum.length?(([self.lastNum integerValue]-1)/pageCount+1):1;
     [self gotoRequestPage:page];
 }
@@ -106,6 +110,9 @@ typedef NS_ENUM(NSUInteger, MakeProblemMainMode) {
     else if(self.vcModel == MakeProblemMainVCSimulateExame){
     }
     else if (self.vcModel == MakeProblemMainVCRandomPractice){
+    }
+    else if (self.vcModel == MakeProblemMainVCMyNote){
+        
     }
 }
 - (void)setMode:(MakeProblemMainMode)mode andShowMode:(MakeProblemMode)showMode{
