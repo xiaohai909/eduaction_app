@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    firstIn = YES;
     [self.view addSubview:self.headView];
     [self.view addSubview:self.collection_main];
     @weakify(self);

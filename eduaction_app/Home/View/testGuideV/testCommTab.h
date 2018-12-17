@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface testCommTab : UITableView<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)RACSubject *clickIndex;
+-(void)setreqDataSource:(testGuideReqModeBaseClass *)mode;
+-(void)setereqDataSourceWitharr:(NSMutableArray *)arr;
 @end
 
 NS_ASSUME_NONNULL_END

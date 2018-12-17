@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface testGuideVC : BaseViewController
-
+@property (nonatomic,assign)BOOL isSec;
+@property (nonatomic,strong)NSMutableArray *secDataArr;
 @end
 
 NS_ASSUME_NONNULL_END
