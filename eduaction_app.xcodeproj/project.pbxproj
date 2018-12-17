@@ -7,35 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041DD19821B900CA00322150 /* MineBuyCourseMainCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DD19621B900CA00322150 /* MineBuyCourseMainCVCell.m */; };
-		041DD19921B900CA00322150 /* MineBuyCourseMainCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DD19721B900CA00322150 /* MineBuyCourseMainCVCell.xib */; };
-		041DD19C21B9057200322150 /* MineHistoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DD19B21B9057200322150 /* MineHistoryCollection.m */; };
-		041DD19F21B90CB000322150 /* MineBuyCourseCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DD19E21B90CB000322150 /* MineBuyCourseCollection.m */; };
-		041DD1A221B927A800322150 /* MineCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DD1A121B927A800322150 /* MineCollectionVC.m */; };
-		041DD1A521B9287400322150 /* MoreTypeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DD1A321B9287400322150 /* MoreTypeScrollView.m */; };
-		042ED7DC21BF90FC00128AAB /* MineUserProfessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7DB21BF90FC00128AAB /* MineUserProfessionVC.m */; };
-		042ED7DF21BF913800128AAB /* MineUserProfessionCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7DE21BF913800128AAB /* MineUserProfessionCollection.m */; };
-		042ED7E321BF915C00128AAB /* MineUserProfessionCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7E121BF915C00128AAB /* MineUserProfessionCVCell.m */; };
-		042ED7E421BF915C00128AAB /* MineUserProfessionCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042ED7E221BF915C00128AAB /* MineUserProfessionCVCell.xib */; };
-		042ED7E721BF948C00128AAB /* MineChangePasswardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7E621BF948C00128AAB /* MineChangePasswardVC.m */; };
-		042ED7EA21BF94FE00128AAB /* MineAttestationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7E921BF94FE00128AAB /* MineAttestationVC.m */; };
-		042ED7ED21BF95C600128AAB /* MineChangePhoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7EC21BF95C600128AAB /* MineChangePhoneVC.m */; };
-		042ED7F021BF9A8A00128AAB /* MineToolExchangeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7EF21BF9A8A00128AAB /* MineToolExchangeVC.m */; };
-		042ED7F321BF9B9400128AAB /* MineToolExchangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7F221BF9B9400128AAB /* MineToolExchangeView.m */; };
-		042ED7F521BF9BA100128AAB /* MineToolExchangeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042ED7F421BF9BA100128AAB /* MineToolExchangeView.xib */; };
-		042ED7F821BFA0EF00128AAB /* MineHelpSetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7F721BFA0EF00128AAB /* MineHelpSetVC.m */; };
-		042ED7FB21BFA1CA00128AAB /* MineHelpSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7FA21BFA1CA00128AAB /* MineHelpSet.m */; };
-		042ED7FF21BFA40100128AAB /* MineHelpSetCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7FD21BFA40100128AAB /* MineHelpSetCVCell.m */; };
-		042ED80021BFA40100128AAB /* MineHelpSetCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042ED7FE21BFA40100128AAB /* MineHelpSetCVCell.xib */; };
-		042ED80321BFADE200128AAB /* MineAttestationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED80221BFADE200128AAB /* MineAttestationView.m */; };
-		042ED80521BFADEF00128AAB /* MineAttestationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042ED80421BFADEF00128AAB /* MineAttestationView.xib */; };
-		044730B521AD32B900E2DC20 /* MineMessageFromCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730B321AD32B900E2DC20 /* MineMessageFromCVCell.m */; };
-		044730B621AD32B900E2DC20 /* MineMessageFromCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044730B421AD32B900E2DC20 /* MineMessageFromCVCell.xib */; };
-		044730B921AD3A9800E2DC20 /* MineMessageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730B821AD3A9800E2DC20 /* MineMessageCollection.m */; };
-		044730BC21AD3C0C00E2DC20 /* MineMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730BB21AD3C0C00E2DC20 /* MineMessageVC.m */; };
-		044730BF21AD3DC300E2DC20 /* MineHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730BE21AD3DC300E2DC20 /* MineHistoryVC.m */; };
-		044730C221AD3E2B00E2DC20 /* MineBuyCourseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730C121AD3E2B00E2DC20 /* MineBuyCourseVC.m */; };
-		044730C521AD3E6700E2DC20 /* MineTodayCourseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730C421AD3E6700E2DC20 /* MineTodayCourseVC.m */; };
+		041DD19C21B9057200322150 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		041DD1A221B927A800322150 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		041DD1A521B9287400322150 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		042ED7DF21BF913800128AAB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		042ED7E321BF915C00128AAB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		042ED7E421BF915C00128AAB /* (null) in Resources */ = {isa = PBXBuildFile; };
+		042ED7EA21BF94FE00128AAB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		042ED7F021BF9A8A00128AAB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		042ED7F821BFA0EF00128AAB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		042ED7FB21BFA1CA00128AAB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		042ED7FF21BFA40100128AAB /* (null) in Sources */ = {isa = PBXBuildFile; };
+		042ED80521BFADEF00128AAB /* (null) in Resources */ = {isa = PBXBuildFile; };
 		044F97DE219E6B05002295CA /* MakeProblemMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F97DD219E6B05002295CA /* MakeProblemMainModel.m */; };
 		045B11BD21912184001FC325 /* StudyTimeCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11B521912184001FC325 /* StudyTimeCVCell.xib */; };
 		045B11BE21912184001FC325 /* StudyTimeCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11B921912184001FC325 /* StudyTimeCVCell.m */; };
@@ -64,8 +47,6 @@
 		045B11FD21916B2B001FC325 /* MakeProblemOptionCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11FB21916B2B001FC325 /* MakeProblemOptionCVCell.xib */; };
 		045B120021917081001FC325 /* MakeProblemMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11FF21917081001FC325 /* MakeProblemMainCollection.m */; };
 		045B120321917302001FC325 /* MakeProblemToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B120221917302001FC325 /* MakeProblemToolView.m */; };
-		0477160121999B1C0051FB83 /* ConsolidateOptionCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047715FF21999B1C0051FB83 /* ConsolidateOptionCVCell.m */; };
-		0477160221999B1C0051FB83 /* ConsolidateOptionCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0477160021999B1C0051FB83 /* ConsolidateOptionCVCell.xib */; };
 		0477160821999F960051FB83 /* RechargeMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477160721999F960051FB83 /* RechargeMainVC.m */; };
 		0477160B2199A0140051FB83 /* RechargeMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477160A2199A0140051FB83 /* RechargeMainView.m */; };
 		04AC33E52192736200307E70 /* MakeProlemAnswerCRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC33E32192736200307E70 /* MakeProlemAnswerCRView.m */; };
@@ -102,30 +83,17 @@
 		04B1B1342194200E00EEB51E /* MakeProblemPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B1B1332194200E00EEB51E /* MakeProblemPopView.xib */; };
 		04B1B137219458E900EEB51E /* MakeProblemQuestionCardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B136219458E900EEB51E /* MakeProblemQuestionCardVC.m */; };
 		04B1B13D21945AD600EEB51E /* ConsolidateMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B13C21945AD600EEB51E /* ConsolidateMainVC.m */; };
-		04B1B14121945B2700EEB51E /* ConsolidateMainHeadCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B1B13F21945B2700EEB51E /* ConsolidateMainHeadCVCell.m */; };
-		04B1B14221945B2700EEB51E /* ConsolidateMainHeadCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B1B14021945B2700EEB51E /* ConsolidateMainHeadCVCell.xib */; };
 		04B3C06F219BB1B90035C995 /* ConsolidateHotMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C06E219BB1B90035C995 /* ConsolidateHotMainVC.m */; };
-		04B3C072219BB2250035C995 /* ConsolidateHotMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C071219BB2250035C995 /* ConsolidateHotMainCollection.m */; };
 		04B3C075219BBBF20035C995 /* ConsolidateMyNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C074219BBBF20035C995 /* ConsolidateMyNoteVC.m */; };
-		04B3C078219BBCE80035C995 /* ConsolidateNoteMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C077219BBCE80035C995 /* ConsolidateNoteMainCollection.m */; };
 		04B3C07B219BBEDA0035C995 /* ConsolidateFallibilityMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C07A219BBEDA0035C995 /* ConsolidateFallibilityMainVC.m */; };
-		04B3C07E219BC0180035C995 /* ConsolidateFalibilityMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C07D219BC0180035C995 /* ConsolidateFalibilityMainCollection.m */; };
 		04B3C081219BC1CC0035C995 /* ConsolidateMyWrongMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C080219BC1CC0035C995 /* ConsolidateMyWrongMainVC.m */; };
-		04B3C084219BC2410035C995 /* ConsolidateMyWrongMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C083219BC2410035C995 /* ConsolidateMyWrongMainCollection.m */; };
-		04B3C087219BC9C90035C995 /* ConsolidateScoreLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C086219BC9C90035C995 /* ConsolidateScoreLineView.m */; };
 		04B3C08A219BD4E00035C995 /* ConsolidateScoreMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C089219BD4E00035C995 /* ConsolidateScoreMainVC.m */; };
 		04B3C08E219BFD140035C995 /* MakeProblemQuestionCardCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C08C219BFD140035C995 /* MakeProblemQuestionCardCVCell.m */; };
 		04B3C08F219BFD140035C995 /* MakeProblemQuestionCardCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B3C08D219BFD140035C995 /* MakeProblemQuestionCardCVCell.xib */; };
-		04B813FC21C09FEA00B5CEDD /* MineHelpFeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B813FB21C09FEA00B5CEDD /* MineHelpFeedBackVC.m */; };
-		04B813FF21C0A04300B5CEDD /* MineHelpUSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B813FE21C0A04300B5CEDD /* MineHelpUSVC.m */; };
-		04B8140221C0A1C700B5CEDD /* MineHelpFeedBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8140121C0A1C700B5CEDD /* MineHelpFeedBackView.m */; };
 		04B8140421C0A1D400B5CEDD /* MineHelpFeedBackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B8140321C0A1D400B5CEDD /* MineHelpFeedBackView.xib */; };
 		04B8140721C0FA4A00B5CEDD /* MakeProblemCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8140621C0FA4A00B5CEDD /* MakeProblemCardModel.m */; };
 		04BBFB85219A7D7E0088196E /* RechargeMainBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB84219A7D7E0088196E /* RechargeMainBottomView.m */; };
 		04BBFB88219AAE080088196E /* MyCollectionMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB87219AAE080088196E /* MyCollectionMainVC.m */; };
-		04BBFB8C219AB34C0088196E /* ConsolidateProblemCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB8A219AB34C0088196E /* ConsolidateProblemCVCell.m */; };
-		04BBFB8D219AB34C0088196E /* ConsolidateProblemCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBFB8B219AB34C0088196E /* ConsolidateProblemCVCell.xib */; };
-		04BBFB93219AB5200088196E /* MyCollectionMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB92219AB5200088196E /* MyCollectionMainCollection.m */; };
 		3E0AE2E521AC296A00AB6180 /* recommandVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0AE2E421AC296A00AB6180 /* recommandVC.m */; };
 		3E14D86221ADA30500165FF8 /* courseCalendarV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D86121ADA30500165FF8 /* courseCalendarV.m */; };
 		3E14D86521ADA41A00165FF8 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D86321ADA41A00165FF8 /* NSDate+Formatter.m */; };
@@ -322,6 +290,32 @@
 		3E89FD2921B4364000D1E012 /* commResBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E89FD2521B4364000D1E012 /* commResBaseClass.m */; };
 		3E8AEDA421927B0F007CF326 /* homeFooterRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AEDA221927B0F007CF326 /* homeFooterRefresh.m */; };
 		3E8AEDA521927B0F007CF326 /* homeFooterRefresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AEDA321927B0F007CF326 /* homeFooterRefresh.xib */; };
+		3E8E47E721C74B3E0044E91B /* SQNetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E47E321C74B3E0044E91B /* SQNetworkInterface.m */; };
+		3E8E47E821C74B3E0044E91B /* SQNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E47E421C74B3E0044E91B /* SQNetworkManager.m */; };
+		3E8E47EF21C74CF30044E91B /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E47EC21C74CF30044E91B /* DataModel.m */; };
+		3E8E47F021C74CF30044E91B /* ChapterListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E47ED21C74CF30044E91B /* ChapterListModel.m */; };
+		3E8E47F121C74CF30044E91B /* ChapterScoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E47EE21C74CF30044E91B /* ChapterScoreModel.m */; };
+		3E8E47FC21C74D350044E91B /* MineBuyCourseMainCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E47F321C74D350044E91B /* MineBuyCourseMainCVCell.xib */; };
+		3E8E47FD21C74D350044E91B /* MineBuyCourseCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E47F821C74D350044E91B /* MineBuyCourseCollection.m */; };
+		3E8E47FE21C74D350044E91B /* MoreTypeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E47F921C74D350044E91B /* MoreTypeScrollView.m */; };
+		3E8E47FF21C74D350044E91B /* MineBuyCourseMainCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E47FA21C74D350044E91B /* MineBuyCourseMainCVCell.m */; };
+		3E8E480021C74D350044E91B /* MineHistoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E47FB21C74D350044E91B /* MineHistoryCollection.m */; };
+		3E8E480321C74D6F0044E91B /* ConsolidateMyWrongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E480221C74D6F0044E91B /* ConsolidateMyWrongModel.m */; };
+		3E8E481D21C74D9E0044E91B /* ConsolidateNoteMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E480521C74D9E0044E91B /* ConsolidateNoteMainCollection.m */; };
+		3E8E481E21C74D9E0044E91B /* ConsolidateScoreLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E480621C74D9E0044E91B /* ConsolidateScoreLineView.m */; };
+		3E8E481F21C74D9E0044E91B /* ConsolidateBottomPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E480821C74D9E0044E91B /* ConsolidateBottomPageView.xib */; };
+		3E8E482021C74D9E0044E91B /* ConsolidateMainHeadCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E480921C74D9E0044E91B /* ConsolidateMainHeadCVCell.m */; };
+		3E8E482121C74D9E0044E91B /* ConsolidateFalibilityMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E480A21C74D9E0044E91B /* ConsolidateFalibilityMainCollection.m */; };
+		3E8E482221C74D9E0044E91B /* ConsolidateMainHeadCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E480B21C74D9E0044E91B /* ConsolidateMainHeadCVCell.xib */; };
+		3E8E482321C74D9E0044E91B /* ConsolidateHotMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E480C21C74D9E0044E91B /* ConsolidateHotMainCollection.m */; };
+		3E8E482421C74D9E0044E91B /* ConsolidateProblemCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E480E21C74D9E0044E91B /* ConsolidateProblemCVCell.xib */; };
+		3E8E482521C74D9E0044E91B /* ConsolidateOptionCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E480F21C74D9E0044E91B /* ConsolidateOptionCVCell.m */; };
+		3E8E482621C74D9E0044E91B /* ConsolidateMyWrongMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E481121C74D9E0044E91B /* ConsolidateMyWrongMainCollection.m */; };
+		3E8E482721C74D9E0044E91B /* ConsolidateBottomPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E481221C74D9E0044E91B /* ConsolidateBottomPageView.m */; };
+		3E8E482821C74D9E0044E91B /* ConsolidateOptionCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E481721C74D9E0044E91B /* ConsolidateOptionCVCell.xib */; };
+		3E8E482921C74D9E0044E91B /* MyCollectionMainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E481821C74D9E0044E91B /* MyCollectionMainCollection.m */; };
+		3E8E482A21C74D9E0044E91B /* ConsolidateProblemCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E481A21C74D9E0044E91B /* ConsolidateProblemCVCell.m */; };
+		3E8E482D21C74DC00044E91B /* RechargeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E482B21C74DC00044E91B /* RechargeModel.m */; };
 		3E8FB22021B0518500FBD5E8 /* testGuideVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8FB21F21B0518500FBD5E8 /* testGuideVC.m */; };
 		3E8FB22321B051B800FBD5E8 /* testGuideDetailVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8FB22221B051B800FBD5E8 /* testGuideDetailVc.m */; };
 		3E8FB22821B0527E00FBD5E8 /* testGuideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8FB22621B0527E00FBD5E8 /* testGuideCell.m */; };
@@ -435,9 +429,6 @@
 		045B11FF21917081001FC325 /* MakeProblemMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemMainCollection.m; sourceTree = "<group>"; };
 		045B120121917302001FC325 /* MakeProblemToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemToolView.h; sourceTree = "<group>"; };
 		045B120221917302001FC325 /* MakeProblemToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemToolView.m; sourceTree = "<group>"; };
-		047715FE21999B1C0051FB83 /* ConsolidateOptionCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateOptionCVCell.h; sourceTree = "<group>"; };
-		047715FF21999B1C0051FB83 /* ConsolidateOptionCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateOptionCVCell.m; sourceTree = "<group>"; };
-		0477160021999B1C0051FB83 /* ConsolidateOptionCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsolidateOptionCVCell.xib; sourceTree = "<group>"; };
 		0477160621999F960051FB83 /* RechargeMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeMainVC.h; sourceTree = "<group>"; };
 		0477160721999F960051FB83 /* RechargeMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeMainVC.m; sourceTree = "<group>"; };
 		047716092199A0140051FB83 /* RechargeMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeMainView.h; sourceTree = "<group>"; };
@@ -499,38 +490,19 @@
 		04B1B136219458E900EEB51E /* MakeProblemQuestionCardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemQuestionCardVC.m; sourceTree = "<group>"; };
 		04B1B13B21945AD600EEB51E /* ConsolidateMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateMainVC.h; sourceTree = "<group>"; };
 		04B1B13C21945AD600EEB51E /* ConsolidateMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMainVC.m; sourceTree = "<group>"; };
-		04B1B13E21945B2700EEB51E /* ConsolidateMainHeadCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateMainHeadCVCell.h; sourceTree = "<group>"; };
-		04B1B13F21945B2700EEB51E /* ConsolidateMainHeadCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMainHeadCVCell.m; sourceTree = "<group>"; };
-		04B1B14021945B2700EEB51E /* ConsolidateMainHeadCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsolidateMainHeadCVCell.xib; sourceTree = "<group>"; };
 		04B3C06D219BB1B90035C995 /* ConsolidateHotMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateHotMainVC.h; sourceTree = "<group>"; };
 		04B3C06E219BB1B90035C995 /* ConsolidateHotMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateHotMainVC.m; sourceTree = "<group>"; };
-		04B3C070219BB2250035C995 /* ConsolidateHotMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateHotMainCollection.h; sourceTree = "<group>"; };
-		04B3C071219BB2250035C995 /* ConsolidateHotMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateHotMainCollection.m; sourceTree = "<group>"; };
 		04B3C073219BBBF20035C995 /* ConsolidateMyNoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateMyNoteVC.h; sourceTree = "<group>"; };
 		04B3C074219BBBF20035C995 /* ConsolidateMyNoteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMyNoteVC.m; sourceTree = "<group>"; };
-		04B3C076219BBCE80035C995 /* ConsolidateNoteMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateNoteMainCollection.h; sourceTree = "<group>"; };
-		04B3C077219BBCE80035C995 /* ConsolidateNoteMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateNoteMainCollection.m; sourceTree = "<group>"; };
 		04B3C079219BBEDA0035C995 /* ConsolidateFallibilityMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateFallibilityMainVC.h; sourceTree = "<group>"; };
 		04B3C07A219BBEDA0035C995 /* ConsolidateFallibilityMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateFallibilityMainVC.m; sourceTree = "<group>"; };
-		04B3C07C219BC0180035C995 /* ConsolidateFalibilityMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateFalibilityMainCollection.h; sourceTree = "<group>"; };
-		04B3C07D219BC0180035C995 /* ConsolidateFalibilityMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateFalibilityMainCollection.m; sourceTree = "<group>"; };
 		04B3C07F219BC1CC0035C995 /* ConsolidateMyWrongMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateMyWrongMainVC.h; sourceTree = "<group>"; };
 		04B3C080219BC1CC0035C995 /* ConsolidateMyWrongMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMyWrongMainVC.m; sourceTree = "<group>"; };
-		04B3C082219BC2410035C995 /* ConsolidateMyWrongMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateMyWrongMainCollection.h; sourceTree = "<group>"; };
-		04B3C083219BC2410035C995 /* ConsolidateMyWrongMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMyWrongMainCollection.m; sourceTree = "<group>"; };
-		04B3C085219BC9C90035C995 /* ConsolidateScoreLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateScoreLineView.h; sourceTree = "<group>"; };
-		04B3C086219BC9C90035C995 /* ConsolidateScoreLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateScoreLineView.m; sourceTree = "<group>"; };
 		04B3C088219BD4E00035C995 /* ConsolidateScoreMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateScoreMainVC.h; sourceTree = "<group>"; };
 		04B3C089219BD4E00035C995 /* ConsolidateScoreMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateScoreMainVC.m; sourceTree = "<group>"; };
 		04B3C08B219BFD140035C995 /* MakeProblemQuestionCardCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemQuestionCardCVCell.h; sourceTree = "<group>"; };
 		04B3C08C219BFD140035C995 /* MakeProblemQuestionCardCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemQuestionCardCVCell.m; sourceTree = "<group>"; };
 		04B3C08D219BFD140035C995 /* MakeProblemQuestionCardCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProblemQuestionCardCVCell.xib; sourceTree = "<group>"; };
-		04B813FA21C09FEA00B5CEDD /* MineHelpFeedBackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHelpFeedBackVC.h; sourceTree = "<group>"; };
-		04B813FB21C09FEA00B5CEDD /* MineHelpFeedBackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHelpFeedBackVC.m; sourceTree = "<group>"; };
-		04B813FD21C0A04300B5CEDD /* MineHelpUSVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHelpUSVC.h; sourceTree = "<group>"; };
-		04B813FE21C0A04300B5CEDD /* MineHelpUSVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHelpUSVC.m; sourceTree = "<group>"; };
-		04B8140021C0A1C700B5CEDD /* MineHelpFeedBackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHelpFeedBackView.h; sourceTree = "<group>"; };
-		04B8140121C0A1C700B5CEDD /* MineHelpFeedBackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHelpFeedBackView.m; sourceTree = "<group>"; };
 		04B8140321C0A1D400B5CEDD /* MineHelpFeedBackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHelpFeedBackView.xib; sourceTree = "<group>"; };
 		04B8140521C0FA4A00B5CEDD /* MakeProblemCardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemCardModel.h; sourceTree = "<group>"; };
 		04B8140621C0FA4A00B5CEDD /* MakeProblemCardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemCardModel.m; sourceTree = "<group>"; };
@@ -538,11 +510,6 @@
 		04BBFB84219A7D7E0088196E /* RechargeMainBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeMainBottomView.m; sourceTree = "<group>"; };
 		04BBFB86219AAE080088196E /* MyCollectionMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionMainVC.h; sourceTree = "<group>"; };
 		04BBFB87219AAE080088196E /* MyCollectionMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionMainVC.m; sourceTree = "<group>"; };
-		04BBFB89219AB34C0088196E /* ConsolidateProblemCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateProblemCVCell.h; sourceTree = "<group>"; };
-		04BBFB8A219AB34C0088196E /* ConsolidateProblemCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateProblemCVCell.m; sourceTree = "<group>"; };
-		04BBFB8B219AB34C0088196E /* ConsolidateProblemCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsolidateProblemCVCell.xib; sourceTree = "<group>"; };
-		04BBFB91219AB5200088196E /* MyCollectionMainCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionMainCollection.h; sourceTree = "<group>"; };
-		04BBFB92219AB5200088196E /* MyCollectionMainCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionMainCollection.m; sourceTree = "<group>"; };
 		3E0AE2E321AC296A00AB6180 /* recommandVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = recommandVC.h; sourceTree = "<group>"; };
 		3E0AE2E421AC296A00AB6180 /* recommandVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = recommandVC.m; sourceTree = "<group>"; };
 		3E14D86021ADA30500165FF8 /* courseCalendarV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = courseCalendarV.h; sourceTree = "<group>"; };
@@ -808,6 +775,53 @@
 		3E8AEDA121927B0F007CF326 /* homeFooterRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = homeFooterRefresh.h; sourceTree = "<group>"; };
 		3E8AEDA221927B0F007CF326 /* homeFooterRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homeFooterRefresh.m; sourceTree = "<group>"; };
 		3E8AEDA321927B0F007CF326 /* homeFooterRefresh.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeFooterRefresh.xib; sourceTree = "<group>"; };
+		3E8E47E321C74B3E0044E91B /* SQNetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNetworkInterface.m; sourceTree = "<group>"; };
+		3E8E47E421C74B3E0044E91B /* SQNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQNetworkManager.m; sourceTree = "<group>"; };
+		3E8E47E521C74B3E0044E91B /* SQNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNetworkManager.h; sourceTree = "<group>"; };
+		3E8E47E621C74B3E0044E91B /* SQNetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQNetworkInterface.h; sourceTree = "<group>"; };
+		3E8E47E921C74CF30044E91B /* ChapterListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterListModel.h; sourceTree = "<group>"; };
+		3E8E47EA21C74CF30044E91B /* ChapterScoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterScoreModel.h; sourceTree = "<group>"; };
+		3E8E47EB21C74CF30044E91B /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		3E8E47EC21C74CF30044E91B /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		3E8E47ED21C74CF30044E91B /* ChapterListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterListModel.m; sourceTree = "<group>"; };
+		3E8E47EE21C74CF30044E91B /* ChapterScoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterScoreModel.m; sourceTree = "<group>"; };
+		3E8E47F321C74D350044E91B /* MineBuyCourseMainCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineBuyCourseMainCVCell.xib; sourceTree = "<group>"; };
+		3E8E47F421C74D350044E91B /* MoreTypeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTypeScrollView.h; sourceTree = "<group>"; };
+		3E8E47F521C74D350044E91B /* MineBuyCourseCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineBuyCourseCollection.h; sourceTree = "<group>"; };
+		3E8E47F621C74D350044E91B /* MineBuyCourseMainCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineBuyCourseMainCVCell.h; sourceTree = "<group>"; };
+		3E8E47F721C74D350044E91B /* MineHistoryCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHistoryCollection.h; sourceTree = "<group>"; };
+		3E8E47F821C74D350044E91B /* MineBuyCourseCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineBuyCourseCollection.m; sourceTree = "<group>"; };
+		3E8E47F921C74D350044E91B /* MoreTypeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTypeScrollView.m; sourceTree = "<group>"; };
+		3E8E47FA21C74D350044E91B /* MineBuyCourseMainCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineBuyCourseMainCVCell.m; sourceTree = "<group>"; };
+		3E8E47FB21C74D350044E91B /* MineHistoryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHistoryCollection.m; sourceTree = "<group>"; };
+		3E8E480121C74D6F0044E91B /* ConsolidateMyWrongModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsolidateMyWrongModel.h; sourceTree = "<group>"; };
+		3E8E480221C74D6F0044E91B /* ConsolidateMyWrongModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMyWrongModel.m; sourceTree = "<group>"; };
+		3E8E480521C74D9E0044E91B /* ConsolidateNoteMainCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsolidateNoteMainCollection.m; sourceTree = "<group>"; };
+		3E8E480621C74D9E0044E91B /* ConsolidateScoreLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsolidateScoreLineView.m; sourceTree = "<group>"; };
+		3E8E480721C74D9E0044E91B /* ConsolidateBottomPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsolidateBottomPageView.h; sourceTree = "<group>"; };
+		3E8E480821C74D9E0044E91B /* ConsolidateBottomPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsolidateBottomPageView.xib; sourceTree = "<group>"; };
+		3E8E480921C74D9E0044E91B /* ConsolidateMainHeadCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMainHeadCVCell.m; sourceTree = "<group>"; };
+		3E8E480A21C74D9E0044E91B /* ConsolidateFalibilityMainCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsolidateFalibilityMainCollection.m; sourceTree = "<group>"; };
+		3E8E480B21C74D9E0044E91B /* ConsolidateMainHeadCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsolidateMainHeadCVCell.xib; sourceTree = "<group>"; };
+		3E8E480C21C74D9E0044E91B /* ConsolidateHotMainCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsolidateHotMainCollection.m; sourceTree = "<group>"; };
+		3E8E480D21C74D9E0044E91B /* ConsolidateProblemCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsolidateProblemCVCell.h; sourceTree = "<group>"; };
+		3E8E480E21C74D9E0044E91B /* ConsolidateProblemCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsolidateProblemCVCell.xib; sourceTree = "<group>"; };
+		3E8E480F21C74D9E0044E91B /* ConsolidateOptionCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsolidateOptionCVCell.m; sourceTree = "<group>"; };
+		3E8E481021C74D9E0044E91B /* MyCollectionMainCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionMainCollection.h; sourceTree = "<group>"; };
+		3E8E481121C74D9E0044E91B /* ConsolidateMyWrongMainCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMyWrongMainCollection.m; sourceTree = "<group>"; };
+		3E8E481221C74D9E0044E91B /* ConsolidateBottomPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsolidateBottomPageView.m; sourceTree = "<group>"; };
+		3E8E481321C74D9E0044E91B /* ConsolidateScoreLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsolidateScoreLineView.h; sourceTree = "<group>"; };
+		3E8E481421C74D9E0044E91B /* ConsolidateNoteMainCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsolidateNoteMainCollection.h; sourceTree = "<group>"; };
+		3E8E481521C74D9E0044E91B /* ConsolidateFalibilityMainCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsolidateFalibilityMainCollection.h; sourceTree = "<group>"; };
+		3E8E481621C74D9E0044E91B /* ConsolidateMainHeadCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsolidateMainHeadCVCell.h; sourceTree = "<group>"; };
+		3E8E481721C74D9E0044E91B /* ConsolidateOptionCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsolidateOptionCVCell.xib; sourceTree = "<group>"; };
+		3E8E481821C74D9E0044E91B /* MyCollectionMainCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionMainCollection.m; sourceTree = "<group>"; };
+		3E8E481921C74D9E0044E91B /* ConsolidateOptionCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsolidateOptionCVCell.h; sourceTree = "<group>"; };
+		3E8E481A21C74D9E0044E91B /* ConsolidateProblemCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsolidateProblemCVCell.m; sourceTree = "<group>"; };
+		3E8E481B21C74D9E0044E91B /* ConsolidateHotMainCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsolidateHotMainCollection.h; sourceTree = "<group>"; };
+		3E8E481C21C74D9E0044E91B /* ConsolidateMyWrongMainCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsolidateMyWrongMainCollection.h; sourceTree = "<group>"; };
+		3E8E482B21C74DC00044E91B /* RechargeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeModel.m; sourceTree = "<group>"; };
+		3E8E482C21C74DC00044E91B /* RechargeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeModel.h; sourceTree = "<group>"; };
 		3E8FB21E21B0518500FBD5E8 /* testGuideVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testGuideVC.h; sourceTree = "<group>"; };
 		3E8FB21F21B0518500FBD5E8 /* testGuideVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testGuideVC.m; sourceTree = "<group>"; };
 		3E8FB22121B051B800FBD5E8 /* testGuideDetailVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testGuideDetailVc.h; sourceTree = "<group>"; };
@@ -960,10 +974,6 @@
 			children = (
 				044F97DC219E6B05002295CA /* MakeProblemMainModel.h */,
 				044F97DD219E6B05002295CA /* MakeProblemMainModel.m */,
-				04D5758D21BE44B70023E649 /* MakeProblemAnserModel.h */,
-				04D5758E21BE44B70023E649 /* MakeProblemAnserModel.m */,
-				04CA92B521B11BCB00F39561 /* MakeProblemOptionModel.h */,
-				04CA92B621B11BCB00F39561 /* MakeProblemOptionModel.m */,
 				04B8140521C0FA4A00B5CEDD /* MakeProblemCardModel.h */,
 				04B8140621C0FA4A00B5CEDD /* MakeProblemCardModel.m */,
 			);
@@ -1004,8 +1014,6 @@
 				045B11D921912FFF001FC325 /* ChapterListVC.m */,
 				045B11DE219133C0001FC325 /* ChapterScoreVC.h */,
 				045B11DF219133C0001FC325 /* ChapterScoreVC.m */,
-				04FCCCF921AE89DD0015AC26 /* ChapterCleanVC.h */,
-				04FCCCFA21AE89DD0015AC26 /* ChapterCleanVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1031,9 +1039,6 @@
 				045B11E9219138E1001FC325 /* ChapterScoreHeadCVCell.h */,
 				045B11EA219138E1001FC325 /* ChapterScoreHeadCVCell.m */,
 				045B11EB219138E1001FC325 /* ChapterScoreHeadCVCell.xib */,
-				04FCCCFC21AE8B9A0015AC26 /* ChapterCleanView.h */,
-				04FCCCFD21AE8B9A0015AC26 /* ChapterCleanView.m */,
-				04FCCCFF21AE8BA60015AC26 /* ChapterCleanView.xib */,
 				045B11CA21912197001FC325 /* RatioView.h */,
 				045B11CD21912197001FC325 /* RatioView.m */,
 			);
@@ -1252,9 +1257,9 @@
 		04B1B13821945ABF00EEB51E /* Consolidate */ = {
 			isa = PBXGroup;
 			children = (
+				3E8E480421C74D9E0044E91B /* View */,
 				04E6DF7721AF834D00AD613F /* Model */,
 				04B1B13921945ABF00EEB51E /* Controller */,
-				04B1B13A21945ABF00EEB51E /* View */,
 			);
 			path = Consolidate;
 			sourceTree = "<group>";
@@ -1280,35 +1285,35 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		04B1B13A21945ABF00EEB51E /* View */ = {
+		04C816C721C1FA630021CC65 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04B1B13E21945B2700EEB51E /* ConsolidateMainHeadCVCell.h */,
-				04B1B13F21945B2700EEB51E /* ConsolidateMainHeadCVCell.m */,
-				04B1B14021945B2700EEB51E /* ConsolidateMainHeadCVCell.xib */,
-				047715FE21999B1C0051FB83 /* ConsolidateOptionCVCell.h */,
-				047715FF21999B1C0051FB83 /* ConsolidateOptionCVCell.m */,
-				0477160021999B1C0051FB83 /* ConsolidateOptionCVCell.xib */,
-				04BBFB89219AB34C0088196E /* ConsolidateProblemCVCell.h */,
-				04BBFB8A219AB34C0088196E /* ConsolidateProblemCVCell.m */,
-				04BBFB8B219AB34C0088196E /* ConsolidateProblemCVCell.xib */,
-				04BBFB91219AB5200088196E /* MyCollectionMainCollection.h */,
-				04BBFB92219AB5200088196E /* MyCollectionMainCollection.m */,
-				04B3C070219BB2250035C995 /* ConsolidateHotMainCollection.h */,
-				04B3C071219BB2250035C995 /* ConsolidateHotMainCollection.m */,
-				04B3C076219BBCE80035C995 /* ConsolidateNoteMainCollection.h */,
-				04B3C077219BBCE80035C995 /* ConsolidateNoteMainCollection.m */,
-				04B3C07C219BC0180035C995 /* ConsolidateFalibilityMainCollection.h */,
-				04B3C07D219BC0180035C995 /* ConsolidateFalibilityMainCollection.m */,
-				04B3C082219BC2410035C995 /* ConsolidateMyWrongMainCollection.h */,
-				04B3C083219BC2410035C995 /* ConsolidateMyWrongMainCollection.m */,
-				04B3C085219BC9C90035C995 /* ConsolidateScoreLineView.h */,
-				04B3C086219BC9C90035C995 /* ConsolidateScoreLineView.m */,
-				04E6DF7B21AF960E00AD613F /* ConsolidateBottomPageView.h */,
-				04E6DF7C21AF960E00AD613F /* ConsolidateBottomPageView.m */,
-				04E08AB321C3BB5E00381A8A /* ConsolidateBottomPageView.xib */,
+				3E8E482C21C74DC00044E91B /* RechargeModel.h */,
+				3E8E482B21C74DC00044E91B /* RechargeModel.m */,
 			);
-			path = View;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04E6DF7721AF834D00AD613F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E480121C74D6F0044E91B /* ConsolidateMyWrongModel.h */,
+				3E8E480221C74D6F0044E91B /* ConsolidateMyWrongModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04FCCCF521AE64A00015AC26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E47E921C74CF30044E91B /* ChapterListModel.h */,
+				3E8E47ED21C74CF30044E91B /* ChapterListModel.m */,
+				3E8E47EA21C74CF30044E91B /* ChapterScoreModel.h */,
+				3E8E47EE21C74CF30044E91B /* ChapterScoreModel.m */,
+				3E8E47EB21C74CF30044E91B /* DataModel.h */,
+				3E8E47EC21C74CF30044E91B /* DataModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3E0AE2E021AC26A200AB6180 /* courseVC */ = {
@@ -1623,6 +1628,7 @@
 		3E2BBBB921C021E900B5A693 /* MineStudy */ = {
 			isa = PBXGroup;
 			children = (
+				3E8E47F221C74D350044E91B /* View */,
 				3E2BBBBA21C021E900B5A693 /* Controller */,
 			);
 			path = MineStudy;
@@ -1690,68 +1696,6 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		04C816C721C1FA630021CC65 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				04C816C821C1FA760021CC65 /* RechargeModel.h */,
-				04C816C921C1FA760021CC65 /* RechargeModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		04CA92A521B0DE3D00F39561 /* DefaultTool */ = {
-			isa = PBXGroup;
-			children = (
-				04CA92B121B0E27600F39561 /* PhotoPicker */,
-				04CA92A621B0DE3D00F39561 /* CityPicker */,
-			);
-			path = DefaultTool;
-			sourceTree = "<group>";
-		};
-		04CA92A621B0DE3D00F39561 /* CityPicker */ = {
-			isa = PBXGroup;
-			children = (
-				04CA92AA21B0DE3D00F39561 /* address.json */,
-				04CA92AB21B0DE3D00F39561 /* WCNAreaPickerView.h */,
-				04CA92A721B0DE3D00F39561 /* WCNAreaPickerView.m */,
-				04CA92A921B0DE3D00F39561 /* WCNAreaPickerView.xib */,
-				04CA92AC21B0DE3D00F39561 /* WCNLocation.h */,
-				04CA92A821B0DE3D00F39561 /* WCNLocation.m */,
-			);
-			path = CityPicker;
-			sourceTree = "<group>";
-		};
-		04CA92B121B0E27600F39561 /* PhotoPicker */ = {
-			isa = PBXGroup;
-			children = (
-				04CA92B321B0E27600F39561 /* PhotoChoiseVC.h */,
-				04CA92B221B0E27600F39561 /* PhotoChoiseVC.m */,
-			);
-			path = PhotoPicker;
-			sourceTree = "<group>";
-		};
-		04E6DF7721AF834D00AD613F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				04E6DF7821AF836800AD613F /* ConsolidateMyWrongModel.h */,
-				04E6DF7921AF836800AD613F /* ConsolidateMyWrongModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		04FCCCF521AE64A00015AC26 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				04FCCCF621AE64B30015AC26 /* ChapterListModel.h */,
-				04FCCCF721AE64B30015AC26 /* ChapterListModel.m */,
-				04FCCD0121AE92480015AC26 /* DataModel.h */,
-				04FCCD0221AE92480015AC26 /* DataModel.m */,
-				04FCCD0421AE9ADB0015AC26 /* ChapterScoreModel.h */,
-				04FCCD0521AE9ADB0015AC26 /* ChapterScoreModel.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		3E32D0B4219910F300E45154 /* trainVc */ = {
 			isa = PBXGroup;
 			children = (
@@ -1773,6 +1717,7 @@
 				3E3AEFB7217DFDA8006C2860 /* Products */,
 				78EB6BC7091DB98ABA35591E /* Pods */,
 				94664A97844402FE7CB98F3D /* Frameworks */,
+				3E8E47E221C74AF40044E91B /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2020,6 +1965,61 @@
 			path = cache;
 			sourceTree = "<group>";
 		};
+		3E8E47E221C74AF40044E91B /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				04B8140321C0A1D400B5CEDD /* MineHelpFeedBackView.xib */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		3E8E47F221C74D350044E91B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E47F321C74D350044E91B /* MineBuyCourseMainCVCell.xib */,
+				3E8E47F421C74D350044E91B /* MoreTypeScrollView.h */,
+				3E8E47F521C74D350044E91B /* MineBuyCourseCollection.h */,
+				3E8E47F621C74D350044E91B /* MineBuyCourseMainCVCell.h */,
+				3E8E47F721C74D350044E91B /* MineHistoryCollection.h */,
+				3E8E47F821C74D350044E91B /* MineBuyCourseCollection.m */,
+				3E8E47F921C74D350044E91B /* MoreTypeScrollView.m */,
+				3E8E47FA21C74D350044E91B /* MineBuyCourseMainCVCell.m */,
+				3E8E47FB21C74D350044E91B /* MineHistoryCollection.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E8E480421C74D9E0044E91B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E480521C74D9E0044E91B /* ConsolidateNoteMainCollection.m */,
+				3E8E480621C74D9E0044E91B /* ConsolidateScoreLineView.m */,
+				3E8E480721C74D9E0044E91B /* ConsolidateBottomPageView.h */,
+				3E8E480821C74D9E0044E91B /* ConsolidateBottomPageView.xib */,
+				3E8E480921C74D9E0044E91B /* ConsolidateMainHeadCVCell.m */,
+				3E8E480A21C74D9E0044E91B /* ConsolidateFalibilityMainCollection.m */,
+				3E8E480B21C74D9E0044E91B /* ConsolidateMainHeadCVCell.xib */,
+				3E8E480C21C74D9E0044E91B /* ConsolidateHotMainCollection.m */,
+				3E8E480D21C74D9E0044E91B /* ConsolidateProblemCVCell.h */,
+				3E8E480E21C74D9E0044E91B /* ConsolidateProblemCVCell.xib */,
+				3E8E480F21C74D9E0044E91B /* ConsolidateOptionCVCell.m */,
+				3E8E481021C74D9E0044E91B /* MyCollectionMainCollection.h */,
+				3E8E481121C74D9E0044E91B /* ConsolidateMyWrongMainCollection.m */,
+				3E8E481221C74D9E0044E91B /* ConsolidateBottomPageView.m */,
+				3E8E481321C74D9E0044E91B /* ConsolidateScoreLineView.h */,
+				3E8E481421C74D9E0044E91B /* ConsolidateNoteMainCollection.h */,
+				3E8E481521C74D9E0044E91B /* ConsolidateFalibilityMainCollection.h */,
+				3E8E481621C74D9E0044E91B /* ConsolidateMainHeadCVCell.h */,
+				3E8E481721C74D9E0044E91B /* ConsolidateOptionCVCell.xib */,
+				3E8E481821C74D9E0044E91B /* MyCollectionMainCollection.m */,
+				3E8E481921C74D9E0044E91B /* ConsolidateOptionCVCell.h */,
+				3E8E481A21C74D9E0044E91B /* ConsolidateProblemCVCell.m */,
+				3E8E481B21C74D9E0044E91B /* ConsolidateHotMainCollection.h */,
+				3E8E481C21C74D9E0044E91B /* ConsolidateMyWrongMainCollection.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3E8FB21D21B0516C00FBD5E8 /* testGuideVc */ = {
 			isa = PBXGroup;
 			children = (
@@ -2186,12 +2186,12 @@
 		3EE6F4D621A199850068F78D /* netMnager */ = {
 			isa = PBXGroup;
 			children = (
+				3E8E47E621C74B3E0044E91B /* SQNetworkInterface.h */,
+				3E8E47E321C74B3E0044E91B /* SQNetworkInterface.m */,
+				3E8E47E521C74B3E0044E91B /* SQNetworkManager.h */,
+				3E8E47E421C74B3E0044E91B /* SQNetworkManager.m */,
 				3EE6F4D721A19E810068F78D /* myNetworkManager.h */,
 				3EE6F4D821A19E810068F78D /* myNetworkManager.m */,
-				04FCCCEC21AE29980015AC26 /* SQNetworkInterface.h */,
-				04FCCCED21AE29980015AC26 /* SQNetworkInterface.m */,
-				04FCCCEF21AE345F0015AC26 /* SQNetworkManager.h */,
-				04FCCCF021AE345F0015AC26 /* SQNetworkManager.m */,
 			);
 			path = netMnager;
 			sourceTree = "<group>";
@@ -2371,6 +2371,7 @@
 				3E2BBB3321BEBB6F00B5A693 /* tooth_5.png in Resources */,
 				04B1B1342194200E00EEB51E /* MakeProblemPopView.xib in Resources */,
 				3E2BBB4C21BEBB6F00B5A693 /* ear_0.png in Resources */,
+				3E8E482421C74D9E0044E91B /* ConsolidateProblemCVCell.xib in Resources */,
 				045B11D321912198001FC325 /* ChapterMainCVCell.xib in Resources */,
 				3E635FC521928A0A006FC152 /* SearchResultH.xib in Resources */,
 				3E2BBB6921BEBB6F00B5A693 /* huzi_2.png in Resources */,
@@ -2385,9 +2386,9 @@
 				04B3C08F219BFD140035C995 /* MakeProblemQuestionCardCVCell.xib in Resources */,
 				3EA283482186EE1200B2D716 /* forgetpassview.xib in Resources */,
 				04AC33F52192B1EA00307E70 /* MakeProblemCommitCVCell.xib in Resources */,
+				3E8E482221C74D9E0044E91B /* ConsolidateMainHeadCVCell.xib in Resources */,
 				3EB08EB2218C76ED00849777 /* homeheaderCR2.xib in Resources */,
 				3E2BBB4721BEBB6F00B5A693 /* tooth_13.png in Resources */,
-				0477160221999B1C0051FB83 /* ConsolidateOptionCVCell.xib in Resources */,
 				3E2BBB6D21BEBB6F00B5A693 /* huzi_11.png in Resources */,
 				3E2BBB7221BEBB6F00B5A693 /* video_snow_white.png in Resources */,
 				04ACCD3D219D083900716953 /* SyllabusMainCRView.xib in Resources */,
@@ -2398,6 +2399,7 @@
 				3EE6F4E221A253260068F78D /* trainLeftCell.xib in Resources */,
 				3E2BBB6F21BEBB6F00B5A693 /* huzi_8.png in Resources */,
 				3E2BBBDD21C021E900B5A693 /* MineMessageFromCVCell.xib in Resources */,
+				3E8E47FC21C74D350044E91B /* MineBuyCourseMainCVCell.xib in Resources */,
 				3E2BBB4521BEBB6F00B5A693 /* tooth_10.png in Resources */,
 				3E2BBB3221BEBB6F00B5A693 /* tooth_4.png in Resources */,
 				3E2BBB5121BEBB6F00B5A693 /* ear_12.png in Resources */,
@@ -2410,20 +2412,19 @@
 				3E8AEDA521927B0F007CF326 /* homeFooterRefresh.xib in Resources */,
 				3E2BBB5021BEBB6F00B5A693 /* ear_3.png in Resources */,
 				045B11BD21912184001FC325 /* StudyTimeCVCell.xib in Resources */,
-				04CA92B021B0DE3D00F39561 /* address.json in Resources */,
 				04ACCD99219D8E4700716953 /* SearchMainCRView.xib in Resources */,
 				3E2BBB5A21BEBB6F00B5A693 /* ear_15.png in Resources */,
 				3E2BBB5221BEBB6F00B5A693 /* ear_13.png in Resources */,
 				3E635FBA219282CD006FC152 /* AlertStringView.strings in Resources */,
 				3E2BBB5721BEBB6F00B5A693 /* ear_7.png in Resources */,
 				3E2BBB4D21BEBB6F00B5A693 /* ear_11.png in Resources */,
+				3E8E481F21C74D9E0044E91B /* ConsolidateBottomPageView.xib in Resources */,
 				3E2BBB3921BEBB6F00B5A693 /* tooth_0.png in Resources */,
 				3E401A67218F498100D85448 /* SearchSecionV.xib in Resources */,
 				3E2BBB6121BEBB6F00B5A693 /* ear_23.png in Resources */,
 				3E2BBB3721BEBB6F00B5A693 /* tooth_3.png in Resources */,
 				045B11E82191354D001FC325 /* ChapterScoreCVCell.xib in Resources */,
 				3E2BBB3121BEBB6F00B5A693 /* fennen.png in Resources */,
-				04B1B14221945B2700EEB51E /* ConsolidateMainHeadCVCell.xib in Resources */,
 				3E2BBB4821BEBB6F00B5A693 /* tooth_8.png in Resources */,
 				3E2BBB4021BEBB6F00B5A693 /* tooth_17.png in Resources */,
 				3E2BBB7421BEBB6F00B5A693 /* cloth_0.png in Resources */,
@@ -2440,17 +2441,17 @@
 				04AC33EB219287B200307E70 /* MakeProblemAnswerCVCell.xib in Resources */,
 				3E2BBB6C21BEBB6F00B5A693 /* huzi_10.png in Resources */,
 				3E2BBB7A21BEBB6F00B5A693 /* PE.dat in Resources */,
+				3E8E482821C74D9E0044E91B /* ConsolidateOptionCVCell.xib in Resources */,
 				3EB08EBD218C853100849777 /* SGQRCode.bundle in Resources */,
 				3E2BBB6E21BEBB6F00B5A693 /* huzi_9.png in Resources */,
 				3E2BBB4B21BEBB6F00B5A693 /* nose_0.png in Resources */,
 				3E2BBB5D21BEBB6F00B5A693 /* ear_18.png in Resources */,
 				3EB08EA0218C5BDC00849777 /* HomecourseCell.xib in Resources */,
-				042ED80521BFADEF00128AAB /* MineAttestationView.xib in Resources */,
+				042ED80521BFADEF00128AAB /* (null) in Resources */,
 				3EB08EAD218C76E400849777 /* homeheaderCR.xib in Resources */,
 				3E2BBB3A21BEBB6F00B5A693 /* tooth_22.png in Resources */,
 				3E79DE662186B56700CD8AFC /* registerView.xib in Resources */,
-				04BBFB8D219AB34C0088196E /* ConsolidateProblemCVCell.xib in Resources */,
-				042ED7E421BF915C00128AAB /* MineUserProfessionCVCell.xib in Resources */,
+				042ED7E421BF915C00128AAB /* (null) in Resources */,
 				3EE6F4EC21A25B370068F78D /* trainRightHead.xib in Resources */,
 				04B8140421C0A1D400B5CEDD /* MineHelpFeedBackView.xib in Resources */,
 				3E3AEFC3217DFDA9006C2860 /* Assets.xcassets in Resources */,
@@ -2606,33 +2607,36 @@
 				3E14D86821ADAD7700165FF8 /* MonthModel.m in Sources */,
 				3E2BBBDE21C021E900B5A693 /* MineMessageCollection.m in Sources */,
 				045B11C021912184001FC325 /* StudyCVCell.m in Sources */,
-				04B3C087219BC9C90035C995 /* ConsolidateScoreLineView.m in Sources */,
 				044F97DE219E6B05002295CA /* MakeProblemMainModel.m in Sources */,
+				3E8E47FE21C74D350044E91B /* MoreTypeScrollView.m in Sources */,
 				3EB08EBE218C853100849777 /* GWQrFlashlightsManager.m in Sources */,
 				3E8FB22821B0527E00FBD5E8 /* testGuideCell.m in Sources */,
 				3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */,
+				3E8E482521C74D9E0044E91B /* ConsolidateOptionCVCell.m in Sources */,
 				3E8FB22021B0518500FBD5E8 /* testGuideVC.m in Sources */,
 				3E2D2CFB21C73AA4006AD59C /* guideVMode.m in Sources */,
 				3EA283462186EE0300B2D716 /* forgetpassview.m in Sources */,
 				3E89FD2821B4364000D1E012 /* commResResultObj.m in Sources */,
 				3E83D2C4217E01F200E78B1C /* LogManager.m in Sources */,
 				04ACCD3C219D083900716953 /* SyllabusMainCRView.m in Sources */,
+				3E8E482021C74D9E0044E91B /* ConsolidateMainHeadCVCell.m in Sources */,
 				3E2BBBDA21C021E900B5A693 /* MineMassageCVCell.m in Sources */,
 				3ECB361E218AAF0C0008A109 /* MYtabarViewController.m in Sources */,
 				045B11E72191354D001FC325 /* ChapterScoreCVCell.m in Sources */,
 				04B1B12C2193DCF700EEB51E /* SimulateExameMainVC.m in Sources */,
 				04B3C08A219BD4E00035C995 /* ConsolidateScoreMainVC.m in Sources */,
-				04FCCCF121AE345F0015AC26 /* SQNetworkManager.m in Sources */,
-				041DD19C21B9057200322150 /* MineHistoryCollection.m in Sources */,
+				041DD19C21B9057200322150 /* (null) in Sources */,
 				04AC33F82192DEBB00307E70 /* MakeProblemSceneCollection.m in Sources */,
 				3E2BBBD521C021E900B5A693 /* MineTodayCourseVC.m in Sources */,
 				3EB08E96218C575200849777 /* HomeCollection.m in Sources */,
+				3E8E481E21C74D9E0044E91B /* ConsolidateScoreLineView.m in Sources */,
 				045B11FC21916B2B001FC325 /* MakeProblemOptionCVCell.m in Sources */,
 				3EB08E9F218C5BDC00849777 /* HomecourseCell.m in Sources */,
 				04AC33E52192736200307E70 /* MakeProlemAnswerCRView.m in Sources */,
 				3E2BBBD621C021E900B5A693 /* MineBuyCourseVC.m in Sources */,
 				045B11D421912198001FC325 /* ChapterMainCollection.m in Sources */,
-				042ED7FF21BFA40100128AAB /* MineHelpSetCVCell.m in Sources */,
+				042ED7FF21BFA40100128AAB /* (null) in Sources */,
+				3E8E47FD21C74D350044E91B /* MineBuyCourseCollection.m in Sources */,
 				3EB08EC9218C922B00849777 /* QRcomfimViewController.m in Sources */,
 				3EB08EB1218C76ED00849777 /* homeheaderCR2.m in Sources */,
 				3EE6F4D921A19E810068F78D /* myNetworkManager.m in Sources */,
@@ -2644,19 +2648,20 @@
 				3E14D86221ADA30500165FF8 /* courseCalendarV.m in Sources */,
 				3E83D2CB217E128100E78B1C /* BaseViewController.m in Sources */,
 				3E89FD2921B4364000D1E012 /* commResBaseClass.m in Sources */,
+				3E8E482321C74D9E0044E91B /* ConsolidateHotMainCollection.m in Sources */,
 				045B11F7219167AF001FC325 /* MakeProblemTopicCVCell.m in Sources */,
 				04B3C075219BBBF20035C995 /* ConsolidateMyNoteVC.m in Sources */,
-				04B3C072219BB2250035C995 /* ConsolidateHotMainCollection.m in Sources */,
 				3E401A65218F496F00D85448 /* SearchSecionV.m in Sources */,
 				3E2BBBE121C021E900B5A693 /* MineMessageFromCVCell.m in Sources */,
 				3EE6F4EB21A25B370068F78D /* trainRightHead.m in Sources */,
 				3E635FCC21929377006FC152 /* MainCollectionFowLayout.m in Sources */,
-				04C816CA21C1FA760021CC65 /* RechargeModel.m in Sources */,
 				3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */,
+				3E8E482121C74D9E0044E91B /* ConsolidateFalibilityMainCollection.m in Sources */,
 				3EE6F4EF21A291870068F78D /* trainRightCollection.m in Sources */,
 				3E2BBBD821C021E900B5A693 /* MineMessageVC.m in Sources */,
 				04B3C06F219BB1B90035C995 /* ConsolidateHotMainVC.m in Sources */,
 				3E0AE2E521AC296A00AB6180 /* recommandVC.m in Sources */,
+				3E8E480321C74D6F0044E91B /* ConsolidateMyWrongModel.m in Sources */,
 				3E1D9F6A21AEF2E700056DF9 /* BATableViewIndex.m in Sources */,
 				3EE6F4E621A257BA0068F78D /* trainRightCell.m in Sources */,
 				3E83D2D1217E132900E78B1C /* loginview.m in Sources */,
@@ -2665,6 +2670,7 @@
 				3E8AEDA421927B0F007CF326 /* homeFooterRefresh.m in Sources */,
 				045B11D121912198001FC325 /* ChapterVC.m in Sources */,
 				3E7564CA21A50441009A766C /* searchKindVM.m in Sources */,
+				3E8E482721C74D9E0044E91B /* ConsolidateBottomPageView.m in Sources */,
 				3EDCF824218F428900861D26 /* SearchhotAndhisV.m in Sources */,
 				04B1B13221941D2F00EEB51E /* MakeProblemPopView.m in Sources */,
 				3E89FD1821B42C7500D1E012 /* GuideVc.m in Sources */,
@@ -2672,28 +2678,28 @@
 				045B11DD219130BA001FC325 /* ChapterListCollection.m in Sources */,
 				04B3C081219BC1CC0035C995 /* ConsolidateMyWrongMainVC.m in Sources */,
 				04B3C07B219BBEDA0035C995 /* ConsolidateFallibilityMainVC.m in Sources */,
+				3E8E482621C74D9E0044E91B /* ConsolidateMyWrongMainCollection.m in Sources */,
 				3E8FB22321B051B800FBD5E8 /* testGuideDetailVc.m in Sources */,
 				3E2BBBDB21C021E900B5A693 /* MineUserCollection.m in Sources */,
+				3E8E482921C74D9E0044E91B /* MyCollectionMainCollection.m in Sources */,
 				045B11E32191344C001FC325 /* ChapterScoreCollection.m in Sources */,
+				3E8E47EF21C74CF30044E91B /* DataModel.m in Sources */,
 				3E6AFEA321A2A3E800E07AD7 /* noticeSubjectmanager.m in Sources */,
+				3E8E47E821C74B3E0044E91B /* SQNetworkManager.m in Sources */,
 				3ECB362A218AC1140008A109 /* MineViewController.m in Sources */,
 				045B11C121912184001FC325 /* StudyCollection.m in Sources */,
 				3EB08EC5218C85E000849777 /* ScanQRViewController.m in Sources */,
-				04FCCD0321AE92480015AC26 /* DataModel.m in Sources */,
 				3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */,
 				3ECB362D218AC1250008A109 /* StudyViewController.m in Sources */,
-				04E6DF7A21AF836800AD613F /* ConsolidateMyWrongModel.m in Sources */,
 				04BBFB85219A7D7E0088196E /* RechargeMainBottomView.m in Sources */,
-				04FCCCFE21AE8B9A0015AC26 /* ChapterCleanView.m in Sources */,
-				04FCCCF821AE64B30015AC26 /* ChapterListModel.m in Sources */,
 				04B1B137219458E900EEB51E /* MakeProblemQuestionCardVC.m in Sources */,
-				041DD1A521B9287400322150 /* MoreTypeScrollView.m in Sources */,
+				041DD1A521B9287400322150 /* (null) in Sources */,
 				3E6AFEA021A29C4300E07AD7 /* TopfilteringV.m in Sources */,
 				0477160821999F960051FB83 /* RechargeMainVC.m in Sources */,
 				04ACCD96219D8E4700716953 /* SearchMainCRView.m in Sources */,
 				3E2BBBD921C021E900B5A693 /* MineUserVC.m in Sources */,
 				04ACCD9C219D8E4700716953 /* SQSearchView.m in Sources */,
-				042ED7EA21BF94FE00128AAB /* MineAttestationVC.m in Sources */,
+				042ED7EA21BF94FE00128AAB /* (null) in Sources */,
 				04AC33FC2192E1AC00307E70 /* MakeProblemSceneCVCell.m in Sources */,
 				3ECB3627218AC1070008A109 /* HomeViewController.m in Sources */,
 				3E635FC821928E81006FC152 /* searchresultCV.m in Sources */,
@@ -2706,10 +2712,8 @@
 				3EE6F4DD21A252640068F78D /* trainLeftTab.m in Sources */,
 				04B1B12F2193DD6D00EEB51E /* SimulateExameMainCollection.m in Sources */,
 				3EE6F4E121A253260068F78D /* trainLeftCell.m in Sources */,
-				04BBFB8C219AB34C0088196E /* ConsolidateProblemCVCell.m in Sources */,
 				3E2BBBD721C021E900B5A693 /* MineHistoryVC.m in Sources */,
 				04B3C08E219BFD140035C995 /* MakeProblemQuestionCardCVCell.m in Sources */,
-				04FCCD0621AE9ADB0015AC26 /* ChapterScoreModel.m in Sources */,
 				3EA283412186E1A600B2D716 /* cellphone_loginview.m in Sources */,
 				3E8FB22C21B0535B00FBD5E8 /* testCommTab.m in Sources */,
 				045B11EC219138E1001FC325 /* ChapterScoreHeadCVCell.m in Sources */,
@@ -2719,56 +2723,54 @@
 				3E14D86521ADA41A00165FF8 /* NSDate+Formatter.m in Sources */,
 				04ACCD44219D120A00716953 /* SyllabusMainCVCell.m in Sources */,
 				3E2BBBE021C021E900B5A693 /* MineUserCVCell.m in Sources */,
+				3E8E47E721C74B3E0044E91B /* SQNetworkInterface.m in Sources */,
 				04ACCD84219D7B0100716953 /* SearchQuestionMainVC.m in Sources */,
 				3E83D2CE217E129300E78B1C /* LoginViewController.m in Sources */,
 				3E7564C221A50024009A766C /* FilterCommonCollectionViewCell.m in Sources */,
+				3E8E482A21C74D9E0044E91B /* ConsolidateProblemCVCell.m in Sources */,
 				3E89FD1521B42B0700D1E012 /* GWProgressHUB.m in Sources */,
 				045B11E0219133C0001FC325 /* ChapterScoreVC.m in Sources */,
-				042ED7DF21BF913800128AAB /* MineUserProfessionCollection.m in Sources */,
+				042ED7DF21BF913800128AAB /* (null) in Sources */,
 				3EB08E8E218C353C00849777 /* HomeHeaderView.m in Sources */,
 				04ACCD40219D0C9B00716953 /* SyllabusMainCollection.m in Sources */,
 				3E7564BA21A4FE70009A766C /* sideFilterCell.m in Sources */,
 				0477160B2199A0140051FB83 /* RechargeMainView.m in Sources */,
-				04D5758F21BE44B70023E649 /* MakeProblemAnserModel.m in Sources */,
 				045B120321917302001FC325 /* MakeProblemToolView.m in Sources */,
-				0477160121999B1C0051FB83 /* ConsolidateOptionCVCell.m in Sources */,
 				04ACCD9A219D8E4700716953 /* SearchCollection.m in Sources */,
-				04B3C078219BBCE80035C995 /* ConsolidateNoteMainCollection.m in Sources */,
+				3E8E47FF21C74D350044E91B /* MineBuyCourseMainCVCell.m in Sources */,
 				3E14D86B21ADAF5600165FF8 /* CalendarCell.m in Sources */,
 				04ACCD98219D8E4700716953 /* SQSearchBar.m in Sources */,
 				3E14D86E21ADAFBD00165FF8 /* CalendarHeaderView.m in Sources */,
-				04B3C084219BC2410035C995 /* ConsolidateMyWrongMainCollection.m in Sources */,
-				04CA92AD21B0DE3D00F39561 /* WCNAreaPickerView.m in Sources */,
 				3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */,
-				04BBFB93219AB5200088196E /* MyCollectionMainCollection.m in Sources */,
 				3E14D87121ADB08200165FF8 /* couresListVC.m in Sources */,
 				045B11D221912198001FC325 /* ChapterCVCell.m in Sources */,
-				042ED7F821BFA0EF00128AAB /* MineHelpSetVC.m in Sources */,
+				042ED7F821BFA0EF00128AAB /* (null) in Sources */,
 				3E83D2C1217E019200E78B1C /* MyNav.m in Sources */,
 				3EE08AE621A5B7A600832D1A /* topFilterCell.m in Sources */,
 				3E635FB421928061006FC152 /* Searchkey.m in Sources */,
-				04B3C07E219BC0180035C995 /* ConsolidateFalibilityMainCollection.m in Sources */,
-				042ED7E321BF915C00128AAB /* MineUserProfessionCVCell.m in Sources */,
-				042ED7FB21BFA1CA00128AAB /* MineHelpSet.m in Sources */,
+				042ED7E321BF915C00128AAB /* (null) in Sources */,
+				042ED7FB21BFA1CA00128AAB /* (null) in Sources */,
 				3EE08AE321A5439E00832D1A /* UIButton+ImageRight.m in Sources */,
 				3EB08EA4218C5EC000849777 /* HomenewsCell.m in Sources */,
 				3E6AFE9C21A29B3D00E07AD7 /* searchWithKindVC.m in Sources */,
+				3E8E47F021C74CF30044E91B /* ChapterListModel.m in Sources */,
 				3E89FD1B21B42C8900D1E012 /* initAppVC.m in Sources */,
 				3E79DE642186B55700CD8AFC /* registerView.m in Sources */,
-				041DD1A221B927A800322150 /* MineCollectionVC.m in Sources */,
+				3E8E481D21C74D9E0044E91B /* ConsolidateNoteMainCollection.m in Sources */,
+				041DD1A221B927A800322150 /* (null) in Sources */,
 				04ACCD48219D424B00716953 /* SyllabusMainPopView.m in Sources */,
+				3E8E482D21C74DC00044E91B /* RechargeModel.m in Sources */,
 				045B11D521912198001FC325 /* ChapterMainCVCell.m in Sources */,
-				04B1B14121945B2700EEB51E /* ConsolidateMainHeadCVCell.m in Sources */,
-				042ED7F021BF9A8A00128AAB /* MineToolExchangeVC.m in Sources */,
+				3E8E480021C74D350044E91B /* MineHistoryCollection.m in Sources */,
+				042ED7F021BF9A8A00128AAB /* (null) in Sources */,
 				3E7564C721A500EF009A766C /* CommonItemModel.m in Sources */,
 				04AC33F42192B1EA00307E70 /* MakeProblemCommitCVCell.m in Sources */,
 				045B11D621912198001FC325 /* RatioView.m in Sources */,
 				3EB08EBC218C853100849777 /* GWScanCodeManager.m in Sources */,
 				04ACCD38219D07F100716953 /* SyllabusMainVC.m in Sources */,
 				045B11DA21912FFF001FC325 /* ChapterListVC.m in Sources */,
-				04FCCCEE21AE29980015AC26 /* SQNetworkInterface.m in Sources */,
-				04FCCCFB21AE89DD0015AC26 /* ChapterCleanVC.m in Sources */,
 				04ACCD87219D840600716953 /* SearchQuestionMainView.m in Sources */,
+				3E8E47F121C74CF30044E91B /* ChapterScoreModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,7 +39,6 @@
 #import "AbbAlertView.h"
 #import "MJRefresh-umbrella.h"
 #import "SQNetworkInterface.h"
-
 #import <MJRefresh/MJRefresh.h>
 #import <MJExtension/MJExtension.h>
 #import "UIScrollView+Refresh.h"
