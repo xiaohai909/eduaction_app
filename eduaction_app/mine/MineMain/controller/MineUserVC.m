@@ -68,7 +68,7 @@
             else if (indexPath.section == 2) {
                 if (indexPath.row == 1) {
                     //选择性别
-                    [self sheetAlertController:@"性别"];
+                    //[self sheetAlertController:@"性别"];
                 }
                 else if (indexPath.row == 2) {
                     //选择地区

@@ -75,8 +75,12 @@
         [_btn_send setTitle:@"退出" forState:UIControlStateNormal];
         _btn_send.layer.masksToBounds = YES;
         [_btn_send setBackgroundImage:[CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:_btn_send.frame gradientDir:leftToright] forState:UIControlStateNormal];
-        
+        @weakify(self);
         [[_btn_send rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self);
+            [self gologinView];
+            [YGUserDefaults setBool:NO forKey:islogin];
+            [YGUserDefaults synchronize];
             
         }];
     }
