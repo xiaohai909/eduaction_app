@@ -63,7 +63,10 @@
             }
             
         }];
-        
+        if ([YGUserDefaults objectForKey:@"sessionID"] != nil) {
+            
+            self.sessionID =[YGUserDefaults objectForKey:@"sessionID"];
+        }
         
     }
     return self;
@@ -77,7 +80,7 @@
     [dic setObject:@"iphone" forKey:@"mobileType"];
     NSMutableDictionary *dic2 = [self commParam:@"requestSession" Andparams:dic AndSessionID:@"" AndHavesession:NO Andtype:@"systemManager"];
     
-    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api" isUploadImage:NO params:dic2 success:^(id response) {
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?3=11" isUploadImage:NO params:dic2 success:^(id response) {
         
         
         DDLogVerbose(@"requestSessionAndsuccess == %@",[CommonFunciton dictionaryToJson:response]);
@@ -85,6 +88,10 @@
         if (mode.resultCode == 10000) {
             
             self.sessionID = mode.resultObj.sessionId;
+            
+            [YGUserDefaults setObject:self.sessionID forKey:@"sessionID"];
+            [YGUserDefaults synchronize];
+            
         }
         
     } failure:failure];
@@ -104,7 +111,11 @@
     [dic setObject:appId forKey:@"appId"];
     [dic setObject:method forKey:@"method"];
     [dic setObject:timeStamp forKey:@"timeStamp"];
-    [dic setObject:params forKey:@"params"];
+    
+    if (params != nil) {
+        [dic setObject:params forKey:@"params"];
+    }
+  
     if (type.length> 0) {
         
           [dic setObject:type forKey:@"type"];
@@ -124,17 +135,35 @@
     return dic;
     
 }
+#pragma mark 重置密码
+-(NSURLSessionDataTask *)resetUserPwd:(NSString *)account AndnewPassword:(NSString *)newPassword AndsmsTxt:(NSString *)smsTxt Andsuccess:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure{
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    [dic setObject:account forKey:@"account"];
+    [dic setObject:newPassword forKey:@"smsTxt"];
+    [dic setObject:smsTxt forKey:@"newPassword"];
+    
+    NSMutableDictionary *dic2 = [self commParam:@"resetUserPwd" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
+    
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=61" isUploadImage:NO params:dic2 success:success failure:failure];
+    
+    return task;
+    
+}
 #pragma mark 注册
--(NSURLSessionDataTask *)regedit:(NSString *)account Andpassword:(NSString *)password AndactivationCode:(NSString *)activationCode Andsuccess:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure{
+-(NSURLSessionDataTask *)regedit:(NSString *)account Andpassword:(NSString *)password AndactivationCode:(NSString *)activationCode AndsmsTxt:(NSString *)smsTxt Andsuccess:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure
+{
 
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setObject:account forKey:@"account"];
     [dic setObject:password forKey:@"password"];
     [dic setObject:activationCode forKey:@"activationCode"];
+    [dic setObject:smsTxt forKey:@"smsTxt"];
+    [dic setObject:account forKey:@"telephone"];
     
     NSMutableDictionary *dic2 = [self commParam:@"regedit" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
     
-    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api" isUploadImage:NO params:dic2 success:success failure:failure];
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=6" isUploadImage:NO params:dic2 success:success failure:failure];
     
     return task;
 }
@@ -146,7 +175,7 @@
     [dic setObject:smsTxt forKey:@"smsTxt"];
     NSMutableDictionary *dic2 = [self commParam:@"loginSms" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
     
-    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api" isUploadImage:NO params:dic2 success:success failure:failure];
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=1" isUploadImage:NO params:dic2 success:success failure:failure];
     
     return task;
     
@@ -157,10 +186,10 @@
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setObject:account forKey:@"account"];
     [dic setObject:password forKey:@"password"];
-    [dic setObject:@"test" forKey:@"activationCode"];
+    //[dic setObject:@"test" forKey:@"activationCode"];
     NSMutableDictionary *dic2 = [self commParam:@"loginAuth" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
     
-    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api" isUploadImage:NO params:dic2 success:success failure:failure];
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=3" isUploadImage:NO params:dic2 success:success failure:failure];
     
     return task;
     
@@ -170,13 +199,49 @@
     
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setObject:account forKey:@"account"];
-    NSMutableDictionary *dic2 = [self commParam:@"sendSms" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
+    NSMutableDictionary *dic2 = [self commParam:@"sendSmsForRegedit" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
     
-    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api" isUploadImage:NO params:dic2 success:success failure:failure];
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/apii?1=23" isUploadImage:NO params:dic2 success:success failure:failure];
     
     return task;
     
 }
+#pragma mark 获取短信（非注册用）
+-(NSURLSessionDataTask *)sendSms2:(NSString *)account Andsuccess:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure{
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    [dic setObject:account forKey:@"account"];
+    NSMutableDictionary *dic2 = [self commParam:@"sendSms" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
+    
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=2" isUploadImage:NO params:dic2 success:success failure:failure];
+    
+    return task;
+    
+}
+#pragma mark 考试指南
+-(NSURLSessionDataTask *)queryGuideAllTypeAndsuccess:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure{
+    
+   
+    NSMutableDictionary *dic2 = [self commParam:@"queryGuideAllType" Andparams:nil AndSessionID:self.sessionID AndHavesession: YES Andtype:@"appServer"];
+    
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?3=41" isUploadImage:NO params:dic2 success:success failure:failure];
+    
+    return task;
+    
+}
+#pragma mark 课程列表
+-(NSURLSessionDataTask *)queryKechengTypeListAndsuccess:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure
+{
+    
+    
+    NSMutableDictionary *dic2 = [self commParam:@"queryKechengTypeList" Andparams:nil AndSessionID:self.sessionID AndHavesession: YES Andtype:@"kecheng"];
+    
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?3=311" isUploadImage:NO params:dic2 success:success failure:failure];
+    
+    return task;
+    
+}
+
 
 - (NSURLSessionDataTask *)MyRequestWithMethod:(RequestMethodType)methodType
                         url:(NSString*)url

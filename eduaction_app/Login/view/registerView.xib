@@ -160,13 +160,15 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="确认注册"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Qe-Gsv">
-                    <rect key="frame" x="25" y="510" width="91" height="32"/>
+                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q4-Qe-Gsv">
+                    <rect key="frame" x="31" y="515" width="80" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="注册协议">
+                    <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="2" maxY="0.0"/>
+                    <state key="normal" title="注册协议" image="单选">
                         <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <state key="selected" image="单选-选中"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -212,5 +214,7 @@
         <image name="login_ico_password02" width="18" height="18"/>
         <image name="login_ico_phone" width="18" height="18"/>
         <image name="login_top_bg-1" width="375" height="150"/>
+        <image name="单选" width="11" height="11"/>
+        <image name="单选-选中" width="11" height="11"/>
     </resources>
 </document>

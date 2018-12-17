@@ -202,6 +202,45 @@
 		3E2BBB7E21BEBB6F00B5A693 /* ILiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB1B21BEBB6E00B5A693 /* ILiveSDK.framework */; };
 		3E2BBB7F21BEBB6F00B5A693 /* ILiveLogReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB1C21BEBB6E00B5A693 /* ILiveLogReport.framework */; };
 		3E2BBB8021BEBB6F00B5A693 /* TILLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB1D21BEBB6E00B5A693 /* TILLiveSDK.framework */; };
+		3E2BBB8221BEBDDD00B5A693 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB8121BEBDDD00B5A693 /* Accelerate.framework */; };
+		3E2BBB8421BEBDE300B5A693 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB8321BEBDE300B5A693 /* AssetsLibrary.framework */; };
+		3E2BBB8621BEBDE800B5A693 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB8521BEBDE800B5A693 /* AVFoundation.framework */; };
+		3E2BBB8821BEBDED00B5A693 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB8721BEBDED00B5A693 /* CoreGraphics.framework */; };
+		3E2BBB8A21BEBDF500B5A693 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB8921BEBDF500B5A693 /* CoreMedia.framework */; };
+		3E2BBB8C21BEBDFA00B5A693 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB8B21BEBDFA00B5A693 /* CoreTelephony.framework */; };
+		3E2BBB8E21BEBDFF00B5A693 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB8D21BEBDFF00B5A693 /* CoreVideo.framework */; };
+		3E2BBB9021BEBE0300B5A693 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB8F21BEBE0300B5A693 /* ImageIO.framework */; };
+		3E2BBB9221BEBE0B00B5A693 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB9121BEBE0B00B5A693 /* JavaScriptCore.framework */; };
+		3E2BBB9421BEBE0E00B5A693 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB9321BEBE0E00B5A693 /* OpenAL.framework */; };
+		3E2BBB9621BEBE1300B5A693 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB9521BEBE1300B5A693 /* OpenGLES.framework */; };
+		3E2BBB9821BEBE1B00B5A693 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB9721BEBE1B00B5A693 /* QuartzCore.framework */; };
+		3E2BBB9A21BEBE2000B5A693 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB9921BEBE2000B5A693 /* SystemConfiguration.framework */; };
+		3E2BBB9C21BEBE2500B5A693 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB9B21BEBE2400B5A693 /* VideoToolbox.framework */; };
+		3E2BBB9E21BEBE2900B5A693 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB9D21BEBE2900B5A693 /* libbz2.tbd */; };
+		3E2BBBA021BEBE3000B5A693 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBB9F21BEBE3000B5A693 /* libc++.tbd */; };
+		3E2BBBA221BEBE3600B5A693 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBBA121BEBE3600B5A693 /* libiconv.tbd */; };
+		3E2BBBA421BEBE3D00B5A693 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBBA321BEBE3D00B5A693 /* libicucore.tbd */; };
+		3E2BBBA621BEBE4300B5A693 /* libprotobuf.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBBA521BEBE4300B5A693 /* libprotobuf.tbd */; };
+		3E2BBBA821BEBE4900B5A693 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBBA721BEBE4900B5A693 /* libresolv.tbd */; };
+		3E2BBBAA21BEBE4F00B5A693 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBBA921BEBE4E00B5A693 /* libsqlite3.tbd */; };
+		3E2BBBAC21BEBE5700B5A693 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBBAB21BEBE5700B5A693 /* libstdc++.6.tbd */; };
+		3E2BBBAE21BEBE5F00B5A693 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBBAD21BEBE5F00B5A693 /* libstdc++.tbd */; };
+		3E2BBBB021BEBE6600B5A693 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2BBBAF21BEBE6600B5A693 /* libz.tbd */; };
+		3E2BBBB221BF64D900B5A693 /* Default-812h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2BBBB121BF64D900B5A693 /* Default-812h@3x.png */; };
+		3E2BBBD521C021E900B5A693 /* MineTodayCourseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBBBB21C021E900B5A693 /* MineTodayCourseVC.m */; };
+		3E2BBBD621C021E900B5A693 /* MineBuyCourseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBBBC21C021E900B5A693 /* MineBuyCourseVC.m */; };
+		3E2BBBD721C021E900B5A693 /* MineHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBBBF21C021E900B5A693 /* MineHistoryVC.m */; };
+		3E2BBBD821C021E900B5A693 /* MineMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBBC521C021E900B5A693 /* MineMessageVC.m */; };
+		3E2BBBD921C021E900B5A693 /* MineUserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBBC621C021E900B5A693 /* MineUserVC.m */; };
+		3E2BBBDA21C021E900B5A693 /* MineMassageCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBBC921C021E900B5A693 /* MineMassageCVCell.m */; };
+		3E2BBBDB21C021E900B5A693 /* MineUserCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBBCB21C021E900B5A693 /* MineUserCollection.m */; };
+		3E2BBBDC21C021E900B5A693 /* MineUserCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2BBBCC21C021E900B5A693 /* MineUserCVCell.xib */; };
+		3E2BBBDD21C021E900B5A693 /* MineMessageFromCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2BBBCD21C021E900B5A693 /* MineMessageFromCVCell.xib */; };
+		3E2BBBDE21C021E900B5A693 /* MineMessageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBBCE21C021E900B5A693 /* MineMessageCollection.m */; };
+		3E2BBBDF21C021E900B5A693 /* MineMassageCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2BBBD021C021E900B5A693 /* MineMassageCVCell.xib */; };
+		3E2BBBE021C021E900B5A693 /* MineUserCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBBD121C021E900B5A693 /* MineUserCVCell.m */; };
+		3E2BBBE121C021E900B5A693 /* MineMessageFromCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BBBD221C021E900B5A693 /* MineMessageFromCVCell.m */; };
+		3E2D2CFB21C73AA4006AD59C /* guideVMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D2CFA21C73AA4006AD59C /* guideVMode.m */; };
 		3E32D0B7219910F300E45154 /* trainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E32D0B6219910F300E45154 /* trainViewController.m */; };
 		3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBA217DFDA8006C2860 /* AppDelegate.m */; };
 		3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEFBD217DFDA8006C2860 /* ViewController.m */; };
@@ -588,6 +627,56 @@
 		3E2BBB1B21BEBB6E00B5A693 /* ILiveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ILiveSDK.framework; sourceTree = "<group>"; };
 		3E2BBB1C21BEBB6E00B5A693 /* ILiveLogReport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ILiveLogReport.framework; sourceTree = "<group>"; };
 		3E2BBB1D21BEBB6E00B5A693 /* TILLiveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TILLiveSDK.framework; sourceTree = "<group>"; };
+		3E2BBB8121BEBDDD00B5A693 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3E2BBB8321BEBDE300B5A693 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		3E2BBB8521BEBDE800B5A693 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3E2BBB8721BEBDED00B5A693 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E2BBB8921BEBDF500B5A693 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3E2BBB8B21BEBDFA00B5A693 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3E2BBB8D21BEBDFF00B5A693 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		3E2BBB8F21BEBE0300B5A693 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		3E2BBB9121BEBE0B00B5A693 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		3E2BBB9321BEBE0E00B5A693 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		3E2BBB9521BEBE1300B5A693 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3E2BBB9721BEBE1B00B5A693 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3E2BBB9921BEBE2000B5A693 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3E2BBB9B21BEBE2400B5A693 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		3E2BBB9D21BEBE2900B5A693 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		3E2BBB9F21BEBE3000B5A693 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3E2BBBA121BEBE3600B5A693 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		3E2BBBA321BEBE3D00B5A693 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		3E2BBBA521BEBE4300B5A693 /* libprotobuf.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libprotobuf.tbd; path = usr/lib/libprotobuf.tbd; sourceTree = SDKROOT; };
+		3E2BBBA721BEBE4900B5A693 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		3E2BBBA921BEBE4E00B5A693 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		3E2BBBAB21BEBE5700B5A693 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		3E2BBBAD21BEBE5F00B5A693 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		3E2BBBAF21BEBE6600B5A693 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3E2BBBB121BF64D900B5A693 /* Default-812h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-812h@3x.png"; path = "eduaction_app/Assets.xcassets/LaunchImage.launchimage/Default-812h@3x.png"; sourceTree = "<group>"; };
+		3E2BBBBB21C021E900B5A693 /* MineTodayCourseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTodayCourseVC.m; sourceTree = "<group>"; };
+		3E2BBBBC21C021E900B5A693 /* MineBuyCourseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineBuyCourseVC.m; sourceTree = "<group>"; };
+		3E2BBBBD21C021E900B5A693 /* MineHistoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHistoryVC.h; sourceTree = "<group>"; };
+		3E2BBBBE21C021E900B5A693 /* MineTodayCourseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTodayCourseVC.h; sourceTree = "<group>"; };
+		3E2BBBBF21C021E900B5A693 /* MineHistoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHistoryVC.m; sourceTree = "<group>"; };
+		3E2BBBC021C021E900B5A693 /* MineBuyCourseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineBuyCourseVC.h; sourceTree = "<group>"; };
+		3E2BBBC321C021E900B5A693 /* MineMessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMessageVC.h; sourceTree = "<group>"; };
+		3E2BBBC421C021E900B5A693 /* MineUserVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineUserVC.h; sourceTree = "<group>"; };
+		3E2BBBC521C021E900B5A693 /* MineMessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMessageVC.m; sourceTree = "<group>"; };
+		3E2BBBC621C021E900B5A693 /* MineUserVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineUserVC.m; sourceTree = "<group>"; };
+		3E2BBBC821C021E900B5A693 /* MineUserCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineUserCVCell.h; sourceTree = "<group>"; };
+		3E2BBBC921C021E900B5A693 /* MineMassageCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMassageCVCell.m; sourceTree = "<group>"; };
+		3E2BBBCA21C021E900B5A693 /* MineMessageFromCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMessageFromCVCell.h; sourceTree = "<group>"; };
+		3E2BBBCB21C021E900B5A693 /* MineUserCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineUserCollection.m; sourceTree = "<group>"; };
+		3E2BBBCC21C021E900B5A693 /* MineUserCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineUserCVCell.xib; sourceTree = "<group>"; };
+		3E2BBBCD21C021E900B5A693 /* MineMessageFromCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineMessageFromCVCell.xib; sourceTree = "<group>"; };
+		3E2BBBCE21C021E900B5A693 /* MineMessageCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMessageCollection.m; sourceTree = "<group>"; };
+		3E2BBBCF21C021E900B5A693 /* MineMassageCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMassageCVCell.h; sourceTree = "<group>"; };
+		3E2BBBD021C021E900B5A693 /* MineMassageCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineMassageCVCell.xib; sourceTree = "<group>"; };
+		3E2BBBD121C021E900B5A693 /* MineUserCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineUserCVCell.m; sourceTree = "<group>"; };
+		3E2BBBD221C021E900B5A693 /* MineMessageFromCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMessageFromCVCell.m; sourceTree = "<group>"; };
+		3E2BBBD321C021E900B5A693 /* MineMessageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMessageCollection.h; sourceTree = "<group>"; };
+		3E2BBBD421C021E900B5A693 /* MineUserCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineUserCollection.h; sourceTree = "<group>"; };
+		3E2D2CF921C73AA4006AD59C /* guideVMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = guideVMode.h; sourceTree = "<group>"; };
+		3E2D2CFA21C73AA4006AD59C /* guideVMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = guideVMode.m; sourceTree = "<group>"; };
 		3E32D0B5219910F300E45154 /* trainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trainViewController.h; sourceTree = "<group>"; };
 		3E32D0B6219910F300E45154 /* trainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trainViewController.m; sourceTree = "<group>"; };
 		3E3AEFB6217DFDA8006C2860 /* eduaction_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eduaction_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -763,6 +852,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E2BBBB021BEBE6600B5A693 /* libz.tbd in Frameworks */,
+				3E2BBBAE21BEBE5F00B5A693 /* libstdc++.tbd in Frameworks */,
+				3E2BBBAC21BEBE5700B5A693 /* libstdc++.6.tbd in Frameworks */,
+				3E2BBBAA21BEBE4F00B5A693 /* libsqlite3.tbd in Frameworks */,
+				3E2BBBA821BEBE4900B5A693 /* libresolv.tbd in Frameworks */,
+				3E2BBBA621BEBE4300B5A693 /* libprotobuf.tbd in Frameworks */,
+				3E2BBBA421BEBE3D00B5A693 /* libicucore.tbd in Frameworks */,
+				3E2BBBA221BEBE3600B5A693 /* libiconv.tbd in Frameworks */,
+				3E2BBBA021BEBE3000B5A693 /* libc++.tbd in Frameworks */,
+				3E2BBB9E21BEBE2900B5A693 /* libbz2.tbd in Frameworks */,
+				3E2BBB9C21BEBE2500B5A693 /* VideoToolbox.framework in Frameworks */,
+				3E2BBB9A21BEBE2000B5A693 /* SystemConfiguration.framework in Frameworks */,
+				3E2BBB9821BEBE1B00B5A693 /* QuartzCore.framework in Frameworks */,
+				3E2BBB9621BEBE1300B5A693 /* OpenGLES.framework in Frameworks */,
+				3E2BBB9421BEBE0E00B5A693 /* OpenAL.framework in Frameworks */,
+				3E2BBB9221BEBE0B00B5A693 /* JavaScriptCore.framework in Frameworks */,
+				3E2BBB9021BEBE0300B5A693 /* ImageIO.framework in Frameworks */,
+				3E2BBB8E21BEBDFF00B5A693 /* CoreVideo.framework in Frameworks */,
+				3E2BBB8C21BEBDFA00B5A693 /* CoreTelephony.framework in Frameworks */,
+				3E2BBB8A21BEBDF500B5A693 /* CoreMedia.framework in Frameworks */,
+				3E2BBB8821BEBDED00B5A693 /* CoreGraphics.framework in Frameworks */,
+				3E2BBB8621BEBDE800B5A693 /* AVFoundation.framework in Frameworks */,
+				3E2BBB8421BEBDE300B5A693 /* AssetsLibrary.framework in Frameworks */,
+				3E2BBB8221BEBDDD00B5A693 /* Accelerate.framework in Frameworks */,
 				3E2BBB2621BEBB6F00B5A693 /* libTXMBasic.a in Frameworks */,
 				3E2BBB1F21BEBB6F00B5A693 /* TLSSDK.framework in Frameworks */,
 				3E2BBB2221BEBB6F00B5A693 /* IMSDKBugly.framework in Frameworks */,
@@ -1447,6 +1560,76 @@
 			path = ILiveSDK;
 			sourceTree = "<group>";
 		};
+		3E2BBBB921C021E900B5A693 /* MineStudy */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBBBA21C021E900B5A693 /* Controller */,
+			);
+			path = MineStudy;
+			sourceTree = "<group>";
+		};
+		3E2BBBBA21C021E900B5A693 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBBBB21C021E900B5A693 /* MineTodayCourseVC.m */,
+				3E2BBBBC21C021E900B5A693 /* MineBuyCourseVC.m */,
+				3E2BBBBD21C021E900B5A693 /* MineHistoryVC.h */,
+				3E2BBBBE21C021E900B5A693 /* MineTodayCourseVC.h */,
+				3E2BBBBF21C021E900B5A693 /* MineHistoryVC.m */,
+				3E2BBBC021C021E900B5A693 /* MineBuyCourseVC.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3E2BBBC121C021E900B5A693 /* MineMain */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBBC221C021E900B5A693 /* controller */,
+				3E2BBBC721C021E900B5A693 /* views */,
+			);
+			path = MineMain;
+			sourceTree = "<group>";
+		};
+		3E2BBBC221C021E900B5A693 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBBC421C021E900B5A693 /* MineUserVC.h */,
+				3E2BBBC621C021E900B5A693 /* MineUserVC.m */,
+				3E2BBBC321C021E900B5A693 /* MineMessageVC.h */,
+				3E2BBBC521C021E900B5A693 /* MineMessageVC.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3E2BBBC721C021E900B5A693 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3E2BBBC821C021E900B5A693 /* MineUserCVCell.h */,
+				3E2BBBC921C021E900B5A693 /* MineMassageCVCell.m */,
+				3E2BBBCA21C021E900B5A693 /* MineMessageFromCVCell.h */,
+				3E2BBBCB21C021E900B5A693 /* MineUserCollection.m */,
+				3E2BBBCC21C021E900B5A693 /* MineUserCVCell.xib */,
+				3E2BBBCD21C021E900B5A693 /* MineMessageFromCVCell.xib */,
+				3E2BBBCE21C021E900B5A693 /* MineMessageCollection.m */,
+				3E2BBBCF21C021E900B5A693 /* MineMassageCVCell.h */,
+				3E2BBBD021C021E900B5A693 /* MineMassageCVCell.xib */,
+				3E2BBBD121C021E900B5A693 /* MineUserCVCell.m */,
+				3E2BBBD221C021E900B5A693 /* MineMessageFromCVCell.m */,
+				3E2BBBD321C021E900B5A693 /* MineMessageCollection.h */,
+				3E2BBBD421C021E900B5A693 /* MineUserCollection.h */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		3E2D2CF821C73A85006AD59C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3E2D2CF921C73AA4006AD59C /* guideVMode.h */,
+				3E2D2CFA21C73AA4006AD59C /* guideVMode.m */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		3E32D0B4219910F300E45154 /* trainVc */ = {
 			isa = PBXGroup;
 			children = (
@@ -1459,6 +1642,7 @@
 		3E3AEFAD217DFDA8006C2860 = {
 			isa = PBXGroup;
 			children = (
+				3E2BBBB121BF64D900B5A693 /* Default-812h@3x.png */,
 				3E2BBAA121BEBB6E00B5A693 /* liveSDK */,
 				3E3AEFEB217DFF51006C2860 /* common */,
 				3E3AEFB8217DFDA8006C2860 /* eduaction_app */,
@@ -1801,6 +1985,7 @@
 		3ECB361F218AB1360008A109 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3E2D2CF821C73A85006AD59C /* Modules */,
 				3E8AEDA621927EE6007CF326 /* cache */,
 				3EB08EB3218C853100849777 /* ScanQR */,
 				3EB08E8B218C352A00849777 /* View */,
@@ -1812,6 +1997,8 @@
 		3ECB3620218AB1360008A109 /* mine */ = {
 			isa = PBXGroup;
 			children = (
+				3E2BBBC121C021E900B5A693 /* MineMain */,
+				3E2BBBB921C021E900B5A693 /* MineStudy */,
 				3ECB3623218AC0E60008A109 /* controller */,
 			);
 			path = mine;
@@ -1915,6 +2102,30 @@
 		94664A97844402FE7CB98F3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E2BBBAF21BEBE6600B5A693 /* libz.tbd */,
+				3E2BBBAD21BEBE5F00B5A693 /* libstdc++.tbd */,
+				3E2BBBAB21BEBE5700B5A693 /* libstdc++.6.tbd */,
+				3E2BBBA921BEBE4E00B5A693 /* libsqlite3.tbd */,
+				3E2BBBA721BEBE4900B5A693 /* libresolv.tbd */,
+				3E2BBBA521BEBE4300B5A693 /* libprotobuf.tbd */,
+				3E2BBBA321BEBE3D00B5A693 /* libicucore.tbd */,
+				3E2BBBA121BEBE3600B5A693 /* libiconv.tbd */,
+				3E2BBB9F21BEBE3000B5A693 /* libc++.tbd */,
+				3E2BBB9D21BEBE2900B5A693 /* libbz2.tbd */,
+				3E2BBB9B21BEBE2400B5A693 /* VideoToolbox.framework */,
+				3E2BBB9921BEBE2000B5A693 /* SystemConfiguration.framework */,
+				3E2BBB9721BEBE1B00B5A693 /* QuartzCore.framework */,
+				3E2BBB9521BEBE1300B5A693 /* OpenGLES.framework */,
+				3E2BBB9321BEBE0E00B5A693 /* OpenAL.framework */,
+				3E2BBB9121BEBE0B00B5A693 /* JavaScriptCore.framework */,
+				3E2BBB8F21BEBE0300B5A693 /* ImageIO.framework */,
+				3E2BBB8D21BEBDFF00B5A693 /* CoreVideo.framework */,
+				3E2BBB8B21BEBDFA00B5A693 /* CoreTelephony.framework */,
+				3E2BBB8921BEBDF500B5A693 /* CoreMedia.framework */,
+				3E2BBB8721BEBDED00B5A693 /* CoreGraphics.framework */,
+				3E2BBB8521BEBDE800B5A693 /* AVFoundation.framework */,
+				3E2BBB8321BEBDE300B5A693 /* AssetsLibrary.framework */,
+				3E2BBB8121BEBDDD00B5A693 /* Accelerate.framework */,
 				7C7DF20B5D012266405DC98F /* Pods_eduaction_app.framework */,
 			);
 			name = Frameworks;
@@ -2027,6 +2238,7 @@
 			files = (
 				3E2BBB3F21BEBB6F00B5A693 /* tooth_19.png in Resources */,
 				3E2BBB4221BEBB6F00B5A693 /* tooth_14.png in Resources */,
+				3E2BBBB221BF64D900B5A693 /* Default-812h@3x.png in Resources */,
 				3E8FB22921B0527E00FBD5E8 /* testGuideCell.xib in Resources */,
 				3E2BBB7621BEBB6F00B5A693 /* params.wmc in Resources */,
 				3E2BBB4F21BEBB6F00B5A693 /* ear_1.png in Resources */,
@@ -2059,6 +2271,7 @@
 				3E2BBB4421BEBB6F00B5A693 /* tooth_11.png in Resources */,
 				3EE6F4E221A253260068F78D /* trainLeftCell.xib in Resources */,
 				3E2BBB6F21BEBB6F00B5A693 /* huzi_8.png in Resources */,
+				3E2BBBDD21C021E900B5A693 /* MineMessageFromCVCell.xib in Resources */,
 				3E2BBB4521BEBB6F00B5A693 /* tooth_10.png in Resources */,
 				3E2BBB3221BEBB6F00B5A693 /* tooth_4.png in Resources */,
 				3E2BBB5121BEBB6F00B5A693 /* ear_12.png in Resources */,
@@ -2115,6 +2328,7 @@
 				3E2BBB6021BEBB6F00B5A693 /* ear_22.png in Resources */,
 				3E2BBB3C21BEBB6F00B5A693 /* tooth_21.png in Resources */,
 				3E2BBB2821BEBB6F00B5A693 /* qingxin.png in Resources */,
+				3E2BBBDC21C021E900B5A693 /* MineUserCVCell.xib in Resources */,
 				3E2BBB2921BEBB6F00B5A693 /* qingliang.png in Resources */,
 				3E2BBB5C21BEBB6F00B5A693 /* ear_9.png in Resources */,
 				3E2BBB6821BEBB6F00B5A693 /* huzi_3.png in Resources */,
@@ -2136,6 +2350,7 @@
 				04AC33E62192736200307E70 /* MakeProlemAnswerCRView.xib in Resources */,
 				3EA283432186E1BF00B2D716 /* cellphone_loginview.xib in Resources */,
 				3E2BBB7D21BEBB6F00B5A693 /* FilterEngine.bundle in Resources */,
+				3E2BBBDF21C021E900B5A693 /* MineMassageCVCell.xib in Resources */,
 				3E2BBB3D21BEBB6F00B5A693 /* tooth_20.png in Resources */,
 				3E2BBB5421BEBB6F00B5A693 /* ear_6.png in Resources */,
 				3E2BBB3B21BEBB6F00B5A693 /* tooth_23.png in Resources */,
@@ -2259,6 +2474,7 @@
 				3EDCF81E218F298800861D26 /* MySearchBar.m in Sources */,
 				04AC33EA219287B200307E70 /* MakeProblemAnswerCVCell.m in Sources */,
 				3E14D86821ADAD7700165FF8 /* MonthModel.m in Sources */,
+				3E2BBBDE21C021E900B5A693 /* MineMessageCollection.m in Sources */,
 				045B11C021912184001FC325 /* StudyCVCell.m in Sources */,
 				04B3C087219BC9C90035C995 /* ConsolidateScoreLineView.m in Sources */,
 				044F97DE219E6B05002295CA /* MakeProblemMainModel.m in Sources */,
@@ -2266,19 +2482,23 @@
 				3E8FB22821B0527E00FBD5E8 /* testGuideCell.m in Sources */,
 				3E21BBAD21874FE70041CF70 /* LoginViewMode.m in Sources */,
 				3E8FB22021B0518500FBD5E8 /* testGuideVC.m in Sources */,
+				3E2D2CFB21C73AA4006AD59C /* guideVMode.m in Sources */,
 				3EA283462186EE0300B2D716 /* forgetpassview.m in Sources */,
 				3E89FD2821B4364000D1E012 /* commResResultObj.m in Sources */,
 				3E83D2C4217E01F200E78B1C /* LogManager.m in Sources */,
 				04ACCD3C219D083900716953 /* SyllabusMainCRView.m in Sources */,
+				3E2BBBDA21C021E900B5A693 /* MineMassageCVCell.m in Sources */,
 				3ECB361E218AAF0C0008A109 /* MYtabarViewController.m in Sources */,
 				045B11E72191354D001FC325 /* ChapterScoreCVCell.m in Sources */,
 				04B1B12C2193DCF700EEB51E /* SimulateExameMainVC.m in Sources */,
 				04B3C08A219BD4E00035C995 /* ConsolidateScoreMainVC.m in Sources */,
 				04AC33F82192DEBB00307E70 /* MakeProblemSceneCollection.m in Sources */,
+				3E2BBBD521C021E900B5A693 /* MineTodayCourseVC.m in Sources */,
 				3EB08E96218C575200849777 /* HomeCollection.m in Sources */,
 				045B11FC21916B2B001FC325 /* MakeProblemOptionCVCell.m in Sources */,
 				3EB08E9F218C5BDC00849777 /* HomecourseCell.m in Sources */,
 				04AC33E52192736200307E70 /* MakeProlemAnswerCRView.m in Sources */,
+				3E2BBBD621C021E900B5A693 /* MineBuyCourseVC.m in Sources */,
 				045B11D421912198001FC325 /* ChapterMainCollection.m in Sources */,
 				3EB08EC9218C922B00849777 /* QRcomfimViewController.m in Sources */,
 				3EB08EB1218C76ED00849777 /* homeheaderCR2.m in Sources */,
@@ -2294,10 +2514,12 @@
 				04B3C075219BBBF20035C995 /* ConsolidateMyNoteVC.m in Sources */,
 				04B3C072219BB2250035C995 /* ConsolidateHotMainCollection.m in Sources */,
 				3E401A65218F496F00D85448 /* SearchSecionV.m in Sources */,
+				3E2BBBE121C021E900B5A693 /* MineMessageFromCVCell.m in Sources */,
 				3EE6F4EB21A25B370068F78D /* trainRightHead.m in Sources */,
 				3E635FCC21929377006FC152 /* MainCollectionFowLayout.m in Sources */,
 				3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */,
 				3EE6F4EF21A291870068F78D /* trainRightCollection.m in Sources */,
+				3E2BBBD821C021E900B5A693 /* MineMessageVC.m in Sources */,
 				04B3C06F219BB1B90035C995 /* ConsolidateHotMainVC.m in Sources */,
 				3E0AE2E521AC296A00AB6180 /* recommandVC.m in Sources */,
 				3E1D9F6A21AEF2E700056DF9 /* BATableViewIndex.m in Sources */,
@@ -2316,6 +2538,7 @@
 				04B3C081219BC1CC0035C995 /* ConsolidateMyWrongMainVC.m in Sources */,
 				04B3C07B219BBEDA0035C995 /* ConsolidateFallibilityMainVC.m in Sources */,
 				3E8FB22321B051B800FBD5E8 /* testGuideDetailVc.m in Sources */,
+				3E2BBBDB21C021E900B5A693 /* MineUserCollection.m in Sources */,
 				045B11E32191344C001FC325 /* ChapterScoreCollection.m in Sources */,
 				3E6AFEA321A2A3E800E07AD7 /* noticeSubjectmanager.m in Sources */,
 				3ECB362A218AC1140008A109 /* MineViewController.m in Sources */,
@@ -2328,6 +2551,7 @@
 				3E6AFEA021A29C4300E07AD7 /* TopfilteringV.m in Sources */,
 				0477160821999F960051FB83 /* RechargeMainVC.m in Sources */,
 				04ACCD96219D8E4700716953 /* SearchMainCRView.m in Sources */,
+				3E2BBBD921C021E900B5A693 /* MineUserVC.m in Sources */,
 				04ACCD9C219D8E4700716953 /* SQSearchView.m in Sources */,
 				04AC33FC2192E1AC00307E70 /* MakeProblemSceneCVCell.m in Sources */,
 				3ECB3627218AC1070008A109 /* HomeViewController.m in Sources */,
@@ -2342,6 +2566,7 @@
 				04B1B12F2193DD6D00EEB51E /* SimulateExameMainCollection.m in Sources */,
 				3EE6F4E121A253260068F78D /* trainLeftCell.m in Sources */,
 				04BBFB8C219AB34C0088196E /* ConsolidateProblemCVCell.m in Sources */,
+				3E2BBBD721C021E900B5A693 /* MineHistoryVC.m in Sources */,
 				04B3C08E219BFD140035C995 /* MakeProblemQuestionCardCVCell.m in Sources */,
 				3EA283412186E1A600B2D716 /* cellphone_loginview.m in Sources */,
 				3E8FB22C21B0535B00FBD5E8 /* testCommTab.m in Sources */,
@@ -2351,6 +2576,7 @@
 				3EDCF821218F2ADC00861D26 /* SearchViewController.m in Sources */,
 				3E14D86521ADA41A00165FF8 /* NSDate+Formatter.m in Sources */,
 				04ACCD44219D120A00716953 /* SyllabusMainCVCell.m in Sources */,
+				3E2BBBE021C021E900B5A693 /* MineUserCVCell.m in Sources */,
 				04ACCD84219D7B0100716953 /* SearchQuestionMainVC.m in Sources */,
 				3E83D2CE217E129300E78B1C /* LoginViewController.m in Sources */,
 				3E7564C221A50024009A766C /* FilterCommonCollectionViewCell.m in Sources */,
@@ -2588,7 +2814,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.education-li.app.eduaction-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2623,7 +2849,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.education-li.app.eduaction-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

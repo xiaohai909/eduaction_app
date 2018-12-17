@@ -41,7 +41,13 @@ NSString *const kcommResBaseClassResultCode = @"resultCode";
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
             self.resultMsg = [self objectOrNilForKey:kcommResBaseClassResultMsg fromDictionary:dict];
             self.resultObj = [commResResultObj modelObjectWithDictionary:[dict objectForKey:kcommResBaseClassResultObj]];
-            self.resultCode = [[self objectOrNilForKey:kcommResBaseClassResultCode fromDictionary:dict] doubleValue];
+            NSLog(@"%@",[self.resultObj dictionaryRepresentation]);
+        
+        if ([dict objectForKey:kcommResBaseClassResultObj] != nil) {
+            
+            self.resultObj_dic = [[NSMutableDictionary alloc]initWithDictionary:[dict objectForKey:kcommResBaseClassResultObj]];
+        }
+        self.resultCode = [[self objectOrNilForKey:kcommResBaseClassResultCode fromDictionary:dict] doubleValue];
 
     }
     

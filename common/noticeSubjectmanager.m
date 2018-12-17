@@ -26,7 +26,7 @@
     if ([super init]) {
         
         self.shouldTabar_jump = [RACSubject subject];
-        
+        self.shouldTabar_jump2 = [RACSubject subject];
         
     }
     return self;

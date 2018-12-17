@@ -78,11 +78,38 @@
         make.top.mas_equalTo(self.mobilenumber.mas_bottom).offset(2);
         
     }];
+    
+    [self.codeicon mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(32, 32));
+        make.left.mas_equalTo(space_left);
+        make.top.mas_equalTo(self.line1.mas_bottom).offset(24*scale_H);
+    }];
+    
+    [self.codebtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.codeicon.mas_centerY);
+        
+        make.right.mas_equalTo(-space_left);
+        make.height.mas_equalTo(31);
+        make.width.mas_equalTo(69);
+    }];
+    [self.code mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.codeicon.mas_centerY);
+        make.left.mas_equalTo(self.codeicon.mas_right).offset(5);
+        make.right.mas_equalTo(self.codebtn.mas_left).offset(-5);
+        make.height.mas_equalTo(31);
+    }];
+    [self.line4 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(space_left);
+        make.right.mas_equalTo(-space_left);
+        make.height.mas_equalTo(0.5);
+        make.top.mas_equalTo(self.code.mas_bottom).offset(2);
+        
+    }];
    
     [self.passicon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(32, 32));
         make.left.mas_equalTo(space_left);
-        make.top.mas_equalTo(self.line1.mas_bottom).offset(24*scale_H);
+        make.top.mas_equalTo(self.line4.mas_bottom).offset(24*scale_H);
     }];
     [self.password_field mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self.passicon.mas_centerY);
@@ -141,7 +168,7 @@
     self.line1.backgroundColor = lineColor_app;
     self.line2.backgroundColor = lineColor_app;
     self.line3.backgroundColor = lineColor_app;
-    
+    self.line4.backgroundColor = lineColor_app;
 }
 
 @end

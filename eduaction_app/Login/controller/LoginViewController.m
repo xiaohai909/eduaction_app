@@ -148,6 +148,13 @@
                 self.myview_reg.hidden=NO;
             }
         }];
+        [[_myview_reg.eulabtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            
+             @strongify(self);
+            self.myview_reg.eulabtn.selected = !self.myview_reg.eulabtn.selected;
+            self.viewModel.eulaselect = self.myview_reg.eulabtn.selected;
+        }];
+        
         
     }
     return _myview_reg;
@@ -174,6 +181,22 @@
     RAC(self.viewModel, regView_password) = self.myview_reg.password_field.rac_textSignal;
     RAC(self.viewModel, regView_password_again) = self.myview_reg.passwordagain_field.rac_textSignal;
     RAC(self.viewModel, smscode) = self.myview_reg.code.rac_textSignal;
+    
+    
+    RAC(self.viewModel, loginwithcode_mobile) = self.myview_code_login.mobilenumber.rac_textSignal;
+    RAC(self.viewModel, loginwithcode_code) = self.myview_code_login.code.rac_textSignal;
+    
+    RAC(self.viewModel, forget_mobile) = self.myforgetView.mobilenumber.rac_textSignal;
+    RAC(self.viewModel, forget_smscode) = self.myforgetView.code.rac_textSignal;
+    RAC(self.viewModel, forget_password) = self.myforgetView.password_field.rac_textSignal;
+    RAC(self.viewModel, forget_password_again) = self.myforgetView.passwordagain_field.rac_textSignal;
+    
+    
+    self.myforgetView.codebtn.rac_command = self.viewModel.subscribeCommand_forgetpassowrd_codebtn;
+    self.myforgetView.forgetbtn.rac_command = self.viewModel.subscribeCommand_forgetpassowrd_reset;
+    
+    self.myview_code_login.codebtn.rac_command = self.viewModel.subscribeCommand_loginwith_codebtn;
+    self.myview_code_login.go_reg_btn.rac_command = self.viewModel.subscribeCommand_loginwithcode;
     
     
     self.myview.QQ.rac_command = self.viewModel.subscribeCommand_QQ;
@@ -245,6 +268,8 @@
             if (mode.resultCode == 10000) {
                 
                 [self goTabarView];
+                [YGUserDefaults setBool:YES forKey:islogin];
+                [YGUserDefaults synchronize];
             }
             else{
                 popAlert(mode.resultMsg, 2);
@@ -266,6 +291,18 @@
             
             if (mode.resultCode == 10000) {
                 
+                [self.viewModel GWCountdown:for_reg andsecond:60 andblock:^(NSInteger second) {
+                    
+                    if (second > 0) {
+                        
+                        [self.myview_reg.codebtn setTitle:[NSString stringWithFormat:@"%@秒",@(second)] forState:UIControlStateNormal];
+                        
+                    }
+                    else{
+                        
+                        [self.myview_reg.codebtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+                    }
+                }];
                 
             }
             else{
@@ -286,6 +323,9 @@
             
             if (mode.resultCode == 10000) {
                 
+                [self goTabarView];
+                [YGUserDefaults setBool:YES forKey:islogin];
+                [YGUserDefaults synchronize];
                 
             }
             else{
@@ -295,8 +335,116 @@
         }
     }];
 
-
-  
+#pragma mark 短信登录验证码
+    [self.viewModel.subscribeCommand_loginwith_codebtn.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        if ([x isKindOfClass:[commResBaseClass class]]) {
+            
+            
+            commResBaseClass *mode = x;
+            
+            
+            if (mode.resultCode == 10000) {
+                
+                [self.viewModel GWCountdown:for_login andsecond:60 andblock:^(NSInteger second) {
+                    
+                    if (second > 0) {
+                        
+                        [self.myview_code_login.codebtn setTitle:[NSString stringWithFormat:@"%@秒",@(second)] forState:UIControlStateNormal];
+                        
+                    }
+                    else{
+                        
+                        [self.myview_code_login.codebtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+                    }
+                }];
+                
+            }
+            else{
+                popAlert(mode.resultMsg, 2);
+            }
+            
+        }
+    }];
+    [self.viewModel.subscribeCommand_loginwithcode.executionSignals.switchToLatest subscribeNext:^(id x) {
+#pragma mark 短信登录
+        @strongify(self);
+        
+        
+        if ([x isKindOfClass:[commResBaseClass class]]) {
+            commResBaseClass *mode = x;
+            [[GWProgressHUB sharedYGGWProgressHUB] YGDismiss:self.view];
+            
+            if (mode.resultCode == 10000) {
+                
+                [self goTabarView];
+                [YGUserDefaults setBool:YES forKey:islogin];
+                [YGUserDefaults synchronize];
+            }
+            else{
+                popAlert(mode.resultMsg, 2);
+            }
+            
+        }
+        
+        
+        
+    }];
+    
+#pragma mark 重置密码获取短信
+    [self.viewModel.subscribeCommand_forgetpassowrd_codebtn.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        if ([x isKindOfClass:[commResBaseClass class]]) {
+            
+            
+            commResBaseClass *mode = x;
+            
+            
+            if (mode.resultCode == 10000) {
+                
+                [self.viewModel GWCountdown:for_password andsecond:60 andblock:^(NSInteger second) {
+                    
+                    if (second > 0) {
+                        
+                        [self.myforgetView.codebtn setTitle:[NSString stringWithFormat:@"%@秒",@(second)] forState:UIControlStateNormal];
+                        
+                    }
+                    else{
+                        
+                        [self.myforgetView.codebtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+                    }
+                }];
+                
+            }
+            else{
+                popAlert(mode.resultMsg, 2);
+            }
+            
+        }
+    }];
+    [self.viewModel.subscribeCommand_forgetpassowrd_reset.executionSignals.switchToLatest subscribeNext:^(id x) {
+#pragma mark 请求重置密码
+        @strongify(self);
+        
+        
+        if ([x isKindOfClass:[commResBaseClass class]]) {
+            commResBaseClass *mode = x;
+            [[GWProgressHUB sharedYGGWProgressHUB] YGDismiss:self.view];
+            
+            if (mode.resultCode == 10000) {
+                
+                popAlert(mode.resultMsg, 2);
+              
+            }
+            else{
+                popAlert(mode.resultMsg, 2);
+            }
+            
+        }
+        
+        
+        
+    }];
 
     
 }

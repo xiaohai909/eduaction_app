@@ -34,9 +34,11 @@ NSString *const kcommResResultObjSessionId = @"sessionId";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.sessionId = [self objectOrNilForKey:kcommResResultObjSessionId fromDictionary:dict];
+        
+        self.sessionId = [self objectOrNilForKey:kcommResResultObjSessionId fromDictionary:dict];
 
     }
+    
     
     return self;
     

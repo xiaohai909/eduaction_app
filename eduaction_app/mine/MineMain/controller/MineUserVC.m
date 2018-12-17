@@ -10,6 +10,9 @@
 #import "MineUserCollection.h"
 
 @interface MineUserVC ()
+{
+    BOOL firstIn;
+}
 @property (nonatomic, strong) MineUserCollection *collection_main;
 @end
 
@@ -23,6 +26,13 @@
     self.title = @"个人资料";
     
     [self.view addSubview:self.collection_main];
+    
+    @weakify(self);
+    [[[[noticeSubjectmanager sharenoticeSubjectmanager] shouldTabar_jump2] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        self->firstIn = YES;
+    }];
+    
 }
 - (MineUserCollection *)collection_main {
     if (!_collection_main) {
@@ -35,6 +45,25 @@
         _collection_main.showsVerticalScrollIndicator = NO;
     }
     return _collection_main;
+}
+- (void)viewWillAppear:(BOOL)animated {
+    
+    
+    //[self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    self.tabBarController.navigationItem.rightBarButtonItem =nil;
+    self.tabBarController.navigationItem.titleView = nil;
+//    if (firstIn) {
+//        firstIn = NO;
+//    }
+//    else{
+//        [self.navigationController setNavigationBarHidden:YES animated:YES];
+//    }
+}
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+//    self.navigationController.navigationBarHidden = YES;
 }
 /*
 #pragma mark - Navigation

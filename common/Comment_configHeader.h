@@ -50,7 +50,9 @@ typedef NS_ENUM(NSInteger,GradientDirection)
 
 #define LL_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define LL_SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
 #define Iphone6Scale(x) ((x) * LL_SCREEN_WIDTH / 375.0f)
+#define Iphone6Scale_height(y) ((y) * LL_SCREEN_HEIGHT / 667.0f)
 
 #define HeaderViewHeight 30
 #define WeekViewHeight 40

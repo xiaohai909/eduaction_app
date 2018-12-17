@@ -37,6 +37,7 @@
 #import "GWProgressHUB.h"
 #import "DataModels.h"
 #import "AbbAlertView.h"
+#import "MJRefresh-umbrella.h"
 #if DEBUG
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #else

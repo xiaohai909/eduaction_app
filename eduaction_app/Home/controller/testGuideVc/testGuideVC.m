@@ -9,8 +9,10 @@
 #import "testGuideVC.h"
 #import "testGuideDetailVc.h"
 #import "testCommTab.h"
+#import "guideVMode.h"
 @interface testGuideVC ()
 @property(nonatomic,strong)testCommTab *myTab;
+@property(nonatomic,strong)guideVMode *myVmode;
 @end
 
 @implementation testGuideVC
@@ -27,12 +29,30 @@
             [self.navigationController pushViewController:cont animated:YES];
         }];
         
+        self.myTab.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            
+        }];
+        
     }
     return _myTab;
+}
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.myVmode = [guideVMode new];
+        
+    }
+    return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.myTab];
+    
+    [[myNetworkManager sharemyNetworkManager]queryKechengTypeListAndsuccess:^(id  _Nonnull response) {
+        
+    } Andfailure:^(NSError * _Nonnull err) {
+        
+    }];
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{

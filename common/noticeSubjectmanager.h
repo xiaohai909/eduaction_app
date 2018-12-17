@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface noticeSubjectmanager : NSObject
 @property(nonatomic,strong)RACSubject *shouldTabar_jump;
+@property(nonatomic,strong)RACSubject *shouldTabar_jump2;
 +(noticeSubjectmanager *)sharenoticeSubjectmanager;
 
 @end

@@ -9,7 +9,9 @@
 #import "GuideVc.h"
 
 @interface GuideVc ()
-
+{
+    UIScrollView *scV;
+}
 @end
 
 @implementation GuideVc
@@ -17,23 +19,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
+    
+    scV =[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, ZTWidth, ZTHeight)];
+    scV.contentSize = CGSizeMake(ZTWidth*3,ZTHeight);
+    scV.pagingEnabled = YES;
+    [self.view addSubview:scV];
+    
+    
+    NSArray *arr =@[@"guide_01",@"guide_02",@"guide_03"];
+    
+    for (NSInteger i= 0 ; i<3; i++) {
+        
+        UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(ZTWidth*i, 0, ZTWidth, ZTHeight)];
+        image.contentMode = UIViewContentModeScaleToFill;
+        [image setImage:[UIImage imageNamed:arr[i]]];
+        [scV addSubview:image];
+    }
+    scV.showsHorizontalScrollIndicator=NO;
     [self initfunction:NO];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setTitle:@"这是引导页，点击进入App" forState:UIControlStateNormal];
+    btn.backgroundColor = [UIColor clearColor];
+    //[btn setTitle:@"这是引导页，点击进入App" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.view addSubview:btn];
+    [scV addSubview:btn];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.view.mas_centerX);
-        make.height.mas_equalTo(44);
-        make.width.mas_equalTo(220);
-        make.centerY.mas_equalTo(self.view.mas_centerY);
+        make.height.mas_equalTo(Iphone6Scale_height(47));
+        make.width.mas_equalTo(235);
+        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-Iphone6Scale_height(48));
     }];
     @weakify(self);
     [[[btn rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(__kindof UIControl * _Nullable x) {
         
         @strongify(self);
+        if (self->scV.contentOffset.x >= 2*ZTWidth) {
+            
+        
+        
         [YGUserDefaults setBool:YES forKey:isfirstUser];
         [YGUserDefaults synchronize];
         
@@ -51,6 +74,7 @@
             }];
             
             [self presentViewController:alert animated:YES completion:nil];
+        }
         }
     }];
 

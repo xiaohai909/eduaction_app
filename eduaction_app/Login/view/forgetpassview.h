@@ -18,6 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *register_btn;
 @property (weak, nonatomic) IBOutlet UIButton *login_btn;
 
+@property (weak, nonatomic) IBOutlet UITextField *code;
+@property (weak, nonatomic) IBOutlet UIView *line4;
+@property (weak, nonatomic) IBOutlet UIImageView *codeicon;
+@property (weak, nonatomic) IBOutlet UIButton *codebtn;
+
 @property (weak, nonatomic) IBOutlet UITextField *mobilenumber;
 @property (weak, nonatomic) IBOutlet UIImageView *mobileicon;
 @property (weak, nonatomic) IBOutlet UIView *line1;
