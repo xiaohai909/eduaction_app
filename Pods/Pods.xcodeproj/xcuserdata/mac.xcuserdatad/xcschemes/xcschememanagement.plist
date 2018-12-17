@@ -14,80 +14,90 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>FMDB.xcscheme_^#shared#^_</key>
+		<key>FCUUID.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>FSCalendar.xcscheme_^#shared#^_</key>
+		<key>FMDB.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>IQKeyboardManager.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
-		<key>ImagePlayerView.xcscheme_^#shared#^_</key>
+		<key>FSCalendar.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>MBProgressHUD.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
-		</dict>
-		<key>MGSwipeTableCell.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
-		</dict>
-		<key>MJExtension.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
-		</dict>
-		<key>MJRefresh.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
-		</dict>
-		<key>Masonry.xcscheme_^#shared#^_</key>
+		<key>IQKeyboardManager.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>Pods-eduaction_app.xcscheme_^#shared#^_</key>
+		<key>ImagePlayerView.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>MBProgressHUD.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>MGSwipeTableCell.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>MJExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>MJRefresh.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
-		<key>ReactiveObjC.xcscheme_^#shared#^_</key>
+		<key>Masonry.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>Pods-eduaction_app.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
-		<key>SDWebImage.xcscheme_^#shared#^_</key>
+		<key>ReactiveObjC.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
-		<key>TezButton.xcscheme_^#shared#^_</key>
+		<key>SDWebImage.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>15</integer>
 		</dict>
-		<key>YYCache.xcscheme_^#shared#^_</key>
+		<key>TezButton.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
-		<key>ZYSideSlipFilter.xcscheme_^#shared#^_</key>
+		<key>UICKeyChainStore.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>17</integer>
+		</dict>
+		<key>YYCache.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
+		<key>ZYSideSlipFilter.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
 		</dict>
 	</dict>
 </dict>

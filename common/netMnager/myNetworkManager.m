@@ -201,7 +201,7 @@
     [dic setObject:account forKey:@"account"];
     NSMutableDictionary *dic2 = [self commParam:@"sendSmsForRegedit" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
     
-    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/apii?1=23" isUploadImage:NO params:dic2 success:success failure:failure];
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=23" isUploadImage:NO params:dic2 success:success failure:failure];
     
     return task;
     
