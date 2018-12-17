@@ -18,8 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SQNetworkInterface : NSObject
 + (NSString *)nowTime;
+#pragma mark --- 充值
++ (void)iRequestRechargeAndResult:(blockResult)result;//充值界面的数据
 
-#pragma mark --- Chapter
+
+#pragma mark --- 章节列表
 + (void)iRequestChapterCleanParames:(NSDictionary *)parames andResult:(blockResult)result;//清除所有章节数据
 
 + (void)iRequestChapterMainParames:(NSDictionary *)parames andResult:(blockResult)result;
@@ -32,19 +35,19 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)iRequestChapterCollectionDeleteParames:(NSDictionary *)parames andResult:(blockResult)result;
 + (void)iRequestChapterNotesDeleteParames:(NSDictionary *)parames andResult:(blockResult)result;
 
-#pragma mark -- make Problem
+#pragma mark -- 做题
 + (void)iRequestMakeProblemParames:(NSDictionary *)parames andResult:(blockResult)result;//获取题目
 + (void)iRequestMakeProblemMakeParames:(NSDictionary *)parames andResult:(blockResult)result;//做题
 
 
 
 #pragma mark -- 巩固
-+ (void)iRequestConsolidateCollectionParames:(NSDictionary *)parames andResult:(blockResult)result;
-+ (void)iRequestConsolidateNotesParames:(NSDictionary *)parames andResult:(blockResult)result;
-//+ (void)iRequestConsolidateEasyWrongParames:(NSDictionary *)parames andResult:(blockResult)result;
++ (void)iRequestConsolidateCollectionParames:(NSDictionary *)parames andResult:(blockResult)result;//收藏
++ (void)iRequestConsolidateNotesParames:(NSDictionary *)parames andResult:(blockResult)result;//笔记
+//+ (void)iRequestConsolidateEasyWrongParames:(NSDictionary *)parames andResult:(blockResult)result;//易错
 
-+ (void)iRequestConsolidateHotParames:(NSDictionary *)parames andResult:(blockResult)result;
-+ (void)iRequestConsolidateMyWrongParames:(NSDictionary *)parames andResult:(blockResult)result;
++ (void)iRequestConsolidateHotParames:(NSDictionary *)parames andResult:(blockResult)result;//热门
++ (void)iRequestConsolidateMyWrongParames:(NSDictionary *)parames andResult:(blockResult)result;//错题
 //+ (void)iRequestConsolidateScoreParames:(NSDictionary *)parames andResult:(blockResult)result;
 @end
 

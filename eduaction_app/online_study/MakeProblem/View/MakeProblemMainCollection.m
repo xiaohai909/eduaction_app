@@ -204,8 +204,7 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
         //字体变化
         cell.lbl_now.font = [UIFont systemFontOfSize:16+self.addTextFont];
         cell.lbl_total.font = [UIFont systemFontOfSize:16+self.addTextFont];
-//        cell.lbl_type.font = [UIFont systemFontOfSize:14+self.addTextFont];
-        //这里type就不单独写了，跟content一起z写
+        //这里type就不单独写了，跟content一起z写cell.lbl_type
         cell.lbl_content.font = [UIFont systemFontOfSize:14+self.addTextFont];
         
         return cell;
@@ -280,12 +279,6 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
         return cell;
     }
 }
-/*
- //单选，多选
- if (@"单选"||@"判断题") {//选择完就确认对错}
- else if(@"多选") {//通过确认按钮来确认答题对错}
- else{ }
- */
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     /*
      1.如果是考试模式，就不提示解析，要不要告诉对方正确与否呢
@@ -298,8 +291,6 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
         if (self.blockMakeProblem) {
             self.blockMakeProblem(self.model.selectTrue?@"1":@"0");
         }
-//        [self requestAnswer];//告诉后台用户的选择
-#warning 这里界面的变化，要不要等提交给后台答题情况后再做动作
         //如果这题选对了且能自动跳转到下一题才自动跳转
         if (self.isAutoReturn && self.model.selectTrue) {
             //进入下一题
@@ -363,25 +354,5 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
         }
        return OptionStateNormal;
     }
-}
-
-#pragma mark --- request
-- (void)requestAnswer//告诉后台回答的情况
-{
-    //self.model.ID
-    NSMutableDictionary *dic = [self.model.questionAnswer mj_keyValues];
-    [dic removeObjectForKey:@"ID"];
-    [dic setObject:self.model.questionAnswer.ID forKey:@"id"];
-    [dic setObject:self.model.selectTrue?@"1":@"0" forKey:@"correct"];
-    [dic setObject:[SQNetworkInterface nowTime] forKey:@"answerTime"];
-    [dic setObject:@"33" forKey:@"userId"];
-    [dic setObject:self.model.ID forKey:@"questionId"];
-    [SQNetworkInterface iRequestMakeProblemMakeParames:dic andResult:^(NSInteger state, NSString * _Nonnull msg, NSString * _Nonnull total, id  _Nonnull resultData) {
-        if (state == CODE_SUCCESS) {
-            //
-            self.model.questionAnswer.collection = dic[@"collection"];
-            DDLogVerbose(@"提交做题的正确与否");
-        }
-    }];
 }
 @end

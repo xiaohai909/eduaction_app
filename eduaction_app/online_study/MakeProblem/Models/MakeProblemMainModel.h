@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) BOOL selectTrue;
 @property (nonatomic, assign) NSInteger addTextFont;//字体更改的倍数
 @property (nonatomic, assign) CGFloat height_analysis,height_notes,height_title;
-@property (nonatomic, copy) NSString *rowsNum;//当前是第几题
+@property (nonatomic, copy) NSString *rowNum;//当前是第几题
 
 @property (nonatomic, copy) NSString *ID;
 @property (nonatomic, copy) NSString *questionTitle;
@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *subjectCode;
 @property (nonatomic, copy) NSString *analysis;
 @property (nonatomic, copy) NSString *answer;
+@property (nonatomic, copy) NSString *correctAnswer;
+
 @property (nonatomic, copy) NSString *collectionCount;
 @property (nonatomic, copy) NSString *discussCount;
 @property (nonatomic, copy) NSString *examinationPoint;

@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat height_notes;
 
 
-//@property (nonatomic, copy) NSString *id;
+@property (nonatomic, copy) NSString *ID;
 @property (nonatomic, copy) NSString *notes;
 @property (nonatomic, copy) NSString *questionId;
 @property (nonatomic, copy) NSString *questionTitle;
@@ -32,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *discussState;
 @property (nonatomic, copy) NSString *discussTime;
 @property (nonatomic, copy) NSString *empty;
+@property (nonatomic, copy) NSString *rowNum;
+
 @end
 
 NS_ASSUME_NONNULL_END

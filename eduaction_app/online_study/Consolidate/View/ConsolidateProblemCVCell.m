@@ -13,6 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.lbl_content.numberOfLines = 1;
 }
 
 

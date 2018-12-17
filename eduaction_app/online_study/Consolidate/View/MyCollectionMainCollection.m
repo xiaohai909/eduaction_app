@@ -75,8 +75,9 @@ static NSString * const cell1 = @"ConsolidateProblemCVCell";
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ConsolidateMyWrongModel *model = self.array_models[indexPath.section];
-    return CGSizeMake(self.py_width, collection_modify?model.height_modify:model.height);
+//    ConsolidateMyWrongModel *model = self.array_models[indexPath.section];
+//    return CGSizeMake(self.py_width, collection_modify?model.height_modify:model.height);
+    return CGSizeMake(self.py_width, indexPath.row?25:40);
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

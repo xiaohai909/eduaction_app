@@ -19,7 +19,12 @@
 
 //每一页获取的题目个数
 static NSInteger const pageCount = 30;
-
+typedef NS_ENUM(NSUInteger, MakeProblemMainMode) {
+    MakeProblemMainModeSimulateExam,//模拟考试
+    
+    MakeProblemMainModeErrorPractice,//错题练习
+    MakeProblemMainModeRandomPractice,//随机练习
+};
 
 @interface MakeProblemMainVC ()
 @property (nonatomic, strong) MakeProblemSceneCollection *collection_main;
@@ -29,6 +34,7 @@ static NSInteger const pageCount = 30;
 @property (nonatomic, strong) MakeProblemToolView *view_more;//只在随机练习的时候，可以有更多操作
 
 @property (nonatomic, assign) MakeProblemMainMode viewMode;//做题的类型
+@property (nonatomic, assign) MakeProblemMainVCMode vcModel;//做题界面
 
 @property (nonatomic, strong) DataModel *data_model;
 //@property (nonatomic, assign) NSInteger total;//总的数据
@@ -44,7 +50,6 @@ static NSInteger const pageCount = 30;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"随机练习";
     [[IQKeyboardManager sharedManager] setEnable:NO];
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -52,64 +57,67 @@ static NSInteger const pageCount = 30;
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self createNavigationLeftItem:YES andImage:@"top_btn_return" andTitle:@"   "];
-    UIButton *btn = [self createNavigationLeftItem:NO andImage:@"" andTitle:@"题卡"];
-    
-    @weakify(self);
-    [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        @strongify(self);
-        //跳转到指定的题
-        MakeProblemQuestionCardVC *vc = [MakeProblemQuestionCardVC new];
-        vc.questionHouse = self.questionHouse;
-        vc.now_row = [self.collection_main.currentPage integerValue];
-        [vc setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
-            self.collection_main.currentPage = @(indexPath.row);
-            MakeProblemAnserModel *model = self.collection_main.array_models[indexPath.row];
-            [self.collection_main selectItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.row] animated:YES scrollPosition:UICollectionViewScrollPositionLeft];
-            //要不要提前加载
-            if (model.ID.length == 0) {
-                NSInteger page = indexPath.row/pageCount+1;//page从1开始
-                [self requestPage:page];
-            }
-        }];
-        [self.navigationController pushViewController:vc animated:YES];
-    }];
     [self.navigationController.navigationBar setBackgroundImage:[CommonFunciton BgImageFromColors:@[HexRGB(0xFF5F5E),HexRGB(0xFC7456),HexRGB(0xFC7855)] withFrame:CGRectMake(0, 0, ZTWidth, NaviIPHONEX) gradientDir:leftToright] forBarMetrics:UIBarMetricsDefault];
 }
 
 #pragma mark --- 从外部带回来的参数，做题方式
+//不同的入口
+- (void)setMakeProblemVC:(MakeProblemMainVCMode)vcMode
+{
+    self.vcModel = vcMode;
+    if (vcMode == MakeProblemMainVCChapterWrong) {
+        self.title = @"错题解析";
+        [self setMode:MakeProblemMainModeErrorPractice andShowMode:MakeProblemModeMemory];        
+//        [self requestMyWrongPage:1];
+    }
+    else if (vcMode == MakeProblemMainVCChapterPractice) {
+        self.title = @"章节练习";
+        [self setMode:MakeProblemMainModeErrorPractice andShowMode:MakeProblemModeAnswer];
+        [self setNavRight];//提卡
+    }
+    else if(vcMode == MakeProblemMainVCMyWrong){
+        self.title = @"错题练习";
+        [self setMode:MakeProblemMainModeErrorPractice andShowMode:MakeProblemModeAnswer];
+//        [self requestAllMyWrongPage:1];
+    }
+    else if(vcMode == MakeProblemMainVCSimulateExame){
+        self.title = @"模拟考试";
+        [self setMode:MakeProblemMainModeSimulateExam andShowMode:MakeProblemModeExam];
+    }
+    else if (vcMode == MakeProblemMainVCRandomPractice){
+        self.title = @"随机练习";
+        [self setMode:MakeProblemMainModeRandomPractice andShowMode:MakeProblemModeAnswer];
+    }
+    NSInteger page = self.lastNum.length?(([self.lastNum integerValue]-1)/pageCount+1):1;
+    [self gotoRequestPage:page];
+}
+//数据加载
+- (void)gotoRequestPage:(NSInteger)page
+{
+    if (self.vcModel == MakeProblemMainVCChapterWrong) {
+        [self requestMyWrongPage:page];
+    }
+    else if (self.vcModel == MakeProblemMainVCChapterPractice) {
+        [self requestChapterPage:page];
+    }
+    else if(self.vcModel == MakeProblemMainVCMyWrong){
+        [self requestAllMyWrongPage:page];
+    }
+    else if(self.vcModel == MakeProblemMainVCSimulateExame){
+    }
+    else if (self.vcModel == MakeProblemMainVCRandomPractice){
+    }
+}
 - (void)setMode:(MakeProblemMainMode)mode andShowMode:(MakeProblemMode)showMode{
     //设置完参数，界面才要加载
     self.viewMode = mode;
-    [self setVCTitle];
     [self.view addSubview:self.view_bottom];
     //位置很重要
     [self.view addSubview:self.collection_main];
     self.collection_main.viewMode = showMode;//考试
-    
     [self.view addSubview:self.btn_add];
-    
-#warning 这里要判断到底要获取哪种数据，标题的名字也要判断
-    //本章的错题解析，继续做题，所有数据
-    //模拟考试，历年真题，随机练习，错题练习，
-    if (self.myWrongType) {
-        //错题解析
-        [self requestMyWrongPage:1];
-    }
-    else{
-        [self requestPage:self.lastNum.length?(([self.lastNum integerValue]-1)/pageCount+1):1];
-    }
 }
-- (void)setVCTitle {
-    if (self.viewMode == MakeProblemMainModeSimulateExam) {
-        self.title = @"模拟考试";
-    }
-    else if (self.viewMode == MakeProblemMainModeErrorPractice) {
-        self.title = @"错题练习";
-    }
-    else {
-        self.title = @"随机练习";
-    }
-}
+
 - (MakeProblemMode)getSceneCollectionMode{//获得题目的类型
     if (self.viewMode == MakeProblemMainModeSimulateExam) {
         return MakeProblemModeExam;
@@ -128,6 +136,30 @@ static NSInteger const pageCount = 30;
     else {
         return MakeProblemToolTypeRandomPractice;
     }
+}
+- (void)setNavRight
+{
+    UIButton *btn = [self createNavigationLeftItem:NO andImage:@"" andTitle:@"题卡"];
+    
+    @weakify(self);
+    [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
+        //跳转到指定的题
+        MakeProblemQuestionCardVC *vc = [MakeProblemQuestionCardVC new];
+        vc.questionHouse = self.questionHouse;
+        vc.now_row = [self.collection_main.currentPage integerValue];
+        [vc setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
+            self.collection_main.currentPage = @(indexPath.row);
+            MakeProblemAnserModel *model = self.collection_main.array_models[indexPath.row];
+            [self.collection_main selectItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.row] animated:YES scrollPosition:UICollectionViewScrollPositionLeft];
+            //要不要提前加载
+            if (model.ID.length == 0) {
+                NSInteger page = indexPath.row/pageCount+1;//page从1开始
+                [self gotoRequestPage:page];
+            }
+        }];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
 }
 #pragma mark --- view creat
 - (MakeProblemSceneCollection *)collection_main {
@@ -159,7 +191,7 @@ static NSInteger const pageCount = 30;
         //要展示的题目y还没加载，就去加载
         [_collection_main setBlockRequestPage:^(NSInteger row) {
             @strongify(self)
-            [self requestPage:row/pageCount+1];
+            [self gotoRequestPage:row/pageCount+1];
         }];
         //什么时候获取到全部数据呢，这个是问题
     }
@@ -226,6 +258,7 @@ static NSInteger const pageCount = 30;
             else{//答题模式
                 self.collection_main.viewMode = MakeProblemModeAnswer;//答题模式
             }
+            [self.collection_main reloadData];
             _view_change.hidden = YES;
         }];        
         //
@@ -317,6 +350,7 @@ static NSInteger const pageCount = 30;
         self.view_more.hidden = !self.view_more.hidden;
     }
     else if ([btn.titleLabel.text isEqualToString:@"设置"]) {
+        btn.selected = NO;
         MakeProblemPopView *view =[MakeProblemPopView creatSetPopView];
         [view setBlockChange:^{
             NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:MakeProblemSetMessage];
@@ -400,7 +434,7 @@ static NSInteger const pageCount = 30;
 
 #pragma mark --- request
 //本章错题
-- (void)requestPage:(NSInteger)page
+- (void)requestChapterPage:(NSInteger)page
 {
     NSDictionary *parames;
     parames = @{@"questionHouse":self.questionHouse,@"userId":@"33",@"page":@(page),@"rows":@(pageCount)};
@@ -409,18 +443,28 @@ static NSInteger const pageCount = 30;
             self.collection_main.total = [total integerValue];
             NSMutableArray *array = [MakeProblemMainModel mj_objectArrayWithKeyValuesArray:resultData];
             [self dataSetArray:array andPage:page];
-            
         }
     }];
 }
-//错题解析
+//本章错题解析
 - (void)requestMyWrongPage:(NSInteger)page
 {
     if (!self.myWrongType) {
         return;
     }
     //获取本章节本题型的收藏
-    [SQNetworkInterface iRequestChapterScoreDetailListParames:@{@"questionHouse":self.questionHouse,@"type":self.myWrongType,@"userId":@"33",@"page":@(page),@"rows":@"10"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
+    [SQNetworkInterface iRequestChapterScoreDetailListParames:@{@"questionHouse":self.questionHouse,@"type":self.myWrongType,@"userId":@"33",@"page":@(page),@"rows":@(pageCount)} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
+        if (state == CODE_SUCCESS) {
+            self.collection_main.total = [total integerValue];
+            NSMutableArray *array = [MakeProblemMainModel mj_objectArrayWithKeyValuesArray:resultData];
+            [self dataSetArray:array andPage:page];
+        }
+    }];
+}
+//所有错题练习
+- (void)requestAllMyWrongPage:(NSInteger)page
+{
+    [SQNetworkInterface iRequestConsolidateMyWrongParames:@{@"userId":@"33",@"page":@(page),@"rows":@(pageCount)} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
         if (state == CODE_SUCCESS) {
             self.collection_main.total = [total integerValue];
             NSMutableArray *array = [MakeProblemMainModel mj_objectArrayWithKeyValuesArray:resultData];
@@ -435,12 +479,11 @@ static NSInteger const pageCount = 30;
         self.data_model = [DataModel new];
         for (int i=0; i<self.collection_main.total; i++) {
             MakeProblemMainModel *model = [MakeProblemMainModel new];
-            model.rowsNum = [NSString stringWithFormat:@"%d",i];
+            model.rowNum = [NSString stringWithFormat:@"%d",i];
             [self.data_model.result addObject:model];
         }
         //第一次加载
         [self.data_model.result replaceObjectsInRange:NSMakeRange(pageCount*(page-1), array.count) withObjectsFromArray:array];
-        
         self.collection_main.array_models = self.data_model.result;
         [self.collection_main reloadData];
         if (self.lastNum.length) {//调到上次做题的地方
@@ -459,10 +502,21 @@ static NSInteger const pageCount = 30;
 - (void)requestAnswer:(NSDictionary *)dic andType:(NSInteger)type//是收藏还是笔记，修改答案，添加评论
 {
     MakeProblemMainModel *model = self.collection_main.array_models[[self.collection_main.currentPage integerValue]];
+
     NSMutableDictionary *parames = [NSMutableDictionary dictionaryWithDictionary:dic];
     [parames setObject:model.ID forKey:@"questionId"];
     [parames setObject:@"33" forKey:@"userId"];
-
+    if (type == 4) {//答题的时候
+        [parames setObject:@"1" forKey:@"empty"];
+    }
+    else{//收藏，笔记，评论
+        if (model.questionAnswer.ID.length) {//已经答题
+            [parames setObject:@"1" forKey:@"empty"];
+        }
+        else{
+            [parames setObject:@"0" forKey:@"empty"];
+        }
+    }
     [SQNetworkInterface iRequestMakeProblemMakeParames:parames andResult:^(NSInteger state, NSString * _Nonnull msg, NSString * _Nonnull total, id  _Nonnull resultData) {
         if (state == CODE_SUCCESS) {
             //notes笔记，answer修改答案，correct做题正确与否，answerTime做题时间，discussTime修改时间，collection收藏，discuss评论
@@ -485,6 +539,7 @@ static NSInteger const pageCount = 30;
                 model.questionAnswer.correct = dic[@"correct"];
                 model.questionAnswer.answerTime = dic[@"answerTime"];
             }
+            [self.data_model.result replaceObjectAtIndex:[self.collection_main.currentPage integerValue] withObject:model];
             [self.collection_main reloadSections:[NSIndexSet indexSetWithIndex:[self.collection_main.currentPage integerValue]]];
              DDLogDebug(@"提交做题的正确与否");
         }

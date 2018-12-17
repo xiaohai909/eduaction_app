@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ConsolidateMyWrongModel.h"
+#import "MakeProblemMainModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

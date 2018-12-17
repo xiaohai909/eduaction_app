@@ -8,7 +8,7 @@
 
 #import "ConsolidateHotMainCollection.h"
 #import "ConsolidateProblemCVCell.h"
-
+#import "MakeProblemMainModel.h"
 
 static NSString * const cell1 = @"ConsolidateProblemCVCell";
 
@@ -50,9 +50,11 @@ static NSString * const cell1 = @"ConsolidateProblemCVCell";
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    MakeProblemMainModel *model = self.array_models[indexPath.section];
     if (indexPath.row == 0) {
         ConsolidateProblemCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-        [cell setCollectionModify:NO andTitle:@"1.盐类泻药应选用（）"];
+        [cell setCollectionModify:NO andTitle:[NSString stringWithFormat:@"%ld.%@",indexPath.section+1,model.questionTitle]];
+        cell.lbl_content.numberOfLines = 1;
         cell.lbl_content.textColor = HexRGB(0x333333);
         cell.lbl_content.font = [UIFont systemFontOfSize:16];
         cell.lbl_content_left.constant = 15;
@@ -60,7 +62,7 @@ static NSString * const cell1 = @"ConsolidateProblemCVCell";
     }
     else {
         ConsolidateProblemCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-        [cell setCollectionModify:YES andTitle:@"123456人收藏"];
+        [cell setCollectionModify:YES andTitle:[NSString stringWithFormat:@"%@人收藏",model.collectionCount]];
         [cell.btn_image setImage:[UIImage imageNamed:@"consolidate_btn_like"] forState:UIControlStateNormal];
         cell.lbl_content.textColor = HexRGB(0x666666);
         cell.lbl_content.font = [UIFont systemFontOfSize:14];
@@ -70,7 +72,7 @@ static NSString * const cell1 = @"ConsolidateProblemCVCell";
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-  
+    NSLog(@"%@",indexPath);
 }
 
 @end

@@ -9,6 +9,11 @@
 #import "ConsolidateMyWrongModel.h"
 
 @implementation ConsolidateMyWrongModel
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"ID": @"id"};
+}
+
 - (CGFloat)height
 {
     if (_height) {

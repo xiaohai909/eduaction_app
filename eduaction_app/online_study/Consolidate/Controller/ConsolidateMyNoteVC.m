@@ -18,7 +18,7 @@
 @property (nonatomic, strong) ConsolidateBottomPageView *view_page;
 @property (nonatomic, strong) RechargeMainBottomView *view_bottom;
 @property (nonatomic, strong) DataModel *data_model;
-
+@property (nonatomic, assign) NSInteger pageCount;
 @end
 
 @implementation ConsolidateMyNoteVC
@@ -73,6 +73,7 @@
             @strongify(self)
             if (self.view_page.tag>1) {
                 self.view_page.tag -= 1;
+                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(self.view_page.tag),@(self.pageCount)];
                 self.collection_main.array_models = (NSMutableArray *)[self.data_model.result subarrayWithRange:NSMakeRange((self.view_page.tag-1)*10, 10)];
                 [self.collection_main reloadData];
             }
@@ -82,9 +83,10 @@
         }];
         [[_view_page.btn_next rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self)
-            if (self.view_page.tag>1) {
+            if (self.view_page.tag<self.pageCount) {
                 self.view_page.tag += 1;
                 if (self.data_model.pageNumber>=_view_page.tag) {
+                    self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(self.view_page.tag),@(self.pageCount)];
                     self.collection_main.array_models = (NSMutableArray *)[self.data_model.result subarrayWithRange:NSMakeRange((self.view_page.tag-1)*10, 10)];
                     [self.collection_main reloadData];
                 }
@@ -111,12 +113,6 @@
                 [self changeViewMode];
             }
             else if ([title isEqualToString:@"移除"]) {
-                //如果当前页删除了数据，那后面的数据就要重新获取
-                self.data_model.pageNumber = self.view_page.tag;
-                self.data_model.result = (NSMutableArray *)[self.data_model.result subarrayWithRange:NSMakeRange(0, (self.view_page.tag-1)*10)];
-                self.collection_main.set_choise = [NSMutableSet set];
-                [self.collection_main setCollectionModify:NO andAll:NO];
-                
                 [self requestDelete:self.collection_main.set_choise];
             }
             else{
@@ -155,8 +151,8 @@
             if (state == CODE_SUCCESS) {
                 NSMutableArray *array = [ConsolidateMyWrongModel mj_objectArrayWithKeyValuesArray:resultData];
                 self.collection_main.array_models = array;
-                NSInteger pageCount = ([total integerValue]%10)?([total integerValue]/10+1):([total integerValue]/10);
-                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(page),@(pageCount)];
+                self.pageCount = ([total integerValue]%10)?([total integerValue]/10+1):([total integerValue]/10);
+                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(page),@(self.pageCount)];
                 self.title = [NSString stringWithFormat:@"我的笔记（%@）",total];
                 
                 if (refresh) {
@@ -181,8 +177,8 @@
             if (state == CODE_SUCCESS) {
                 NSMutableArray *array = [ConsolidateMyWrongModel mj_objectArrayWithKeyValuesArray:resultData];
                 self.collection_main.array_models = array;
-                NSInteger pageCount = ([total integerValue]%10)?([total integerValue]/10+1):([total integerValue]/10);
-                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(page),@(pageCount)];
+                self.pageCount = ([total integerValue]%10)?([total integerValue]/10+1):([total integerValue]/10);
+                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(page),@(self.pageCount)];
                 self.title = [NSString stringWithFormat:@"我的笔记（%@）",total];
                 
                 if (refresh) {
@@ -207,11 +203,21 @@
     if (deleteSet.count) {
         NSMutableString *ids = [NSMutableString string];
         for (ConsolidateMyWrongModel *model in deleteSet) {
-            [ids appendFormat:@"%@,",model.questionId];
+            [ids appendFormat:@"%@,",model.ID];
         }
-        [SQNetworkInterface iRequestChapterNotesDeleteParames:@{@"ids":@"1,",@"userId":@"33"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
+        [SQNetworkInterface iRequestChapterNotesDeleteParames:@{@"ids":ids,@"userId":@"33"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
             if (state == CODE_SUCCESS) {
-                [self requestRefresh:NO];
+                CGFloat count = self.data_model.result.count-(self.view_page.tag-1)*10;//当前页往后的数据总数
+                [self.data_model.result removeObjectsInRange:NSMakeRange((self.view_page.tag-1)*10, count)];
+                [self.collection_main.array_models removeAllObjects];
+                self.collection_main.set_choise = [NSMutableSet set];
+                [self.collection_main setCollectionModify:NO andAll:NO];
+                self.data_model.pageNumber = self.view_page.tag-1;//才不会获取错的页数
+                [self requestRefresh:NO];//这里会加一
+                
+                //取消编辑状态
+                self.btn_right.selected = NO;
+                [self changeViewMode];
             }
             [self.collection_main reloadData];
         }];

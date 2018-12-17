@@ -83,12 +83,19 @@
                         [self.navigationController pushViewController:vc animated:YES];
                     }
                     else {
-                        //错题解析
-                        MakeProblemMainVC *vc = [MakeProblemMainVC new];
-                        vc.questionHouse = self.questionHouse;
-                        vc.myWrongType = self.collection_main.model.analysis;
-                        [vc setMode:MakeProblemMainModeErrorPractice andShowMode:MakeProblemModeMemory];
-                        [self.navigationController pushViewController:vc animated:YES];
+                        //如果有错题，才要跳转到错题解析
+                        if (self.collection_main.model.wrongCount.length) {
+                            //错题解析
+                            MakeProblemMainVC *vc = [MakeProblemMainVC new];
+                            vc.questionHouse = self.questionHouse;
+                            vc.myWrongType = self.collection_main.model.analysis;
+                            [vc setMakeProblemVC:MakeProblemMainVCChapterWrong];
+                            [self.navigationController pushViewController:vc animated:YES];
+                        }
+                        else{
+                            //没有错题
+                            DDLogVerbose(@"没有错题哟~");
+                        }
                     }
                 }
             }
@@ -114,13 +121,8 @@
         @weakify(self)
         [[_btn_redo rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self)
-//            [self requestRedo];
-            
-            //跳转到做题
-            MakeProblemMainVC *vc = [MakeProblemMainVC new];
-            vc.questionHouse = self.questionHouse;
-            [vc setMode:MakeProblemMainModeErrorPractice andShowMode:MakeProblemModeAnswer];
-            [self.navigationController pushViewController:vc animated:YES];
+            //重新做题
+            [self requestRedo];
         }];
     }
     return _btn_redo;
@@ -145,7 +147,7 @@
             //跳转到做题
             MakeProblemMainVC *vc = [MakeProblemMainVC new];
             vc.questionHouse = self.questionHouse;
-            [vc setMode:MakeProblemMainModeErrorPractice andShowMode:MakeProblemModeAnswer];
+            [vc setMakeProblemVC:MakeProblemMainVCChapterPractice];
             [self.navigationController pushViewController:vc animated:YES];
         }
     }];

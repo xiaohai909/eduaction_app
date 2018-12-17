@@ -138,6 +138,7 @@
 		04C5ED5A21AD239E0024F826 /* MineUserCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C5ED5821AD239E0024F826 /* MineUserCVCell.xib */; };
 		04C5ED6121AD30510024F826 /* MineMassageCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5ED5F21AD30510024F826 /* MineMassageCVCell.m */; };
 		04C5ED6221AD30510024F826 /* MineMassageCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C5ED6021AD30510024F826 /* MineMassageCVCell.xib */; };
+		04C816CA21C1FA760021CC65 /* RechargeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C816C921C1FA760021CC65 /* RechargeModel.m */; };
 		04CA92AD21B0DE3D00F39561 /* WCNAreaPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA92A721B0DE3D00F39561 /* WCNAreaPickerView.m */; };
 		04CA92AE21B0DE3D00F39561 /* WCNLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA92A821B0DE3D00F39561 /* WCNLocation.m */; };
 		04CA92AF21B0DE3D00F39561 /* WCNAreaPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CA92A921B0DE3D00F39561 /* WCNAreaPickerView.xib */; };
@@ -145,9 +146,9 @@
 		04CA92B421B0E27600F39561 /* PhotoChoiseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA92B221B0E27600F39561 /* PhotoChoiseVC.m */; };
 		04CA92B721B11BCB00F39561 /* MakeProblemOptionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA92B621B11BCB00F39561 /* MakeProblemOptionModel.m */; };
 		04D5758F21BE44B70023E649 /* MakeProblemAnserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D5758E21BE44B70023E649 /* MakeProblemAnserModel.m */; };
+		04E08AB421C3BB5E00381A8A /* ConsolidateBottomPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E08AB321C3BB5E00381A8A /* ConsolidateBottomPageView.xib */; };
 		04E6DF7A21AF836800AD613F /* ConsolidateMyWrongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6DF7921AF836800AD613F /* ConsolidateMyWrongModel.m */; };
 		04E6DF7D21AF960E00AD613F /* ConsolidateBottomPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E6DF7C21AF960E00AD613F /* ConsolidateBottomPageView.m */; };
-		04E6DF7F21AF961900AD613F /* ConsolidateBottomPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6DF7E21AF961900AD613F /* ConsolidateBottomPageView.xib */; };
 		04FCCCEE21AE29980015AC26 /* SQNetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCCCED21AE29980015AC26 /* SQNetworkInterface.m */; };
 		04FCCCF121AE345F0015AC26 /* SQNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCCCF021AE345F0015AC26 /* SQNetworkManager.m */; };
 		04FCCCF421AE3E540015AC26 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCCCF321AE3E530015AC26 /* UIScrollView+Refresh.m */; };
@@ -486,6 +487,8 @@
 		04C5ED5E21AD30510024F826 /* MineMassageCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineMassageCVCell.h; sourceTree = "<group>"; };
 		04C5ED5F21AD30510024F826 /* MineMassageCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineMassageCVCell.m; sourceTree = "<group>"; };
 		04C5ED6021AD30510024F826 /* MineMassageCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineMassageCVCell.xib; sourceTree = "<group>"; };
+		04C816C821C1FA760021CC65 /* RechargeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeModel.h; sourceTree = "<group>"; };
+		04C816C921C1FA760021CC65 /* RechargeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeModel.m; sourceTree = "<group>"; };
 		04CA92A721B0DE3D00F39561 /* WCNAreaPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCNAreaPickerView.m; sourceTree = "<group>"; };
 		04CA92A821B0DE3D00F39561 /* WCNLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCNLocation.m; sourceTree = "<group>"; };
 		04CA92A921B0DE3D00F39561 /* WCNAreaPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCNAreaPickerView.xib; sourceTree = "<group>"; };
@@ -498,11 +501,11 @@
 		04CA92B621B11BCB00F39561 /* MakeProblemOptionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemOptionModel.m; sourceTree = "<group>"; };
 		04D5758D21BE44B70023E649 /* MakeProblemAnserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemAnserModel.h; sourceTree = "<group>"; };
 		04D5758E21BE44B70023E649 /* MakeProblemAnserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemAnserModel.m; sourceTree = "<group>"; };
+		04E08AB321C3BB5E00381A8A /* ConsolidateBottomPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsolidateBottomPageView.xib; sourceTree = "<group>"; };
 		04E6DF7821AF836800AD613F /* ConsolidateMyWrongModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateMyWrongModel.h; sourceTree = "<group>"; };
 		04E6DF7921AF836800AD613F /* ConsolidateMyWrongModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateMyWrongModel.m; sourceTree = "<group>"; };
 		04E6DF7B21AF960E00AD613F /* ConsolidateBottomPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsolidateBottomPageView.h; sourceTree = "<group>"; };
 		04E6DF7C21AF960E00AD613F /* ConsolidateBottomPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsolidateBottomPageView.m; sourceTree = "<group>"; };
-		04E6DF7E21AF961900AD613F /* ConsolidateBottomPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsolidateBottomPageView.xib; sourceTree = "<group>"; };
 		04FCCCEC21AE29980015AC26 /* SQNetworkInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQNetworkInterface.h; sourceTree = "<group>"; };
 		04FCCCED21AE29980015AC26 /* SQNetworkInterface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQNetworkInterface.m; sourceTree = "<group>"; };
 		04FCCCEF21AE345F0015AC26 /* SQNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQNetworkManager.h; sourceTree = "<group>"; };
@@ -843,6 +846,7 @@
 		0477160321999F6F0051FB83 /* Recharge */ = {
 			isa = PBXGroup;
 			children = (
+				04C816C721C1FA630021CC65 /* Model */,
 				0477160421999F6F0051FB83 /* Controller */,
 				0477160521999F6F0051FB83 /* View */,
 			);
@@ -1044,7 +1048,7 @@
 				04B3C086219BC9C90035C995 /* ConsolidateScoreLineView.m */,
 				04E6DF7B21AF960E00AD613F /* ConsolidateBottomPageView.h */,
 				04E6DF7C21AF960E00AD613F /* ConsolidateBottomPageView.m */,
-				04E6DF7E21AF961900AD613F /* ConsolidateBottomPageView.xib */,
+				04E08AB321C3BB5E00381A8A /* ConsolidateBottomPageView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1218,6 +1222,15 @@
 				042ED7F421BF9BA100128AAB /* MineToolExchangeView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04C816C721C1FA630021CC65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04C816C821C1FA760021CC65 /* RechargeModel.h */,
+				04C816C921C1FA760021CC65 /* RechargeModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		04CA92A521B0DE3D00F39561 /* DefaultTool */ = {
@@ -1782,7 +1795,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B1B1342194200E00EEB51E /* MakeProblemPopView.xib in Resources */,
-				04E6DF7F21AF961900AD613F /* ConsolidateBottomPageView.xib in Resources */,
 				045B11D321912198001FC325 /* ChapterMainCVCell.xib in Resources */,
 				3E635FC521928A0A006FC152 /* SearchResultH.xib in Resources */,
 				3EE6F4E721A257BA0068F78D /* trainRightCell.xib in Resources */,
@@ -1836,6 +1848,7 @@
 				3E83D2D3217E133F00E78B1C /* loginview.xib in Resources */,
 				04C5ED5A21AD239E0024F826 /* MineUserCVCell.xib in Resources */,
 				3E635FBB219282CD006FC152 /* AlertStringView.xib in Resources */,
+				04E08AB421C3BB5E00381A8A /* ConsolidateBottomPageView.xib in Resources */,
 				042ED80021BFA40100128AAB /* MineHelpSetCVCell.xib in Resources */,
 				3E3AEFC1217DFDA8006C2860 /* Main.storyboard in Resources */,
 				045B11FD21916B2B001FC325 /* MakeProblemOptionCVCell.xib in Resources */,
@@ -1987,6 +2000,7 @@
 				04C5ED6121AD30510024F826 /* MineMassageCVCell.m in Sources */,
 				3EE6F4EB21A25B370068F78D /* trainRightHead.m in Sources */,
 				3E635FCC21929377006FC152 /* MainCollectionFowLayout.m in Sources */,
+				04C816CA21C1FA760021CC65 /* RechargeModel.m in Sources */,
 				3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */,
 				3EE6F4EF21A291870068F78D /* trainRightCollection.m in Sources */,
 				04B3C06F219BB1B90035C995 /* ConsolidateHotMainVC.m in Sources */,

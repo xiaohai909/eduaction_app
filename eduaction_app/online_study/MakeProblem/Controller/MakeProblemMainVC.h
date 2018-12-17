@@ -11,12 +11,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, MakeProblemMainMode) {
-    MakeProblemMainModeSimulateExam,//模拟考试
 
-    MakeProblemMainModeErrorPractice,//错题练习
-    MakeProblemMainModeRandomPractice,//随机练习
+
+typedef NS_ENUM(NSUInteger, MakeProblemMainVCMode) {
+    MakeProblemMainVCChapterWrong,//错题解析
+    MakeProblemMainVCChapterPractice,//章节练习
+    MakeProblemMainVCMyWrong,//错题练习
+    MakeProblemMainVCSimulateExame,//模拟考场
+    MakeProblemMainVCRandomPractice//随机练习
 };
+
 @interface MakeProblemMainVC : BaseViewController
 @property (nonatomic, strong) NSString *questionHouse;
 @property (nonatomic, strong) NSString *lastNum;
@@ -31,7 +35,10 @@ typedef NS_ENUM(NSUInteger, MakeProblemMainMode) {
 //考试模式：选完就下一题
 //背题模式：显示答案解析
 //练习模式：做题并显示答案解析
-- (void)setMode:(MakeProblemMainMode)mode andShowMode:(MakeProblemMode)showMode;
+//不同的入口
+- (void)setMakeProblemVC:(MakeProblemMainVCMode)vcMode;
+
+//- (void)setMode:(MakeProblemMainMode)mode andShowMode:(MakeProblemMode)showMode;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ConsolidateHotMainCollection : UICollectionView<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSMutableArray *array_models;//数据
 
+
+
 @end
 
 NS_ASSUME_NONNULL_END

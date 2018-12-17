@@ -10,6 +10,10 @@
 
 @implementation ConsolidateBottomPageView
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -18,4 +22,7 @@
 }
 */
 
+- (IBAction)btnAction:(UIButton *)sender {
+    NSLog(@"ddddd");
+}
 @end

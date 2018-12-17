@@ -45,7 +45,7 @@
             @strongify(self)
             //跳转到对应的考试
             MakeProblemMainVC *vc = [MakeProblemMainVC new];
-            [vc setMode:MakeProblemMainModeSimulateExam andShowMode:MakeProblemModeExam];
+            [vc setMakeProblemVC:MakeProblemMainVCSimulateExame];
             [self.navigationController pushViewController:vc animated:YES];
         }];
     }

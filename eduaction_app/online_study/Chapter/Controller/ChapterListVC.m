@@ -50,14 +50,8 @@
             MakeProblemMainVC *vc = [MakeProblemMainVC new];
             vc.questionHouse = model.secClassID;
             vc.lastNum = model.lastNum;
-            [vc setMode:MakeProblemMainModeErrorPractice andShowMode:MakeProblemModeAnswer];
+            [vc setMakeProblemVC:MakeProblemMainVCChapterPractice];
             [self.navigationController pushViewController:vc animated:YES];
-            
-            
-//            ChapterListModel *model = self.collection_main.data_model.result[indexPath.row];
-//            ChapterScoreVC *vc = [ChapterScoreVC new];
-//            vc.questionHouse = model.secClassID;
-//            [self.navigationController pushViewController:vc animated:YES];
             
         }];
         [_collection_main setBlockScore:^(NSIndexPath * _Nonnull indexPath) {

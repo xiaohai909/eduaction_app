@@ -79,7 +79,7 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MakeProblemQuestionCardCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MakeProblemQuestionCardCVCell" forIndexPath:indexPath];
-    [cell setBtnTiltle:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1] andMode:[self getCarMode:self.model.questionCard[indexPath.row]]];
+    [cell setBtnTiltle:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1] andMode:[self getCarModeWithIndexPath:indexPath]];
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -89,8 +89,9 @@
     }
 }
 
-- (QuestionCardMode)getCarMode:(MakeProblemCardModel *)model
+- (QuestionCardMode)getCarModeWithIndexPath:(NSIndexPath *)indexPath
 {
+    MakeProblemCardModel *model = self.model.questionCard[indexPath.row];
     if (model.answerId.length) {
         if ([model.correct isEqualToString:@"1"]) {
             return self.now_row==[model.rownum integerValue]?QuestionCardModeNowRight:QuestionCardModeRight;
@@ -103,26 +104,9 @@
         }
     }
     else{
-        return self.now_row==[model.rownum integerValue]?QuestionCardModeNowNormal:QuestionCardModeNormal;
+        return indexPath.row == self.now_row?QuestionCardModeNowNormal:QuestionCardModeNormal;
     }
 }
-//- (QuestionCardMode)getCarMode:(MakeProblemMainModel *)model andRow:(NSInteger)row
-//{
-//    if (model.questionAnswer) {
-//        if ([model.questionAnswer.correct isEqualToString:@"1"]) {
-//            return self.now_row==row?QuestionCardModeNowRight:QuestionCardModeRight;
-//        }
-//        else if ([model.questionAnswer.correct isEqualToString:@"0"]){
-//            return self.now_row==row?QuestionCardModeNowWrong:QuestionCardModeWrong;
-//        }
-//        else{
-//            return self.now_row==row?QuestionCardModeNowNormal:QuestionCardModeNormal;
-//        }
-//    }
-//    else{
-//        return self.now_row==row?QuestionCardModeNowNormal:QuestionCardModeNormal;
-//    }
-//}
 #pragma mark --
 - (void)request
 {

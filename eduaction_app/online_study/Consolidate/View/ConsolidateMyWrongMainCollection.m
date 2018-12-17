@@ -8,7 +8,7 @@
 
 #import "ConsolidateMyWrongMainCollection.h"
 #import "ConsolidateProblemCVCell.h"
-
+#import "MakeProblemMainModel.h"
 
 static NSString * const cell1 = @"ConsolidateProblemCVCell";
 
@@ -69,14 +69,16 @@ static NSString * const cell1 = @"ConsolidateProblemCVCell";
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ConsolidateMyWrongModel *model = self.array_models[indexPath.section];
-    return CGSizeMake(self.py_width, collection_modify?model.height_modify:model.height);
+    return CGSizeMake(self.py_width, indexPath.row?25:40);
+
+//    ConsolidateMyWrongModel *model = self.array_models[indexPath.section];
+//    return CGSizeMake(self.py_width, collection_modify?model.height_modify:model.height);
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    ConsolidateMyWrongModel *model = self.array_models[indexPath.section];
+    MakeProblemMainModel *model = self.array_models[indexPath.section];
     
     ConsolidateProblemCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
     [cell setCollectionModify:collection_modify andTitle:[NSString stringWithFormat:@"%ld.%@",indexPath.section+1,model.questionTitle]];

@@ -26,7 +26,9 @@
     NSMutableDictionary *dic =[[NSMutableDictionary alloc]init];
     [dic setObject:appId forKey:@"appId"];
     [dic setObject:timeStamp forKey:@"timeStamp"];
-    [dic setObject:params forKey:@"params"];
+    if (params) {
+        [dic setObject:params forKey:@"params"];
+    }
     [dic setObject:@"209EB1A4-8032-B81E-7620-90B5D3157135" forKey:@"sessionId"];
     return dic;
 }
@@ -46,6 +48,18 @@
     return [[SQNetworkInterface formatter] stringFromDate:[NSDate date]];
 }
 
+#pragma mark --- 充值
++ (void)iRequestRechargeAndResult:(blockResult)result
+{
+    NSMutableDictionary *parames = [SQNetworkInterface params:nil];
+    [parames setObject:@"kecheng" forKey:@"type"];
+    [parames setObject:@"queryAllBuyTemp" forKey:@"method"];
+    
+    [SQNetworkManager sessionrequestUrl:smt_request_url(@"mobile/line/api?2=1281") andShowError:YES andParams:parames andType:HttpMethodPost andRefreshData:YES andResult:^(NSInteger state, NSString * _Nonnull msg, NSString * _Nonnull total, id  _Nonnull resultData) {
+        result(state,msg,total,resultData);
+    }];
+}
+#pragma mark --- 章节列表
 + (void)iRequestChapterCleanParames:(NSMutableDictionary *)parames andResult:(blockResult)result
 {
     parames = [SQNetworkInterface params:parames];
@@ -132,7 +146,7 @@
     }];
 }
 
-#pragma mark -- make Problem
+#pragma mark -- 做题
 + (void)iRequestMakeProblemParames:(NSMutableDictionary *)parames andResult:(blockResult)result//获取题目
 {
     parames = [SQNetworkInterface params:parames];

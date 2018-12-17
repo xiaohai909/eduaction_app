@@ -11,12 +11,16 @@
 #import "RechargeMainBottomView.h"
 #import "ConsolidateBottomPageView.h"
 
+#import "MakeProblemMainVC.h"
+#import "MakeProblemMainModel.h"
+
 @interface ConsolidateMyWrongMainVC ()
 @property (nonatomic, strong) ConsolidateMyWrongMainCollection *collection_main;
 @property (nonatomic, strong) UIButton *btn_right;
 @property (nonatomic, strong) RechargeMainBottomView *view_bottom;
 @property (nonatomic, strong) ConsolidateBottomPageView *view_page;
 @property (nonatomic, strong) DataModel *data_model;
+@property (nonatomic, assign) NSInteger pageCount;
 
 @end
 
@@ -56,6 +60,20 @@
             @strongify(self)
             self.view_bottom.btn_left.selected = all;
         }];
+        [_collection_main setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
+            @strongify(self)
+            //选择其中其中一道题，然后跳转到错题解析
+            if (self.questionHouse) {
+                //本章错题就不跳了
+            }
+            else{
+                //我的错题就要跳
+                MakeProblemMainVC *vc = [MakeProblemMainVC new];
+                vc.lastNum = [NSString stringWithFormat:@"%ld",indexPath.section+1+(self.view_page.tag-1)*10];
+                [vc setMakeProblemVC:MakeProblemMainVCMyWrong];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+        }];
         //数据
         [self requestRefresh:YES];
     }
@@ -73,6 +91,7 @@
             @strongify(self)
             if (self.view_page.tag>1) {
                 self.view_page.tag -= 1;
+                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(self.view_page.tag),@(self.pageCount)];
                 self.collection_main.array_models = (NSMutableArray *)[self.data_model.result subarrayWithRange:NSMakeRange((self.view_page.tag-1)*10, 10)];
                 [self.collection_main reloadData];
             }
@@ -82,9 +101,10 @@
         }];
         [[_view_page.btn_next rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             @strongify(self)
-            if (self.view_page.tag>1) {
+            if (self.view_page.tag<self.pageCount) {
                 self.view_page.tag += 1;
                 if (self.data_model.pageNumber>=_view_page.tag) {
+                    self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(self.view_page.tag),@(self.pageCount)];
                     self.collection_main.array_models = (NSMutableArray *)[self.data_model.result subarrayWithRange:NSMakeRange((self.view_page.tag-1)*10, 10)];
                     [self.collection_main reloadData];
                 }
@@ -102,7 +122,7 @@
 - (RechargeMainBottomView *)view_bottom {
     if (!_view_bottom) {
         _view_bottom = [[RechargeMainBottomView alloc] initWithFrame:(CGRect){0,ZTHeight,ZTWidth,50} andViewType:BottomViewTypeCollection];
-        
+
         @weakify(self)
         [_view_bottom setBlockActionClick:^(NSString * _Nonnull title) {
             @strongify(self)
@@ -111,12 +131,6 @@
                 [self changeViewMode];
             }
             else if ([title isEqualToString:@"移除"]) {
-                //如果当前页删除了数据，那后面的数据就要重新获取
-                self.data_model.pageNumber = self.view_page.tag;
-                self.data_model.result = (NSMutableArray *)[self.data_model.result subarrayWithRange:NSMakeRange(0, (self.view_page.tag-1)*10)];
-                self.collection_main.set_choise = [NSMutableSet set];
-                [self.collection_main setCollectionModify:NO andAll:NO];
-                
                 [self requestDelete:self.collection_main.set_choise];
             }
             else{
@@ -131,7 +145,7 @@
     //修改collection的状态
     [self.collection_main setCollectionModify:self.btn_right.selected andAll:self.view_bottom.btn_left.selected];
     [self.collection_main reloadData];
-    
+
     if (self.btn_right.selected) {
         [UIView animateWithDuration:0.3 animations:^{
             self.view_bottom.py_bottom = ZTHeight-NaviIPHONEX;
@@ -155,11 +169,11 @@
         //获取本章节本题型的收藏
         [SQNetworkInterface iRequestChapterScoreDetailListParames:@{@"questionHouse":self.questionHouse,@"type":self.myWrongType,@"userId":@"33",@"page":@(page),@"rows":@"10"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
             if (state == CODE_SUCCESS) {
-                NSMutableArray *array = [ConsolidateMyWrongModel mj_objectArrayWithKeyValuesArray:resultData];
+                NSMutableArray *array = [MakeProblemMainModel mj_objectArrayWithKeyValuesArray:resultData];
                 self.collection_main.array_models = array;
                 
-                NSInteger pageCount = ([total integerValue]%10)?([total integerValue]/10+1):([total integerValue]/10);
-                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(page),@(pageCount)];
+                self.pageCount = ([total integerValue]%10)?([total integerValue]/10+1):([total integerValue]/10);
+                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(page),@(self.pageCount)];
                 self.title = [NSString stringWithFormat:@"我的错题（%@）",total];
                 
                 if (refresh) {
@@ -179,14 +193,14 @@
         }];
     }
     else{
-        //获取本章节本题型的收藏
+        //获取所有错题解析
         [SQNetworkInterface iRequestConsolidateMyWrongParames:@{@"userId":@"33",@"page":@(page),@"rows":@"10"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
             if (state == CODE_SUCCESS) {
-                NSMutableArray *array = [ConsolidateMyWrongModel mj_objectArrayWithKeyValuesArray:resultData];
+                NSMutableArray *array = [MakeProblemMainModel mj_objectArrayWithKeyValuesArray:resultData];
                 self.collection_main.array_models = array;
                 
-                NSInteger pageCount = ([total integerValue]%10)?([total integerValue]/10+1):([total integerValue]/10);
-                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(page),@(pageCount)];
+                self.pageCount = ([total integerValue]%10)?([total integerValue]/10+1):([total integerValue]/10);
+                self.view_page.lbl_now.text = [NSString stringWithFormat:@"%@/%@",@(page),@(self.pageCount)];
                 self.title = [NSString stringWithFormat:@"我的错题（%@）",total];
                 
                 if (refresh) {
