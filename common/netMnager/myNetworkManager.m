@@ -67,6 +67,11 @@
             
             self.sessionID =[YGUserDefaults objectForKey:@"sessionID"];
         }
+        if ([YGUserDefaults objectForKey:@"userloginMode"] != nil) {
+            
+            NSData * data = [YGUserDefaults objectForKey:@"userloginMode"];
+            self.userMode = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        }
         
     }
     return self;
@@ -163,7 +168,21 @@
     
     NSMutableDictionary *dic2 = [self commParam:@"regedit" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
     
-    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=6" isUploadImage:NO params:dic2 success:success failure:failure];
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=6" isUploadImage:NO params:dic2 success:^(id response) {
+        
+        commResBaseClass *mode = [[commResBaseClass alloc]initWithDictionary:response];
+        if (mode.resultCode == 10000) {
+            
+            self.userMode = [[userBaseClass alloc]initWithDictionary:response[@"params"]];
+            
+            NSData * data = [NSKeyedArchiver archivedDataWithRootObject:self.userMode];
+            [YGUserDefaults setObject:data forKey:@"userloginMode"];
+            [YGUserDefaults synchronize];
+        }
+      
+        success(response);
+        
+    } failure:failure];
     
     return task;
 }
@@ -175,7 +194,19 @@
     [dic setObject:smsTxt forKey:@"smsTxt"];
     NSMutableDictionary *dic2 = [self commParam:@"loginSms" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
     
-    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=1" isUploadImage:NO params:dic2 success:success failure:failure];
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=1" isUploadImage:NO params:dic2 success:^(id response) {
+        
+        commResBaseClass *mode = [[commResBaseClass alloc]initWithDictionary:response];
+        if (mode.resultCode == 10000) {
+            
+            self.userMode = [[userBaseClass alloc]initWithDictionary:response[@"resultObj"]];
+            
+            NSData * data = [NSKeyedArchiver archivedDataWithRootObject:self.userMode];
+            [YGUserDefaults setObject:data forKey:@"userloginMode"];
+            [YGUserDefaults synchronize];
+        }
+        success(response);
+    } failure:failure];
     
     return task;
     
@@ -189,7 +220,19 @@
     //[dic setObject:@"test" forKey:@"activationCode"];
     NSMutableDictionary *dic2 = [self commParam:@"loginAuth" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"userManager"];
     
-    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=3" isUploadImage:NO params:dic2 success:success failure:failure];
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?1=3" isUploadImage:NO params:dic2 success:^(id response) {
+        
+        commResBaseClass *mode = [[commResBaseClass alloc]initWithDictionary:response];
+        if (mode.resultCode == 10000) {
+            
+            self.userMode = [[userBaseClass alloc]initWithDictionary:response[@"resultObj"]];
+            
+            NSData * data = [NSKeyedArchiver archivedDataWithRootObject:self.userMode];
+            [YGUserDefaults setObject:data forKey:@"userloginMode"];
+            [YGUserDefaults synchronize];
+        }
+        success(response);
+    } failure:failure];
     
     return task;
     

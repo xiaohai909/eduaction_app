@@ -21,8 +21,10 @@ typedef NS_ENUM(NSInteger, RequestMethodType){
     RequestMethodTypePut = 3,
     RequestMethodTypeDelete=4
 };
+@class userBaseClass;
 @interface myNetworkManager : NSObject
 @property (nonatomic,strong)NSString *sessionID;
+@property (nonatomic,strong)userBaseClass *userMode;
 +(myNetworkManager *)sharemyNetworkManager;
 
 -(NSURLSessionDataTask *)regedit:(NSString *)account Andpassword:(NSString *)password AndactivationCode:(NSString *)activationCode AndsmsTxt:(NSString *)smsTxt Andsuccess:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure;

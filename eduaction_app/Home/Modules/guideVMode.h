@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface guideVMode : NSObject
-
+@property (nonatomic,strong)RACCommand *headerReq;
 @end
 
 NS_ASSUME_NONNULL_END

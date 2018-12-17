@@ -5,4 +5,9 @@
 //  Copyright (c) 2018 __MyCompanyName__. All rights reserved.
 //
 
-#import "CommResResultObj.h"#import "CommResBaseClass.h"
+#import "commResResultObj.h"
+#import "commResBaseClass.h"
+#import "testGuideReqModeBaseClass.h"
+#import "testGuideReqModeResultObj.h"
+#import "testGuideReqModeChildren.h"
+#import "userBaseClass.h"
