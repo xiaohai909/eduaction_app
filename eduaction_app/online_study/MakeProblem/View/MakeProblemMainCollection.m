@@ -40,6 +40,7 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
 }
 */
 
+
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout andType:(MakeProblemMode)viewMode {
     
     self = [super initWithFrame:frame collectionViewLayout:layout];
@@ -57,34 +58,43 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
         self.dataSource = self;
         
         self.viewMode = viewMode;
-        self.commitShow = YES;
+        self.commitShow = NO;
+        
+        //添加左右滑动的效果
+        UISwipeGestureRecognizer *swipe_left = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(pageChange:)];//下一页
+        swipe_left.direction = UISwipeGestureRecognizerDirectionLeft;
+        [self addGestureRecognizer:swipe_left];
+        UISwipeGestureRecognizer *swipe_right = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(pageChange:)];//上一页
+        swipe_right.direction = UISwipeGestureRecognizerDirectionRight;
+        [self addGestureRecognizer:swipe_right];
     }
     return self;
 }
 
+- (void)pageChange:(UISwipeGestureRecognizer *)gesture
+{
+    if (self.blockPageChange) {
+        self.blockPageChange(gesture.direction==UISwipeGestureRecognizerDirectionLeft);
+    }
+}
 #pragma mark -- model
 - (void)setModel:(MakeProblemMode)viewMode andFrame:(CGRect)frame andModel:(MakeProblemMainModel *)model {
     self.frame = frame;
     self.viewMode = viewMode;
     self.model = model;
-    
-    //用户选择
-//    self.indexPath = [NSIndexPath indexPathForRow:random()%5 inSection:1];
     [self reloadData];
 }
 
 #pragma mark --- set
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    if (self.model.isSelelct && (self.viewMode != MakeProblemModeExam)) {//用户已经选择且不是考试模式
-//    if (self.indexPath && (self.viewMode != MakeProblemModeExam)) {//用户已经选择且不是考试模式
-        //还要看是不是自动跳转
-        if (self.isAutoReturn && self.model.selectTrue) {
-            return 2;
-        }
+    if (self.model.isSelelct && self.viewMode != MakeProblemModeExam) {//用户已经选择且不是考试模式
         return 4;
     }
-    else {
+    else if(self.viewMode == MakeProblemModeMemory){//如果是背题模式，不用选择
+        return 4;
+    }
+    else{
         return 2;
     }
 }
@@ -95,13 +105,13 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
         return 1;
     }
     else if (section == 1){
-        return 5;//答案的个数
+        return self.model.questionOptionList.count;//答案的个数
     }
     else if (section == 2) {
-        return 3;//答案，解析，笔记
+        return self.model.questionAnswer.notes.length?3:2;//答案，解析，笔记
     }
     else {
-        return self.commitShow?2:0;//评论的个数，是不是展开
+        return self.commitShow?self.model.commits.count:0;//评论的个数，是不是展开
     }
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
@@ -134,7 +144,7 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
         else if (indexPath.section == 3) {
             MakeProblemCommitCRView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:crView2 forIndexPath:indexPath];
             view.btn_detail.selected = self.commitShow;
-            
+            view.lbl_title.text = [NSString stringWithFormat:@"评论（%@）",self.model.discussCount];            
             [[view.btn_detail rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
                //是否展示评论
                 self.commitShow = !view.btn_detail.selected;
@@ -154,13 +164,22 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        return CGSizeMake(self.py_width, (indexPath.row%2)?(92+100):92);//就看要不要显示图片了
+        return CGSizeMake(self.py_width,self.model.height_title);//就看要不要显示图片了
     }
     else if (indexPath.section == 1){
         return CGSizeMake(self.py_width, 35);//固定的
     }
     else if (indexPath.section == 2){
-        return CGSizeMake(self.py_width, 107);//答案，解析，笔记：按照内容的大小来
+        if (indexPath.row == 0) {
+             return CGSizeMake(self.py_width, 100);
+        }
+        else if (indexPath.row == 1) {
+             return CGSizeMake(self.py_width, self.model.height_analysis);
+        }
+        else{
+             return CGSizeMake(self.py_width, self.model.height_notes);
+        }
+       //答案，解析，笔记：按照内容的大小来
     }
     else{
         return CGSizeMake(self.py_width, 100);//按照评论的内容大小来
@@ -171,21 +190,29 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
 {
     if (indexPath.section == 0) {
         MakeProblemTopicCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-        cell.img_content_height.constant = indexPath.row%2?100:0;
+        cell.img_content_height.constant = self.model.image.length?100:0;
         cell.lbl_now.text = [NSString stringWithFormat:@"%ld",self.tag+1];
         cell.lbl_total.text = [NSString stringWithFormat:@"/%ld",self.allNumber];
+        cell.lbl_content.text = [NSString stringWithFormat:@"[%@]%@",self.model.questionType,self.model.questionTitle];//题目
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        [paragraphStyle setLineSpacing:5];
+        NSMutableAttributedString *atb_detail = [[NSMutableAttributedString alloc] initWithString:cell.lbl_content.text];
+        [atb_detail addAttribute:NSForegroundColorAttributeName value:HexRGB(0xFF6B6B) range:NSMakeRange(0,self.model.questionType.length+2)];
+        [atb_detail addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0,cell.lbl_content.text.length)];
+        cell.lbl_content.attributedText = atb_detail;
         
         //字体变化
         cell.lbl_now.font = [UIFont systemFontOfSize:16+self.addTextFont];
         cell.lbl_total.font = [UIFont systemFontOfSize:16+self.addTextFont];
-//        cell.lbl_type.font = [UIFont systemFontOfSize:14+self.addTextFont];
-        //这里type就不单独写了，跟content一起z写
+        //这里type就不单独写了，跟content一起z写cell.lbl_type
         cell.lbl_content.font = [UIFont systemFontOfSize:14+self.addTextFont];
+        
         return cell;
     }
     else if (indexPath.section == 1) {
+        MakeProblemOptionModel *option_model = self.model.questionOptionList[indexPath.row];
         MakeProblemOptionCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell2 forIndexPath:indexPath];
-        [cell setContent:@"答案" andRow:indexPath.row andState:[self stateForIndexPath:indexPath]];
+        [cell setContent:option_model.optionDescribe andOption:option_model.option andState:[self stateForIndexPath:indexPath]];
         
         //字体变化
         cell.btn_order.titleLabel.font = [UIFont systemFontOfSize:14+self.addTextFont];
@@ -194,6 +221,50 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
     }
     else if (indexPath.section == 2) {
         MakeProblemAnswerCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell3 forIndexPath:indexPath];
+        cell.btn_wrong.hidden = YES;
+
+        if (indexPath.row == 0) {
+            cell.btn_wrong.hidden = NO;
+            cell.lbl_title.text = [NSString stringWithFormat:@"答案：%@  ",self.model.answer];
+            if (self.viewMode == MakeProblemModeMemory) {
+                cell.lbl_detail.text =[NSString stringWithFormat:@"全站正确率为%@",self.model.allCorrectLv];
+            }
+            else{
+                cell.lbl_detail.text =[NSString stringWithFormat:@"您选择：%@\n全站正确率为%@",self.model.selelct,self.model.allCorrectLv];
+                NSMutableAttributedString *atb_title = [[NSMutableAttributedString alloc] initWithString:cell.lbl_title.text];
+                [atb_title addAttributes:@{NSForegroundColorAttributeName:HexRGB(0x179AF5)} range:NSMakeRange(3, 1)];
+                cell.lbl_title.attributedText = atb_title;
+                
+                NSMutableAttributedString *atb_detail = [[NSMutableAttributedString alloc] initWithString:cell.lbl_detail.text];
+                [atb_detail addAttributes:@{NSForegroundColorAttributeName:HexRGB(0x333333)} range:NSMakeRange(0, 3)];
+                [atb_detail addAttributes:@{NSForegroundColorAttributeName:HexRGB(0xFF7B77)} range:NSMakeRange(4, 1)];
+                NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+                [paragraphStyle setLineSpacing:10];
+                [atb_detail addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0,cell.lbl_detail.text.length)];
+                cell.lbl_detail.attributedText = atb_detail;
+            }
+        }
+        else if (indexPath.row == 1){
+            cell.lbl_title.text = @"解析";
+            cell.lbl_detail.text = self.model.analysis;
+            NSMutableAttributedString *atb_detail = [[NSMutableAttributedString alloc] initWithString:cell.lbl_detail.text];
+            NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+            [paragraphStyle setLineSpacing:5];
+            paragraphStyle.firstLineHeadIndent = 20.f; // 首行缩进
+            [atb_detail addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0,cell.lbl_detail.text.length)];
+            cell.lbl_detail.attributedText = atb_detail;
+
+        }
+        else if (indexPath.row == 2) {
+            cell.lbl_title.text = @"笔记";
+            cell.lbl_detail.text = self.model.questionAnswer.notes;
+            NSMutableAttributedString *atb_detail = [[NSMutableAttributedString alloc] initWithString:cell.lbl_detail.text];
+            NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+            [paragraphStyle setLineSpacing:5];
+            paragraphStyle.firstLineHeadIndent = 20.f; // 首行缩进
+            [atb_detail addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0,cell.lbl_detail.text.length)];
+            cell.lbl_detail.attributedText = atb_detail;
+        }
         
         //字体变化
         cell.btn_wrong.titleLabel.font = [UIFont systemFontOfSize:12+self.addTextFont];
@@ -204,29 +275,26 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
     else {
      //评论
         MakeProblemCommitCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell4 forIndexPath:indexPath];
+        //设置评论的数据
         return cell;
     }
 }
-/*
- //单选，多选
- if (@"单选"||@"判断题") {//选择完就确认对错}
- else if(@"多选") {//通过确认按钮来确认答题对错}
- else{ }
- */
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     /*
      1.如果是考试模式，就不提示解析，要不要告诉对方正确与否呢
      2.如果是其他情况都要告诉对方问题解析
      */
     if (!self.model.isSelelct) {//是否已经选择
-//    if (!self.indexPath.section) {//单选，选择完后就不能再选
-        self.model.selelct = [NSString stringWithFormat:@"%ld",indexPath.row];
-//        self.indexPath = indexPath;
-        
+        MakeProblemOptionModel *option_model = self.model.questionOptionList[indexPath.row];
+        self.model.selelct = option_model.option;
+        self.model.optionId = option_model.optionId;
+        if (self.blockMakeProblem) {
+            self.blockMakeProblem(self.model.selectTrue?@"1":@"0");
+        }
         //如果这题选对了且能自动跳转到下一题才自动跳转
         if (self.isAutoReturn && self.model.selectTrue) {
             //进入下一题
-            [collectionView reloadSections:[NSIndexSet indexSetWithIndex:1]];
+            [collectionView reloadData];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 if (self.blockGoOn) {
                     self.blockGoOn();
@@ -259,28 +327,32 @@ static NSString * const crView2 = @"MakeProblemCommitCRView";
 //现在这个位置的答案是正确的吗
 - (BOOL)nowIsRight:(NSIndexPath *)indexPath
 {
-    return [self.model isTrueResult:[NSString stringWithFormat:@"%ld",indexPath.row]];
-//    return (indexPath.row == 2)?YES:NO;
+    MakeProblemOptionModel *option_model = self.model.questionOptionList[indexPath.row];
+    return [self.model isTrueResult:option_model.option];
 }
 //当前cell的转态
 - (OptionState)stateForIndexPath:(NSIndexPath *)indexPath
 {
-    //现在是正确答案
-    if([self nowIsRight:indexPath] ) {
-        if (self.model.isSelelct||self.viewMode == MakeProblemModeMemory) {//用户已经选择过，背题模式,都可以直接显示
-//        if (self.indexPath||self.viewMode == MakeProblemModeMemory) {//用户已经选择过，背题模式,都可以直接显示
-            return OptionStateRight;
-        }//用户还没选择，但是要看这个不是背题模式
-        return OptionStateNormal;
-    }
-    else {
-        //现在不是正确答案
-        //用户选择了这个错误的答案
-        if ([self.model.selelct isEqualToString:[NSString stringWithFormat:@"%ld",indexPath.row]] && self.viewMode != MakeProblemModeMemory ) {//用户选的,且当前状态不是背题模式
-//        if ([indexPath isEqual:self.indexPath] && self.viewMode != MakeProblemModeMemory ) {//用户选的,且当前状态不是背题模式
-            return OptionStateError;//用户选错了
+    MakeProblemOptionModel *option_model = self.model.questionOptionList[indexPath.row];
+    if (self.model.selelct) {
+        //现在是正确答案
+        if ([self nowIsRight:indexPath]) {
+             return OptionStateRight;
         }
-        return OptionStateNormal;
+        else{
+            if ([self.model.selelct isEqualToString:option_model.option]) {//用户选择了错误的
+                return OptionStateError;//用户选错了
+            }
+            else{
+                return OptionStateNormal;
+            }
+        }
+    }
+    else{
+        if (self.viewMode == MakeProblemModeMemory && [self nowIsRight:indexPath]) {
+            return OptionStateRight;
+        }
+       return OptionStateNormal;
     }
 }
 @end

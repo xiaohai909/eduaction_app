@@ -7,6 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041DD19821B900CA00322150 /* MineBuyCourseMainCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DD19621B900CA00322150 /* MineBuyCourseMainCVCell.m */; };
+		041DD19921B900CA00322150 /* MineBuyCourseMainCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DD19721B900CA00322150 /* MineBuyCourseMainCVCell.xib */; };
+		041DD19C21B9057200322150 /* MineHistoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DD19B21B9057200322150 /* MineHistoryCollection.m */; };
+		041DD19F21B90CB000322150 /* MineBuyCourseCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DD19E21B90CB000322150 /* MineBuyCourseCollection.m */; };
+		041DD1A221B927A800322150 /* MineCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DD1A121B927A800322150 /* MineCollectionVC.m */; };
+		041DD1A521B9287400322150 /* MoreTypeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DD1A321B9287400322150 /* MoreTypeScrollView.m */; };
+		042ED7DC21BF90FC00128AAB /* MineUserProfessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7DB21BF90FC00128AAB /* MineUserProfessionVC.m */; };
+		042ED7DF21BF913800128AAB /* MineUserProfessionCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7DE21BF913800128AAB /* MineUserProfessionCollection.m */; };
+		042ED7E321BF915C00128AAB /* MineUserProfessionCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7E121BF915C00128AAB /* MineUserProfessionCVCell.m */; };
+		042ED7E421BF915C00128AAB /* MineUserProfessionCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042ED7E221BF915C00128AAB /* MineUserProfessionCVCell.xib */; };
+		042ED7E721BF948C00128AAB /* MineChangePasswardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7E621BF948C00128AAB /* MineChangePasswardVC.m */; };
+		042ED7EA21BF94FE00128AAB /* MineAttestationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7E921BF94FE00128AAB /* MineAttestationVC.m */; };
+		042ED7ED21BF95C600128AAB /* MineChangePhoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7EC21BF95C600128AAB /* MineChangePhoneVC.m */; };
+		042ED7F021BF9A8A00128AAB /* MineToolExchangeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7EF21BF9A8A00128AAB /* MineToolExchangeVC.m */; };
+		042ED7F321BF9B9400128AAB /* MineToolExchangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7F221BF9B9400128AAB /* MineToolExchangeView.m */; };
+		042ED7F521BF9BA100128AAB /* MineToolExchangeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042ED7F421BF9BA100128AAB /* MineToolExchangeView.xib */; };
+		042ED7F821BFA0EF00128AAB /* MineHelpSetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7F721BFA0EF00128AAB /* MineHelpSetVC.m */; };
+		042ED7FB21BFA1CA00128AAB /* MineHelpSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7FA21BFA1CA00128AAB /* MineHelpSet.m */; };
+		042ED7FF21BFA40100128AAB /* MineHelpSetCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED7FD21BFA40100128AAB /* MineHelpSetCVCell.m */; };
+		042ED80021BFA40100128AAB /* MineHelpSetCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042ED7FE21BFA40100128AAB /* MineHelpSetCVCell.xib */; };
+		042ED80321BFADE200128AAB /* MineAttestationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042ED80221BFADE200128AAB /* MineAttestationView.m */; };
+		042ED80521BFADEF00128AAB /* MineAttestationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042ED80421BFADEF00128AAB /* MineAttestationView.xib */; };
+		044730B521AD32B900E2DC20 /* MineMessageFromCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730B321AD32B900E2DC20 /* MineMessageFromCVCell.m */; };
+		044730B621AD32B900E2DC20 /* MineMessageFromCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044730B421AD32B900E2DC20 /* MineMessageFromCVCell.xib */; };
+		044730B921AD3A9800E2DC20 /* MineMessageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730B821AD3A9800E2DC20 /* MineMessageCollection.m */; };
+		044730BC21AD3C0C00E2DC20 /* MineMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730BB21AD3C0C00E2DC20 /* MineMessageVC.m */; };
+		044730BF21AD3DC300E2DC20 /* MineHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730BE21AD3DC300E2DC20 /* MineHistoryVC.m */; };
+		044730C221AD3E2B00E2DC20 /* MineBuyCourseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730C121AD3E2B00E2DC20 /* MineBuyCourseVC.m */; };
+		044730C521AD3E6700E2DC20 /* MineTodayCourseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 044730C421AD3E6700E2DC20 /* MineTodayCourseVC.m */; };
 		044F97DE219E6B05002295CA /* MakeProblemMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F97DD219E6B05002295CA /* MakeProblemMainModel.m */; };
 		045B11BD21912184001FC325 /* StudyTimeCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B11B521912184001FC325 /* StudyTimeCVCell.xib */; };
 		045B11BE21912184001FC325 /* StudyTimeCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B11B921912184001FC325 /* StudyTimeCVCell.m */; };
@@ -87,6 +116,11 @@
 		04B3C08A219BD4E00035C995 /* ConsolidateScoreMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C089219BD4E00035C995 /* ConsolidateScoreMainVC.m */; };
 		04B3C08E219BFD140035C995 /* MakeProblemQuestionCardCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B3C08C219BFD140035C995 /* MakeProblemQuestionCardCVCell.m */; };
 		04B3C08F219BFD140035C995 /* MakeProblemQuestionCardCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B3C08D219BFD140035C995 /* MakeProblemQuestionCardCVCell.xib */; };
+		04B813FC21C09FEA00B5CEDD /* MineHelpFeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B813FB21C09FEA00B5CEDD /* MineHelpFeedBackVC.m */; };
+		04B813FF21C0A04300B5CEDD /* MineHelpUSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B813FE21C0A04300B5CEDD /* MineHelpUSVC.m */; };
+		04B8140221C0A1C700B5CEDD /* MineHelpFeedBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8140121C0A1C700B5CEDD /* MineHelpFeedBackView.m */; };
+		04B8140421C0A1D400B5CEDD /* MineHelpFeedBackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B8140321C0A1D400B5CEDD /* MineHelpFeedBackView.xib */; };
+		04B8140721C0FA4A00B5CEDD /* MakeProblemCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B8140621C0FA4A00B5CEDD /* MakeProblemCardModel.m */; };
 		04BBFB85219A7D7E0088196E /* RechargeMainBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB84219A7D7E0088196E /* RechargeMainBottomView.m */; };
 		04BBFB88219AAE080088196E /* MyCollectionMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB87219AAE080088196E /* MyCollectionMainVC.m */; };
 		04BBFB8C219AB34C0088196E /* ConsolidateProblemCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BBFB8A219AB34C0088196E /* ConsolidateProblemCVCell.m */; };
@@ -491,6 +525,15 @@
 		04B3C08B219BFD140035C995 /* MakeProblemQuestionCardCVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemQuestionCardCVCell.h; sourceTree = "<group>"; };
 		04B3C08C219BFD140035C995 /* MakeProblemQuestionCardCVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemQuestionCardCVCell.m; sourceTree = "<group>"; };
 		04B3C08D219BFD140035C995 /* MakeProblemQuestionCardCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeProblemQuestionCardCVCell.xib; sourceTree = "<group>"; };
+		04B813FA21C09FEA00B5CEDD /* MineHelpFeedBackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHelpFeedBackVC.h; sourceTree = "<group>"; };
+		04B813FB21C09FEA00B5CEDD /* MineHelpFeedBackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHelpFeedBackVC.m; sourceTree = "<group>"; };
+		04B813FD21C0A04300B5CEDD /* MineHelpUSVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHelpUSVC.h; sourceTree = "<group>"; };
+		04B813FE21C0A04300B5CEDD /* MineHelpUSVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHelpUSVC.m; sourceTree = "<group>"; };
+		04B8140021C0A1C700B5CEDD /* MineHelpFeedBackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHelpFeedBackView.h; sourceTree = "<group>"; };
+		04B8140121C0A1C700B5CEDD /* MineHelpFeedBackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHelpFeedBackView.m; sourceTree = "<group>"; };
+		04B8140321C0A1D400B5CEDD /* MineHelpFeedBackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHelpFeedBackView.xib; sourceTree = "<group>"; };
+		04B8140521C0FA4A00B5CEDD /* MakeProblemCardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeProblemCardModel.h; sourceTree = "<group>"; };
+		04B8140621C0FA4A00B5CEDD /* MakeProblemCardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeProblemCardModel.m; sourceTree = "<group>"; };
 		04BBFB83219A7D7E0088196E /* RechargeMainBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeMainBottomView.h; sourceTree = "<group>"; };
 		04BBFB84219A7D7E0088196E /* RechargeMainBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeMainBottomView.m; sourceTree = "<group>"; };
 		04BBFB86219AAE080088196E /* MyCollectionMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionMainVC.h; sourceTree = "<group>"; };
@@ -917,6 +960,12 @@
 			children = (
 				044F97DC219E6B05002295CA /* MakeProblemMainModel.h */,
 				044F97DD219E6B05002295CA /* MakeProblemMainModel.m */,
+				04D5758D21BE44B70023E649 /* MakeProblemAnserModel.h */,
+				04D5758E21BE44B70023E649 /* MakeProblemAnserModel.m */,
+				04CA92B521B11BCB00F39561 /* MakeProblemOptionModel.h */,
+				04CA92B621B11BCB00F39561 /* MakeProblemOptionModel.m */,
+				04B8140521C0FA4A00B5CEDD /* MakeProblemCardModel.h */,
+				04B8140621C0FA4A00B5CEDD /* MakeProblemCardModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -939,6 +988,7 @@
 		045B11C221912197001FC325 /* Chapter */ = {
 			isa = PBXGroup;
 			children = (
+				04FCCCF521AE64A00015AC26 /* Models */,
 				045B11C321912197001FC325 /* Controller */,
 				045B11C621912197001FC325 /* View */,
 			);
@@ -954,6 +1004,8 @@
 				045B11D921912FFF001FC325 /* ChapterListVC.m */,
 				045B11DE219133C0001FC325 /* ChapterScoreVC.h */,
 				045B11DF219133C0001FC325 /* ChapterScoreVC.m */,
+				04FCCCF921AE89DD0015AC26 /* ChapterCleanVC.h */,
+				04FCCCFA21AE89DD0015AC26 /* ChapterCleanVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -979,6 +1031,9 @@
 				045B11E9219138E1001FC325 /* ChapterScoreHeadCVCell.h */,
 				045B11EA219138E1001FC325 /* ChapterScoreHeadCVCell.m */,
 				045B11EB219138E1001FC325 /* ChapterScoreHeadCVCell.xib */,
+				04FCCCFC21AE8B9A0015AC26 /* ChapterCleanView.h */,
+				04FCCCFD21AE8B9A0015AC26 /* ChapterCleanView.m */,
+				04FCCCFF21AE8BA60015AC26 /* ChapterCleanView.xib */,
 				045B11CA21912197001FC325 /* RatioView.h */,
 				045B11CD21912197001FC325 /* RatioView.m */,
 			);
@@ -1049,6 +1104,7 @@
 		0477160321999F6F0051FB83 /* Recharge */ = {
 			isa = PBXGroup;
 			children = (
+				04C816C721C1FA630021CC65 /* Model */,
 				0477160421999F6F0051FB83 /* Controller */,
 				0477160521999F6F0051FB83 /* View */,
 			);
@@ -1196,6 +1252,7 @@
 		04B1B13821945ABF00EEB51E /* Consolidate */ = {
 			isa = PBXGroup;
 			children = (
+				04E6DF7721AF834D00AD613F /* Model */,
 				04B1B13921945ABF00EEB51E /* Controller */,
 				04B1B13A21945ABF00EEB51E /* View */,
 			);
@@ -1247,6 +1304,9 @@
 				04B3C083219BC2410035C995 /* ConsolidateMyWrongMainCollection.m */,
 				04B3C085219BC9C90035C995 /* ConsolidateScoreLineView.h */,
 				04B3C086219BC9C90035C995 /* ConsolidateScoreLineView.m */,
+				04E6DF7B21AF960E00AD613F /* ConsolidateBottomPageView.h */,
+				04E6DF7C21AF960E00AD613F /* ConsolidateBottomPageView.m */,
+				04E08AB321C3BB5E00381A8A /* ConsolidateBottomPageView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1628,6 +1688,68 @@
 				3E2D2CFA21C73AA4006AD59C /* guideVMode.m */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		04C816C721C1FA630021CC65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04C816C821C1FA760021CC65 /* RechargeModel.h */,
+				04C816C921C1FA760021CC65 /* RechargeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CA92A521B0DE3D00F39561 /* DefaultTool */ = {
+			isa = PBXGroup;
+			children = (
+				04CA92B121B0E27600F39561 /* PhotoPicker */,
+				04CA92A621B0DE3D00F39561 /* CityPicker */,
+			);
+			path = DefaultTool;
+			sourceTree = "<group>";
+		};
+		04CA92A621B0DE3D00F39561 /* CityPicker */ = {
+			isa = PBXGroup;
+			children = (
+				04CA92AA21B0DE3D00F39561 /* address.json */,
+				04CA92AB21B0DE3D00F39561 /* WCNAreaPickerView.h */,
+				04CA92A721B0DE3D00F39561 /* WCNAreaPickerView.m */,
+				04CA92A921B0DE3D00F39561 /* WCNAreaPickerView.xib */,
+				04CA92AC21B0DE3D00F39561 /* WCNLocation.h */,
+				04CA92A821B0DE3D00F39561 /* WCNLocation.m */,
+			);
+			path = CityPicker;
+			sourceTree = "<group>";
+		};
+		04CA92B121B0E27600F39561 /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				04CA92B321B0E27600F39561 /* PhotoChoiseVC.h */,
+				04CA92B221B0E27600F39561 /* PhotoChoiseVC.m */,
+			);
+			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
+		04E6DF7721AF834D00AD613F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04E6DF7821AF836800AD613F /* ConsolidateMyWrongModel.h */,
+				04E6DF7921AF836800AD613F /* ConsolidateMyWrongModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04FCCCF521AE64A00015AC26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04FCCCF621AE64B30015AC26 /* ChapterListModel.h */,
+				04FCCCF721AE64B30015AC26 /* ChapterListModel.m */,
+				04FCCD0121AE92480015AC26 /* DataModel.h */,
+				04FCCD0221AE92480015AC26 /* DataModel.m */,
+				04FCCD0421AE9ADB0015AC26 /* ChapterScoreModel.h */,
+				04FCCD0521AE9ADB0015AC26 /* ChapterScoreModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3E32D0B4219910F300E45154 /* trainVc */ = {
@@ -2066,6 +2188,10 @@
 			children = (
 				3EE6F4D721A19E810068F78D /* myNetworkManager.h */,
 				3EE6F4D821A19E810068F78D /* myNetworkManager.m */,
+				04FCCCEC21AE29980015AC26 /* SQNetworkInterface.h */,
+				04FCCCED21AE29980015AC26 /* SQNetworkInterface.m */,
+				04FCCCEF21AE345F0015AC26 /* SQNetworkManager.h */,
+				04FCCCF021AE345F0015AC26 /* SQNetworkManager.m */,
 			);
 			path = netMnager;
 			sourceTree = "<group>";
@@ -2284,6 +2410,7 @@
 				3E8AEDA521927B0F007CF326 /* homeFooterRefresh.xib in Resources */,
 				3E2BBB5021BEBB6F00B5A693 /* ear_3.png in Resources */,
 				045B11BD21912184001FC325 /* StudyTimeCVCell.xib in Resources */,
+				04CA92B021B0DE3D00F39561 /* address.json in Resources */,
 				04ACCD99219D8E4700716953 /* SearchMainCRView.xib in Resources */,
 				3E2BBB5A21BEBB6F00B5A693 /* ear_15.png in Resources */,
 				3E2BBB5221BEBB6F00B5A693 /* ear_13.png in Resources */,
@@ -2318,11 +2445,14 @@
 				3E2BBB4B21BEBB6F00B5A693 /* nose_0.png in Resources */,
 				3E2BBB5D21BEBB6F00B5A693 /* ear_18.png in Resources */,
 				3EB08EA0218C5BDC00849777 /* HomecourseCell.xib in Resources */,
+				042ED80521BFADEF00128AAB /* MineAttestationView.xib in Resources */,
 				3EB08EAD218C76E400849777 /* homeheaderCR.xib in Resources */,
 				3E2BBB3A21BEBB6F00B5A693 /* tooth_22.png in Resources */,
 				3E79DE662186B56700CD8AFC /* registerView.xib in Resources */,
 				04BBFB8D219AB34C0088196E /* ConsolidateProblemCVCell.xib in Resources */,
+				042ED7E421BF915C00128AAB /* MineUserProfessionCVCell.xib in Resources */,
 				3EE6F4EC21A25B370068F78D /* trainRightHead.xib in Resources */,
+				04B8140421C0A1D400B5CEDD /* MineHelpFeedBackView.xib in Resources */,
 				3E3AEFC3217DFDA9006C2860 /* Assets.xcassets in Resources */,
 				3E2BBB6721BEBB6F00B5A693 /* huzi_7.png in Resources */,
 				3E2BBB6021BEBB6F00B5A693 /* ear_22.png in Resources */,
@@ -2492,6 +2622,8 @@
 				045B11E72191354D001FC325 /* ChapterScoreCVCell.m in Sources */,
 				04B1B12C2193DCF700EEB51E /* SimulateExameMainVC.m in Sources */,
 				04B3C08A219BD4E00035C995 /* ConsolidateScoreMainVC.m in Sources */,
+				04FCCCF121AE345F0015AC26 /* SQNetworkManager.m in Sources */,
+				041DD19C21B9057200322150 /* MineHistoryCollection.m in Sources */,
 				04AC33F82192DEBB00307E70 /* MakeProblemSceneCollection.m in Sources */,
 				3E2BBBD521C021E900B5A693 /* MineTodayCourseVC.m in Sources */,
 				3EB08E96218C575200849777 /* HomeCollection.m in Sources */,
@@ -2500,11 +2632,13 @@
 				04AC33E52192736200307E70 /* MakeProlemAnswerCRView.m in Sources */,
 				3E2BBBD621C021E900B5A693 /* MineBuyCourseVC.m in Sources */,
 				045B11D421912198001FC325 /* ChapterMainCollection.m in Sources */,
+				042ED7FF21BFA40100128AAB /* MineHelpSetCVCell.m in Sources */,
 				3EB08EC9218C922B00849777 /* QRcomfimViewController.m in Sources */,
 				3EB08EB1218C76ED00849777 /* homeheaderCR2.m in Sources */,
 				3EE6F4D921A19E810068F78D /* myNetworkManager.m in Sources */,
 				045B11F3219166C4001FC325 /* MakeProblemMainVC.m in Sources */,
 				3E635FBC219282CD006FC152 /* AbbAlertView.m in Sources */,
+				04B8140721C0FA4A00B5CEDD /* MakeProblemCardModel.m in Sources */,
 				045B11BE21912184001FC325 /* StudyTimeCVCell.m in Sources */,
 				04AC33EF21928D7500307E70 /* MakeProblemCommitCRView.m in Sources */,
 				3E14D86221ADA30500165FF8 /* courseCalendarV.m in Sources */,
@@ -2517,6 +2651,7 @@
 				3E2BBBE121C021E900B5A693 /* MineMessageFromCVCell.m in Sources */,
 				3EE6F4EB21A25B370068F78D /* trainRightHead.m in Sources */,
 				3E635FCC21929377006FC152 /* MainCollectionFowLayout.m in Sources */,
+				04C816CA21C1FA760021CC65 /* RechargeModel.m in Sources */,
 				3E83D2D6217E21A600E78B1C /* CommonFunciton.m in Sources */,
 				3EE6F4EF21A291870068F78D /* trainRightCollection.m in Sources */,
 				3E2BBBD821C021E900B5A693 /* MineMessageVC.m in Sources */,
@@ -2544,15 +2679,21 @@
 				3ECB362A218AC1140008A109 /* MineViewController.m in Sources */,
 				045B11C121912184001FC325 /* StudyCollection.m in Sources */,
 				3EB08EC5218C85E000849777 /* ScanQRViewController.m in Sources */,
+				04FCCD0321AE92480015AC26 /* DataModel.m in Sources */,
 				3E3AEFBE217DFDA8006C2860 /* ViewController.m in Sources */,
 				3ECB362D218AC1250008A109 /* StudyViewController.m in Sources */,
+				04E6DF7A21AF836800AD613F /* ConsolidateMyWrongModel.m in Sources */,
 				04BBFB85219A7D7E0088196E /* RechargeMainBottomView.m in Sources */,
+				04FCCCFE21AE8B9A0015AC26 /* ChapterCleanView.m in Sources */,
+				04FCCCF821AE64B30015AC26 /* ChapterListModel.m in Sources */,
 				04B1B137219458E900EEB51E /* MakeProblemQuestionCardVC.m in Sources */,
+				041DD1A521B9287400322150 /* MoreTypeScrollView.m in Sources */,
 				3E6AFEA021A29C4300E07AD7 /* TopfilteringV.m in Sources */,
 				0477160821999F960051FB83 /* RechargeMainVC.m in Sources */,
 				04ACCD96219D8E4700716953 /* SearchMainCRView.m in Sources */,
 				3E2BBBD921C021E900B5A693 /* MineUserVC.m in Sources */,
 				04ACCD9C219D8E4700716953 /* SQSearchView.m in Sources */,
+				042ED7EA21BF94FE00128AAB /* MineAttestationVC.m in Sources */,
 				04AC33FC2192E1AC00307E70 /* MakeProblemSceneCVCell.m in Sources */,
 				3ECB3627218AC1070008A109 /* HomeViewController.m in Sources */,
 				3E635FC821928E81006FC152 /* searchresultCV.m in Sources */,
@@ -2568,6 +2709,7 @@
 				04BBFB8C219AB34C0088196E /* ConsolidateProblemCVCell.m in Sources */,
 				3E2BBBD721C021E900B5A693 /* MineHistoryVC.m in Sources */,
 				04B3C08E219BFD140035C995 /* MakeProblemQuestionCardCVCell.m in Sources */,
+				04FCCD0621AE9ADB0015AC26 /* ChapterScoreModel.m in Sources */,
 				3EA283412186E1A600B2D716 /* cellphone_loginview.m in Sources */,
 				3E8FB22C21B0535B00FBD5E8 /* testCommTab.m in Sources */,
 				045B11EC219138E1001FC325 /* ChapterScoreHeadCVCell.m in Sources */,
@@ -2582,10 +2724,12 @@
 				3E7564C221A50024009A766C /* FilterCommonCollectionViewCell.m in Sources */,
 				3E89FD1521B42B0700D1E012 /* GWProgressHUB.m in Sources */,
 				045B11E0219133C0001FC325 /* ChapterScoreVC.m in Sources */,
+				042ED7DF21BF913800128AAB /* MineUserProfessionCollection.m in Sources */,
 				3EB08E8E218C353C00849777 /* HomeHeaderView.m in Sources */,
 				04ACCD40219D0C9B00716953 /* SyllabusMainCollection.m in Sources */,
 				3E7564BA21A4FE70009A766C /* sideFilterCell.m in Sources */,
 				0477160B2199A0140051FB83 /* RechargeMainView.m in Sources */,
+				04D5758F21BE44B70023E649 /* MakeProblemAnserModel.m in Sources */,
 				045B120321917302001FC325 /* MakeProblemToolView.m in Sources */,
 				0477160121999B1C0051FB83 /* ConsolidateOptionCVCell.m in Sources */,
 				04ACCD9A219D8E4700716953 /* SearchCollection.m in Sources */,
@@ -2594,28 +2738,36 @@
 				04ACCD98219D8E4700716953 /* SQSearchBar.m in Sources */,
 				3E14D86E21ADAFBD00165FF8 /* CalendarHeaderView.m in Sources */,
 				04B3C084219BC2410035C995 /* ConsolidateMyWrongMainCollection.m in Sources */,
+				04CA92AD21B0DE3D00F39561 /* WCNAreaPickerView.m in Sources */,
 				3E3AEFBB217DFDA8006C2860 /* AppDelegate.m in Sources */,
 				04BBFB93219AB5200088196E /* MyCollectionMainCollection.m in Sources */,
 				3E14D87121ADB08200165FF8 /* couresListVC.m in Sources */,
 				045B11D221912198001FC325 /* ChapterCVCell.m in Sources */,
+				042ED7F821BFA0EF00128AAB /* MineHelpSetVC.m in Sources */,
 				3E83D2C1217E019200E78B1C /* MyNav.m in Sources */,
 				3EE08AE621A5B7A600832D1A /* topFilterCell.m in Sources */,
 				3E635FB421928061006FC152 /* Searchkey.m in Sources */,
 				04B3C07E219BC0180035C995 /* ConsolidateFalibilityMainCollection.m in Sources */,
+				042ED7E321BF915C00128AAB /* MineUserProfessionCVCell.m in Sources */,
+				042ED7FB21BFA1CA00128AAB /* MineHelpSet.m in Sources */,
 				3EE08AE321A5439E00832D1A /* UIButton+ImageRight.m in Sources */,
 				3EB08EA4218C5EC000849777 /* HomenewsCell.m in Sources */,
 				3E6AFE9C21A29B3D00E07AD7 /* searchWithKindVC.m in Sources */,
 				3E89FD1B21B42C8900D1E012 /* initAppVC.m in Sources */,
 				3E79DE642186B55700CD8AFC /* registerView.m in Sources */,
+				041DD1A221B927A800322150 /* MineCollectionVC.m in Sources */,
 				04ACCD48219D424B00716953 /* SyllabusMainPopView.m in Sources */,
 				045B11D521912198001FC325 /* ChapterMainCVCell.m in Sources */,
 				04B1B14121945B2700EEB51E /* ConsolidateMainHeadCVCell.m in Sources */,
+				042ED7F021BF9A8A00128AAB /* MineToolExchangeVC.m in Sources */,
 				3E7564C721A500EF009A766C /* CommonItemModel.m in Sources */,
 				04AC33F42192B1EA00307E70 /* MakeProblemCommitCVCell.m in Sources */,
 				045B11D621912198001FC325 /* RatioView.m in Sources */,
 				3EB08EBC218C853100849777 /* GWScanCodeManager.m in Sources */,
 				04ACCD38219D07F100716953 /* SyllabusMainVC.m in Sources */,
 				045B11DA21912FFF001FC325 /* ChapterListVC.m in Sources */,
+				04FCCCEE21AE29980015AC26 /* SQNetworkInterface.m in Sources */,
+				04FCCCFB21AE89DD0015AC26 /* ChapterCleanVC.m in Sources */,
 				04ACCD87219D840600716953 /* SearchQuestionMainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

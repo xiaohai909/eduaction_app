@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "IQTextView.h"
 
 extern NSString *const MakeProblemSetMessage;
 extern NSString *const MakeProblemSetMessageGO;
@@ -23,10 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *btn_big;
 @property (weak, nonatomic) IBOutlet UIButton *btn_bigger;
 
+@property (weak, nonatomic) IBOutlet UILabel *lbl_title;
 @property (weak, nonatomic) IBOutlet UIButton *btn_send;
-@property (weak, nonatomic) IBOutlet UITextView *view_text;
+@property (weak, nonatomic) IBOutlet IQTextView *view_text;
 
-@property (nonatomic, copy) void (^blockChange)();
+@property (nonatomic, copy) void (^blockChange)(void);
 
 + (MakeProblemPopView *)creatSetPopView;
 + (MakeProblemPopView *)creatNotePopView;

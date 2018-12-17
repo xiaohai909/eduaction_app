@@ -7,8 +7,10 @@
 //
 
 #import "MineHistoryVC.h"
+#import "MineHistoryCollection.h"
 
 @interface MineHistoryVC ()
+@property (nonatomic, strong) MineHistoryCollection *collection_main;
 
 @end
 
@@ -21,9 +23,37 @@
     [self setnavbg_defa];
     self.title = @"历史记录";
     
-//    [self.view addSubview:self.collection_main];
+    [self.view addSubview:self.collection_main];
 }
-
+#pragma --- view creat
+- (MineHistoryCollection *)collection_main {
+    if (!_collection_main) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.minimumLineSpacing = 1.0;
+        layout.minimumInteritemSpacing = 4.0;
+        
+        _collection_main = [[MineHistoryCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth, ZTHeight-NaviIPHONEX} collectionViewLayout:layout];
+        _collection_main.backgroundColor = HexRGB(0xF1F0F0);       
+        
+        //@weakify(self)
+        [_collection_main setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
+            //@strongify(self)
+            //跳转到对应的课程
+        }];
+        
+        //数据
+        [_collection_main setupHeaderRefresh:^{
+            
+        }];
+        [_collection_main setupHeaderRefresh:^{
+            
+        }];
+        
+        _collection_main.data_model = [DataModel new];
+        [_collection_main.data_model.result addObjectsFromArray:@[@"",@"",@"",@""]];
+    }
+    return _collection_main;
+}
 /*
 #pragma mark - Navigation
 

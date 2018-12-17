@@ -20,7 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) MakeProblemMode viewMode;//答题模式
 @property (nonatomic, strong) NSNumber *currentPage;//
 
+@property (nonatomic, assign) NSInteger total;
 @property (nonatomic, strong) NSMutableArray *array_models;
+@property (nonatomic, copy) void (^blockMakeProblem)(NSString *correct);
+@property (nonatomic, copy) void (^blockRequestPage)(NSInteger row);
 
 
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout andType:(MakeProblemMode)viewMode;

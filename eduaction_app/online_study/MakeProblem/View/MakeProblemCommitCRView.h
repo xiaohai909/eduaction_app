@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MakeProblemCommitCRView : UICollectionReusableView
 @property (weak, nonatomic) IBOutlet UIButton *btn_detail;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_title;
 
 @end
 

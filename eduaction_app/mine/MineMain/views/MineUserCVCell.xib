@@ -31,7 +31,7 @@
                             <constraint firstAttribute="width" constant="13" id="Y5Q-mw-Z5V"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ4-7d-b6n">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ4-7d-b6n">
                         <rect key="frame" x="271" y="2" width="46" height="46"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="bJ4-7d-b6n" secondAttribute="height" multiplier="1:1" id="1ib-xo-dbZ"/>
@@ -55,15 +55,18 @@
                 <constraint firstItem="bbr-2k-4M9" firstAttribute="centerY" secondItem="SEy-5g-ep8" secondAttribute="centerY" id="b9u-KB-YYe"/>
                 <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="8Ca-0v-2ac" secondAttribute="trailing" constant="23" id="ePL-Tb-VS9"/>
                 <constraint firstItem="8Ca-0v-2ac" firstAttribute="leading" secondItem="NeN-JV-bg9" secondAttribute="trailing" constant="13" id="mMv-uw-fHS"/>
-                <constraint firstItem="8Ca-0v-2ac" firstAttribute="leading" secondItem="bJ4-7d-b6n" secondAttribute="trailing" constant="31" id="pyi-od-cee"/>
                 <constraint firstItem="NeN-JV-bg9" firstAttribute="centerY" secondItem="bbr-2k-4M9" secondAttribute="centerY" id="qwg-Hp-LpJ"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="bJ4-7d-b6n" secondAttribute="trailing" constant="67" id="v3g-z2-0iR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="384" height="50"/>
             <connections>
                 <outlet property="btn_head" destination="bJ4-7d-b6n" id="YE3-Q1-3yu"/>
+                <outlet property="btn_head_right" destination="v3g-z2-0iR" id="ebm-Wh-54p"/>
+                <outlet property="image_arrow" destination="8Ca-0v-2ac" id="z0Q-M1-CmH"/>
                 <outlet property="lbl_detail" destination="NeN-JV-bg9" id="4yp-jf-hAx"/>
                 <outlet property="lbl_title" destination="bbr-2k-4M9" id="Bc8-1x-Ugi"/>
+                <outlet property="lbl_title_left" destination="A5Y-V2-iTy" id="otR-xo-nv4"/>
             </connections>
             <point key="canvasLocation" x="-134.40000000000001" y="154.72263868065968"/>
         </collectionViewCell>

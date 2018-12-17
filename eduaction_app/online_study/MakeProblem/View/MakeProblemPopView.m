@@ -94,6 +94,7 @@ NSString *const MakeProblemSetMessageTextFont = @"MakeProblemSetMessageTextFont"
         
         noteView.layer.cornerRadius = 5;
         noteView.view_text.delegate = noteView;
+        noteView.view_text.placeholder = @"点击这里，添加笔记";
     });
     [noteView.view_text becomeFirstResponder];
     return noteView;
@@ -106,13 +107,6 @@ NSString *const MakeProblemSetMessageTextFont = @"MakeProblemSetMessageTextFont"
         [self removeFromSuperview];
     }];
 }
-- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-    if ([textView.text isEqualToString:@"点击这里，添加笔记"]) {
-        textView.text = @"";
-        textView.textColor = HexRGB(0x333333);
-    }
-    return YES;
-}
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     if ([text isEqualToString:@""] && range.location==0 && range.length==1){
@@ -121,29 +115,12 @@ NSString *const MakeProblemSetMessageTextFont = @"MakeProblemSetMessageTextFont"
         self.btn_send.layer.borderWidth = 1.0;
         self.btn_send.backgroundColor = [UIColor whiteColor];
     }
-    else if (![text isEqualToString:@"点击这里，添加笔记"]) {
+    else {
         self.btn_send.userInteractionEnabled = YES;
         self.btn_send.selected = YES;
         self.btn_send.layer.borderWidth = 0.0;
         self.btn_send.backgroundColor = HexRGB(0xFF6B6B);
     }
     return YES;
-}
-- (void)textViewDidEndEditing:(UITextView *)textView
-{
-    if (textView.text.length>0 && ![textView.text isEqualToString:@"点击这里，添加笔记"]) {
-        self.btn_send.userInteractionEnabled = YES;
-        self.btn_send.selected = YES;
-        self.btn_send.layer.borderWidth = 0.0;
-        self.btn_send.backgroundColor = HexRGB(0xFF6B6B);
-    }
-    else{
-        textView.text = @"点击这里，添加笔记";
-        textView.textColor = HexRGB(0x999999);
-        self.btn_send.userInteractionEnabled = NO;
-        self.btn_send.selected = NO;
-        self.btn_send.layer.borderWidth = 1.0;
-        self.btn_send.backgroundColor = [UIColor whiteColor];
-    }
 }
 @end

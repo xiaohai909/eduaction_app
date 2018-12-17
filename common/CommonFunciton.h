@@ -44,6 +44,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (Creat_Category)
 +(instancetype)instancetypeWithXib;
++ (CGFloat)viewGetHeightWithContent:(NSString *)content width:(CGFloat)width font:(CGFloat)font;
++ (CGFloat)viewGetWidthWithContent:(NSString *)content height:(CGFloat)height font:(CGFloat)font;
+- (void)showViewInViewWithView:(UIView *)view;
+- (void)hideViewInView:(UIView *)view;
 @end
 
 NS_ASSUME_NONNULL_END

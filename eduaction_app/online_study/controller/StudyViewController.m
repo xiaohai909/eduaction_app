@@ -81,9 +81,10 @@
             }
             else if ([title isEqualToString:@"继续学习"]){
                 //根据原来练习的章节继续学习
-                MakeProblemMainVC *vc = [MakeProblemMainVC new];
-                [vc setMode:MakeProblemMainModeRandomPractice];
-                [self.navigationController pushViewController:vc animated:YES];
+#warning mark ---  章节信息和最后做到的题目
+//                MakeProblemMainVC *vc = [MakeProblemMainVC new];
+//                [vc setMakeProblemVC:MakeProblemMainVCChapterPractice];
+//                [self.navigationController pushViewController:vc animated:YES];
             }
             else if ([title isEqualToString:@"章节练习"]) {
                 [self.navigationController pushViewController:[ChapterVC new] animated:YES];
@@ -95,12 +96,13 @@
                 
             }
             else if ([title isEqualToString:@"随机练习"]) {
-                MakeProblemMainVC *vc = [MakeProblemMainVC new];
-                [vc setMode:MakeProblemMainModeRandomPractice];
-                [self.navigationController pushViewController:vc animated:YES];
+#warning mark ---  随机练习接口参数
+//                MakeProblemMainVC *vc = [MakeProblemMainVC new];
+//                [vc setMakeProblemVC:MakeProblemMainVCRandomPractice];
+//                [self.navigationController pushViewController:vc animated:YES];
             }
             else if ([title isEqualToString:@"错题练习"]) {
-                //先到错题列表
+                //错题练习
                 [self.navigationController pushViewController:[ConsolidateMyWrongMainVC new] animated:YES];
             }
             else if ([title isEqualToString:@"巩固练习"]) {

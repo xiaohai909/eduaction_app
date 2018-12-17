@@ -8,7 +8,7 @@
 
 #import "ConsolidateMyWrongMainCollection.h"
 #import "ConsolidateProblemCVCell.h"
-
+#import "MakeProblemMainModel.h"
 
 static NSString * const cell1 = @"ConsolidateProblemCVCell";
 
@@ -30,6 +30,7 @@ static NSString * const cell1 = @"ConsolidateProblemCVCell";
         self.dataSource = self;
         
         self.set_choise = [NSMutableSet set];
+        self.array_models = [NSMutableArray array];
     }
     return self;
 }
@@ -68,13 +69,19 @@ static NSString * const cell1 = @"ConsolidateProblemCVCell";
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(self.py_width, 50);
+    return CGSizeMake(self.py_width, indexPath.row?25:40);
+
+//    ConsolidateMyWrongModel *model = self.array_models[indexPath.section];
+//    return CGSizeMake(self.py_width, collection_modify?model.height_modify:model.height);
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    MakeProblemMainModel *model = self.array_models[indexPath.section];
+    
     ConsolidateProblemCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-    [cell setCollectionModify:collection_modify andTitle:@"1.盐类泻药应选用（）"];
+    [cell setCollectionModify:collection_modify andTitle:[NSString stringWithFormat:@"%ld.%@",indexPath.section+1,model.questionTitle]];
     if (collection_modify) {//是不是编辑状态
         //是否存在
         bool isExist = [self.set_choise containsObject:self.array_models[indexPath.section]];

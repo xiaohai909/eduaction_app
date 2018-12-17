@@ -276,5 +276,72 @@
 {
     return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
 }
+//根据宽度求高度  content 计算的内容  width 计算的宽度 font字体大小
++ (CGFloat)viewGetHeightWithContent:(NSString *)content width:(CGFloat)width font:(CGFloat)font{
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:5];
+    paragraphStyle.firstLineHeadIndent = 20.f; // 首行缩进
+    CGRect rect = [content boundingRectWithSize:CGSizeMake(width, 999)
+                                        options:NSStringDrawingUsesLineFragmentOrigin
+                                     attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font],NSParagraphStyleAttributeName:paragraphStyle}
+                                        context:nil];
+    return rect.size.height;
+}
 
+//根据高度度求宽度  content 计算的内容  Height 计算的高度 font字体大小
++ (CGFloat)viewGetWidthWithContent:(NSString *)content height:(CGFloat)height font:(CGFloat)font{
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:5];
+    paragraphStyle.firstLineHeadIndent = 20.f; // 首行缩进
+    CGRect rect = [content boundingRectWithSize:CGSizeMake(999, height)
+                                        options:NSStringDrawingUsesLineFragmentOrigin
+                                     attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font],NSParagraphStyleAttributeName:paragraphStyle}
+                                        context:nil];
+    return rect.size.width;
+}
+
+
+
+- (void)showViewInViewWithView:(UIView *)view
+{
+    UIButton *bg = [self viewWithTag:110];
+    if (!bg) {
+        bg = [UIButton buttonWithType:UIButtonTypeCustom];
+        bg.frame = CGRectMake(0, 0, ZTWidth, ZTHeight);
+    }
+    bg.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.5];
+    bg.tag = 110;
+    [bg addSubview:view];
+    //    [bg setBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
+    //        [self hideViewInView:view];
+    //    }];
+    [self addSubview:bg];
+    if (view.py_height == ZTHeight) {
+        view.py_bottom = ZTHeight;
+    }
+    else{
+        [UIView animateWithDuration:0.3 animations:^{
+            view.py_bottom = ZTHeight;
+        }];
+    }
+}
+
+- (void)hideViewInView:(UIView *)view
+{
+    if (view.py_height == ZTHeight) {
+        view.py_y = ZTHeight;
+        [view.superview removeFromSuperview];
+        [view removeFromSuperview];
+    }
+    else{
+        [UIView animateWithDuration:0.3 animations:^{
+            view.py_y = ZTHeight;
+        } completion:^(BOOL finished) {
+            [view.superview removeFromSuperview];
+            [view removeFromSuperview];
+        }];
+    }
+}
 @end

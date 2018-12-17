@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ChapterMainCollection : UICollectionView <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@property (nonatomic, copy) NSString *qsAnswerCount,*qsAverage,*qsCorrectCount,*qsTotal;
+@property (nonatomic, strong) NSMutableArray *model_array;
 @property (nonatomic, copy) void (^blockGoOn)(NSIndexPath *indexPath);
 @end
 

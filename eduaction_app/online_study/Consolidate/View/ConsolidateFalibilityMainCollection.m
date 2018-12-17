@@ -8,6 +8,7 @@
 
 #import "ConsolidateFalibilityMainCollection.h"
 #import "ConsolidateProblemCVCell.h"
+#import "MakeProblemMainModel.h"
 
 
 static NSString * const cell1 = @"ConsolidateProblemCVCell";
@@ -49,9 +50,10 @@ static NSString * const cell1 = @"ConsolidateProblemCVCell";
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    MakeProblemMainModel *model = self.array_models[indexPath.section];
     if (indexPath.row == 0) {
         ConsolidateProblemCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-        [cell setCollectionModify:NO andTitle:@"1.盐类泻药应选用（）"];
+        [cell setCollectionModify:NO andTitle:[NSString stringWithFormat:@"%ld.%@",indexPath.section+1,model.questionTitle]];
         cell.lbl_content.textColor = HexRGB(0x333333);
         cell.lbl_content.font = [UIFont systemFontOfSize:16];
         cell.lbl_content_left.constant = 15;
@@ -59,7 +61,7 @@ static NSString * const cell1 = @"ConsolidateProblemCVCell";
     }
     else {
         ConsolidateProblemCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-        [cell setCollectionModify:YES andTitle:@"123456人答错"];
+        [cell setCollectionModify:YES andTitle:[NSString stringWithFormat:@"%@人答错",model.collectionCount]];
         [cell.btn_image setImage:[UIImage imageNamed:@"error prone_ico_wrong question"] forState:UIControlStateNormal];
         cell.lbl_content.textColor = HexRGB(0xFF6B6B);
         cell.lbl_content.font = [UIFont systemFontOfSize:14];

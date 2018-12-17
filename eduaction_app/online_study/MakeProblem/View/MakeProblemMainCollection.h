@@ -29,14 +29,15 @@ typedef NS_ENUM(NSUInteger, MakeProblemMode) {
 @interface MakeProblemMainCollection : UICollectionView<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, assign) BOOL isAutoReturn;//是否自动跳转
 @property (nonatomic, assign) NSInteger addTextFont;//字体更改的倍数
-#warning 这个要看后台的正确答案是以什么形式给的
-//@property (nonatomic, strong) NSIndexPath *indexPath;//用户选择的结果
 @property (nonatomic, assign) MakeProblemMode viewMode;//答题模式
 
 @property (nonatomic, assign) NSInteger allNumber;
 @property (nonatomic, strong) MakeProblemMainModel *model;
 
-@property (nonatomic, copy) void (^blockGoOn)();//
+@property (nonatomic, copy) void (^blockGoOn)(void);//自动进入下一题
+@property (nonatomic, copy) void (^blockPageChange)(BOOL nextPage);//上下页
+@property (nonatomic, copy) void (^blockMakeProblem)(NSString *correct);//做完题目
+
 
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout andType:(MakeProblemMode)viewMode;
 - (void)setModel:(MakeProblemMode)viewMode andFrame:(CGRect)frame andModel:(MakeProblemMainModel *)model ;

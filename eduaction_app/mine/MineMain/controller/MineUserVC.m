@@ -8,6 +8,12 @@
 
 #import "MineUserVC.h"
 #import "MineUserCollection.h"
+#import "PhotoChoiseVC.h"
+#import "WCNAreaPickerView.h"
+#import "MineUserProfessionVC.h"
+#import "MineAttestationVC.h"
+#import "MineChangePasswardVC.h"
+#import "MineChangePhoneVC.h"
 
 @interface MineUserVC ()
 {
@@ -43,6 +49,47 @@
         _collection_main = [[MineUserCollection alloc] initWithFrame:(CGRect){0, 0, ZTWidth, ZTHeight-NaviIPHONEX} collectionViewLayout:layout];
         _collection_main.backgroundColor = [UIColor groupTableViewBackgroundColor];
         _collection_main.showsVerticalScrollIndicator = NO;
+        @weakify(self)
+        [_collection_main setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
+            @strongify(self)
+            if (indexPath.section == 0) {
+                //选择头像并上传
+                [self getImageBlock:^(UIImage * _Nonnull image) {
+                    NSLog(@"%@",image);
+                }];
+            }
+            else if (indexPath.section == 1){
+                if (indexPath.row == 0) {
+                    //选择职业
+                    [self.navigationController pushViewController:[MineUserProfessionVC new] animated:YES];
+//                    [self sheetAlertController:@"职业"];
+                }
+            }
+            else if (indexPath.section == 2) {
+                if (indexPath.row == 1) {
+                    //选择性别
+                    [self sheetAlertController:@"性别"];
+                }
+                else if (indexPath.row == 2) {
+                    //选择地区
+                    WCNAreaPickerView *pickerView = [[WCNAreaPickerView alloc] initWithStyle:WCNAreaPickerWithStateAndCityAndDistrict delegate:self];
+                    [pickerView show];
+                }
+            }
+            else if (indexPath.section == 3) {
+                if (indexPath.row == 0) {
+                    [self.navigationController pushViewController:[MineChangePhoneVC new] animated:YES];
+                }
+                else if (indexPath.row == 3) {
+                    //修改密码
+                    [self.navigationController pushViewController:[MineChangePasswardVC new] animated:YES];
+
+                } else if(indexPath.row == 4){
+                    //查看实名认证或实名认证
+                    [self.navigationController pushViewController:[MineAttestationVC new] animated:YES];
+                }
+            }
+        }];
     }
     return _collection_main;
 }

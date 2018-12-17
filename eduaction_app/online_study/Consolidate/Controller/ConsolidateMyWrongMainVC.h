@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ConsolidateMyWrongMainVC : BaseViewController
-
+@property (nonatomic, strong) NSString *questionHouse;
+@property (nonatomic, strong) NSString *myWrongType;//type
 @end
 
 NS_ASSUME_NONNULL_END

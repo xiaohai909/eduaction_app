@@ -10,6 +10,9 @@
 #import "ChapterMainCollection.h"
 
 #import "ChapterListVC.h"
+#import "ChapterCleanVC.h"
+
+#import "ChapterListModel.h"
 
 @interface ChapterVC ()
 @property (nonatomic, strong) ChapterMainCollection *collection_main;
@@ -29,6 +32,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.collection_main.mj_header beginRefreshing];
 }
 /*
 #pragma mark - Navigation
@@ -52,10 +56,44 @@
         @weakify(self)
         [_collection_main setBlockGoOn:^(NSIndexPath * _Nonnull indexPath) {
             @strongify(self)
-            //跳转到对应的章节
-            [self.navigationController pushViewController:[ChapterListVC new] animated:YES];
+            if (indexPath.section == 1) {
+                //跳转到对应的章节
+                ChapterListVC *vc = [ChapterListVC new];
+                vc.model = self.collection_main.model_array[indexPath.row];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+            else{
+             //清空
+                ChapterCleanVC *vc = [ChapterCleanVC new];
+                [vc setBlockClean:^{
+                    [self request];
+                }];
+                [self.navigationController pushViewController:vc animated:YES];
+            }            
+        }];        
+        
+        //数据
+        [_collection_main setupHeaderRefresh:^{
+            [self request];
         }];
+//        [_collection_main.mj_header beginRefreshing];
     }
     return _collection_main;
+}
+
+#pragma mark --- request
+- (void)request
+{
+    [SQNetworkInterface iRequestChapterMainParames:@{@"parentId":@"1",@"userId":@"33"} andResult:^(NSInteger state, NSString * _Nonnull msg,NSString * _Nonnull total, id  _Nonnull resultData) {
+        if (state == CODE_SUCCESS) {
+            self.collection_main.qsAnswerCount = [NSString stringWithFormat:@"%@",resultData[@"qsAnswerCount"]];
+            self.collection_main.qsAverage = [NSString stringWithFormat:@"%@",resultData[@"qsAverage"]];
+            self.collection_main.qsCorrectCount = [NSString stringWithFormat:@"%@",resultData[@"qsCorrectCount"]];
+            self.collection_main.qsTotal = [NSString stringWithFormat:@"%@",resultData[@"qsTotal"]];
+            self.collection_main.model_array = [ChapterListModel mj_objectArrayWithKeyValuesArray:resultData[@"ListData"]];
+        }
+        [self.collection_main reloadData];
+        [self.collection_main stopHeaderRefresh];
+    }];
 }
 @end

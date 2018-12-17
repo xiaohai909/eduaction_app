@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ChapterScoreVC : BaseViewController
+@property (nonatomic, strong) NSString *questionHouse;
 
 @end
 

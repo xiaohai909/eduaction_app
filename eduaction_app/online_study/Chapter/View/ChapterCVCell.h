@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "RatioView.h"
 
+#import "ChapterListModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ChapterCVCell : UICollectionViewCell
@@ -17,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lbl_detail;
 @property (weak, nonatomic) IBOutlet UIButton *btn_check;
 
+- (void)setChapterMainModel:(ChapterListModel *)model;
 @end
 
 NS_ASSUME_NONNULL_END
