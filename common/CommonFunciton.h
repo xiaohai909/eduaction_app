@@ -28,6 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage*)createImageWithColor:(UIColor*)color;
 
 +(UIAlertController *)showAlert:(NSString *)message  AndOK_str:(NSString *)oktitle AndCancel_str:(NSString *)canceltitle AndClickOK:(void (^)(int index))OK;
+
++(CGFloat)getSpaceLabelHeight:(NSString*)str withFont:(UIFont*)font withWidth:(CGFloat)width;
++(void)setLabelSpace:(UILabel*)label withValue:(NSString*)str withFont:(UIFont*)font;
+
 @end
 
 

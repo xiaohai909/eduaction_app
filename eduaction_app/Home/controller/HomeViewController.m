@@ -18,6 +18,9 @@
 #import "testGuideVC.h"
 #import "medicineVC.h"
 @interface HomeViewController ()
+{
+    BOOL isfirstIn;
+}
 @property(strong,nonatomic)UIButton *rightBtn;
 @property(strong,nonatomic)UIButton *searchBtn;
 @property(strong,nonatomic)HomeCollection *homeCollectionV;
@@ -30,7 +33,19 @@
         
         _homeCollectionV = [[HomeCollection alloc]initWithFrame:CGRectMake(0, 0, ZTWidth, ZTHeight-NaviIPHONEX-TabIPHONEX) collectionViewLayout:layout];
         _homeCollectionV.backgroundColor =  HexRGB(0xF1F0F0);
-   
+        CGFloat bgheight = (btnwidth*2+2*topspace+centerspcae+2*titlespcae+2*btn_title_height);
+        _homeCollectionV.contentInset = UIEdgeInsetsMake(ZTWidth*0.4+bgheight+104, 0, 0, 0);
+        
+        _homeCollectionV.mj_header =[MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            
+            
+            NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+            [dic setObject:@(0) forKey:@"page"];
+            [dic setObject:@"6" forKey:@"kechengTypeId"];
+            [[[[myNetworkManager sharemyNetworkManager]net_courseMode]dataReqCommand] execute:dic];
+            
+        }];
+        _homeCollectionV.mj_header.AdjusttoTop = ZTWidth*0.4+bgheight+104;
         //XFAdjustsScrollViewInsets(_homeCollectionV);
     }
     return _homeCollectionV;
@@ -78,15 +93,50 @@
        
     }];
     [self.view addSubview:self.homeCollectionV];
-    self.homeCollectionV.contentInset = UIEdgeInsetsMake(ZTWidth*0.4+bgheight+104, 0, 0, 0);
+    
+   
+    
     [self.homeCollectionV addSubview:header];
     
+    [[myNetworkManager sharemyNetworkManager] queryKechengTypeListAndsuccess:^(id  _Nonnull response) {
+        
+    } Andfailure:^(NSError * _Nonnull err) {
+        
+    }];
+    
+
+    [[[[[[myNetworkManager sharemyNetworkManager]net_courseMode]dataReqCommand]executionSignals] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id  _Nullable x) {
+        
+        @strongify(self);
+        [[x takeUntil:self.rac_willDeallocSignal] subscribeCompleted:^{
+            @strongify(self);
+            [self.homeCollectionV.mj_header endRefreshing];
+            [self.homeCollectionV.mj_footer endRefreshing];
+        }];
+        [[x takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id  _Nullable x) {
+            @strongify(self);
+            commResBaseClass *mode = x;
+            if (mode.resultObj_arr.count > 0) {
+                
+            }
+            
+        }];
+        
+        
+        
+    }];
+      
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
     
     
     //[self.navigationController.navigationBar setBackgroundImage:[CommonFunciton createImageWithColor:HexRGB(0xFFFFFF)] forBarMetrics:UIBarMetricsDefault];
+    if (!isfirstIn) {
+        isfirstIn = YES;
+        [self.homeCollectionV.mj_header beginRefreshing];
+    }
+    
     [self.navigationController.navigationBar setBackgroundImage:[CommonFunciton createImageWithColor:HexRGB(0xFFFFFF)] forBarMetrics:UIBarMetricsDefault];
     self.tabBarController.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
     

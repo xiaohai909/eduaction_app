@@ -46,6 +46,11 @@
     
     // 设置y值(当自己的高度发生改变了，肯定要重新调整Y值，所以放到placeSubviews方法中设置y值)
     self.mj_y = - self.mj_h - self.ignoredScrollViewContentInsetTop;
+    
+    if (self.AdjusttoTop > 0) {
+        
+         self.mj_y = - self.mj_h - self.ignoredScrollViewContentInsetTop-(self.AdjusttoTop);
+    }
 }
 
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)change

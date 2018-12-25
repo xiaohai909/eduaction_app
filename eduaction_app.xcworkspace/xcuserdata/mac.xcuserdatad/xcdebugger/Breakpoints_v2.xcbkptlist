@@ -185,11 +185,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eduaction_app/online_study/MakeProblem/Controller/MakeProblemMainVC.m"
-            timestampString = "566711358.282742"
+            timestampString = "566705431.234225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "527"
-            endingLineNumber = "527"
+            startingLineNumber = "520"
+            endingLineNumber = "520"
             landmarkName = "-requestAnswer:andType:"
             landmarkType = "7">
             <Locations>
@@ -201,11 +201,11 @@
                   moduleName = "eduaction_app"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Documents/eduaction_app2/eduaction_app/online_study/MakeProblem/Controller/MakeProblemMainVC.m"
-                  timestampString = "566724476.731714"
+                  timestampString = "566706348.539788"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "527"
-                  endingLineNumber = "527"
+                  startingLineNumber = "520"
+                  endingLineNumber = "520"
                   offsetFromSymbolStart = "775">
                </Location>
                <Location
@@ -216,26 +216,26 @@
                   moduleName = "eduaction_app"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Documents/eduaction_app2/eduaction_app/online_study/MakeProblem/Controller/MakeProblemMainVC.m"
-                  timestampString = "566724476.735611"
+                  timestampString = "566706348.542642"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "528"
-                  endingLineNumber = "528"
+                  startingLineNumber = "521"
+                  endingLineNumber = "521"
                   offsetFromSymbolStart = "113">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.507"
+                  symbolName = "__destroy_helper_block_.505"
                   moduleName = "eduaction_app"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Documents/eduaction_app2/eduaction_app/online_study/MakeProblem/Controller/MakeProblemMainVC.m"
-                  timestampString = "566724476.739791"
+                  timestampString = "566706348.545101"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "527"
-                  endingLineNumber = "527"
+                  startingLineNumber = "520"
+                  endingLineNumber = "520"
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
@@ -264,7 +264,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eduaction_app/online_study/Consolidate/Controller/ConsolidateMyWrongMainVC.m"
-            timestampString = "566711358.282842"
+            timestampString = "566705431.234303"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "171"
@@ -280,7 +280,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eduaction_app/online_study/Consolidate/Controller/ConsolidateMyWrongMainVC.m"
-            timestampString = "566711358.282908"
+            timestampString = "566705431.23474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "198"
@@ -296,12 +296,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eduaction_app/online_study/MakeProblem/Controller/MakeProblemMainVC.m"
-            timestampString = "566711358.282968"
+            timestampString = "566706347.574173"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "485"
-            endingLineNumber = "485"
-            landmarkName = "-requestAllMyWrongPage:"
+            startingLineNumber = "478"
+            endingLineNumber = "478"
+            landmarkName = "-dataSetArray:andPage:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -312,12 +312,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eduaction_app/online_study/MakeProblem/Controller/MakeProblemMainVC.m"
-            timestampString = "566711358.283024"
+            timestampString = "566706349.2546"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "477"
-            endingLineNumber = "477"
-            landmarkName = "-requestMyWrongPage:"
+            startingLineNumber = "470"
+            endingLineNumber = "470"
+            landmarkName = "-requestAllMyWrongPage:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -328,76 +328,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eduaction_app/online_study/Consolidate/Controller/MyCollectionMainVC.m"
-            timestampString = "566711358.2830811"
+            timestampString = "566707370.2197469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "-changeViewMode"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eduaction_app/Login/viewmode/LoginViewMode.m"
-            timestampString = "566722995.931402"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "-subscribeCommand_forgetpassowrd_codebtn"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LoginViewMode subscribeCommand_forgetpassowrd_codebtn]"
-                  moduleName = "eduaction_app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Documents/eduaction_app2/eduaction_app/Login/viewmode/LoginViewMode.m"
-                  timestampString = "566724476.792357"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__56-[LoginViewMode subscribeCommand_forgetpassowrd_codebtn]_block_invoke"
-                  moduleName = "eduaction_app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Documents/eduaction_app2/eduaction_app/Login/viewmode/LoginViewMode.m"
-                  timestampString = "566724476.79556"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "166"
-                  endingLineNumber = "166"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.105"
-                  moduleName = "eduaction_app"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Documents/eduaction_app2/eduaction_app/Login/viewmode/LoginViewMode.m"
-                  timestampString = "566724476.7989891"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

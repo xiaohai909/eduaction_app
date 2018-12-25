@@ -4,7 +4,7 @@
 target 'eduaction_app' do
 use_frameworks!
 pod 'ReactiveObjC'
-pod 'SDWebImage'
+pod 'SDWebImage','~> 4.4.0'
 pod 'MGSwipeTableCell'
 pod 'FSCalendar'
 pod 'AFNetworking'
@@ -20,4 +20,5 @@ pod 'TezButton'
 pod 'YYCache'
 pod 'ZYSideSlipFilter'
 pod 'FCUUID'
+#pod 'SuperPlayer'
 end

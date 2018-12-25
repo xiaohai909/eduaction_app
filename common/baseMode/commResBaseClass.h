@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *resultMsg;
 @property (nonatomic, strong) commResResultObj *resultObj;
 @property (nonatomic, strong) NSMutableDictionary *resultObj_dic;
+@property (nonatomic, strong) NSMutableArray *resultObj_arr;
 @property (nonatomic, assign) double resultCode;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;

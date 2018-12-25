@@ -42,6 +42,11 @@
 #import <MJRefresh/MJRefresh.h>
 #import <MJExtension/MJExtension.h>
 #import "UIScrollView+Refresh.h"
+#import "courseVMode.h"
+#import "trainkindBaseClass.h"
+#import "GWProgressHUB.h"
+#import "SDWebImage-umbrella.h"
+#import "SuperPlayer.h"
 #if DEBUG
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 #else

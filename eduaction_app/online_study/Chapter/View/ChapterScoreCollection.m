@@ -23,8 +23,7 @@ static NSString * const cell2 = @"ChapterScoreCVCell";
     // Drawing code
 }
 */
-- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
-    
+-(instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout{
     self = [super initWithFrame:frame collectionViewLayout:layout];
     if (self) {
         

@@ -10,6 +10,7 @@
 #import "SQNetworkManager.h"
 
 #define smt_request_url(__APIURL__) [severAddress stringByAppendingString:__APIURL__]
+#define appId @"app_mobile"
 
 @implementation SQNetworkInterface
 +(NSMutableDictionary *)params:(NSMutableDictionary *)params{

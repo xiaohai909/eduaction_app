@@ -14,5 +14,9 @@
     [super awakeFromNib];
     // Initialization code
 }
-
+-(void)setDataSource:(courselistdataBaseClass *)mode{
+    
+    
+    
+}
 @end

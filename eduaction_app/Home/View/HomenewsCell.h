@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *iamgeV;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *time;
-
+-(void)setDataSource:(courselistdataBaseClass *)mode;
 @end
 
 NS_ASSUME_NONNULL_END

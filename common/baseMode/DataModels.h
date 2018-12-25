@@ -11,3 +11,7 @@
 #import "testGuideReqModeResultObj.h"
 #import "testGuideReqModeChildren.h"
 #import "userBaseClass.h"
+#import "testGuideDetailResultObj.h"
+#import "testGuideDetailBaseClass.h"
+#import "trainlistBaseClass.h"
+#import "courselistdataBaseClass.h"

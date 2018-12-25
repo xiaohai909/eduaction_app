@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface trainRightCollection : UICollectionView<UICollectionViewDelegate,UICollectionViewDataSource>
-
+@property (nonatomic,strong)RACSubject *clickindex;
 @end
 
 NS_ASSUME_NONNULL_END

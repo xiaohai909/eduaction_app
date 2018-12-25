@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lab2;
 @property (weak, nonatomic) IBOutlet UILabel *lab3;
 @property (weak, nonatomic) IBOutlet UIImageView *statusimage;
-
+-(void)SetDataSource:(courselistdataBaseClass *)mode;
 @end
 
 NS_ASSUME_NONNULL_END

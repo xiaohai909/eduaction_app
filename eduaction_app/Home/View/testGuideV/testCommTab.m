@@ -24,6 +24,8 @@
         dataSource = [[NSMutableArray alloc]init];
         
         self.clickIndex = [RACSubject subject];
+        self.clickDetail = [RACSubject subject];
+        
         self.delegate = self;
         self.dataSource =self;
         [self registerNib:[UINib nibWithNibName:@"testGuideCell" bundle:nil] forCellReuseIdentifier:@"testGuideCell"];
@@ -66,13 +68,40 @@
     id mode = [dataSource objectAtIndex:indexPath.row];
     if ([mode isKindOfClass:[testGuideReqModeResultObj class]]) {
         
-        NSMutableArray *arr = [[NSMutableArray alloc]initWithArray:((testGuideReqModeChildren *)mode).children];
-        [self.clickIndex sendNext:arr];
+        NSMutableArray *arr = [[NSMutableArray alloc]initWithArray:((testGuideReqModeResultObj *)mode).children];
+        if (arr.count > 0) {
+              [self.clickIndex sendNext:arr];
+        }
+        else{
+            testGuideReqModeResultObj *temp = mode;
+            [self.clickDetail sendNext:temp];
+        }
+      
     }
     else if ([mode isKindOfClass:[testGuideReqModeChildren class]]){
         
         NSMutableArray *arr = [[NSMutableArray alloc]initWithArray:((testGuideReqModeChildren *)mode).children];
-        [self.clickIndex sendNext:arr];
+        
+        if (arr.count > 0) {
+             [self.clickIndex sendNext:arr];
+        }
+        else{
+            testGuideReqModeChildren *temp = mode;
+            [self.clickDetail sendNext:temp];
+        }
+    }
+    else if ([mode isKindOfClass:[NSDictionary class]]){
+        
+        testGuideReqModeChildren *temp_mode = [[testGuideReqModeChildren alloc]initWithDictionary:mode];
+        NSMutableArray *arr = [[NSMutableArray alloc]initWithArray:temp_mode.children];
+        if (arr.count > 0) {
+            
+             [self.clickIndex sendNext:arr];
+        }
+        else{
+            [self.clickDetail sendNext:temp_mode];
+        }
+       
     }
  
     

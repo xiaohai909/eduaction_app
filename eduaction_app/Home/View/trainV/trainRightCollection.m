@@ -26,13 +26,42 @@ static NSString * const HID = @"trainRightHead";
     if ([super initWithFrame:frame collectionViewLayout:layout]) {
         
         self.showsVerticalScrollIndicator =NO;
+        self.clickindex = [RACSubject subject];
+        
         [self registerNib:[UINib nibWithNibName:NSStringFromClass([trainRightCell class]) bundle:nil] forCellWithReuseIdentifier:cell1];
         [self registerNib:[UINib nibWithNibName:NSStringFromClass([trainRightHead class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HID];
         self.delegate =self;
         self.dataSource =self;
+        titleArr = [[NSMutableArray alloc]init];
+        @weakify(self);
+        [[[[[[myNetworkManager sharemyNetworkManager] net_courseMode]queryKemuByPeixunbanIdCommand]executionSignals] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id  _Nullable x) {
+            @strongify(self);
+            [[x takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id  _Nullable x) {
+                @strongify(self);
+                commResBaseClass *mode =x;
+                
+                if (mode.resultCode == 10000) {
+                    [self->titleArr removeAllObjects];
+                    if (mode.resultObj_arr.count > 0) {
+                        for (NSInteger i=0; i<mode.resultObj_arr.count; i++) {
+                            
+                            trainlistBaseClass *temp = [[trainlistBaseClass alloc]initWithDictionary:mode.resultObj_arr[i]];
+                            [self->titleArr addObject:temp];
+                            
+                        }
+                        [self reloadData];
+                    }
+                    
+                }
+                
+                
+            }];
+            [[x takeUntil:self.rac_willDeallocSignal] subscribeCompleted:^{
+                [[GWProgressHUB sharedYGGWProgressHUB] YGDismiss:[CommonFunciton theTopviewControler].view];
+            }];
+        }];
         
-        NSArray *arr = @[@{@"title":@"基础科目",@"data":@[@"兽医法律法规与职业道德",@"动物解刨、组织与胚胎学",@"动物生理学",@"动物生物化学",@"兽医病理学"]},@{@"title":@"预防科目",@"data":@[@"兽医法律法规与职业道德",@"动物解刨、组织与胚胎学",@"动物生理学",@"动物生物化学",@"兽医病理学"]},@{@"title":@"预防科目",@"data":@[@"兽医法律法规与职业道德",@"动物解刨、组织与胚胎学",@"动物生理学",@"动物生物化学",@"兽医病理学"]},@{@"title":@"临床科目",@"data":@[@"兽医法律法规与职业道德",@"动物解刨、组织与胚胎学",@"动物生理学",@"动物生物化学",@"兽医病理学"]},@{@"title":@"综合应用科目",@"data":@[@"兽医法律法规与职业道德",@"动物解刨、组织与胚胎学",@"动物生理学",@"动物生物化学",@"兽医病理学"]}];
-        titleArr = [[NSMutableArray alloc]initWithArray:arr];
+       
     }
     return self;
     
@@ -41,28 +70,26 @@ static NSString * const HID = @"trainRightHead";
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     
-    return titleArr.count;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     
 
-    NSDictionary *dic = [titleArr objectAtIndex:section];
-    NSArray *arr = dic[@"data"];
-    return arr.count;
+    return titleArr.count;
+   
     
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
     
-    NSDictionary *dic = [titleArr objectAtIndex:indexPath.section];
-    NSArray *arr = dic[@"data"];
-    NSString *title = arr[indexPath.item];
+    trainlistBaseClass *mode = [titleArr objectAtIndex:indexPath.item];
+    
     
     trainRightCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cell1 forIndexPath:indexPath];
-    cell.titleLab.text = title;
+    cell.titleLab.text = mode.name;
     return cell;
    
 }
@@ -108,14 +135,12 @@ static NSString * const HID = @"trainRightHead";
         if (kind == UICollectionElementKindSectionHeader)
         {
             
-            NSDictionary *dic = [titleArr objectAtIndex:indexPath.section];
-            NSArray *arr = dic[@"data"];
-            NSString *title = arr[indexPath.item];
+           
             
             
             trainRightHead * headVc = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HID forIndexPath:indexPath];
             
-            headVc.titleLab.text = title;
+            headVc.titleLab.text = @"";
             return headVc;
         }
     
@@ -123,5 +148,17 @@ static NSString * const HID = @"trainRightHead";
     
     
     return nil;
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    [self.clickindex sendNext:titleArr[indexPath.item]];
+    
+    
+    
+}
+-(void)dealloc{
+    
+    
 }
 @end

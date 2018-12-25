@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface testGuideDetailVc : BaseViewController
-
+@property (nonatomic,strong)NSString *keyId;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -44,6 +44,9 @@
 -(instancetype)init{
     if ([super init]) {
         
+        self.net_courseMode = [[courseVMode alloc]init];
+        
+        
         network_manager = [AFNetworkReachabilityManager sharedManager];
         [network_manager startMonitoring];
         
@@ -264,10 +267,23 @@
 #pragma mark 考试指南
 -(NSURLSessionDataTask *)queryGuideAllTypeAndsuccess:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure{
     
-   
+
     NSMutableDictionary *dic2 = [self commParam:@"queryGuideAllType" Andparams:nil AndSessionID:self.sessionID AndHavesession: YES Andtype:@"appServer"];
     
     NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?3=41" isUploadImage:NO params:dic2 success:success failure:failure];
+    
+    return task;
+    
+}
+#pragma mark 考试指南详情
+-(NSURLSessionDataTask *)getGuideById:(NSString *)guideid Andsuccess:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure{
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    [dic setObject:@([guideid integerValue]) forKey:@"guideId"];
+    
+    NSMutableDictionary *dic2 = [self commParam:@"getGuideById" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"appServer"];
+    
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?3=43" isUploadImage:NO params:dic2 success:success failure:failure];
     
     return task;
     
@@ -284,8 +300,162 @@
     return task;
     
 }
+#pragma mark 获取课程列表
+//"freeType": 1,             1=收费   0  免费                           可为空
+//
+//"queryStartTime": "2018-11-01",    课程开课时间  可为空
+//
+//"kechengName": "大盘鸡",       课程标题 模糊查询  可为空
+//
+//"page": 1,                            为空默认1
+//
+//"rows": 20,                       为空默认20
+//
+//"kechengTypeId": 1,            分类ID  可为空
+//
+//"queryEndTime": "2018-11-31"       截止时间  可为空
+//"id" : 1,
+//"parentId" : 0,
+//"name" : "执兽培训",
+//"children" : [
+//
+//]
+//},
+//{
+//    "id" : 4,
+//    "parentId" : 0,
+//    "name" : "技能培训",
+//    "children" : [
+//
+//    ]
+//},
+//{
+//    "id" : 6,
+//    "parentId" : 0,
+//    "name" : "推荐课程",
+//    "children" : [
+//
+//    ]
+//},
+//{
+//    "id" : 7,
+//    "parentId" : 0,
+//    "name" : "公开课",
+//    "children" : [
+-(NSURLSessionDataTask *)queryKechengListAndfreeType:(NSString *)freeType AndqueryStartTime:(NSString *)queryStartTime AndkechengName:(NSString *)kechengName Andpage:(NSInteger)page AndkechengTypeId:(NSString *)kechengTypeId AndqueryEndTime:(NSString *)queryEndTime Andsuccess:(void (^)(id response))success Andfailure:(void (^)(NSError* err))failure{
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+//
+    if (freeType.length > 0) {
+        
+         [dic setObject:@([freeType integerValue]) forKey:@"freeType"];
+    }
+   
 
 
+    if (queryStartTime.length > 0) {
+        
+          [dic setObject:queryStartTime forKey:@"queryStartTime"];
+    }
+  
+
+
+    if (kechengName.length > 0) {
+        
+        [dic setObject:kechengName forKey:@"kechengName"];
+    }
+    
+    if (kechengTypeId.length > 0) {
+        
+          [dic setObject:@([kechengTypeId integerValue]) forKey:@"kechengTypeId"];
+    }
+  
+  
+    
+//    [dic setObject:queryEndTime forKey:@"queryEndTime"];
+   
+    [dic setObject:@(page) forKey:@"page"];
+//
+    [dic setObject:@(20) forKey:@"rows"];
+    
+    NSMutableDictionary *dic2 = [self commParam:@"queryKechengList" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"kecheng"];
+    
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?3=312" isUploadImage:NO params:dic2 success:success failure:failure];
+    
+    return task;
+    
+}
+#pragma mark 获取课程详情
+-(NSURLSessionDataTask *)getKechengTitleByKechengId:(NSString *)kechengId
+                                         Andsuccess:(void (^)(id response))success
+                                         Andfailure:(void (^)(NSError* err))failure
+
+{
+ 
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    [dic setObject:@([kechengId integerValue]) forKey:@"kechengId"];
+    
+    NSMutableDictionary *dic2 = [self commParam:@"getKechengTitleByKechengId" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"kecheng"];
+    
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?3=313" isUploadImage:NO params:dic2 success:success failure:failure];
+    
+    return task;
+    
+}
+#pragma mark 培训班信息
+-(NSURLSessionDataTask *)queryPeixunban:(NSString *)state
+                             Andsuccess:(void (^)(id response))success
+                             Andfailure:(void (^)(NSError* err))failure
+
+{
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    if (state.length > 0) {
+        [dic setObject:state forKey:@"state"];
+    }
+    
+    NSMutableDictionary *dic2 = [self commParam:@"queryPeixunban" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"kecheng"];
+    
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?3=3111" isUploadImage:NO params:dic2 success:success failure:failure];
+    
+    return task;
+    
+}
+#pragma mark 获取分类对应科目
+-(NSURLSessionDataTask *)queryKemuByPeixunbanId:(NSString *)peixunbanId
+                                     Andsuccess:(void (^)(id response))success
+                                     Andfailure:(void (^)(NSError* err))failure
+{
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    if (peixunbanId.length > 0) {
+        [dic setObject:@([peixunbanId integerValue]) forKey:@"peixunbanId"];
+    }
+    NSMutableDictionary *dic2 = [self commParam:@"queryKemuByPeixunbanId" Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:@"kecheng"];
+    
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?3=3112" isUploadImage:NO params:dic2 success:success failure:failure];
+    
+    return task;
+    
+}
+#pragma mark 获取培训科目列表
+-(NSURLSessionDataTask *)queryKechengByKemuId:(NSString *)kemuId
+                                      Andpage:(NSInteger)page
+                                     Andsuccess:(void (^)(id response))success
+                                     Andfailure:(void (^)(NSError* err))failure
+{
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    if (kemuId.length > 0) {
+        [dic setObject:@([kemuId integerValue]) forKey:@"kemuId"];
+    }
+    //[dic setObject:@(page) forKey:@"page"];
+    
+    NSMutableDictionary *dic2 = [self commParam:[NSString stringWithFormat:@"queryKechengByKemuId"] Andparams:dic AndSessionID:self.sessionID AndHavesession: YES Andtype:[NSString stringWithFormat:@"kecheng"]];
+    
+    NSURLSessionDataTask *task =[self MyRequestWithMethod:RequestMethodTypePost url:@"mobile/line/api?3=3113" isUploadImage:NO params:dic2 success:success failure:failure];
+    
+    return task;
+    
+}
 - (NSURLSessionDataTask *)MyRequestWithMethod:(RequestMethodType)methodType
                         url:(NSString*)url
               isUploadImage:(BOOL )is_Image
@@ -305,9 +475,10 @@
     mgr.responseSerializer = [AFJSONResponseSerializer serializer];
     
     NSMutableSet *Contentsets=[[NSMutableSet alloc]init];
-    [Contentsets addObject:ContentType1];
-    [Contentsets addObject:ContentType];
+    //[Contentsets addObject:ContentType1];
     [Contentsets addObject:ContentType2];
+    [Contentsets addObject:ContentType];
+  
     
     mgr.responseSerializer.acceptableContentTypes=Contentsets;
     mgr.requestSerializer.HTTPShouldHandleCookies = YES;

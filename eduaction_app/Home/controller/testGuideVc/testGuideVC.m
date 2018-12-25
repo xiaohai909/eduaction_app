@@ -10,6 +10,7 @@
 #import "testGuideDetailVc.h"
 #import "testCommTab.h"
 #import "guideVMode.h"
+
 @interface testGuideVC ()
 {
     BOOL isfirstin;
@@ -39,8 +40,23 @@
             @strongify(self);
             testGuideVC *cont = [[testGuideVC alloc]init];
             cont.isSec = YES;
+            cont.title = @"考试指南";
             cont.secDataArr = [[NSMutableArray alloc]initWithArray:x];
             [self.navigationController pushViewController:cont animated:YES];
+        }];
+        [[[self.myTab clickDetail] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id  _Nullable x) {
+            @strongify(self);
+            testGuideDetailVc *cont = [[testGuideDetailVc alloc]init];
+            cont.title = @"指南详情";
+            if ([x isKindOfClass:[testGuideReqModeChildren class]]) {
+                cont.keyId = [NSString stringWithFormat:@"%.0f",((testGuideReqModeChildren *)x).childrenIdentifier];
+            }
+            else{
+                cont.keyId = [NSString stringWithFormat:@"%.0f",((testGuideReqModeResultObj *)x).resultObjIdentifier];
+            }
+           
+            [self.navigationController pushViewController:cont animated:YES];
+            
         }];
     }
     return _myTab;

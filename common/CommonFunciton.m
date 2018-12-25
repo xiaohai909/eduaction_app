@@ -9,6 +9,38 @@
 #import "CommonFunciton.h"
 
 @implementation CommonFunciton
++(CGFloat)getSpaceLabelHeight:(NSString*)str withFont:(UIFont*)font withWidth:(CGFloat)width {
+    
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    //paraStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    paraStyle.alignment = NSTextAlignmentLeft;
+    paraStyle.lineSpacing = 5; //设置行间距
+    //设置字间距 NSKernAttributeName:@1.5f
+    NSDictionary *dic = @{NSFontAttributeName:[UIFont systemFontOfSize:font.pointSize + 1], NSParagraphStyleAttributeName:paraStyle};
+    
+    CGSize size = [str boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
+                                    options: NSStringDrawingTruncatesLastVisibleLine
+                   | NSStringDrawingUsesLineFragmentOrigin
+                   | NSStringDrawingUsesFontLeading
+                                 attributes:dic
+                                    context:nil].size;
+    
+    
+    return size.height;
+    
+}
++(void)setLabelSpace:(UILabel*)label withValue:(NSString*)str withFont:(UIFont*)font{
+    
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    //paraStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    paraStyle.alignment = NSTextAlignmentLeft;
+    paraStyle.lineSpacing = 5; //设置行间距
+    //设置字间距 NSKernAttributeName:@1.5f
+    NSDictionary *dic = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paraStyle};
+    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:str attributes:dic];
+    label.attributedText = attributeStr;
+    
+}
 +(UIViewController *)theTopviewControler{
     UIViewController *rootVC = [[UIApplication sharedApplication].delegate window].rootViewController;
     

@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface searchWithKindVC : BaseViewController
-
+@property (nonatomic,assign)NSInteger kechengTypeId;
+@property (nonatomic,strong)NSString *kemuCode;
 @end
 
 NS_ASSUME_NONNULL_END

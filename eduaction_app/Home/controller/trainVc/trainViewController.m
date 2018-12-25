@@ -32,6 +32,17 @@
         _myCollectionV = [[trainRightCollection alloc]initWithFrame:CGRectMake(99, 0, ZTWidth - 99, ZTHeight) collectionViewLayout:layout];
         _myCollectionV.backgroundColor = [UIColor whiteColor];
         _myCollectionV.contentInset = UIEdgeInsetsMake(125, 0, 0, 0);
+        @weakify(self);
+        [[[_myCollectionV clickindex] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id  _Nullable x) {
+            @strongify(self);
+            trainlistBaseClass *mode = x;
+            searchWithKindVC *cont = [[searchWithKindVC alloc]init];
+            [cont setTitle:mode.name];
+            cont.kechengTypeId = 1;
+            cont.kemuCode = [NSString stringWithFormat:@"%0.f",mode.internalBaseClassIdentifier];
+            [self.navigationController pushViewController:cont animated:YES];
+            
+        }];
     }
     return _myCollectionV;
 }
@@ -45,7 +56,7 @@
     [self.view addSubview:self.myCollectionV];
     
     
-    [self.myTab  selectindex:0];
+    //[self.myTab  selectindex:0];
     // Do any additional setup after loading the view.
 }
 -(void)rightAction:(UIButton *)sender{
